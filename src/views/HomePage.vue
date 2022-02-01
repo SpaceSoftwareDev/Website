@@ -1,11 +1,21 @@
 <template>
   <ion-page>
+<<<<<<< HEAD
+=======
+    <ion-header :translucent="true">
+      <ion-toolbar>
+        <ion-title>Blank</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+>>>>>>> 9c911c91cb30df66f83b0ce2cf91939dd93008a7
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <!-- <img src="https://i.ibb.co/dkTnR4B/Logo-Nav-Bar-1.png" alt="Logo-Nav-Bar-1" border="0">
         <h3>Info?</h3> -->
       </ion-header>
 
+<<<<<<< HEAD
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -57,6 +67,8 @@
 
         </ion-grid>
 
+=======
+>>>>>>> 9c911c91cb30df66f83b0ce2cf91939dd93008a7
       <div id="container">
       </div>
     </ion-content>
@@ -64,8 +76,13 @@
 </template>
 
 <script lang="ts">
+<<<<<<< HEAD
 import { IonContent, IonHeader, IonPage, IonGrid} from '@ionic/vue';
 import { defineComponent } from 'vue';
+=======
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue'
+import { defineComponent } from 'vue'
+>>>>>>> 9c911c91cb30df66f83b0ce2cf91939dd93008a7
 
 export default defineComponent({
   components: {
@@ -74,7 +91,7 @@ export default defineComponent({
     IonPage,
     IonGrid,
   }
-});
+})
 </script>
 
 <style scoped>
@@ -85,7 +102,7 @@ export default defineComponent({
 
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
@@ -101,9 +118,15 @@ export default defineComponent({
 #container p {
   font-size: 16px;
   line-height: 22px;
+<<<<<<< HEAD
   
   color: #fffbfb;
   
+=======
+
+  color: #8c8c8c;
+
+>>>>>>> 9c911c91cb30df66f83b0ce2cf91939dd93008a7
   margin: 0;
 }
 
