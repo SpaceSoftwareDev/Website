@@ -1,11 +1,11 @@
 <template>
   <ion-page>
 
-    <ion-header :translucent="true">
+    <!-- <ion-header :translucent="true">
       <ion-toolbar>
         <ion-title>Blank</ion-title>
       </ion-toolbar>
-    </ion-header>
+    </ion-header> -->
 
 
     <ion-content :fullscreen="true">
@@ -73,7 +73,7 @@
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonGrid} from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -82,6 +82,8 @@ export default defineComponent({
     IonHeader,
     IonPage,
     IonGrid,
+    IonRow,
+    IonCol
   }
 })
 </script>
