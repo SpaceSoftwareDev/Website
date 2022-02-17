@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
@@ -12,6 +13,7 @@
   "dependencies": {
     "@ionic/vue": "^6.0.8",
     "@ionic/vue-router": "^6.0.8",
+    "@vueuse/core": "^7.6.2",
     "ansi-regex": "^6.0.1",
     "core-js": "^3.21.1",
     "postcss": "^8.4.6",
