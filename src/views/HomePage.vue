@@ -59,7 +59,7 @@
             <!-- About us Text -->
             <ion-row>
               <div class="About-Us">
-                <h1>About Us</h1>
+                <h3>About Us</h3>
               </div>
             </ion-row>
 
@@ -133,10 +133,13 @@ export default defineComponent({
 }
 .Menu{
   position: absolute;
-  margin-top: 3.5vh;
+  margin-top: 4vh;
   right: 7vw;
+  width: 31;
+  height: 20;
 }
 .Text{
+  margin-top: 2vh;
   text-align: center;
 }
 .Text2{
@@ -175,16 +178,16 @@ export default defineComponent({
 }
 
 .About-Us{
-  margin-top: 0vh;
-  color: 2F2F2F;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 0%;
   margin-left: 5vw;
-  font-size: 24px;
+  font-style: normal;
 }
 
 .Bottom-Text{
   margin-left: auto;
   margin-right: auto;
+  text-indent: 20px;
+  color: #000000 40%;
 }
 
 h1{
@@ -198,6 +201,14 @@ h2{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
  
+}
+
+h3{
+  color: #2F2F2F;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 30px;
 }
 
 </style>
