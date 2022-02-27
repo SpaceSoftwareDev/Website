@@ -2,6 +2,7 @@
   <ion-page>
     <ion-content :fullscreen="true">
 
+    <div class="background">
     <!-- header -->     
       <ion-grid>
         <ion-row>
@@ -73,7 +74,10 @@
               </div>
             </ion-row>
 
-        </ion-grid>
+      </ion-grid>
+      </div>
+
+
       <div id="container">
       </div>
     </ion-content>
@@ -126,7 +130,9 @@ export default defineComponent({
 #container a {
   text-decoration: none;
 }
-
+.background{
+background-image: linear-gradient(white, #CCE2FF);
+}
 .Logo{
   margin-left: 1vw;
   margin-top: 3vh;
