@@ -49,12 +49,12 @@
                         <img src="https://i.ibb.co/4TrzSsz/Ionic.png" alt="Ionic" border="0">
                     </ion-col>
                 </div>
+              </ion-row>
 
             <!-- team picture -->
+            <ion-row>
+                <img class="Team" src="https://i.ibb.co/PNwf3JX/Team.png" alt="Team" border="0">
             </ion-row>
-            <div class="Team">
-                <img src="https://i.ibb.co/PNwf3JX/Team.png" alt="Team" border="0">
-            </div>
             
             <!-- About us Text -->
             <ion-row>
@@ -67,13 +67,13 @@
             <ion-row>
               <div class="Bottom-Text">
                 <h2>We are new sofware studio founded by 3 highschool students from Slovakia.
-Currently we are studying on high school SPŠE Hálova 16.
-And we are part of really cool study plan named OPENLAB.</h2>
+                    Currently we are studying on high school SPŠE Hálova 16.
+                    And we are part of really cool study plan named OPENLAB.
+                </h2>
               </div>
             </ion-row>
 
         </ion-grid>
-
       <div id="container">
       </div>
     </ion-content>
@@ -158,8 +158,8 @@ export default defineComponent({
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vh;
-  width: 300px;
-  height: 300px;
+  width: 339px;
+  height: 228px;
 }
 
 .Vue{
