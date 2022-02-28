@@ -2,7 +2,6 @@
   <ion-page>
     <ion-content :fullscreen="true">
 
-    <div class="background">
     <!-- header -->     
       <ion-grid>
         <ion-row>
@@ -21,7 +20,7 @@
       </ion-grid>
       
       <!-- software studio text -->
-        <ion-grid>
+        <ion-grid class="background">
             <ion-row>
               <br>
             </ion-row>
@@ -66,20 +65,18 @@
 
             <!-- Bottom Text -->
             <ion-row>
-              <div class="Bottom-Text">
-                <h2>We are new sofware studio founded by 3 highschool students from Slovakia.
-                    Currently we are studying on high school SPŠE Hálova 16.
-                    And we are part of really cool study plan named OPENLAB.
-                </h2>
+              <div class="Bottom-Text" style="padding-left: 5vw;">
+                <h2>We are new sofware studio founded by 3 highschool students from Slovakia.</h2>
+                  <h2>Currently we are studying on high school SPŠE Hálova 16.</h2>
+                   <h2>And we are part of really cool study plan named OPENLAB. </h2>
               </div>
             </ion-row>
 
+            <hr>
+
+      <!-- <div id="container">
+      </div> -->
       </ion-grid>
-      </div>
-
-
-      <div id="container">
-      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -148,6 +145,7 @@ background-image: linear-gradient(white, #CCE2FF);
   margin-top: 2vh;
   text-align: center;
 }
+
 .Text2{
   margin-top: 0vh;
 }
@@ -190,10 +188,10 @@ background-image: linear-gradient(white, #CCE2FF);
 }
 
 .Bottom-Text{
-  margin-left: auto;
+  margin-top: 2vh;
   margin-right: auto;
-  text-indent: 20px;
-  color: #000000 40%;
+  color: rgba(0, 0, 0, 0.4);
+padding-right: 10vw;
 }
 
 h1{
@@ -203,10 +201,11 @@ h1{
 }
 
 h2{
-  text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
- 
+  font-weight: 400;
+  margin-top: 0vh;
+  text-align: left;
 }
 
 h3{
@@ -215,6 +214,11 @@ h3{
   font-size: 24px;
   font-weight: 800;
   line-height: 30px;
+}
+
+hr{
+  margin-top: 20vh;
+  border: 1px solid rgba(187, 217, 255, 0.6);
 }
 
 </style>
