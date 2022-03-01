@@ -12,15 +12,13 @@
             <br>
           </ion-col>
           <ion-col>
-            <div class="Menu">
-                <img src="https://i.ibb.co/gFMJwTn/More-Icon.png" alt="Hamburger-Menu" border="0">
-            </div>
+            <img class="Menu" src="https://i.ibb.co/FgdRKJv/More-Icon-1.png" alt="Hamburger-Menu" border="0">
           </ion-col>
         </ion-row>
       </ion-grid>
       
       <!-- software studio text -->
-        <ion-grid> <!-- class="background" -->
+        <ion-grid class="background">
             <ion-row>
               <br>
             </ion-row>
@@ -33,20 +31,20 @@
             <!-- technologie logos   -->
             <ion-row>
                 <div class="Technologies">
-                    <ion-col class="CMS">
-                        <img src="https://i.ibb.co/tx1gK9Z/October-CMS.png" alt="October-CMS" border="0">
+                    <ion-col>
+                        <img class="OCMS" src="https://i.ibb.co/Gk9PCDD/October-CMS-1.png" alt="October-CMS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
-                    <ion-col class="Vue">
-                        <img src="https://i.ibb.co/yRqx2PY/Vue.png" alt="Vue" border="0"> 
+                    <ion-col>
+                        <img class="Vue" src="https://i.ibb.co/bvWB5FX/Vue-1.png" alt="Vue" border="0">
                     </ion-col>
                     <ion-col></ion-col>
-                    <ion-col class="AWS"> 
-                        <img src="https://i.ibb.co/RvGsjKm/AWS.png" alt="AWS" border="0">
+                    <ion-col class="AWSCol"> 
+                        <img class="AWS" src="https://i.ibb.co/kQ1rvfs/AWS-1.png" alt="AWS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
-                    <ion-col class="Ionic"> 
-                        <img src="https://i.ibb.co/4TrzSsz/Ionic.png" alt="Ionic" border="0">
+                    <ion-col> 
+                        <img class="Ionic" src="https://i.ibb.co/rp0NV4F/Ionic-1.png" alt="Ionic" border="0">
                     </ion-col>
                 </div>
               </ion-row>
@@ -72,17 +70,23 @@
               </div>
             </ion-row>
 
-          <!-- About Us Section -->
-            <!-- About Us Header -->
+            <!-- About Us Bottom -->
             <ion-row>
-              <ion-col>
+              <ion-col class="ioncol">
                 <img class="Space" src="https://i.ibb.co/Y3GdV7d/Space.png" alt="Space" border="0">
               </ion-col>
+              <ion-col></ion-col>
               <ion-col>
-                
+                <h4 class="About-Us-Line"><b>ABOUT US</b></h4>
               </ion-col>
             </ion-row>    
             <hr>
+
+          <!-- Projects Section -->
+            <!-- Projects -->
+            <ion-row>
+              <h1 class="center">Projects</h1>
+            </ion-row>
 
       <!-- <div id="container">
       </div> -->
@@ -145,11 +149,11 @@ background-image: linear-gradient(white, #CCE2FF);
   margin-top: 3vh;
 }
 .Menu{
-  position: absolute;
-  margin-top: 4vh;
-  right: 7vw;
-  width: 31;
+  width: 30%;
   height: 20;
+  margin-top: 4vh;
+  /* right: 7vw; */
+  margin-left: 10vw;
 }
 .Text{
   margin-top: 2vh;
@@ -179,16 +183,28 @@ background-image: linear-gradient(white, #CCE2FF);
   height: 228px;
 }
 
+.OCMS{
+  width: 20.33px;
+  height: 20.78px;
+  size: 50%;
+}
+
 .Vue{
+  width: 25.89px;
+  height: 20.78px;
   margin-left: 5vw;
 }
 
 .AWS{
- margin-left: 6vw;
+  width: 37.78px;
+  height: 20.78px;
+  margin-left: 6vw;
 }
 
 .Ionic{
- margin-left: 7vw;
+  width: 22.43px;
+  height: 24px;
+  margin-left: 7vw;
 }
 
 .About-Us{
@@ -208,6 +224,18 @@ background-image: linear-gradient(white, #CCE2FF);
   width: 27px;
   height: 11.39px;
   margin-left: 4vw;
+}
+.About-Us-Line{
+    color: rgba(204, 226, 255, 1);
+    margin-top: 0vh;
+    text-align: right;
+    padding-right: 2.5vw;
+}
+
+.center{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 h1{
@@ -232,10 +260,18 @@ h3{
   line-height: 30px;
 }
 
+h4{
+    font-size: 16px;
+}
+
 hr{
-  margin-top: 0.5vh;
+  /* margin-top: -2vh; */
+  margin-top: -0.3vh;
   border: 1px solid rgba(187, 217, 255, 0.6);
   height: 0px;
+  width:90%;
+  text-align:center;
 }
+
 
 </style>
