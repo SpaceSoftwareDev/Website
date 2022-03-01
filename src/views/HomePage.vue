@@ -6,7 +6,7 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-              <img class="Logo" src="https://i.ibb.co/dkTnR4B/Logo-Nav-Bar-1.png" alt="Space-Logo" border="0">
+              <img class="Logo" src="https://i.ibb.co/441BZRX/Logo-Nav-Bar-2.png" alt="Space-Logo" border="0">
           </ion-col>
           <ion-col>
             <br>
@@ -20,7 +20,7 @@
       </ion-grid>
       
       <!-- software studio text -->
-        <ion-grid class="background">
+        <ion-grid> <!-- class="background" -->
             <ion-row>
               <br>
             </ion-row>
@@ -53,7 +53,7 @@
 
             <!-- team picture -->
             <ion-row>
-                <img class="Team" src="https://i.ibb.co/PNwf3JX/Team.png" alt="Team" border="0">
+                <img class="Team" src="https://i.ibb.co/CKWtjx1/Team.png" alt="Team" border="0">
             </ion-row>
             
             <!-- About us Text -->
@@ -72,6 +72,16 @@
               </div>
             </ion-row>
 
+          <!-- About Us Section -->
+            <!-- About Us Header -->
+            <ion-row>
+              <ion-col>
+                <img class="Space" src="https://i.ibb.co/Y3GdV7d/Space.png" alt="Space" border="0">
+              </ion-col>
+              <ion-col>
+                
+              </ion-col>
+            </ion-row>    
             <hr>
 
       <!-- <div id="container">
@@ -191,7 +201,13 @@ background-image: linear-gradient(white, #CCE2FF);
   margin-top: 2vh;
   margin-right: auto;
   color: rgba(0, 0, 0, 0.4);
-padding-right: 10vw;
+  padding-right: 10vw;
+}
+
+.Space{
+  width: 27px;
+  height: 11.39px;
+  margin-left: 4vw;
 }
 
 h1{
@@ -204,7 +220,7 @@ h2{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  margin-top: 0vh;
+  margin-top: -1vh;
   text-align: left;
 }
 
@@ -217,8 +233,9 @@ h3{
 }
 
 hr{
-  margin-top: 20vh;
+  margin-top: 0.5vh;
   border: 1px solid rgba(187, 217, 255, 0.6);
+  height: 0px;
 }
 
 </style>
