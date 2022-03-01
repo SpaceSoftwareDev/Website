@@ -12,19 +12,19 @@
             <br>
           </ion-col>
           <ion-col>
-            <img class="Menu" src="https://i.ibb.co/FgdRKJv/More-Icon-1.png" alt="Hamburger-Menu" border="0">
+            <img class="Hamburger-Menu" src="https://i.ibb.co/FgdRKJv/More-Icon-1.png" alt="Hamburger-Menu" border="0">
           </ion-col>
         </ion-row>
       </ion-grid>
       
       <!-- software studio text -->
-        <ion-grid class="background">
+        <ion-grid class="Background">
             <ion-row>
               <br>
             </ion-row>
-              <div class="Text">
+              <div class="Software-Text">
                   <h1>Software studio</h1>
-                  <h1 class="Text2">founded by three</h1>
+                  <h1 class="Founded-Text">founded by three</h1>
                   <h1 class="Gradient-Text">highschool students.</h1>             
               </div>
 
@@ -54,14 +54,14 @@
                 <img class="Team" src="https://i.ibb.co/CKWtjx1/Team.png" alt="Team" border="0">
             </ion-row>
             
-            <!-- About us Text -->
+            <!-- about us text -->
             <ion-row>
               <div class="About-Us">
                 <h3>About Us</h3>
               </div>
             </ion-row>
 
-            <!-- Bottom Text -->
+            <!-- bottom text -->
             <ion-row>
               <div class="Bottom-Text" style="padding-left: 5vw;">
                 <h2>We are new sofware studio founded by 3 highschool students from Slovakia.</h2>
@@ -70,7 +70,7 @@
               </div>
             </ion-row>
 
-            <!-- About Us Bottom -->
+            <!-- about us bottom -->
             <ion-row>
               <ion-col class="ioncol">
                 <img class="Space" src="https://i.ibb.co/Y3GdV7d/Space.png" alt="Space" border="0">
@@ -83,22 +83,95 @@
             <hr>
 
           <!-- Projects Section -->
-            <!-- Projects -->
+            <!-- projects -->
             <ion-row>
-              <h1 class="center">Projects</h1>
+              <h1 class="center" id="Projects">Projects</h1>
             </ion-row>
-            <!-- MemeTimeApp Header -->
+
+            <!-- memetimeApp header -->
             <ion-row>
               <img class="Meme-Time-App" src="https://i.ibb.co/Nt3Z3t9/Meme-Time-Section.png" alt="Meme-Time-Section" border="0">
             </ion-row>
-            <!-- MemeTimeApp Mockup-->
+
+            <!-- memetimeapp mockup-->
             <ion-row>
               <img class="Meme-Time-Mockup" src="https://i.ibb.co/3vDKTht/Screens.png" alt="Screens" border="0">
             </ion-row>
 
+            <!-- memetime gradient text -->
+            <ion-row>
+              <div class="Meme-Time-Gradient">
+                <h3>MemeTime</h3>
+              </div>
+            </ion-row>
+
+            <!-- memetimeapp bottom text -->
+            <ion-row>
+              <div id="MemTime-Text" class="Bottom-Text" style="padding-left: 5vw;">
+                <h2>MemeTime is our first project its a new application for android devices.</h2>
+                  <h2>Memetime points out that this is never the bad time to improve your day. 
+                    The focus of our platform is simple and obvious - just memes and other 
+                    fun content without any limits or censorship. Purpose of MemeTime! 
+                    is to make your day better with daily memes of your taste.</h2>
+              </div>
+            </ion-row>
+
+          <!-- projects section bottom -->
+          <ion-row>
+            <ion-col class="ioncol">
+              <img class="Space" src="https://i.ibb.co/Y3GdV7d/Space.png" alt="Space" border="0">
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <h4 class="About-Us-Line"><b>PROJECTS</b></h4>
+            </ion-col>
+          </ion-row>    
+          <hr>
+
+        <!-- Contantact Us Section-->
+          <!-- contact us globe-->
+          <ion-row>
+            <img id="Globe-Img" class="center" src="https://i.ibb.co/0Jj6BYF/Saly-44.png" alt="Saly-44" border="0">
+          </ion-row>
+
+          <!-- contact text -->
+          <ion-row>
+            <div id="Contact-Text" class="center">
+               <h3>Contact</h3>
+            </div>
+          </ion-row>
+
+         <!-- space email -->
+         <ion-row>
+           <div id="Space-Mail" class="center">
+             <h5>business@space-software.com</h5>
+           </div>
+         </ion-row>
+
+         <!-- email icon -->
+         <ion-row>
+           <img class="Email-Icon" src="https://i.ibb.co/V2Mn4jg/mail-outline.png" alt="mail-outline" border="0">
+         </ion-row>
+
+          <!-- contact us section bottom -->
+          <ion-row>
+            <ion-col class="ioncol">
+              <img class="Space" src="https://i.ibb.co/Y3GdV7d/Space.png" alt="Space" border="0">
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+              <h4 class="About-Us-Line"><b>CONTACT</b></h4>
+            </ion-col>
+          </ion-row>    
+          <hr>
+        </ion-grid>
+
+        <ion-grid class="grid">
+
+        </ion-grid>
+
       <!-- <div id="container">
       </div> -->
-      </ion-grid>
     </ion-content>
   </ion-page>
 </template>
@@ -149,27 +222,54 @@ export default defineComponent({
 #container a {
   text-decoration: none;
 }
-.background{
+
+#Projects{
+  font-weight: 100px;
+  font-size: 24px;
+}
+
+#MemTime-Text{
+  margin-top: -6vh;
+}
+
+#Globe-Img{
+  width: 202px;
+  height: 171.22px;
+  margin-top: 5vh;
+}
+
+#Contact-Text{
+  font-weight: 400px;
+}
+
+#Space-Mail{
+  margin-top: -2vh;
+}
+
+.Background{
 background-image: linear-gradient(white, #CCE2FF);
 }
+
 .Logo{
   margin-left: 1vw;
   margin-top: 3vh;
   width: 118.72px;
   height: 31.96px;
 }
-.Menu{
+
+.Hamburger-Menu{
   width: 31px;
   height: 20px;
   margin-top: 3.9vh;
   margin-left: 14vw;
 }
-.Text{
+
+.Software-Text{
   margin-top: 2vh;
   text-align: center;
 }
 
-.Text2{
+.Founded-Text{
   margin-top: 0vh;
 }
 .Gradient-Text{
@@ -233,10 +333,11 @@ background-image: linear-gradient(white, #CCE2FF);
   width: 27px;
   height: 11.39px;
   margin-left: 4vw;
+  margin-top: 3vh;
 }
 .About-Us-Line{
     color: rgba(204, 226, 255, 1);
-    margin-top: 0vh;
+    margin-top: 2.4vh;
     text-align: right;
     padding-right: 2.5vw;
 }
@@ -250,12 +351,37 @@ background-image: linear-gradient(white, #CCE2FF);
 .Meme-Time-App{
   margin-left: auto;
   margin-right: auto;
+  width: 380px;
+  height: 139px;
 }
 
 .Meme-Time-Mockup{
   margin-right: auto;
   margin-left: auto;
   margin-top: -18vh;
+  width: 380px;
+  height: 482px;
+}
+
+.Meme-Time-Gradient{
+  background: -webkit-linear-gradient(200deg, #00B232 100%, #048383 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: -15vh;
+  margin-left: 5vw;
+  font-style: normal;
+}
+
+.Email-Icon{
+  width: 41px;
+  height: 41px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid{
+  height: 94px;
 }
 
 h1{
@@ -274,7 +400,7 @@ h2{
 
 h3{
   color: #2F2F2F;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica;
   font-size: 24px;
   font-weight: 800;
   line-height: 30px;
@@ -284,9 +410,14 @@ h4{
     font-size: 16px;
 }
 
+h5{
+  font-size: 19px;
+  font-weight: 400px;
+}
+
 hr{
   /* margin-top: -2vh; */
-  margin-top: -0.3vh;
+  margin-top: -0.5vh;
   border: 1px solid rgba(187, 217, 255, 0.6);
   height: 0px;
   width:90%;
