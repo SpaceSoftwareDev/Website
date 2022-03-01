@@ -147,13 +147,14 @@ background-image: linear-gradient(white, #CCE2FF);
 .Logo{
   margin-left: 1vw;
   margin-top: 3vh;
+  width: 118.72px;
+  height: 31.96px;
 }
 .Menu{
-  width: 30%;
-  height: 20;
-  margin-top: 4vh;
-  /* right: 7vw; */
-  margin-left: 10vw;
+  width: 31px;
+  height: 20px;
+  margin-top: 3.9vh;
+  margin-left: 14vw;
 }
 .Text{
   margin-top: 2vh;
