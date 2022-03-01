@@ -87,6 +87,14 @@
             <ion-row>
               <h1 class="center">Projects</h1>
             </ion-row>
+            <!-- MemeTimeApp Header -->
+            <ion-row>
+              <img class="Meme-Time-App" src="https://i.ibb.co/Nt3Z3t9/Meme-Time-Section.png" alt="Meme-Time-Section" border="0">
+            </ion-row>
+            <!-- MemeTimeApp Mockup-->
+            <ion-row>
+              <img class="Meme-Time-Mockup" src="https://i.ibb.co/3vDKTht/Screens.png" alt="Screens" border="0">
+            </ion-row>
 
       <!-- <div id="container">
       </div> -->
@@ -237,6 +245,17 @@ background-image: linear-gradient(white, #CCE2FF);
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+}
+
+.Meme-Time-App{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Meme-Time-Mockup{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -18vh;
 }
 
 h1{
