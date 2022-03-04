@@ -153,7 +153,7 @@
            <img class="Email-Icon" src="https://i.ibb.co/V2Mn4jg/mail-outline.png" alt="mail-outline" border="0">
          </ion-row>
 
-          <!-- contact us section bottom -->
+          <!-- contact us bottom -->
           <ion-row>
             <ion-col class="ioncol">
               <img class="Space" src="https://i.ibb.co/Y3GdV7d/Space.png" alt="Space" border="0">
@@ -166,6 +166,7 @@
           <hr>
         </ion-grid>
 
+        <!-- Footer -->
         <ion-grid class="grid">
 
         </ion-grid>
@@ -247,7 +248,7 @@ export default defineComponent({
 }
 
 .Background{
-background-image: linear-gradient(white, #CCE2FF);
+background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Logo{
