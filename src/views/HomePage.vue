@@ -166,9 +166,20 @@
           <hr>
         </ion-grid>
 
-        <!-- Footer -->
+        <!-- footer -->
         <ion-grid class="grid">
-
+          <!-- space logo 3 -->
+          <ion-row>
+            <ion-col>
+              <img class="Space-3" src="https://i.ibb.co/pQ07GgS/Logo-Space3.png" alt="Logo-Space3" border="0">
+            </ion-col>
+            <ion-col>
+              <h4>""</h4>
+            </ion-col>
+            <ion-col>
+              <img class="Social-Medias" src="https://i.ibb.co/hgKgH3B/Right.png" alt="Right" border="0">
+            </ion-col>
+          </ion-row>
         </ion-grid>
 
       <!-- <div id="container">
@@ -385,6 +396,19 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   height: 94px;
 }
 
+.Space-3{
+  width: 120.9px;
+  height: 59.5px;
+  text-align: left;
+  margin-top: 2vh;
+}
+
+.Social-Medias{
+  text-align: right;
+  margin-top: 3vh;
+  size: 30%;
+}
+
 h1{
   font-size: 31px;
   font-family: 'Helvetica';
@@ -394,7 +418,7 @@ h1{
 h2{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: -1vh;
   text-align: left;
 }
