@@ -144,13 +144,17 @@
          <!-- space email -->
          <ion-row>
            <div id="Space-Mail" class="center">
-             <h5>business@space-software.com</h5>
+             <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C">
+               <h5 id="Space-Mail-Text">business@space-software.com</h5>
+             </a>
            </div>
          </ion-row>
 
          <!-- email icon -->
          <ion-row>
-           <img class="Email-Icon" src="https://space-software.s3.eu-central-1.amazonaws.com/website/mail-outline.png" alt="mail-outline" border="0">
+           <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C" class="center">
+             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/website/mail-outline.png" alt="mail-outline" border="0">
+           </a>
          </ion-row>
 
           <!-- contact us bottom -->
@@ -256,6 +260,11 @@ export default defineComponent({
 
 #Space-Mail{
   margin-top: -2vh;
+}
+
+#Space-Mail-Text{
+  color: black;
+  text-decoration: none;
 }
 
 .Background{
