@@ -39,7 +39,7 @@
                         <img class="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/website/vue.png" alt="Vue" border="0">
                     </ion-col>
                     <ion-col></ion-col>
-                    <ion-col class="AWSCol"> 
+                    <ion-col> 
                         <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/website/aws.png" alt="AWS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
@@ -77,7 +77,7 @@
               </ion-col>
               <ion-col></ion-col>
               <ion-col>
-                <h4 class="About-Us-Line"><b>ABOUT US</b></h4>
+                <h4 class="Section-Text"><b>ABOUT US</b></h4>
               </ion-col>
             </ion-row>    
             <hr>
@@ -123,7 +123,7 @@
             </ion-col>
             <ion-col></ion-col>
             <ion-col>
-              <h4 class="About-Us-Line"><b>PROJECTS</b></h4>
+              <h4 class="Section-Text"><b>PROJECTS</b></h4>
             </ion-col>
           </ion-row>    
           <hr>
@@ -164,7 +164,7 @@
             </ion-col>
             <ion-col></ion-col>
             <ion-col>
-              <h4 class="About-Us-Line"><b>CONTACT</b></h4>
+              <h4 class="Section-Text"><b>CONTACT</b></h4>
             </ion-col>
           </ion-row>    
           <hr>
@@ -184,10 +184,9 @@
               <img class="Social-Medias" src="https://i.ibb.co/hgKgH3B/Right.png" alt="Right" border="0">
             </ion-col>
           </ion-row>
+
         </ion-grid>
 
-      <!-- <div id="container">
-      </div> -->
     </ion-content>
   </ion-page>
 </template>
@@ -211,32 +210,6 @@ export default defineComponent({
 
 #Text{
   margin-top: 1vh;
-}
-
-#container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px; 
-  color: #fffbfb;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }
 
 #Projects{
@@ -317,29 +290,33 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   width: 20.33px;
   height: 20.78px;
   size: 50%;
+  margin-right: 6vw;
 }
 
 .Vue{
   width: 25.89px;
   height: 20.78px;
-  margin-left: 5vw;
+  margin-left: 1vw;
 }
 
 .AWS{
   width: 37.78px;
   height: 20.78px;
-  margin-left: 6vw;
+  margin-left: 8vw;
 }
 
 .Ionic{
   width: 22.43px;
   height: 24px;
-  margin-left: 7vw;
+  margin-left: 4vw;
 }
 
 .About-Us{
   top: 0%;
-  margin-left: 5vw;
+  /* margin-left: 5vw; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   font-style: normal;
 }
 
@@ -356,7 +333,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-left: 4vw;
   margin-top: 3vh;
 }
-.About-Us-Line{
+.Section-Text{
     color: rgba(204, 226, 255, 1);
     margin-top: 2.4vh;
     text-align: right;
@@ -385,7 +362,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Meme-Time-Gradient{
-  background: -webkit-linear-gradient(200deg, #00B232 100%, #048383 100%);
+  background: -webkit-linear-gradient(420deg, #00B232 45%, #048383 85%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
