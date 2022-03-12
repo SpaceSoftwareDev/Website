@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content :fullscreen="true">
 
-    <!-- header -->     
+    <!-- header -->
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -16,7 +16,7 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      
+
       <!-- software studio text -->
         <ion-grid class="Background">
             <ion-row>
@@ -25,7 +25,7 @@
               <div class="Software-Text">
                   <h1>Software studio</h1>
                   <h1 class="Founded-Text">founded by three</h1>
-                  <h1 class="Gradient-Text">highschool students.</h1>             
+                  <h1 class="Gradient-Text">highschool students.</h1>
               </div>
 
             <!-- technologie logos   -->
@@ -39,11 +39,11 @@
                         <img class="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/website/vue.png" alt="Vue" border="0">
                     </ion-col>
                     <ion-col></ion-col>
-                    <ion-col> 
+                    <ion-col>
                         <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/website/aws.png" alt="AWS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
-                    <ion-col> 
+                    <ion-col>
                         <img class="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/website/ionic.png" alt="Ionic" border="0">
                     </ion-col>
                 </div>
@@ -53,7 +53,7 @@
             <ion-row>
                 <img class="Team" src="https://space-software.s3.eu-central-1.amazonaws.com/website/team.png" alt="Team" border="0">
             </ion-row>
-            
+
             <!-- about us text -->
             <ion-row>
               <div class="About-Us">
@@ -79,7 +79,7 @@
               <ion-col>
                 <h4 class="Section-Text"><b>ABOUT US</b></h4>
               </ion-col>
-            </ion-row>    
+            </ion-row>
             <hr>
 
           <!-- Projects Section -->
@@ -109,9 +109,9 @@
             <ion-row>
               <div id="MemTime-Text" class="Bottom-Text" style="padding-left: 5vw;">
                 <h2>MemeTime is our first project its a new application for android devices.</h2>
-                  <h2>Memetime points out that this is never the bad time to improve your day. 
-                    The focus of our platform is simple and obvious - just memes and other 
-                    fun content without any limits or censorship. Purpose of MemeTime! 
+                  <h2>Memetime points out that this is never the bad time to improve your day.
+                    The focus of our platform is simple and obvious - just memes and other
+                    fun content without any limits or censorship. Purpose of MemeTime!
                     is to make your day better with daily memes of your taste.</h2>
               </div>
             </ion-row>
@@ -125,7 +125,7 @@
             <ion-col>
               <h4 class="Section-Text"><b>PROJECTS</b></h4>
             </ion-col>
-          </ion-row>    
+          </ion-row>
           <hr>
 
         <!-- Contantact Us Section-->
@@ -166,7 +166,7 @@
             <ion-col>
               <h4 class="Section-Text"><b>CONTACT</b></h4>
             </ion-col>
-          </ion-row>    
+          </ion-row>
           <hr>
         </ion-grid>
 
@@ -191,22 +191,11 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  components: {
-    IonContent,
-    IonPage,
-    IonGrid,
-    IonRow,
-    IonCol
-  }
-})
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 #Text{
   margin-top: 1vh;

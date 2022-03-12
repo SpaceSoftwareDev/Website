@@ -3,15 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "serve": "vite --port 80",
+    "dev": "vite --port 80",
+    "build": "vue-tsc --noEmit && vite build",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
-    "@ionic/vue": "^6.0.8",
+    "@ionic/vue": "^6.0.11-dev.11646862954.7975b9a",
     "@ionic/vue-router": "^6.0.8",
     "@vueuse/core": "^7.6.2",
     "ansi-regex": "^6.0.1",
@@ -21,25 +19,11 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "@vue/cli-plugin-babel": "~5.0.0-rc.1",
-    "@vue/cli-plugin-e2e-cypress": "~5.0.0-rc.1",
-    "@vue/cli-plugin-eslint": "~5.0.0-rc.1",
-    "@vue/cli-plugin-router": "~5.0.0-rc.1",
-    "@vue/cli-plugin-typescript": "~5.0.0-rc.1",
-    "@vue/cli-plugin-unit-jest": "~5.0.0-rc.1",
-    "@vue/cli-service": "~5.0.0-rc.1",
-    "@vue/eslint-config-typescript": "^9.1.0",
-    "@vue/test-utils": "^2.0.0-rc.16",
-    "@vue/vue3-jest": "^27.0.0-alpha.3",
-    "babel-jest": "^27.3.1",
-    "cypress": "^8.7.0",
-    "eslint": "^8.9.0",
-    "eslint-plugin-vue": "^8.4.1",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7",
+    "@types/node": "^17.0.21",
+    "@vitejs/plugin-vue": "^2.2.4",
+    "eslint": "^8.11.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "sass": "^1.49.9",
     "typescript": "^4.5.5"
   },
   "description": "An Ionic project"
