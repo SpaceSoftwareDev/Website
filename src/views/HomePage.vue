@@ -234,10 +234,8 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Logo{
-  margin-left: 1vw;
-  margin-top: 3vh;
-  width: 118.72px;
-  height: 31.96px;
+  margin-left: 6vw;
+  margin-top: 2.5vh;
 }
 
 .Hamburger-Menu{
