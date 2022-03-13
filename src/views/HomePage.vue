@@ -175,13 +175,16 @@
           <!-- space logo 3 -->
           <ion-row>
             <ion-col>
-              <img class="Space-3" src="https://i.ibb.co/pQ07GgS/Logo-Space3.png" alt="Logo-Space3" border="0">
+              <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/website/footer-logo.png" alt="Footer-Logo" border="0">
             </ion-col>
             <ion-col>
-              <h4>""</h4>
+              <q>kurvy ruske vyjebane</q>
             </ion-col>
             <ion-col>
-              <img class="Social-Medias" src="https://i.ibb.co/hgKgH3B/Right.png" alt="Right" border="0">
+              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/facebook.png" alt="Right" border="0">
+              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/instagram.png" alt="Right" border="0">
+              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/twitter.png" alt="Right" border="0">
+              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/tiktok.png" alt="Right" border="0">
             </ion-col>
           </ion-row>
 
@@ -369,7 +372,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   height: 94px;
 }
 
-.Space-3{
+.Footer-Logo{
   width: 120.9px;
   height: 59.5px;
   text-align: left;
