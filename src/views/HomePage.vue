@@ -171,20 +171,20 @@
         </ion-grid>
 
         <!-- footer -->
-        <ion-grid class="grid">
+        <ion-grid class="Grid">
           <!-- space logo 3 -->
           <ion-row>
             <ion-col>
               <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/website/footer-logo.png" alt="Footer-Logo" border="0">
             </ion-col>
-            <ion-col>
-              <q>kurvy ruske vyjebane</q>
+            <ion-col class="Footer-Text">
+              <q>Stop thinking about what you cant do and focus on reality</q>
             </ion-col>
             <ion-col>
-              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/facebook.png" alt="Right" border="0">
-              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/instagram.png" alt="Right" border="0">
-              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/twitter.png" alt="Right" border="0">
-              <img class="Social-Medias" src="https://space-software.s3.eu-central-1.amazonaws.com/website/tiktok.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/website/facebook.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/website/instagram.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/website/twitter.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/website/tiktok.png" alt="Right" border="0">
             </ion-col>
           </ion-row>
 
@@ -232,11 +232,18 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   text-decoration: none;
 }
 
+#Social-Medias{
+  text-align: right;
+  margin-top: 4vh;
+}
+
 .Background{
 background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Logo{
+  width: 104px;
+  height: 36px;
   margin-left: 6vw;
   margin-top: 2.5vh;
 }
@@ -280,7 +287,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   width: 20.33px;
   height: 20.78px;
   size: 50%;
-  margin-right: 6vw;
+  margin-right: 7vw;
 }
 
 .Vue{
@@ -292,13 +299,13 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 .AWS{
   width: 37.78px;
   height: 20.78px;
-  margin-left: 8vw;
+  margin-left: 7vw;
 }
 
 .Ionic{
   width: 22.43px;
   height: 24px;
-  margin-left: 4vw;
+  margin-left: 7vw;
 }
 
 .About-Us{
@@ -368,21 +375,45 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-right: auto;
 }
 
-.grid{
+.Grid{
   height: 94px;
 }
 
 .Footer-Logo{
-  width: 120.9px;
-  height: 59.5px;
+  width: 80px;
+  height: 34px;
   text-align: left;
+  margin-top: 2vh;
+  margin-left: 16px;
+}
+
+.Footer-Text{
+  text-align: center;
   margin-top: 2vh;
 }
 
-.Social-Medias{
-  text-align: right;
-  margin-top: 3vh;
-  size: 30%;
+.Facebook{
+  width: 11.82px;
+  height: 11.8px;
+  margin-left: 4vw;
+}
+
+.Instagram{
+  width: 11.82px;
+  height: 11.8px;
+  margin-left: 4vw;
+}
+
+.Twitter{
+  width: 14.38px;
+  height: 11.8px;
+  margin-left: 4vw;
+}
+
+.Tik-Tok{
+  width: 10.02px;
+  height: 11.8;
+  margin-left: 4vw;
 }
 
 h1{
@@ -424,6 +455,5 @@ hr{
   width:90%;
   text-align:center;
 }
-
 
 </style>
