@@ -153,7 +153,7 @@
          <!-- email icon -->
          <ion-row>
            <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C" class="center">
-             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/website/mail-outline.png" alt="mail-outline" border="0">
+             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/website/mail-icon-3d.png" alt="mail-outline" border="0">
            </a>
          </ion-row>
 
@@ -347,13 +347,12 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-left: auto;
   margin-right: auto;
   width: 380px;
-  height: 139px;
 }
 
 .Meme-Time-Mockup{
   margin-right: auto;
   margin-left: auto;
-  margin-top: -18vh;
+  margin-top: -15vh;
   width: 380px;
   height: 482px;
 }
@@ -369,8 +368,8 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Email-Icon{
-  width: 41px;
-  height: 41px;
+  width: 100px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
 }
