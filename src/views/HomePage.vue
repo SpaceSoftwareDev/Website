@@ -340,13 +340,12 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-left: auto;
   margin-right: auto;
   width: 380px;
-  height: 139px;
 }
 
 .Meme-Time-Mockup{
   margin-right: auto;
   margin-left: auto;
-  margin-top: -18vh;
+  margin-top: -15vh;
   width: 380px;
   height: 482px;
 }
