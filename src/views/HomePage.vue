@@ -234,7 +234,7 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 
 #Social-Medias{
   text-align: right;
-  margin-top: 4vh;
+  margin-top: 4.3vh;
 }
 
 .Background{
@@ -382,13 +382,13 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   width: 80px;
   height: 34px;
   text-align: left;
-  margin-top: 2vh;
+  margin-top: 3vh;
   margin-left: 16px;
 }
 
 .Footer-Text{
   text-align: center;
-  margin-top: 2vh;
+  margin-top: 1.5vh;
 }
 
 .Facebook{
@@ -453,6 +453,12 @@ hr{
   height: 0px;
   width:90%;
   text-align:center;
+}
+
+q{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
 }
 
 </style>
