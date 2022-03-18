@@ -6,13 +6,13 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-              <img class="Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/website/logo-nav-bar.png" alt="Space-Logo" border="0">
+              <img class="Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/media/logo-nav-bar.png" alt="Space-Logo" border="0">
           </ion-col>
           <ion-col>
             <br>
           </ion-col>
           <ion-col>
-            <img class="Hamburger-Menu" src="https://space-software.s3.eu-central-1.amazonaws.com/website/burger-menu.png" alt="Hamburger-Menu" border="0">
+            <img class="Hamburger-Menu" src="https://space-software.s3.eu-central-1.amazonaws.com/media/burger-menu.png" alt="Hamburger-Menu" border="0">
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -32,26 +32,26 @@
             <ion-row>
                 <div class="Technologies">
                     <ion-col>
-                        <img class="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/website/ocms.png" alt="October-CMS" border="0">
+                        <img class="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/website/vue.png" alt="Vue" border="0">
+                        <img class="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/website/aws.png" alt="AWS" border="0">
+                        <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/aws.png" alt="AWS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/website/ionic.png" alt="Ionic" border="0">
+                        <img class="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0">
                     </ion-col>
                 </div>
               </ion-row>
 
             <!-- team picture -->
             <ion-row>
-                <img class="Team" src="https://space-software.s3.eu-central-1.amazonaws.com/website/team.png" alt="Team" border="0">
+                <img class="Team" src="https://space-software.s3.eu-central-1.amazonaws.com/media/team.png" alt="Team" border="0">
             </ion-row>
 
             <!-- about us text -->
@@ -73,7 +73,7 @@
             <!-- about us bottom -->
             <ion-row>
               <ion-col class="ioncol">
-                <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/website/space.png" alt="Space" border="0">
+                <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/media/space.png" alt="Space" border="0">
               </ion-col>
               <ion-col></ion-col>
               <ion-col>
@@ -90,12 +90,12 @@
 
             <!-- memetimeApp header -->
             <ion-row>
-              <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/website/memetimeapp-section.png" alt="Meme-Time-Section" border="0">
+              <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetimeapp-section.png" alt="Meme-Time-Section" border="0">
             </ion-row>
 
             <!-- memetimeapp mockup-->
             <ion-row>
-              <img class="Meme-Time-Mockup" src="https://space-software.s3.eu-central-1.amazonaws.com/website/memetimeapp-screens.png" alt="Screens" border="0">
+              <img class="Meme-Time-Mockup" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetimeapp-screens.png" alt="Screens" border="0">
             </ion-row>
 
             <!-- memetime gradient text -->
@@ -119,7 +119,7 @@
           <!-- projects section bottom -->
           <ion-row>
             <ion-col class="ioncol">
-              <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/website/space.png" alt="Space" border="0">
+              <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/media/space.png" alt="Space" border="0">
             </ion-col>
             <ion-col></ion-col>
             <ion-col>
@@ -131,7 +131,7 @@
         <!-- Contantact Us Section-->
           <!-- contact us globe-->
           <ion-row>
-            <img id="Globe-Img" class="center" src="https://space-software.s3.eu-central-1.amazonaws.com/website/globe.png" alt="Saly-44" border="0">
+            <img id="Globe-Img" class="center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/globe.png" alt="Saly-44" border="0">
           </ion-row>
 
           <!-- contact text -->
@@ -153,14 +153,14 @@
          <!-- email icon -->
          <ion-row>
            <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C" class="center">
-             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/website/mail-icon-3d.png" alt="mail-outline" border="0">
+             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/mail-icon-3d.png" alt="mail-outline" border="0">
            </a>
          </ion-row>
 
           <!-- contact us bottom -->
           <ion-row>
             <ion-col class="ioncol">
-              <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/website/space.png" alt="Space" border="0">
+              <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/media/space.png" alt="Space" border="0">
             </ion-col>
             <ion-col></ion-col>
             <ion-col>
@@ -175,16 +175,16 @@
           <!-- space logo 3 -->
           <ion-row>
             <ion-col>
-              <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/website/footer-logo.png" alt="Footer-Logo" border="0">
+              <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/media/footer-logo.png" alt="Footer-Logo" border="0">
             </ion-col>
             <ion-col class="Footer-Text">
               <q>Stop thinking about what you cant do and focus on reality</q>
             </ion-col>
             <ion-col>
-              <img id="Social-Medias" class="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/website/facebook.png" alt="Right" border="0">
-              <img id="Social-Medias" class="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/website/instagram.png" alt="Right" border="0">
-              <img id="Social-Medias" class="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/website/twitter.png" alt="Right" border="0">
-              <img id="Social-Medias" class="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/website/tiktok.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0">
+              <img id="Social-Medias" class="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0">
             </ion-col>
           </ion-row>
 
