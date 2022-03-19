@@ -90,7 +90,8 @@
 
             <!-- memetimeApp header -->
             <ion-row>
-              <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/website/memetimeapp-section.png" alt="Meme-Time-Section" border="0">
+              <h6 style="margin-left: auto">MemeTime!</h6><h5 style="margin-left: 0vw">App</h5>
+              <img class="Meme-Time-App" src="https://i.ibb.co/z68RCbj/Meme-Time-App-Icon.png" alt="Meme-Time-Logo" border="0">
             </ion-row>
 
             <!-- memetimeapp mockup-->
@@ -237,6 +238,9 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   margin-top: 4.3vh;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+
 .Background{
 background-image: linear-gradient(white, #CCE2FF 160%);
 }
@@ -344,9 +348,11 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Meme-Time-App{
+  text-align: right;
   margin-left: auto;
-  margin-right: auto;
-  width: 380px;
+  margin-right: 6vw;
+  width: 78.13px;
+  height: 78.14px;
 }
 
 .Meme-Time-Mockup{
@@ -422,7 +428,7 @@ h1{
 }
 
 h2{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Roboto";
   font-size: 14px;
   font-weight: 500;
   margin-top: -1vh;
@@ -446,6 +452,10 @@ h5{
   font-weight: 400px;
 }
 
+h6{
+  font-family: "Sarina", cursive;
+}
+
 hr{
   /* margin-top: -2vh; */
   margin-top: -0.5vh;
@@ -456,9 +466,10 @@ hr{
 }
 
 q{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Roboto";
   font-weight: 800;
   font-size: 10px;
+  padding-left: 2vw;
 }
 
 </style>
