@@ -181,10 +181,10 @@
               <q>Stop thinking about what you cant do and focus on reality</q>
             </ion-col>
             <ion-col>
-              <img id="Social-Medias" class="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0">
-              <img id="Social-Medias" class="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0">
-              <img id="Social-Medias" class="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0">
-              <img id="Social-Medias" class="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0">
+              <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img id="Social-Medias" class="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
+              <a href="https://www.instagram.com/spacesoftwarestudio/"><img id="Social-Medias" class="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
+              <a href="https://twitter.com/spacesoftstudio"><img id="Social-Medias" class="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
+              <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img id="Social-Medias" class="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
             </ion-col>
           </ion-row>
 
