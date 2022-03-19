@@ -32,7 +32,7 @@
             <ion-row>
                 <div class="Technologies">
                     <ion-col>
-                        <img class="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0">
+                        <img class="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/octobercms-2.png" alt="October-CMS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
@@ -40,11 +40,11 @@
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/aws.png" alt="AWS" border="0">
+                        <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/AWS.png" alt="AWS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0">
+                        <img class="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic-1.png" alt="Ionic" border="0">
                     </ion-col>
                 </div>
               </ion-row>
@@ -90,12 +90,8 @@
 
             <!-- memetimeApp header -->
             <ion-row>
-<<<<<<< HEAD
               <h6 style="margin-left: auto">MemeTime!</h6><h5 style="margin-left: 0vw">App</h5>
-              <img class="Meme-Time-App" src="https://i.ibb.co/z68RCbj/Meme-Time-App-Icon.png" alt="Meme-Time-Logo" border="0">
-=======
-              <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetimeapp-section.png" alt="Meme-Time-Section" border="0">
->>>>>>> 5325ceb49892c80a3156e36125bc7e064fab5326
+              <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetime-app-icon.png" alt="Meme-Time-Logo" border="0">
             </ion-row>
 
             <!-- memetimeapp mockup-->
@@ -292,7 +288,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .OCMS{
-  width: 20.33px;
+  width: 18px;
   height: 20.78px;
   size: 50%;
   margin-right: 7vw;
@@ -306,7 +302,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 
 .AWS{
   width: 37.78px;
-  height: 20.78px;
+  height: 21.78px;
   margin-left: 7vw;
 }
 
