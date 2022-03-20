@@ -32,19 +32,19 @@
             <ion-row>
                 <div class="Technologies">
                     <ion-col>
-                        <img class="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/octobercms-2.png" alt="October-CMS" border="0">
+                        <img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/octobercms-2.png" alt="October-CMS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0">
+                        <img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/AWS.png" alt="AWS" border="0">
+                        <img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/AWS.png" alt="AWS" border="0">
                     </ion-col>
                     <ion-col></ion-col>
                     <ion-col>
-                        <img class="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic-1.png" alt="Ionic" border="0">
+                        <img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic-1.png" alt="Ionic" border="0">
                     </ion-col>
                 </div>
               </ion-row>
@@ -85,12 +85,12 @@
           <!-- Projects Section -->
             <!-- projects -->
             <ion-row>
-              <h1 class="center" id="Projects">Projects</h1>
+              <h1 class="Center" id="Projects">Projects</h1>
             </ion-row>
 
             <!-- memetimeApp header -->
             <ion-row>
-              <h6 style="margin-left: auto">MemeTime!</h6><h5 style="margin-left: 0vw">App</h5>
+              <h6 class = "Meme-Time-Logo">MemeTime!</h6><h5 class="Meme-Time-Logo-2">App</h5>
               <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetime-app-icon.png" alt="Meme-Time-Logo" border="0">
             </ion-row>
 
@@ -132,19 +132,19 @@
         <!-- Contantact Us Section-->
           <!-- contact us globe-->
           <ion-row>
-            <img id="Globe-Img" class="center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/globe.png" alt="Saly-44" border="0">
+            <img id="Globe-Img" class="Center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/globe.png" alt="Saly-44" border="0">
           </ion-row>
 
           <!-- contact text -->
           <ion-row>
-            <div id="Contact-Text" class="center">
+            <div id="Contact-Text" class="Center">
                <h3>Contact</h3>
             </div>
           </ion-row>
 
          <!-- space email -->
          <ion-row>
-           <div id="Space-Mail" class="center">
+           <div id="Space-Mail" class="Center">
              <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C">
                <h5 id="Space-Mail-Text">business@space-software.com</h5>
              </a>
@@ -153,7 +153,7 @@
 
          <!-- email icon -->
          <ion-row>
-           <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C" class="center">
+           <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C" class="Center">
              <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/mail-icon-3d.png" alt="mail-outline" border="0">
            </a>
          </ion-row>
@@ -176,16 +176,16 @@
           <!-- space logo 3 -->
           <ion-row>
             <ion-col>
-              <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/media/footer-logo.png" alt="Footer-Logo" border="0">
+              <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/media/Logo%20Space3.png" alt="Footer-Logo" border="0">
             </ion-col>
             <ion-col class="Footer-Text">
               <q>Stop thinking about what you cant do and focus on reality</q>
             </ion-col>
-            <ion-col>
-              <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img id="Social-Medias" class="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
-              <a href="https://www.instagram.com/spacesoftwarestudio/"><img id="Social-Medias" class="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
-              <a href="https://twitter.com/spacesoftstudio"><img id="Social-Medias" class="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
-              <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img id="Social-Medias" class="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
+            <ion-col class="Social-Medias">
+              <a href="https://sk-sk.facebook.com/"><img  id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
+              <a href="https://www.instagram.com/"><img id="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
+              <a href="https://twitter.com/i/flow/login"><img  id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
+              <a href="https://www.tiktok.com/"><img  id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
             </ion-col>
           </ion-row>
 
@@ -200,6 +200,31 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 </script>
 
 <style lang="scss" scoped>
+
+#OCMS{
+  width: 18px;
+  height: 20.78px;
+  size: 50%;
+  margin-right: 7vw;
+}
+
+#Vue{
+  width: 25.89px;
+  height: 20.78px;
+  margin-left: 1vw;
+}
+
+#AWS{
+  width: 37.78px;
+  height: 21.78px;
+  margin-left: 7vw;
+}
+
+#Ionic{
+  width: 22.43px;
+  height: 24px;
+  margin-left: 7vw;
+}
 
 #Text{
   margin-top: 1vh;
@@ -233,9 +258,28 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   text-decoration: none;
 }
 
-#Social-Medias{
-  text-align: right;
-  margin-top: 4.3vh;
+#Facebook{
+  width: 11.82px;
+  height: 11.8px;
+  margin-left: 1vw;
+}
+
+#Instagram{
+  width: 11.82px;
+  height: 11.8px;
+  margin-left: 4vw;
+}
+
+#Twitter{
+  width: 14.38px;
+  height: 11.8px;
+  margin-left: 4vw;
+}
+
+#Tik-Tok{
+  width: 10.02px;
+  height: 11.8;
+  margin-left: 4vw;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -287,31 +331,6 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   height: 228px;
 }
 
-.OCMS{
-  width: 18px;
-  height: 20.78px;
-  size: 50%;
-  margin-right: 7vw;
-}
-
-.Vue{
-  width: 25.89px;
-  height: 20.78px;
-  margin-left: 1vw;
-}
-
-.AWS{
-  width: 37.78px;
-  height: 21.78px;
-  margin-left: 7vw;
-}
-
-.Ionic{
-  width: 22.43px;
-  height: 24px;
-  margin-left: 7vw;
-}
-
 .About-Us{
   top: 0%;
   /* margin-left: 5vw; */
@@ -341,10 +360,20 @@ background-image: linear-gradient(white, #CCE2FF 160%);
     padding-right: 2.5vw;
 }
 
-.center{
+.Center{
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+}
+
+.Meme-Time-Logo{
+  margin-left: auto;
+  color: #00B232;
+  text-shadow: 0 0 1px black, 0 0 1px black;
+}
+
+.Meme-Time-Logo-2{
+  margin-left: 0vw;
 }
 
 .Meme-Time-App{
@@ -353,6 +382,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-right: 6vw;
   width: 78.13px;
   height: 78.14px;
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
 }
 
 .Meme-Time-Mockup{
@@ -397,28 +427,9 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-top: 1.5vh;
 }
 
-.Facebook{
-  width: 11.82px;
-  height: 11.8px;
-  margin-left: 4vw;
-}
-
-.Instagram{
-  width: 11.82px;
-  height: 11.8px;
-  margin-left: 4vw;
-}
-
-.Twitter{
-  width: 14.38px;
-  height: 11.8px;
-  margin-left: 4vw;
-}
-
-.Tik-Tok{
-  width: 10.02px;
-  height: 11.8;
-  margin-left: 4vw;
+.Social-Medias{
+  text-align: right;
+  margin-top: 4.3vh;
 }
 
 h1{
@@ -454,6 +465,9 @@ h5{
 
 h6{
   font-family: "Sarina", cursive;
+  font-style: normal;
+	font-weight: normal;
+  font-size: 24px;
 }
 
 hr{
