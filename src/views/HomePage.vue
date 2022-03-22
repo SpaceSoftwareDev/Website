@@ -77,7 +77,7 @@
               </ion-col>
               <ion-col></ion-col>
               <ion-col>
-                <h4 class="Section-Text"><b>ABOUT US</b></h4>
+                <h5 class="Section-Text"><b>ABOUT US</b></h5>
               </ion-col>
             </ion-row>
             <hr>
@@ -90,7 +90,8 @@
 
             <!-- memetimeApp header -->
             <ion-row>
-              <h6 class = "Meme-Time-Logo">MemeTime!</h6><h5 class="Meme-Time-Logo-2">App</h5>
+              <h4 class = "Meme-Time-Logo">MemeTime!</h4>
+              <h5 class="Meme-Time-Logo-2">App</h5>
               <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetime-app-icon.png" alt="Meme-Time-Logo" border="0">
             </ion-row>
 
@@ -119,12 +120,12 @@
 
           <!-- projects section bottom -->
           <ion-row>
-            <ion-col class="ioncol">
+            <ion-col>
               <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/media/space.png" alt="Space" border="0">
             </ion-col>
             <ion-col></ion-col>
             <ion-col>
-              <h4 class="Section-Text"><b>PROJECTS</b></h4>
+              <h5 class="Section-Text"><b>PROJECTS</b></h5>
             </ion-col>
           </ion-row>
           <hr>
@@ -160,12 +161,12 @@
 
           <!-- contact us bottom -->
           <ion-row>
-            <ion-col class="ioncol">
+            <ion-col>
               <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/media/space.png" alt="Space" border="0">
             </ion-col>
             <ion-col></ion-col>
             <ion-col>
-              <h4 class="Section-Text"><b>CONTACT</b></h4>
+              <h5 class="Section-Text"><b>CONTACT</b></h5>
             </ion-col>
           </ion-row>
           <hr>
@@ -179,7 +180,9 @@
               <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/media/Logo%20Space3.png" alt="Footer-Logo" border="0">
             </ion-col>
             <ion-col class="Footer-Text">
-              <q>Stop thinking about what you cant do and focus on reality</q>
+                 <h6>"Stop thinking about</h6>
+                 <h6>what you cant do</h6> 
+                 <h6>and focus on reality."</h6>
             </ion-col>
             <ion-col class="Social-Medias">
               <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img  id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
@@ -256,6 +259,8 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 #Space-Mail-Text{
   color: black;
   text-decoration: none;
+  font-size: 19px;
+  font-weight: 400px;
 }
 
 #Facebook{
@@ -333,7 +338,6 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 
 .About-Us{
   top: 0%;
-  /* margin-left: 5vw; */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -358,6 +362,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
     margin-top: 2.4vh;
     text-align: right;
     padding-right: 2.5vw;
+    font-size: 16px;
 }
 
 .Center{
@@ -419,17 +424,19 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   height: 34px;
   text-align: left;
   margin-top: 3vh;
-  margin-left: 16px;
+  margin-left: 9px;
+  margin-bottom: auto;
 }
 
 .Footer-Text{
   text-align: center;
-  margin-top: 1.5vh;
+  margin-top: 2vh;
+  padding-left: 3vw;
 }
 
 .Social-Medias{
   text-align: right;
-  margin-top: 4.3vh;
+  margin-top: 3vh;
 }
 
 h1{
@@ -455,19 +462,17 @@ h3{
 }
 
 h4{
-    font-size: 16px;
-}
-
-h5{
-  font-size: 19px;
-  font-weight: 400px;
-}
-
-h6{
   font-family: "Sarina", cursive;
   font-style: normal;
 	font-weight: normal;
   font-size: 24px;
+}
+
+h6{
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 10px;
+  margin: 0vh;
 }
 
 hr{
@@ -477,13 +482,6 @@ hr{
   height: 0px;
   width:90%;
   text-align:center;
-}
-
-q{
-  font-family: "Roboto";
-  font-weight: 800;
-  font-size: 10px;
-  padding-left: 2vw;
 }
 
 </style>
