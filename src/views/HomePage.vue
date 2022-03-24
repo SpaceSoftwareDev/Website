@@ -264,26 +264,34 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 }
 
 #Facebook{
-  width: 11.82px;
-  height: 11.8px;
-  margin-left: 1vw;
+  // width: 11.82px;
+  // height: 11.8px;
+  width: 18px;
+  height: 17px;
+  margin-left: -10vw;
 }
 
 #Instagram{
-  width: 11.82px;
-  height: 11.8px;
+  // width: 11.82px;
+  // height: 11.8px;
+  width: 18px;
+  height: 17px;
   margin-left: 4vw;
 }
 
 #Twitter{
-  width: 14.38px;
-  height: 11.8px;
+  // width: 14.38px;
+  // height: 11.8px;
+  width: 18px;
+  height: 17px;
   margin-left: 4vw;
 }
 
 #Tik-Tok{
-  width: 10.02px;
-  height: 11.8;
+  // width: 10.02px;
+  // height: 11.8;
+  width: 18px;
+  height: 17px;
   margin-left: 4vw;
 }
 
@@ -420,10 +428,10 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Footer-Logo{
-  width: 80px;
-  height: 34px;
+  width: 90px;
+  height: 40px;
   text-align: left;
-  margin-top: 3vh;
+  margin-top: 2.2vh;
   margin-left: 9px;
   margin-bottom: auto;
 }
@@ -431,12 +439,12 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 .Footer-Text{
   text-align: center;
   margin-top: 2vh;
-  padding-left: 3vw;
+  margin-right: 3.3vw;
 }
 
 .Social-Medias{
   text-align: right;
-  margin-top: 3vh;
+  margin-top: 3.4vh;
 }
 
 h1{
@@ -469,10 +477,10 @@ h4{
 }
 
 h6{
-  font-family: "Roboto";
+  font-family: "Helvetica";
   font-weight: 800;
   font-size: 10px;
-  margin: 0vh;
+  margin: 0.2vh;
 }
 
 hr{
