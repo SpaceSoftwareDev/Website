@@ -90,7 +90,9 @@
 
             <!-- memetimeApp header -->
             <ion-row>
-              <h4 class = "Meme-Time-Logo">MemeTime!</h4>
+              <h5 class="Meme-Time-Logo" id="M">M</h5>
+              <h5 class="Meme-Time-Logo-Text">emeTime</h5>
+              <h5 class="Meme-Time-Logo">!</h5>
               <h5 class="Meme-Time-Logo-2">App</h5>
               <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetime-app-icon.png" alt="Meme-Time-Logo" border="0">
             </ion-row>
@@ -242,6 +244,10 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   margin-top: -6vh;
 }
 
+#M{
+    margin-left: auto;
+}
+
 #Globe-Img{
   width: 202px;
   height: 171.22px;
@@ -380,19 +386,39 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Meme-Time-Logo{
-  margin-left: auto;
   color: #00B232;
+  font-family: "Sarina", cursive;
+  font-style: normal;
+	font-weight: 400;
+  font-size: 24px;
   text-shadow: 0 0 1px black, 0 0 1px black;
+  margin-top: 3vh;
+}
+
+.Meme-Time-Logo-Text{
+  margin-left: 0px;
+  color: #00B232;
+  font-family: "Roboto";
+  font-style: normal;
+	font-weight: 800;
+  text-shadow: 0 0 1px black, 0 0 1px black;
+  font-size: 24px;
+  margin-top: 3vh;
 }
 
 .Meme-Time-Logo-2{
   margin-left: 0vw;
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 3vh;
 }
 
 .Meme-Time-App{
   text-align: right;
-  margin-left: auto;
-  margin-right: 6vw;
+  margin-right: 8vw;
+  margin-left: 2vw;
+  margin-bottom: 5vw;
   width: 78.13px;
   height: 78.14px;
   text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
@@ -467,13 +493,6 @@ h3{
   font-size: 24px;
   font-weight: 800;
   line-height: 30px;
-}
-
-h4{
-  font-family: "Sarina", cursive;
-  font-style: normal;
-	font-weight: normal;
-  font-size: 24px;
 }
 
 h6{
