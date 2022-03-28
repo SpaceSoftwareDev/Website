@@ -72,7 +72,7 @@
 
             <!-- about us bottom -->
             <ion-row>
-              <ion-col class="ioncol">
+              <ion-col>
                 <img class="Space" src="https://space-software.s3.eu-central-1.amazonaws.com/media/space.png" alt="Space" border="0">
               </ion-col>
               <ion-col></ion-col>
@@ -89,7 +89,7 @@
             </ion-row>
 
             <!-- memetimeApp header -->
-            <ion-row>
+            <ion-row class="Center">
               <h5 class="Meme-Time-Logo" id="M">M</h5>
               <h5 class="Meme-Time-Logo-Text">emeTime</h5>
               <h5 class="Meme-Time-Logo">!</h5>
@@ -111,7 +111,7 @@
 
             <!-- memetimeapp bottom text -->
             <ion-row>
-              <div id="MemTime-Text" class="Bottom-Text" style="padding-left: 5vw;">
+              <div class="Bottom-Text" id= "MemeTime-Bottom-Text" style="padding-left: 5vw">
                 <h2>MemeTime is our first project its a new application for android devices.</h2>
                   <h2>Memetime points out that this is never the bad time to improve your day.
                     The focus of our platform is simple and obvious - just memes and other
@@ -235,17 +235,21 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   margin-top: 1vh;
 }
 
+#MemeTime-Bottom-Text{
+  margin-top: -6vh;
+}
+
 #Projects{
   font-weight: 100px;
   font-size: 24px;
 }
 
-#MemTime-Text{
-  margin-top: -6vh;
-}
-
 #M{
     margin-left: auto;
+}
+
+#MemeTime-Bottom-Text{
+  margin-top: -6vh;
 }
 
 #Globe-Img{
@@ -415,7 +419,6 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Meme-Time-App{
-  text-align: right;
   margin-right: 8vw;
   margin-left: 2vw;
   margin-bottom: 5vw;
@@ -430,6 +433,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-top: -15vh;
   width: 380px;
   height: 482px;
+  margin-bottom: 2vh;
 }
 
 .Meme-Time-Gradient{
@@ -489,7 +493,7 @@ h2{
 
 h3{
   color: #2F2F2F;
-  font-family: Arial, Helvetica;
+  font-family: Helvetica;
   font-size: 24px;
   font-weight: 800;
   line-height: 30px;
