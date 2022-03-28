@@ -18,12 +18,13 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
-    "@vitejs/plugin-vue": "^2.2.4",
+    "@vitejs/plugin-vue": "beta",
     "@vue/compiler-sfc": "^3.2.31",
     "eslint": "^8.11.0",
     "eslint-plugin-vue": "^8.5.0",
     "sass": "^1.49.9",
     "typescript": "^4.5.5",
+    "vite": "beta",
     "vue-tsc": "^0.32.1"
   },
   "description": "An Ionic project"
