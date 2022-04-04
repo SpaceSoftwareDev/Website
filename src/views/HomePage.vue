@@ -176,24 +176,24 @@
 
         <!-- footer -->
         <ion-grid class="Grid">
-          <!-- space logo 3 -->
-          <ion-row>
+          <!-- social medias -->
+          <ion-row class="Social-Medias">
             <ion-col>
-              <img class="Footer-Logo" src="https://space-software.s3.eu-central-1.amazonaws.com/media/Logo%20Space3.png" alt="Footer-Logo" border="0">
+               <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img  id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
             </ion-col>
-            <ion-col class="Footer-Text">
-                 <h6>"Stop thinking about</h6>
-                 <h6>what you cant do</h6> 
-                 <h6>and focus on reality."</h6>
+            <ion-col></ion-col>
+            <ion-col>
+               <a href="https://www.instagram.com/spacesoftwarestudio/"><img id="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
             </ion-col>
-            <ion-col class="Social-Medias">
-              <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img  id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
-              <a href="https://www.instagram.com/spacesoftwarestudio/"><img id="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
-              <a href="https://twitter.com/spacesoftstudio"><img  id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
-              <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img  id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
+            <ion-col></ion-col>
+            <ion-col>
+               <a href="https://twitter.com/spacesoftstudio"><img  id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+               <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img  id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
             </ion-col>
           </ion-row>
-
         </ion-grid>
 
     </ion-content>
@@ -278,7 +278,7 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   // height: 11.8px;
   width: 18px;
   height: 17px;
-  margin-left: -10vw;
+  margin-left: 10vw;
 }
 
 #Instagram{
@@ -286,7 +286,7 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   // height: 11.8px;
   width: 18px;
   height: 17px;
-  margin-left: 4vw;
+  margin-left: 10vw;
 }
 
 #Twitter{
@@ -457,24 +457,10 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   height: 94px;
 }
 
-.Footer-Logo{
-  width: 90px;
-  height: 40px;
-  text-align: left;
-  margin-top: 2.2vh;
-  margin-left: 9px;
-  margin-bottom: auto;
-}
-
-.Footer-Text{
-  text-align: center;
-  margin-top: 2vh;
-  margin-right: 3.3vw;
-}
-
 .Social-Medias{
-  text-align: right;
-  margin-top: 3.4vh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1vh;
 }
 
 h1{
