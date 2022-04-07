@@ -318,10 +318,6 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   margin-top: 0vh;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
 .Background{
 background-image: linear-gradient(white, #CCE2FF 160%);
 }
@@ -377,11 +373,15 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   font-style: normal;
 }
 
-.Bottom-Text{
-  margin-top: 2vh;
-  margin-right: auto;
-  color: rgba(0, 0, 0, 0.4);
-  padding-right: 10vw;
+.Bottom-Text {
+	margin-top: 2vh;
+	margin-right: auto;
+	color: rgba(0, 0, 0, 0.4);
+	padding-right: 10vw;
+	text-align: center;
+	h2 {
+		text-align: center;
+	}
 }
 
 .Space{
@@ -452,13 +452,17 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Meme-Time-Gradient{
-  background: -webkit-linear-gradient(420deg, #00B232 45%, #048383 85%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-top: -15vh;
-  margin-left: 5vw;
-  font-style: normal;
+	background: -webkit-linear-gradient(420deg, #00B232 45%, #048383 85%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin-top: -15vh;
+	// margin-left: 5vw;
+	width: 100vw;
+	font-style: normal;
+	h3 {
+		text-align: center;
+	}
 }
 
 .Email-Icon{
