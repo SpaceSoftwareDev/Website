@@ -64,9 +64,9 @@
             <!-- bottom text -->
             <ion-row>
               <div class="Bottom-Text" style="padding-left: 5vw;">
-                <h2>We are new sofware studio founded by 3 highschool students from Slovakia.</h2>
-                  <h2>Currently we are studying on high school SPŠE Hálova 16.</h2>
-                   <h2>And we are part of really cool study plan named OPENLAB. </h2>
+                <h2>We are little sofware studio founded in 2021 by 3 highschool students from Slovakia.</h2>
+                <h2>Currently we are studying on high school SPŠE Hálova 16, Bratislava.
+                  And we are part of really cool study program named OpenLab.</h2>
               </div>
             </ion-row>
 
@@ -105,18 +105,17 @@
             <!-- memetime gradient text -->
             <ion-row>
               <div class="Meme-Time-Gradient">
-                <h3>MemeTime</h3>
+                <h3>MemeTime!</h3>
               </div>
             </ion-row>
 
             <!-- memetimeapp bottom text -->
             <ion-row>
               <div class="Bottom-Text" id= "MemeTime-Bottom-Text" style="padding-left: 5vw">
-                <h2>MemeTime is our first project its a new application for android devices.</h2>
-                  <h2>Memetime points out that this is never the bad time to improve your day.
-                    The focus of our platform is simple and obvious - just memes and other
-                    fun content without any limits or censorship. Purpose of MemeTime!
-                    is to make your day better with daily memes of your taste.</h2>
+                <h2>MemeTime! is our first project and it’s a new application for mobile devices.</h2>
+                <h2>MemeTime! points out that this is never the bad time to improve your day.
+                  The focus of our platform is simple and obvious - just memes and other fun content without any limits or censorship.</h2>
+                <h2>Purpose of MemeTime! is to make your day better with daily memes of your taste.</h2>
               </div>
             </ion-row>
 
@@ -194,8 +193,15 @@
                <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img  id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
             </ion-col>
           </ion-row>
+          <!-- space row -->
+          <ion-row>
+            <h5 class="Center" id="Space-Footer">space.</h5>
+          </ion-row>
+          <!-- all rights reserved -->
+          <ion-row>
+            <h5 class="Center" id="All-Rights-Reserved">Ⓒ 2022 All rights reserved </h5>
+          </ion-row>
         </ion-grid>
-
     </ion-content>
   </ion-page>
 </template>
@@ -271,42 +277,50 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
   text-decoration: none;
   font-size: 19px;
   font-weight: 400px;
+  font-family: "Space Mono", monospace;
 }
 
 #Facebook{
-  // width: 11.82px;
-  // height: 11.8px;
   width: 18px;
   height: 17px;
-  margin-left: 10vw;
+  margin-left: 15vw;
 }
 
 #Instagram{
-  // width: 11.82px;
-  // height: 11.8px;
   width: 18px;
   height: 17px;
-  margin-left: 10vw;
+  margin-left: 5vw;
 }
 
 #Twitter{
-  // width: 14.38px;
-  // height: 11.8px;
   width: 18px;
   height: 17px;
-  margin-left: 4vw;
+  margin-left: 1vw;
 }
 
 #Tik-Tok{
-  // width: 10.02px;
-  // height: 11.8;
   width: 18px;
   height: 17px;
-  margin-left: 4vw;
+  margin-left: -4vw;
+}
+
+#Space-Footer{
+  font-family: "Space Mono", monospace;
+  font-weight: 800;
+  font-size: 17px;
+  margin-top: 1vh;
+}
+
+#All-Rights-Reserved{
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 400px;
+  margin-top: 0vh;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 .Background{
 background-image: linear-gradient(white, #CCE2FF 160%);
@@ -315,15 +329,16 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 .Logo{
   width: 104px;
   height: 36px;
-  margin-left: 6vw;
+  margin-left: 4vw;
   margin-top: 2.5vh;
 }
 
 .Hamburger-Menu{
+  float: right;
   width: 31px;
   height: 20px;
   margin-top: 3.9vh;
-  margin-left: 14vw;
+  margin-right: 4vw;
 }
 
 .Software-Text{
@@ -413,7 +428,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 .Meme-Time-Logo-2{
   margin-left: 0vw;
   font-family: "Roboto";
-  font-weight: 800;
+  font-weight: 900;
   font-size: 24px;
   margin-top: 3vh;
 }
@@ -447,8 +462,8 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Email-Icon{
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   margin-left: auto;
   margin-right: auto;
 }
