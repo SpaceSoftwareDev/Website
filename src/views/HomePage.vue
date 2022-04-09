@@ -31,10 +31,10 @@
             <!-- technologie logos   -->
             <ion-row>
                 <div class="Technologies">
-					<img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0">
-					<img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0">
-					<img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/AWS.png" alt="AWS" border="0">
-					<img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0">
+					<a href="https://octobercms.com/" target="_blank"><img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0"></a>
+					<a href="https://vuejs.org/" target="_blank"><img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0"></a>
+					<a href="https://aws.amazon.com/" target="_blank"><img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/aws.png" alt="AWS" border="0"></a>
+					<a href="https://ionicframework.com/" target="_blank"><img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0"></a>
                 </div>
               </ion-row>
 
@@ -90,7 +90,7 @@
             <!-- memetime gradient text -->
             <ion-row>
               <div class="Meme-Time-Gradient">
-                <h3>MemeTime!</h3>
+				  <a href="https://memetimeapp.space-software.com/" target="_blank"><h3>MemeTime!</h3></a>
               </div>
             </ion-row>
 
@@ -162,10 +162,10 @@
         <ion-grid>
           <!-- social medias -->
           <ion-row class="Social-Medias">
-               <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
-               <a href="https://www.instagram.com/spacesoftwarestudio/"><img id="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
-               <a href="https://twitter.com/spacesoftstudio"><img id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
-               <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
+               <a href="https://www.facebook.com/space-Software-Studio-108894994970173" target="_blank"><img id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
+               <a href="https://www.instagram.com/spacesoftwarestudio/" target="_blank"><img id="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
+               <a href="https://twitter.com/spacesoftstudio" target="_blank"><img id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
+               <a href="https://www.tiktok.com/@spacesoftware?lang=en" target="_blank"><img id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
           </ion-row>
           <!-- space row -->
           <ion-row>
