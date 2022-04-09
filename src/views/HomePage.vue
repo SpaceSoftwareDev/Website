@@ -31,21 +31,10 @@
             <!-- technologie logos   -->
             <ion-row>
                 <div class="Technologies">
-                    <ion-col>
-                        <img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/octobercms-2.png" alt="October-CMS" border="0">
-                    </ion-col>
-                    <ion-col></ion-col>
-                    <ion-col>
-                        <img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0">
-                    </ion-col>
-                    <ion-col></ion-col>
-                    <ion-col>
-                        <img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/AWS.png" alt="AWS" border="0">
-                    </ion-col>
-                    <ion-col></ion-col>
-                    <ion-col>
-                        <img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic-1.png" alt="Ionic" border="0">
-                    </ion-col>
+					<img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0">
+					<img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0">
+					<img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/AWS.png" alt="AWS" border="0">
+					<img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0">
                 </div>
               </ion-row>
 
@@ -57,7 +46,7 @@
             <!-- about us text -->
             <ion-row>
               <div class="About-Us">
-                <h3>About Us</h3>
+                <h3>About us</h3>
               </div>
             </ion-row>
 
@@ -90,11 +79,7 @@
 
             <!-- memetimeApp header -->
             <ion-row class="Center">
-              <h5 class="Meme-Time-Logo" id="M">M</h5>
-              <h5 class="Meme-Time-Logo-Text">emeTime</h5>
-              <h5 class="Meme-Time-Logo">!</h5>
-              <h5 class="Meme-Time-Logo-2">App</h5>
-              <img class="Meme-Time-App" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetime-app-icon.png" alt="Meme-Time-Logo" border="0">
+              <img class="Meme-Time-Header" src="https://space-software.s3.eu-central-1.amazonaws.com/media/memetime-header.png" alt="Meme-Time-Header" border="0">
             </ion-row>
 
             <!-- memetimeapp mockup-->
@@ -156,7 +141,7 @@
          <!-- email icon -->
          <ion-row>
            <a href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C" class="Center">
-             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/mail-icon-3d.png" alt="mail-outline" border="0">
+             <img class="Email-Icon center" src="https://space-software.s3.eu-central-1.amazonaws.com/media/mail-outline.png" alt="mail-outline" border="0">
            </a>
          </ion-row>
 
@@ -174,24 +159,13 @@
         </ion-grid>
 
         <!-- footer -->
-        <ion-grid class="Grid">
+        <ion-grid>
           <!-- social medias -->
           <ion-row class="Social-Medias">
-            <ion-col>
-               <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img  id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
-            </ion-col>
-            <ion-col></ion-col>
-            <ion-col>
+               <a href="https://www.facebook.com/space-Software-Studio-108894994970173"><img id="Facebook" src="https://space-software.s3.eu-central-1.amazonaws.com/media/facebook.png" alt="Right" border="0"></a>
                <a href="https://www.instagram.com/spacesoftwarestudio/"><img id="Instagram" src="https://space-software.s3.eu-central-1.amazonaws.com/media/instagram.png" alt="Right" border="0"></a>
-            </ion-col>
-            <ion-col></ion-col>
-            <ion-col>
-               <a href="https://twitter.com/spacesoftstudio"><img  id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
-            </ion-col>
-            <ion-col></ion-col>
-            <ion-col>
-               <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img  id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
-            </ion-col>
+               <a href="https://twitter.com/spacesoftstudio"><img id="Twitter" src="https://space-software.s3.eu-central-1.amazonaws.com/media/twitter.png" alt="Right" border="0"></a>
+               <a href="https://www.tiktok.com/@spacesoftware?lang=en"><img id="Tik-Tok" src="https://space-software.s3.eu-central-1.amazonaws.com/media/tiktok.png" alt="Right" border="0"></a>
           </ion-row>
           <!-- space row -->
           <ion-row>
@@ -199,7 +173,7 @@
           </ion-row>
           <!-- all rights reserved -->
           <ion-row>
-            <h5 class="Center" id="All-Rights-Reserved">Ⓒ 2022 All rights reserved </h5>
+            <h5 class="Center" id="All-Rights-Reserved">Ⓒ {{ new Date().getFullYear() }} All rights reserved </h5>
           </ion-row>
         </ion-grid>
     </ion-content>
@@ -212,29 +186,33 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 
 <style lang="scss" scoped>
 
+html, body, div, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 #OCMS{
   width: 18px;
   height: 20.78px;
-  size: 50%;
-  margin-right: 7vw;
 }
 
 #Vue{
   width: 25.89px;
   height: 20.78px;
-  margin-left: 1vw;
 }
 
 #AWS{
   width: 37.78px;
   height: 21.78px;
-  margin-left: 7vw;
 }
 
 #Ionic{
   width: 22.43px;
   height: 24px;
-  margin-left: 7vw;
 }
 
 #Text{
@@ -261,7 +239,7 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 #Globe-Img{
   width: 202px;
   height: 171.22px;
-  margin-top: 5vh;
+  margin-top: 4vh;
 }
 
 #Contact-Text{
@@ -283,25 +261,21 @@ import { IonContent, IonPage, IonGrid, IonRow, IonCol, } from '@ionic/vue';
 #Facebook{
   width: 18px;
   height: 17px;
-  margin-left: 15vw;
 }
 
 #Instagram{
   width: 18px;
   height: 17px;
-  margin-left: 5vw;
 }
 
 #Twitter{
   width: 18px;
   height: 17px;
-  margin-left: 1vw;
 }
 
 #Tik-Tok{
   width: 18px;
   height: 17px;
-  margin-left: -4vw;
 }
 
 #Space-Footer{
@@ -345,6 +319,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 .Founded-Text{
   margin-top: 0vh;
 }
+
 .Gradient-Text{
   margin-top: 0vh;
   background: -webkit-linear-gradient(360deg, #00D1FF 40%, #0209B5 85%);
@@ -352,11 +327,16 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .Technologies{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2vh;
+	display: flex;
+	justify-content: space-around;
+	width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+  	margin-top: 2vh;
 }
+
 .Team{
   margin-left: auto;
   margin-right: auto;
@@ -390,6 +370,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-left: 4vw;
   margin-top: 3vh;
 }
+
 .Section-Text{
     color: rgba(204, 226, 255, 1);
     margin-top: 2.4vh;
@@ -404,42 +385,12 @@ background-image: linear-gradient(white, #CCE2FF 160%);
   margin-left: auto;
 }
 
-.Meme-Time-Logo{
-  color: #00B232;
-  font-family: "Sarina", cursive;
-  font-style: normal;
-	font-weight: 400;
-  font-size: 24px;
-  text-shadow: 0 0 1px black, 0 0 1px black;
-  margin-top: 3vh;
-}
-
-.Meme-Time-Logo-Text{
-  margin-left: 0px;
-  color: #00B232;
-  font-family: "Roboto";
-  font-style: normal;
-	font-weight: 800;
-  text-shadow: 0 0 1px black, 0 0 1px black;
-  font-size: 24px;
-  margin-top: 3vh;
-}
-
-.Meme-Time-Logo-2{
-  margin-left: 0vw;
-  font-family: "Roboto";
-  font-weight: 900;
-  font-size: 24px;
-  margin-top: 3vh;
-}
-
-.Meme-Time-App{
-  margin-right: 8vw;
-  margin-left: 2vw;
-  margin-bottom: 5vw;
-  width: 78.13px;
-  height: 78.14px;
-  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25);
+.Meme-Time-Header{
+	margin-right: auto;
+	margin-left: auto;
+  	margin-top: 1vw;
+	margin-bottom: 2vw;
+	height: 80px;
 }
 
 .Meme-Time-Mockup{
@@ -466,20 +417,18 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 }
 
 .Email-Icon{
-  width: 130px;
-  height: 130px;
+  width: 70px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.Grid{
-  height: 94px;
 }
 
 .Social-Medias{
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 1vh;
+	display: flex;
+	justify-content: space-around;
+	width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5vh;
 }
 
 h1{
