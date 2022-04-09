@@ -52,7 +52,7 @@
 
             <!-- bottom text -->
             <ion-row>
-              <div class="Bottom-Text" style="padding-left: 5vw;">
+              <div class="Bottom-Text" style="padding-left: 5vw; padding-right: 5vw;">
                 <h2>We are little sofware studio founded in 2021 by 3 highschool students from Slovakia.</h2>
                 <h2>Currently we are studying on high school SPŠE Hálova 16, Bratislava.
                   And we are part of really cool study program named OpenLab.</h2>
@@ -96,7 +96,7 @@
 
             <!-- memetimeapp bottom text -->
             <ion-row>
-              <div class="Bottom-Text" id= "MemeTime-Bottom-Text" style="padding-left: 5vw">
+              <div class="Bottom-Text" id= "MemeTime-Bottom-Text" style="padding-left: 5vw; padding-right: 5vw;">
                 <h2>MemeTime! is our first project and it’s a new application for mobile devices.</h2>
                 <h2>MemeTime! points out that this is never the bad time to improve your day.
                   The focus of our platform is simple and obvious - just memes and other fun content without any limits or censorship.</h2>
@@ -407,8 +407,7 @@ background-image: linear-gradient(white, #CCE2FF 160%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	margin-top: -15vh;
-	// margin-left: 5vw;
+	margin-top: -16vh;
 	width: 100vw;
 	font-style: normal;
 	h3 {
