@@ -31,10 +31,10 @@
             <!-- technologie logos   -->
             <ion-row>
                 <div class="Technologies">
-					<a href="https://octobercms.com/" target="_blank"><img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0"></a>
-					<a href="https://vuejs.org/" target="_blank"><img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0"></a>
-					<a href="https://aws.amazon.com/" target="_blank"><img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/aws.png" alt="AWS" border="0"></a>
-					<a href="https://ionicframework.com/" target="_blank"><img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0"></a>
+					          <a href="https://octobercms.com/" target="_blank"><img id="OCMS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ocms.png" alt="October-CMS" border="0"></a>
+					          <a href="https://vuejs.org/" target="_blank"><img id="Vue" src="https://space-software.s3.eu-central-1.amazonaws.com/media/vue.png" alt="Vue" border="0"></a>
+					          <a href="https://aws.amazon.com/" target="_blank"><img id="AWS" src="https://space-software.s3.eu-central-1.amazonaws.com/media/aws.png" alt="AWS" border="0"></a>
+					          <a href="https://ionicframework.com/" target="_blank"><img id="Ionic" src="https://space-software.s3.eu-central-1.amazonaws.com/media/ionic.png" alt="Ionic" border="0"></a>
                 </div>
               </ion-row>
 
@@ -90,7 +90,7 @@
             <!-- memetime gradient text -->
             <ion-row>
               <div class="Meme-Time-Gradient">
-				  <a href="https://memetimeapp.space-software.com/" target="_blank"><h3>MemeTime!</h3></a>
+				        <a href="https://memetimeapp.space-software.com/" target="_blank"><h3>MemeTime!</h3></a>
               </div>
             </ion-row>
 
