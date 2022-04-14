@@ -330,7 +330,6 @@
 			</ion-grid>
 		</ion-content>
 	</ion-page>
->>>>>>> 4b84912c339c901500f9f63baa55bddfb6cdbb9a
 </template>
 
 <script setup lang="ts">
