@@ -32,9 +32,10 @@
 					<br />
 				</ion-row>
 				<div class="Software-Text">
-					<h1>Software studio</h1>
-					<h1 class="Founded-Text">founded by three</h1>
-					<h1 class="Gradient-Text">highschool students.</h1>
+					<h1>
+						Software studio <wbr /> founded by three <wbr />
+						<mark class="Gradient-Text">highschool students.</mark>
+					</h1>
 				</div>
 
 				<!-- technologie logos   -->
@@ -105,7 +106,7 @@
 						<h2>
 							Currently we are studying on high school SPŠE Hálova
 							16, Bratislava. And we are part of really cool study
-							program named OpenLab.
+							program named <b>OpenLab</b>.
 						</h2>
 					</div>
 				</ion-row>
@@ -130,7 +131,7 @@
 				<!-- Projects Section -->
 				<!-- projects -->
 				<ion-row>
-					<h1 class="Center" id="Projects">Projects</h1>
+					<h2 class="Center Projects" id="projects">Projects</h2>
 				</ion-row>
 
 				<!-- memetimeApp header -->
@@ -349,6 +350,43 @@ img {
 	vertical-align: baseline;
 }
 
+h1 {
+	font-size: 31px;
+	font-family: "Helvetica";
+	font-weight: 800;
+}
+
+h2 {
+	font-family: "Roboto";
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: -1vh;
+	text-align: left;
+}
+
+h3 {
+	color: #2f2f2f;
+	font-family: Helvetica;
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 30px;
+}
+
+h6 {
+	font-family: "Helvetica";
+	font-weight: 800;
+	font-size: 10px;
+	margin: 0.2vh;
+}
+
+hr {
+	margin-top: -0.5vh;
+	border: 1px solid rgba(187, 217, 255, 0.6);
+	height: 0px;
+	width: 90%;
+	text-align: center;
+}
+
 #OCMS {
 	width: 18px;
 	height: 20.78px;
@@ -377,9 +415,11 @@ img {
 	margin-top: -6vh;
 }
 
-#Projects {
+.Projects {
 	font-weight: 100px;
 	font-size: 24px;
+	font-family: "Helvetica";
+	font-weight: 800;
 }
 
 #M {
@@ -470,10 +510,6 @@ img {
 	text-align: center;
 }
 
-.Founded-Text {
-	margin-top: 0vh;
-}
-
 .Gradient-Text {
 	margin-top: 0vh;
 	background: -webkit-linear-gradient(360deg, #00d1ff 40%, #0209b5 85%);
@@ -489,6 +525,7 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 2vh;
+	max-width: 450px;
 }
 
 .Team {
@@ -582,42 +619,5 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1.5vh;
-}
-
-h1 {
-	font-size: 31px;
-	font-family: "Helvetica";
-	font-weight: 800;
-}
-
-h2 {
-	font-family: "Roboto";
-	font-size: 14px;
-	font-weight: 500;
-	margin-top: -1vh;
-	text-align: left;
-}
-
-h3 {
-	color: #2f2f2f;
-	font-family: Helvetica;
-	font-size: 24px;
-	font-weight: 800;
-	line-height: 30px;
-}
-
-h6 {
-	font-family: "Helvetica";
-	font-weight: 800;
-	font-size: 10px;
-	margin: 0.2vh;
-}
-
-hr {
-	margin-top: -0.5vh;
-	border: 1px solid rgba(187, 217, 255, 0.6);
-	height: 0px;
-	width: 90%;
-	text-align: center;
 }
 </style>
