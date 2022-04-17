@@ -106,7 +106,14 @@
 						<h2>
 							Currently we are studying on high school SPŠE Hálova
 							16, Bratislava. And we are part of really cool study
-							program named <b>OpenLab</b>.
+							program named 
+							<a 
+								href="https://openlab.sk/" 
+								target="_blank" 
+								style="text-decoration: none; color: rgba(0, 0, 0, 0.4);"
+							>
+								<b>OpenLab</b>
+							</a>.
 						</h2>
 					</div>
 				</ion-row>
@@ -416,6 +423,7 @@ hr {
 }
 
 .Projects {
+	margin-top: 3vw;
 	font-weight: 100px;
 	font-size: 24px;
 	font-family: "Helvetica";
