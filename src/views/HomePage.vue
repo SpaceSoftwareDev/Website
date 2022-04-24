@@ -15,13 +15,20 @@
 					<ion-col>
 						<br />
 					</ion-col>
-					<ion-col>
+					<ion-col class="Dropdown">
 						<img
-							class="Hamburger-Menu"
+							id="Hamburger-Menu"
+							class="Dropdown-Img"
 							src="https://space-software.s3.eu-central-1.amazonaws.com/media/burger-menu.png"
 							alt="Hamburger-Menu"
 							border="0"
+							@click="DropdownMenu"
 						/>
+						<div id="Dropdown-Menu" class="Dropdown-Content">
+							<a href="#">About US</a>
+    						<a href="#">Projects</a>
+    						<a href="#">Contact</a>
+						</div>
 					</ion-col>
 				</ion-row>
 			</ion-grid>
@@ -342,6 +349,12 @@
 
 <script setup lang="ts">
 import { IonContent, IonPage, IonGrid, IonRow, IonCol } from "@ionic/vue"
+ 
+ 	const DropdownMenu = async () => {
+		document.getElementById("Dropdown-Menu").classList.toggle("Show");
+	} 
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -505,7 +518,7 @@ hr {
 	margin-top: 2.5vh;
 }
 
-.Hamburger-Menu {
+#Hamburger-Menu {
 	float: right;
 	width: 31px;
 	height: 20px;
@@ -612,8 +625,36 @@ hr {
 	h3 {
 		text-align: center;
 	}
+} 
+
+.Dropdown {
+  position: relative;
+  display: inline-block;
 }
 
+.Dropdown-Content {
+  visibility: hidden;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 7.5vh;
+}
+
+.Dropdown-Content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.Dropdown a:hover {background-color: #ddd;}
+
+.Show {
+	visibility: visible;
+}
 .Email-Icon {
 	width: 70px;
 	margin-left: auto;
