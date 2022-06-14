@@ -1,51 +1,19 @@
 <template>
 	<ion-page>
 		<ion-content :fullscreen="true">
-			<!-- header -->
-			<ion-grid>
-				<ion-row>
-					<ion-col>
-						<img
-							class="Logo"
-							src="https://space-software.s3.eu-central-1.amazonaws.com/media/logo-nav-bar.png"
-							alt="Space-Logo"
-							border="0"
-						/>
-					</ion-col>
-					<ion-col>
-						<br />
-					</ion-col>
-					<ion-col class="Dropdown">
-						<img
-							id="Hamburger-Menu"
-							class="Dropdown-Img"
-							src="https://space-software.s3.eu-central-1.amazonaws.com/media/burger-menu.png"
-							alt="Hamburger-Menu"
-							border="0"
-							@click="DropdownMenu"
-						/>
-						<div id="Dropdown-Menu" class="Dropdown-Content">
-							<a href="#">About US</a>
-    						<a href="#">Projects</a>
-    						<a href="#">Contact</a>
-						</div>
-					</ion-col>
-				</ion-row>
-			</ion-grid>
-
 			<!-- software studio text -->
+
 			<ion-grid class="Background">
-				<ion-row>
-					<br />
-				</ion-row>
 				<div class="Software-Text">
-					<h1>
-						Software studio <wbr /> founded by three <wbr />
-						<mark class="Gradient-Text">highschool students.</mark>
+					<h1 class="Software-Text-Title">
+						Software studio founded by three
 					</h1>
+
+					<h1 class="Gradient-Text">highschool students.</h1>
 				</div>
 
 				<!-- technologie logos   -->
+
 				<ion-row>
 					<div class="Technologies">
 						<a href="https://octobercms.com/" target="_blank">
@@ -56,6 +24,7 @@
 								border="0"
 							/>
 						</a>
+
 						<a href="https://vuejs.org/" target="_blank">
 							<img
 								id="Vue"
@@ -64,6 +33,7 @@
 								border="0"
 							/>
 						</a>
+
 						<a href="https://aws.amazon.com/" target="_blank">
 							<img
 								id="AWS"
@@ -72,6 +42,7 @@
 								border="0"
 							/>
 						</a>
+
 						<a href="https://ionicframework.com/" target="_blank">
 							<img
 								id="Ionic"
@@ -84,6 +55,7 @@
 				</ion-row>
 
 				<!-- team picture -->
+
 				<ion-row>
 					<img
 						class="Team"
@@ -94,6 +66,7 @@
 				</ion-row>
 
 				<!-- about us text -->
+
 				<ion-row>
 					<div class="About-Us">
 						<h3>About us</h3>
@@ -101,6 +74,7 @@
 				</ion-row>
 
 				<!-- bottom text -->
+
 				<ion-row>
 					<div
 						class="Bottom-Text"
@@ -110,22 +84,29 @@
 							We are little sofware studio founded in 2021 by 3
 							highschool students from Slovakia.
 						</h2>
+
 						<h2>
 							Currently we are studying on high school SPŠE Hálova
 							16, Bratislava. And we are part of really cool study
-							program named 
-							<a 
-								href="https://openlab.sk/" 
-								target="_blank" 
-								style="text-decoration: none; color: rgba(0, 0, 0, 0.4);"
+							program named
+
+							<a
+								href="https://openlab.sk/"
+								target="_blank"
+								style="
+									text-decoration: none;
+
+									color: rgba(0, 0, 0, 0.4);
+								"
 							>
-								<b>OpenLab</b>
-							</a>.
+								<b>OpenLab</b> </a
+							>.
 						</h2>
 					</div>
 				</ion-row>
 
 				<!-- about us bottom -->
+
 				<ion-row>
 					<ion-col>
 						<img
@@ -135,20 +116,26 @@
 							border="0"
 						/>
 					</ion-col>
+
 					<ion-col></ion-col>
+
 					<ion-col>
 						<h5 class="Section-Text"><b>ABOUT US</b></h5>
 					</ion-col>
 				</ion-row>
+
 				<hr />
 
 				<!-- Projects Section -->
+
 				<!-- projects -->
+
 				<ion-row>
 					<h2 class="Center Projects" id="projects">Projects</h2>
 				</ion-row>
 
 				<!-- memetimeApp header -->
+
 				<ion-row class="Center">
 					<img
 						class="Meme-Time-Header"
@@ -159,6 +146,7 @@
 				</ion-row>
 
 				<!-- memetimeapp mockup-->
+
 				<ion-row>
 					<img
 						class="Meme-Time-Mockup"
@@ -169,6 +157,7 @@
 				</ion-row>
 
 				<!-- memetime gradient text -->
+
 				<ion-row>
 					<div class="Meme-Time-Gradient">
 						<a
@@ -181,6 +170,7 @@
 				</ion-row>
 
 				<!-- memetimeapp bottom text -->
+
 				<ion-row>
 					<div
 						class="Bottom-Text"
@@ -191,12 +181,14 @@
 							MemeTime! is our first project and it’s a new
 							application for mobile devices.
 						</h2>
+
 						<h2>
 							MemeTime! points out that this is never the bad time
 							to improve your day. The focus of our platform is
 							simple and obvious - just memes and other fun
 							content without any limits or censorship.
 						</h2>
+
 						<h2>
 							Purpose of MemeTime! is to make your day better with
 							daily memes of your taste.
@@ -205,6 +197,7 @@
 				</ion-row>
 
 				<!-- projects section bottom -->
+
 				<ion-row>
 					<ion-col>
 						<img
@@ -214,15 +207,20 @@
 							border="0"
 						/>
 					</ion-col>
+
 					<ion-col></ion-col>
+
 					<ion-col>
 						<h5 class="Section-Text"><b>PROJECTS</b></h5>
 					</ion-col>
 				</ion-row>
+
 				<hr />
 
 				<!-- Contantact Us Section-->
+
 				<!-- contact us globe-->
+
 				<ion-row>
 					<img
 						id="Globe-Img"
@@ -234,6 +232,7 @@
 				</ion-row>
 
 				<!-- contact text -->
+
 				<ion-row>
 					<div id="Contact-Text" class="Center">
 						<h3>Contact</h3>
@@ -241,6 +240,7 @@
 				</ion-row>
 
 				<!-- space email -->
+
 				<ion-row>
 					<div id="Space-Mail" class="Center">
 						<a
@@ -254,6 +254,7 @@
 				</ion-row>
 
 				<!-- email icon -->
+
 				<ion-row>
 					<a
 						href="mailto:business@space-software.com?subject=Mail%20from%20our%20Website&body=Dear%20Space%20Software%20Team%2C"
@@ -269,6 +270,7 @@
 				</ion-row>
 
 				<!-- contact us bottom -->
+
 				<ion-row>
 					<ion-col>
 						<img
@@ -278,17 +280,22 @@
 							border="0"
 						/>
 					</ion-col>
+
 					<ion-col></ion-col>
+
 					<ion-col>
 						<h5 class="Section-Text"><b>CONTACT</b></h5>
 					</ion-col>
 				</ion-row>
+
 				<hr />
 			</ion-grid>
 
 			<!-- footer -->
+
 			<ion-grid>
 				<!-- social medias -->
+
 				<ion-row class="Social-Medias">
 					<a
 						href="https://www.facebook.com/space-Software-Studio-108894994970173"
@@ -301,6 +308,7 @@
 							border="0"
 						/>
 					</a>
+
 					<a
 						href="https://www.instagram.com/spacesoftwarestudio/"
 						target="_blank"
@@ -311,6 +319,7 @@
 							border="0"
 						/>
 					</a>
+
 					<a
 						href="https://twitter.com/spacesoftstudio"
 						target="_blank"
@@ -321,6 +330,7 @@
 							border="0"
 						/>
 					</a>
+
 					<a
 						href="https://www.tiktok.com/@spacesoftware?lang=en"
 						target="_blank"
@@ -332,11 +342,15 @@
 						/>
 					</a>
 				</ion-row>
+
 				<!-- space row -->
+
 				<ion-row>
 					<h5 class="Center" id="Space-Footer">space.</h5>
 				</ion-row>
+
 				<!-- all rights reserved -->
+
 				<ion-row>
 					<h5 class="Center" id="All-Rights-Reserved">
 						Ⓒ {{ new Date().getFullYear() }} All rights reserved
@@ -349,12 +363,6 @@
 
 <script setup lang="ts">
 import { IonContent, IonPage, IonGrid, IonRow, IonCol } from "@ionic/vue"
- 
- 	const DropdownMenu = async () => {
-		document.getElementById("Dropdown-Menu").classList.toggle("Show");
-	} 
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -363,67 +371,71 @@ body,
 div,
 img {
 	margin: 0;
+
 	padding: 0;
+
 	border: 0;
+
 	font-size: 100%;
+
 	font: inherit;
+
 	vertical-align: baseline;
 }
 
 h1 {
-	font-size: 31px;
-	font-family: "Helvetica";
-	font-weight: 800;
-}
-
-h2 {
-	font-family: "Roboto";
-	font-size: 14px;
-	font-weight: 500;
-	margin-top: -1vh;
-	text-align: left;
-}
-
-h3 {
-	color: #2f2f2f;
-	font-family: Helvetica;
-	font-size: 24px;
-	font-weight: 800;
-	line-height: 30px;
-}
-
-h6 {
-	font-family: "Helvetica";
-	font-weight: 800;
-	font-size: 10px;
-	margin: 0.2vh;
+	font-family: "Gothic A1";
 }
 
 hr {
 	margin-top: -0.5vh;
+
 	border: 1px solid rgba(187, 217, 255, 0.6);
+
 	height: 0px;
+
 	width: 90%;
+
 	text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Manrope:wght@200;400;700;800&family=Space+Mono&display=swap");
+
+//Gothic A1
+
+#Hamburger-Menu {
+	float: right;
+
+	width: 31px;
+
+	height: 20px;
+
+	margin-top: 3.9vh;
+
+	margin-right: 4vw;
 }
 
 #OCMS {
 	width: 18px;
+
 	height: 20.78px;
 }
 
 #Vue {
 	width: 25.89px;
+
 	height: 20.78px;
 }
 
 #AWS {
 	width: 37.78px;
+
 	height: 21.78px;
 }
 
 #Ionic {
 	width: 22.43px;
+
 	height: 24px;
 }
 
@@ -437,9 +449,13 @@ hr {
 
 .Projects {
 	margin-top: 3vw;
+
 	font-weight: 100px;
+
 	font-size: 24px;
+
 	font-family: "Helvetica";
+
 	font-weight: 800;
 }
 
@@ -453,7 +469,9 @@ hr {
 
 #Globe-Img {
 	width: 202px;
+
 	height: 171.22px;
+
 	margin-top: 4vh;
 }
 
@@ -467,110 +485,144 @@ hr {
 
 #Space-Mail-Text {
 	color: black;
+
 	text-decoration: none;
+
 	font-size: 19px;
+
 	font-weight: 400px;
+
 	font-family: "Space Mono", monospace;
 }
 
 #Facebook {
 	width: 18px;
+
 	height: 17px;
 }
 
 #Instagram {
 	width: 18px;
+
 	height: 17px;
 }
 
 #Twitter {
 	width: 18px;
+
 	height: 17px;
 }
 
 #Tik-Tok {
 	width: 18px;
+
 	height: 17px;
 }
 
 #Space-Footer {
 	font-family: "Space Mono", monospace;
+
 	font-weight: 800;
+
 	font-size: 17px;
+
 	margin-top: 1vh;
 }
 
 #All-Rights-Reserved {
 	font-family: "Space Mono", monospace;
+
 	font-size: 13px;
+
 	font-weight: 400px;
+
 	margin-top: 0vh;
 }
 
 .Background {
 	background-image: linear-gradient(white, #cce2ff 160%);
+	margin-top: 50px;
 }
 
-.Logo {
-	width: 104px;
-	height: 36px;
-	margin-left: 4vw;
-	margin-top: 2.5vh;
-}
-
-#Hamburger-Menu {
-	float: right;
-	width: 31px;
-	height: 20px;
-	margin-top: 3.9vh;
-	margin-right: 4vw;
+.Software-Text-Title {
+	font-weight: 800;
+	font-size: 31px;
+	line-height: 46.65px;
+	max-width: 300px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .Software-Text {
-	margin-top: 2vh;
-	text-align: center;
+	margin-top: 50px;
 }
 
 .Gradient-Text {
 	margin-top: 0vh;
-	background: -webkit-linear-gradient(360deg, #00d1ff 40%, #0209b5 85%);
+
+	background: -webkit-linear-gradient(340deg, #00d1ff 40%, #0209b5 85%);
+
 	-webkit-background-clip: text;
+
 	-webkit-text-fill-color: transparent;
+
 	background-clip: text;
+
+	text-align: center;
 }
 
 .Technologies {
 	display: flex;
+
 	justify-content: space-around;
+
 	width: 90vw;
+
 	margin-left: auto;
+
 	margin-right: auto;
+
 	margin-top: 2vh;
+
 	max-width: 450px;
 }
 
 .Team {
 	margin-left: auto;
+
 	margin-right: auto;
+
 	margin-top: 5vh;
+
 	width: 339px;
+
 	height: 228px;
 }
 
 .About-Us {
 	top: 0%;
+
 	text-align: center;
+
 	margin-left: auto;
+
 	margin-right: auto;
+
 	font-style: normal;
 }
 
 .Bottom-Text {
 	margin-top: 2vh;
+
 	margin-right: auto;
+
 	color: rgba(0, 0, 0, 0.4);
+
 	padding-right: 10vw;
+
 	text-align: center;
+
 	h2 {
 		text-align: center;
 	}
@@ -578,95 +630,99 @@ hr {
 
 .Space {
 	width: 27px;
+
 	height: 11.39px;
+
 	margin-left: 4vw;
+
 	margin-top: 3vh;
 }
 
 .Section-Text {
 	color: rgba(204, 226, 255, 1);
+
 	margin-top: 2.4vh;
+
 	text-align: right;
+
 	padding-right: 2.5vw;
+
 	font-size: 16px;
 }
 
 .Center {
 	text-align: center;
+
 	margin-right: auto;
+
 	margin-left: auto;
 }
 
 .Meme-Time-Header {
 	margin-right: auto;
+
 	margin-left: auto;
+
 	margin-top: 1vw;
+
 	margin-bottom: 2vw;
+
 	height: 80px;
 }
 
 .Meme-Time-Mockup {
 	margin-right: auto;
+
 	margin-left: auto;
+
 	margin-top: -15vh;
+
 	width: 380px;
+
 	height: 482px;
+
 	margin-bottom: 2vh;
 }
 
 .Meme-Time-Gradient {
 	background: -webkit-linear-gradient(420deg, #00b232 45%, #048383 85%);
+
 	-webkit-background-clip: text;
+
 	-webkit-text-fill-color: transparent;
+
 	background-clip: text;
+
 	margin-top: -16vh;
+
 	width: 100vw;
+
 	font-style: normal;
+
 	h3 {
 		text-align: center;
 	}
-} 
-
-.Dropdown {
-  position: relative;
-  display: inline-block;
 }
 
-.Dropdown-Content {
-  visibility: hidden;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-top: 7.5vh;
-}
-
-.Dropdown-Content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.Dropdown a:hover {background-color: #ddd;}
-
-.Show {
-	visibility: visible;
-}
 .Email-Icon {
 	width: 70px;
+
 	margin-left: auto;
+
 	margin-right: auto;
 }
 
 .Social-Medias {
 	display: flex;
+
 	justify-content: space-around;
+
 	width: 90vw;
+
 	margin-left: auto;
+
 	margin-right: auto;
+
 	margin-top: 1.5vh;
 }
 </style>
