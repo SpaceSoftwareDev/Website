@@ -73,6 +73,8 @@ ion-grid {
 
 .Space-Image {
 	margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .Space-Text {
