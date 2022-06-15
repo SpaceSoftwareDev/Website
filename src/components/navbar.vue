@@ -1,10 +1,11 @@
+/* eslint-disable prettier/prettier */
 <template>
 	<ion-header>
 		<ion-grid>
 			<ion-row>
 				<ion-col>
 					<ion-row>
-						<h1 class="Space-Text">
+						<h1 class="Space-Text Vertical-Center">
 							spa
 							<img class="Space-Image" src="@/assets/C.svg" />
 							e.
@@ -12,7 +13,7 @@
 					</ion-row>
 				</ion-col>
 
-				<ion-col class="Dropdown">
+				<ion-col class="Dropdown Vertical-Center">
 					<img
 						id="Hamburger-Menu"
 						src="@/assets/More-Icon.svg"
@@ -41,6 +42,14 @@ const DropdownMenu = async () => {
 </script>
 
 <style lang="scss" scoped>
+#Hamburger-Menu {
+	float: right;
+	position: relative;
+	margin-right: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Manrope:wght@200;400;700;800&family=Roboto:ital,wght@0,700;1,700&family=Sarina&family=Space+Mono&display=swap");
+
 html,
 body,
 div,
@@ -54,38 +63,31 @@ img {
 }
 
 h1 {
-	font-family: "SF Mono";
+	font-family: "Gothic A1";
 }
 
 ion-grid {
 	background-color: white;
-	//opacity: 0.9;
-}
-
-#Hamburger-Menu {
-	float: right;
-	align-items: center;
-	position: relative;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	margin-right: 20px;
+	height: 60px;
 }
 
 .Space-Image {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .Space-Text {
 	color: black;
-	line-height: 35.8px;
 	font-size: 30px;
 	font-weight: 700;
 	font-style: normal;
 	line-height: 36px;
 	display: flex;
-	align-items: center;
 	margin-left: 20px;
+}
+
+.Vertical-Center {
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .Dropdown {
