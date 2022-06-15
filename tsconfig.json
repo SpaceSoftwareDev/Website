@@ -13,10 +13,8 @@
 		"lib": ["esnext", "dom"],
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"],
-			"~/*": ["src/*"]
+			"@/*": ["src/*"]
 		},
   	},
-  	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  	"references": [{ "path": "./tsconfig.node.json" }]
+  	"exclude": ["node_modules", ".yarn", ".vscode", ".github", "dist"]
 }
