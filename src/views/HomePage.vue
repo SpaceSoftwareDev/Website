@@ -118,7 +118,7 @@
 						<h1 class="MemeTime-Roboto">App</h1>
 						<img
 							class="MemeTime-Icon"
-							src="@/assets/MemeTime! App Icon.svg"
+							src="@/assets/MemeTime!AppIcon.svg"
 							alt=""
 						/>
 					</div>
