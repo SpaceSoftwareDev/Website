@@ -13,19 +13,25 @@
 				</ion-col>
 
 				<ion-col class="Dropdown Vertical-Center">
-					<img
-						id="Hamburger-Menu"
-						src="@/assets/More-Icon.svg"
-						alt="Hamburger-Menu"
-						border="0"
-						@click="DropdownMenu"
-					/>
-
-					<div id="Dropdown-Menu" class="Dropdown-Content">
-						<a href="#">About US</a>
+					<div id="mySidenav" class="SideNav">
+						<a
+							href="javascript:void(0)"
+							class="CloseBtn"
+							@click="closeNav()"
+							>&times;</a
+						>
+						<a href="#">About us</a>
 						<a href="#">Projects</a>
-						<a href="#">Contact</a>
+						<a href="#">Contact us</a>
 					</div>
+
+					<!-- Use any element to open the sidenav -->
+					<span @click="openNav()" class="Hamburger-Menu">
+						<img
+							src="@/assets/More-Icon.svg"
+							alt="Hamburger-Menu"
+						/>
+					</span>
 				</ion-col>
 			</ion-row>
 		</ion-grid>
@@ -33,18 +39,16 @@
 </template>
 
 <script setup lang="ts">
-const DropdownMenu = async () => {
-	document.getElementById("Dropdown-Menu").classList.toggle("Show")
+function openNav() {
+	document.getElementById("mySidenav").style.width = "100%"
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0"
 }
 </script>
 
 <style lang="scss" scoped>
-#Hamburger-Menu {
-	float: right;
-	position: relative;
-	margin-right: 20px;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Manrope:wght@200;400;700;800&family=Roboto:ital,wght@0,700;1,700&family=Sarina&family=Space+Mono&display=swap");
 
 html,
@@ -89,34 +93,53 @@ ion-grid {
 	margin-bottom: auto;
 }
 
+.Hamburger-Menu {
+	float: right;
+	position: relative;
+	margin-right: 20px;
+}
+
+.SideNav {
+	height: 20%;
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	margin-top: 40px;
+	background-color: white;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 20px; /* Place content from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.SideNav a {
+	padding: 8px 4px 4px 32px;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 25px;
+	color: black;
+	transition: 0.5s;
+	font-family: "Roboto";
+	font-weight: 400;
+}
+
+.SideNav a:hover {
+	color: #818181;
+}
+
+/* Position and style the close button (top right corner) */
+.SideNav .CloseBtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
 .Dropdown {
 	position: relative;
 	display: inline-block;
-}
-
-.Dropdown-Content {
-	visibility: hidden;
-	position: absolute;
-	background-color: #f1f1f1;
-	min-width: 160px;
-	overflow: auto;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	margin-top: 7.5vh;
-}
-
-.Dropdown-Content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.Dropdown a:hover {
-	background-color: #ddd;
-}
-
-.Show {
-	visibility: visible;
 }
 </style>
