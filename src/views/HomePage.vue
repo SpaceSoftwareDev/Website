@@ -304,9 +304,7 @@
 	</ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonPage, IonGrid, IonRow, IonCol } from "@ionic/vue"
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 html,

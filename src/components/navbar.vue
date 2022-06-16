@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 <template>
 	<ion-header>
 		<ion-grid>
@@ -34,8 +33,6 @@
 </template>
 
 <script setup lang="ts">
-import { IonHeader, IonGrid, IonRow, IonCol } from "@ionic/vue"
-
 const DropdownMenu = async () => {
 	document.getElementById("Dropdown-Menu").classList.toggle("Show")
 }
@@ -73,8 +70,8 @@ ion-grid {
 
 .Space-Image {
 	margin-top: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 .Space-Text {

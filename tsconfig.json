@@ -1,20 +1,24 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"useDefineForClassFields": true,
 		"module": "esnext",
 		"moduleResolution": "node",
+		"lib": ["esnext", "dom"],
 		"strict": false,
-		"jsx": "preserve",
 		"sourceMap": true,
+		"jsx": "preserve",
+		"useDefineForClassFields": true,
 		"resolveJsonModule": true,
 		"importHelpers": true,
 		"esModuleInterop": true,
-		"lib": ["esnext", "dom"],
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
 		},
-  	},
-  	"exclude": ["node_modules", ".yarn", ".vscode", ".github", "dist"]
+		"types": [
+			"@types/node",
+			"vite/client"
+		]
+	},
+	"exclude": ["dist", "node_modules", ".yarn", ".idea", ".github"]
 }
