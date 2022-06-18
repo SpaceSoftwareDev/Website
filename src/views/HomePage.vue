@@ -56,7 +56,7 @@
 
 				<!-- about us text -->
 				<ion-row>
-					<div class="Section-Header Center">
+					<div id="about-us" class="Section-Header Center">
 						<h1>About us</h1>
 					</div>
 				</ion-row>
@@ -106,7 +106,9 @@
 				<!-- Projects Section -->
 				<!-- Projects -->
 				<ion-row>
-					<h1 class="Section-Header Center">Projects</h1>
+					<div id="projects" class="Section-Header Center">
+						<h1>Projects</h1>
+					</div>
 				</ion-row>
 
 				<!-- MemeTimeApp Header -->
@@ -196,8 +198,8 @@
 
 				<!-- contact text -->
 				<ion-row>
-					<div class="Section-Header Center">
-						<h1>Contact</h1>
+					<div id="contact-us" class="Section-Header Center">
+						<h1>Contact us</h1>
 					</div>
 				</ion-row>
 

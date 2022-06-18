@@ -20,9 +20,9 @@
 							@click="closeNav()"
 							>&times;</a
 						>
-						<a href="#">About us</a>
-						<a href="#">Projects</a>
-						<a href="#">Contact us</a>
+						<a href="#about-us">About us</a>
+						<a href="#projects">Projects</a>
+						<a href="#contact-us">Contact us</a>
 					</div>
 
 					<!-- Use any element to open the sidenav -->
