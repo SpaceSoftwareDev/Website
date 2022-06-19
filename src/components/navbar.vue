@@ -20,12 +20,17 @@
 							@click="closeNav()"
 							>&times;</a
 						>
-						<a href="#about-us">About us</a>
-						<a href="#projects">Projects</a>
-						<a href="#contact-us">Contact us</a>
+						<a href="#About">About us</a>
+						<a href="#Projects">Projects</a>
+						<a href="#Contact">Contact us</a>
 					</div>
 
 					<!-- Use any element to open the sidenav -->
+					<!-- <div class="container" @click="myFunction()">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div> -->
 					<span @click="openNav()" class="Hamburger-Menu">
 						<img
 							src="@/assets/More-Icon.svg"
@@ -46,6 +51,10 @@ function openNav() {
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0"
 }
+
+// function myFunction() {
+// 	this.classList.toggle("change")
+// }
 </script>
 
 <style lang="scss" scoped>
@@ -141,5 +150,34 @@ ion-grid {
 .Dropdown {
 	position: relative;
 	display: inline-block;
+}
+
+.container {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
 }
 </style>
