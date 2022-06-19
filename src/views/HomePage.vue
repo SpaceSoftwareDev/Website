@@ -3,7 +3,7 @@
 		<ion-content :fullscreen="true">
 			<!-- software studio text -->
 
-			<ion-grid class="Background">
+			<ion-grid class="Background" id="About">
 				<ion-row>
 					<div class="Software-Text-Grid Center">
 						<h1 class="Software-Text">
@@ -86,7 +86,7 @@
 				</ion-row>
 
 				<!-- about us bottom -->
-				<ion-row>
+				<ion-row class="Section" id="Projects">
 					<ion-col>
 						<img
 							class="Space"
@@ -174,9 +174,6 @@
 							border="0"
 						/>
 					</ion-col>
-
-					<ion-col></ion-col>
-
 					<ion-col>
 						<h1 class="Section-Text"><b>PROJECTS</b></h1>
 					</ion-col>
@@ -187,7 +184,7 @@
 				<!-- Contantact Us Section-->
 
 				<!-- contact us globe-->
-				<ion-row>
+				<ion-row id="Contact">
 					<img
 						class="Center Earth-Image"
 						src="@/assets/Saly-44.svg"
@@ -241,7 +238,6 @@
 							border="0"
 						/>
 					</ion-col>
-
 					<ion-col>
 						<h1 class="Section-Text"><b>CONTACT</b></h1>
 					</ion-col>
@@ -433,7 +429,6 @@ hr {
 
 .Section-Header {
 	font-family: "Gothic A1";
-	top: 0px;
 	line-height: 30px;
 	font-size: 24px;
 	font-weight: 800;
@@ -459,7 +454,7 @@ hr {
 }
 
 .Space {
-	margin-left: 4vw;
+	margin-left: 9%;
 	margin-top: 3vh;
 }
 
@@ -467,7 +462,7 @@ hr {
 	color: rgba(204, 226, 255, 1);
 	margin-top: 2.4vh;
 	text-align: right;
-	margin-right: 3vw;
+	margin-right: 9%;
 	font-size: 16px;
 }
 
@@ -506,5 +501,9 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1.5vh;
+}
+
+.Section {
+	margin-top: 20px;
 }
 </style>
