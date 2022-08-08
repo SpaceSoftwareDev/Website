@@ -140,7 +140,7 @@
 				<ion-row>
 					<div class="Meme-Time-Gradient Center">
 						<a
-							href="https://memetimeapp.space-software.com/"
+							href="https://memetime.space-software.com/"
 							target="_blank"
 						>
 							<h1>MemeTime!</h1>
