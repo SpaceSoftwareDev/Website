@@ -1,8 +1,6 @@
 <template>
 	<ion-page>
-		<ion-content :fullscreen="true">
-			<!-- software studio text -->
-
+		<ion-content fullscreen>
 			<ion-grid class="Background" id="About">
 				<ion-row>
 					<div class="Software-Text-Grid Center">

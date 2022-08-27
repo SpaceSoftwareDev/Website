@@ -1,7 +1,7 @@
 <template>
 	<ion-header>
 		<ion-grid>
-			<ion-row>
+			<ion-row class="header">
 				<ion-col>
 					<ion-row>
 						<h1 class="Space-Text Vertical-Center">
@@ -13,25 +13,7 @@
 				</ion-col>
 
 				<ion-col class="Dropdown Vertical-Center">
-					<div id="mySidenav" class="SideNav">
-						<a
-							href="javascript:void(0)"
-							class="CloseBtn"
-							@click="closeNav()"
-							>&times;</a
-						>
-						<a href="#About">About us</a>
-						<a href="#Projects">Projects</a>
-						<a href="#Contact">Contact us</a>
-					</div>
-
-					<!-- Use any element to open the sidenav -->
-					<!-- <div class="container" @click="myFunction()">
-						<div class="bar1"></div>
-						<div class="bar2"></div>
-						<div class="bar3"></div>
-					</div> -->
-					<span @click="openNav()" class="Hamburger-Menu">
+					<span @click="opened = !opened" class="Hamburger-Menu">
 						<img
 							src="@/assets/More-Icon.svg"
 							alt="Hamburger-Menu"
@@ -39,22 +21,33 @@
 					</span>
 				</ion-col>
 			</ion-row>
+			<ion-row>
+				<ion-col>
+					<div :class="{ SideNav: true, active: opened }">
+						<a @click="scrollTo('#About')">About us</a>
+						<a @click="scrollTo('#Projects')">Projects</a>
+						<a @click="scrollTo('#Contact')">Contact us</a>
+					</div>
+				</ion-col>
+			</ion-row>
 		</ion-grid>
 	</ion-header>
 </template>
 
 <script setup lang="ts">
-function openNav() {
-	document.getElementById("mySidenav").style.width = "100%"
-}
+import { ref } from "vue"
 
-function closeNav() {
-	document.getElementById("mySidenav").style.width = "0"
-}
+const opened = ref(false)
 
-// function myFunction() {
-// 	this.classList.toggle("change")
-// }
+function scrollTo(el: string) {
+	const element = document.querySelector(el)
+	if (!element) return
+	element.scrollIntoView({
+		behavior: "smooth",
+		block: "start"
+	})
+	opened.value = false
+}
 </script>
 
 <style lang="scss" scoped>
@@ -70,6 +63,10 @@ img {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+.header {
+	z-index: 2;
 }
 
 h1 {
@@ -109,20 +106,25 @@ ion-grid {
 }
 
 .SideNav {
-	height: 20%;
-	width: 0; /* 0 width - change this with JavaScript */
-	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 0px;
+	width: 100%;
+	position: relative;
 	z-index: 1;
 	left: 0;
-	margin-top: 40px;
 	background-color: white;
 	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 20px; /* Place content from the top */
-	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	transition: all 0.5s ease-in-out;
+}
+
+.SideNav.active {
+	height: 15vh;
 }
 
 .SideNav a {
-	padding: 8px 4px 4px 32px;
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
@@ -136,15 +138,6 @@ ion-grid {
 
 .SideNav a:hover {
 	color: #818181;
-}
-
-/* Position and style the close button (top right corner) */
-.SideNav .CloseBtn {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
 }
 
 .Dropdown {

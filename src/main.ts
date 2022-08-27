@@ -1,11 +1,9 @@
-import { createApp } from "vue"
+import { createApp, Component } from "vue"
 import App from "./App.vue"
 import router from "@/router"
 
 import { IonicVue } from "@ionic/vue"
 import * as IonComponents from "@ionic/vue"
-
-import { Component } from "vue"
 
 import "@/styles/variables.scss"
 
@@ -19,4 +17,3 @@ Object.entries(IonComponents)
 	})
 
 app.mount("#app")
-export default app
