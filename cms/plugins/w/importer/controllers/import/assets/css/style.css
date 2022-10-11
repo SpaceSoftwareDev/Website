@@ -1,0 +1,42 @@
+#files-upload {
+    background-color: #ffffff;
+    color: #385487;
+    border: 1px solid #d1d6d9;
+}
+
+#files-upload #customFile {
+    border: none;
+}
+
+#files-upload #custom-content {
+    padding: 8px 13px 9px;
+}
+
+#files-upload input:focus {
+    outline: none;
+}
+
+#files-upload ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+    list-style-type: decimal;
+}
+
+.error-flash {
+    background-color: #ee5656;
+}
+
+.success-flash {
+    background-color: #69d684;
+}
+
+.importer-flash-msg {
+    color: white;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 7px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}

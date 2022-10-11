@@ -1,0 +1,22 @@
+{
+    "name": "wapi/cors",
+    "version": "0.1.0",
+    "description": "Our beloved CORS plugin",
+    "authors": [
+        {
+            "name": "Psycho",
+            "email": "sekerka@wezeo.com"
+        },
+        {
+            "name": "Patrik Nemeček",
+            "email": "nemecek@wezeo.com"
+        }
+    ],
+    "support": {
+        "issues": "https://gitlab.com/wezeo/ocms-plugins/cors"
+    },
+    "require": {
+        "php": "^7.1"
+    }
+}
+

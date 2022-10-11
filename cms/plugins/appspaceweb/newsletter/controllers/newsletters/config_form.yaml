@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Newsletter
+
+# Model Form Field configuration
+form: $/appspaceweb/newsletter/models/newsletter/fields.yaml
+
+# Model Class name
+modelClass: AppSpaceWeb\Newsletter\Models\Newsletter
+
+# Default redirect location
+defaultRedirect: appspaceweb/newsletter/newsletters
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appspaceweb/newsletter/newsletters/update/:id
+    redirectClose: appspaceweb/newsletter/newsletters
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appspaceweb/newsletter/newsletters
+    redirectClose: appspaceweb/newsletter/newsletters
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

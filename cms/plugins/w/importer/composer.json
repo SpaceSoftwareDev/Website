@@ -1,0 +1,12 @@
+{
+    "name": "w/importer",
+    "version": "0.1.0",
+    "description": "Imports data from CSV files",
+    "authors": [
+        {
+            "name": "Lukas Koza",
+            "email": "lukas.koza33@gmail.com"
+        }
+    ]
+}
+

@@ -1,0 +1,33 @@
+<?= Form::ajax('onImport', [
+    'files' => true,
+    'class' => 'form-elements',
+    'data-stripe-load-indicator' => true,
+]) ?>
+<div class="form-group span-left">
+    <?php if($this->user->isSuperUser()): ?>
+    <label for="exampleFormControlTextarea1">Custom aliases in <b>JSON</b> format </label>
+
+    <textarea style="resize: none; overflow-y: scroll" class="form-control" id="exampleFormControlTextarea1"
+        name="aliases" placeholder='{"category" : "LibFeature\Category\Models\Lesson"}' rows="5"></textarea>
+    <?php endif ?>
+
+    <button style="margin-top: 40px" class="btn btn-default" type="submit">Import</button>
+</div>
+
+<div class="form-group span-right">
+    <label for="exampleFormControlTextarea1">Upload <b>CSV</b> files in <b>desired order</b></label>
+
+    <div id="files-upload">
+        <?= Form::file('files[]', ['class' => 'form-control form-control-sm', 'id' => 'customFile', 'multiple' => true]) ?>
+
+        <div id="custom-content">
+            <!-- <h5 id="uploaded-files-label">Uploaded files:</h5> -->
+            <ul></ul>
+        </div>
+    </div>
+</div>
+
+<?= Form::close() ?>
+
+<div id="importer-flash"></div>
+<div id="importer-response"></div>

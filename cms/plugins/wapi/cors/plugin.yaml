@@ -1,0 +1,6 @@
+plugin:
+    name: 'wapi.cors::lang.plugin.name'
+    description: 'WEZEO: Doplnenie CORS headra do vsetkych requestov'
+    author: 'wezeo'
+    icon: oc-icon-code
+    homepage: ''

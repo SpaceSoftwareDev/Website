@@ -1,0 +1,4 @@
+1.0.1:
+    - create emails and newsletters table
+    - create_emails_table.php
+    - create_newsletters_table.php

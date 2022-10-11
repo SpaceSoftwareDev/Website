@@ -1,0 +1,17 @@
+{
+	"name": "w/seeder",
+    "version": "0.1.1",
+	"description": "Model seeder",
+	"support": {
+		"issues": "https://gitlab.com/wezeo/ocms-plugins/seeder"
+	},
+    "authors": [
+        {
+            "name": "Patrik Nemeček",
+            "email": "nemecek@wezeo.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    }
+}

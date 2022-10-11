@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/appspaceweb/project/models/project/fields.yaml
+
+# Model Class name
+modelClass: AppSpaceWeb\Project\Models\Project
+
+# Default redirect location
+defaultRedirect: appspaceweb/project/projects
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appspaceweb/project/projects/update/:id
+    redirectClose: appspaceweb/project/projects
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appspaceweb/project/projects
+    redirectClose: appspaceweb/project/projects
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

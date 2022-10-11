@@ -1,0 +1,26 @@
+<?php foreach($data as $sheet => $groupedModels): ?>
+    <h4><b><?= $sheet ?></b></h4>
+
+    <?php foreach($groupedModels as $alias => $models): ?>
+        <h5><b><?= '   -   ' . $alias ?></b></h5>
+        <?php if ($models->isNotEmpty()): ?>
+        <table class="table">
+            <tr>
+                <?php foreach($models->first() as $key => $value): ?>
+                    <th><?= $key ?></th>
+                <?php endforeach; ?>
+            </tr>
+
+            <?php foreach($models as $model): ?>
+            <tr>
+                <?php foreach($model as $key => $value): ?>
+                    <td><?= is_array($value) ? json_encode($value) : $value ?></td>
+                <?php endforeach; ?>
+            </tr>
+
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+
+    <?php endforeach; ?>
+<?php endforeach; ?>
