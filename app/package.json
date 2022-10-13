@@ -36,5 +36,5 @@
     "node": ">=16.13.0",
     "yarn": ">=1.22.17"
   },
-  "packageManager": "yarn@4.0.0-rc.22"
+  "packageManager": "yarn@4.0.0-rc.25"
 }

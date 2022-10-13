@@ -1,0 +1,48 @@
+name: App
+
+on: [push, pull_request]
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+          cache-dependency-path: ./app/yarn.lock
+      - name: Install Dependencies
+        working-directory: ./app
+        run: yarn install --immutable
+      - name: Lint
+        working-directory: ./app
+        run: yarn lint
+
+  Build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+          cache-dependency-path: ./app/yarn.lock
+      - name: Install Dependencies
+        working-directory: ./app
+        run: yarn install --immutable
+      - name: Build
+        working-directory: ./app
+        run: yarn build
