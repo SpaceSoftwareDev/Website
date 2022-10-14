@@ -1,3 +1,7 @@
 trailingComma: "none"
 semi: false
 singleQuote: false
+vueIndentScriptAndStyle: false
+bracketSameLine: true
+tabWidth: 4
+useTabs: true

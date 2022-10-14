@@ -1,0 +1,22 @@
+<IfModule mod_headers.c>
+    RequestHeader set X-Prerender-Token "M5nyzi0jOhB0hcOnXjNh"
+    RequestHeader set X-Prerender-Version "prerender-apache@2.0.0"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+
+    <IfModule mod_proxy_http.c>
+        RewriteCond %{HTTP_USER_AGENT} googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest\/0\.|pinterestbot|slackbot|vkShare|W3C_Validator|whatsapp|redditbot|applebot|flipboard|tumblr|bitlybot|skypeuripreview|nuzzel|discordbot|google\ page\ speed|qwantify|bitrix\ link\ preview|xing-contenttabreceiver|chrome-lighthouse|telegrambot [NC,OR]
+        RewriteCond %{QUERY_STRING} _escaped_fragment_
+        RewriteCond %{REQUEST_URI} ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent|\.ttf|\.woff|\.svg))
+
+        RewriteRule ^(index\.html|index\.php)?(.*) https://service.prerender.io/%{REQUEST_SCHEME}://%{HTTP_HOST}$2 [P,END]
+    </IfModule>
+</IfModule>

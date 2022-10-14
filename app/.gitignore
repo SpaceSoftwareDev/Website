@@ -2,13 +2,11 @@
 # http://git-scm.com/docs/gitignore
 
 *~
-*.sw[mnpcod]
 .tmp
 *.tmp
 *.tmp.*
 *.sublime-project
 *.sublime-workspace
-.DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
@@ -16,13 +14,15 @@ $RECYCLE.BIN/
 *.log
 log.txt
 npm-debug.log*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
-/.idea
 /.ionic
-/.sass-cache
-/.sourcemaps
 /.versions
-/.vscode
 /coverage
 /dist
 /node_modules
@@ -30,4 +30,10 @@ npm-debug.log*
 /plugins
 /www
 
-!.yarn/cache
+# Editor directories and files
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

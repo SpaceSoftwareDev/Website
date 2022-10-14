@@ -1,28 +1,41 @@
 {
-	"compilerOptions": {
-		"target": "esnext",
-		"module": "esnext",
-		"moduleResolution": "node",
-		"lib": ["esnext", "dom"],
-		"strict": false,
-		"sourceMap": true,
-		"jsx": "preserve",
-		"useDefineForClassFields": true,
-		"resolveJsonModule": true,
-		"importHelpers": true,
-		"esModuleInterop": true,
-		"baseUrl": "..",
-		"paths": {
-			"@/*": ["src/*"]
-		},
-		"types": [
-			"@types/node",
-			"vite/client"
-		]
-	},
-	"exclude": [
-      "dist", "node_modules",
-      ".yarn", ".idea",
-    "../.github"
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "strict": false,
+    "sourceMap": true,
+    "jsx": "preserve",
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "types": [
+      "@intlify/vite-plugin-vue-i18n/client",
+      "@types/node",
+      "vite/client"
     ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "ios",
+    "android",
+    ".yarn",
+    ".idea",
+    ".github",
+    "public",
+    "docker",
+    "resources"
+  ]
 }

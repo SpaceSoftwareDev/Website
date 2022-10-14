@@ -1,21 +1,31 @@
 import { defineConfig } from "vite"
+
+/** Vite Plugins */
 import vue from "@vitejs/plugin-vue"
+import vueI18n from "@intlify/vite-plugin-vue-i18n"
+import { ViteWebfontDownload } from "vite-plugin-webfont-dl"
+
 import { fileURLToPath, URL } from "url"
 
-import progress from "vite-plugin-progress"
-import colors from "picocolors"
-
-// https://vitejs.dev/config/
+/**
+ * Vite Config
+ *
+ * @see https://vitejs.dev/config/
+ */
 export default defineConfig({
+	server: {
+		port: 80,
+		host: true
+	},
 	plugins: [
 		vue(),
-		progress({
-			format: `${colors.green(colors.bold("Building"))} ${colors.cyan(
-				":bar"
-			)} :percent`,
-			total: 200,
-			width: 60
-		})
+		vueI18n({
+			include: fileURLToPath(new URL("./src/locales/**", import.meta.url))
+		}),
+		ViteWebfontDownload([
+			"https://fonts.googleapis.com/css?family=Sarina",
+			"https://fonts.googleapis.com/css?family=Roboto"
+		])
 	],
 	resolve: {
 		alias: {
