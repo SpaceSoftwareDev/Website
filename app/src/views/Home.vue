@@ -14,10 +14,9 @@
 			<!--Whole content of landing page-->
 			<article>
 				<p class="landingText">
-					Software studio <br />founded by <br /><span
-						class="coloredText"
-						>highschool students</span
-					>
+					Software studio <br />
+					founded by <br />
+					<span class="coloredText"> highschool students </span>
 				</p>
 				<!--Socials. icons-->
 				<div class="icons"><p>*ICONS*</p></div>
@@ -25,16 +24,16 @@
 				<button>Get In Touch</button>
 			</article>
 
-			<!--<footer>
+			<!-- <footer>
 				<Footer />
-			</footer>--->
+			</footer> -->
 		</div>
 	</ion-page>
 </template>
 
 <script setup lang="ts">
-import NavBar from "@/components/NavBar.vue"
-//import Footer from "@/components/Footer.vue"
+import { NavBar } from "@/components"
+// import Footer from "@/components/Footer.vue"
 </script>
 <style lang="scss" scoped>
 .container {
@@ -48,18 +47,17 @@ article {
 }
 
 .landingText {
-	font-family: "Poppins", sans-serif;
 	margin: 0;
 	font-size: 3.7rem;
 	font-weight: 600;
 }
 
 .coloredText {
-	font-family: "Poppins", sans-serif;
 	font-size: 3.9rem;
 	font-weight: 800;
 	background: #00d1ff;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

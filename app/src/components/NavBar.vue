@@ -22,17 +22,28 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue"
+
 // Html elements for changes
-const toggle = ref(document.getElementById("morebtn"))
-const dropDown = ref(document.getElementById("navLinks"))
-const trashDiv = ref(document.getElementById("test"))
+const toggle = ref<HTMLAnchorElement>(null)
+const dropDown = ref<HTMLElement>(null)
+const trashDiv = ref<HTMLDivElement>(null)
+
 // variable for loading first dropdown
 let clicks = 0
+
 // toggle function between active and not active dropdown
-const superToggle = function (element, active, deactive) {
+const superToggle = function (
+	element: HTMLElement,
+	active: string,
+	deactive: string
+) {
 	element.classList.toggle(active)
 	element.classList.toggle(deactive)
 }
+
+/**
+ * ! Rewrite to use `@click=""` instead
+ */
 // dropdown function
 onMounted(() => {
 	toggle.value.addEventListener("click", () => {

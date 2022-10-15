@@ -1,0 +1,8 @@
+{
+	"files.exclude": {
+		"**/node_modules": true
+	},
+  "npm.packageManager": "yarn",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
+}

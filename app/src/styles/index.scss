@@ -1,8 +1,4 @@
 @use "sass:string";
-//Space mono - navigation font
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-//poppins main font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 #nprogress {
 	pointer-events: none;
@@ -26,9 +22,14 @@ ion-content {
 	}
 }
 
+* {
+	font-family: "Poppins", sans-serif;
+}
+
 body {
 	background: rgb(240, 240, 240);
 	overflow-x: hidden;
+	font-family: "Poppins", sans-serif;
 }
 
 body.dark {

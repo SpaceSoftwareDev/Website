@@ -21,7 +21,6 @@
       ]
     },
     "types": [
-      "@intlify/vite-plugin-vue-i18n/client",
       "@types/node",
       "vite/client"
     ]
@@ -29,13 +28,10 @@
   "exclude": [
     "dist",
     "node_modules",
-    "ios",
-    "android",
     ".yarn",
     ".idea",
     ".github",
     "public",
-    "docker",
     "resources"
   ]
 }
