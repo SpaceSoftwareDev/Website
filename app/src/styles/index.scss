@@ -26,20 +26,3 @@ body {
 	background: rgb(240, 240, 240);
 	overflow-x: hidden;
 }
-
-body.dark {
-	color: white;
-	background-color: rgb(30, 30, 30);
-	.content {
-		background-color: #32353b;
-	}
-
-	.alert-radio-label {
-		color: white;
-	}
-}
-
-.v-toast {
-	position: relative;
-	margin-top: 1rem;
-}

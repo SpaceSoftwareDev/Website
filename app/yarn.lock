@@ -192,14 +192,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ionic/core@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "@ionic/core@npm:6.3.1"
+"@ionic/core@npm:^6.3.2":
+  version: 6.3.2
+  resolution: "@ionic/core@npm:6.3.2"
   dependencies:
     "@stencil/core": "npm:^2.18.0"
     ionicons: "npm:^6.0.3"
     tslib: "npm:^2.1.0"
-  checksum: 5e343a141416e57c82bc9cc3da8c8c98b30389133797f4bd46d6814616085cdd892915696c76874605cf5cce35c5e618ec2718ece1c74f6b1ad7c1bf6764ba24
+  checksum: 737dc0018cca6f899d9f8afffa329855898ab8c3e47ee695679dbf54664c0e915a5bf9de9bdf2863e513df35b21a61b398c95b8b4d078fe26ca2ce30adeb89bc
   languageName: node
   linkType: hard
 
@@ -210,22 +210,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ionic/vue-router@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "@ionic/vue-router@npm:6.3.1"
+"@ionic/vue-router@npm:^6.3.2":
+  version: 6.3.2
+  resolution: "@ionic/vue-router@npm:6.3.2"
   dependencies:
-    "@ionic/vue": "npm:^6.3.1"
-  checksum: 075e106709dbdfc42d4fb554d882a2f91ef163822b7a92c761373c58da2c233e32d740162121517ac6759ec0a85f11ea32ea6ce5bd41fccebc7b6b900adba67e
+    "@ionic/vue": "npm:^6.3.2"
+  checksum: 09aa27992d5ecee2b58a7c7147cc2a609c8209c5343dfb3b787a370555187431aac00dc81718c91a0c5d77e9d8e062f231da3c13533f9ec500937cd479ffca1c
   languageName: node
   linkType: hard
 
-"@ionic/vue@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "@ionic/vue@npm:6.3.1"
+"@ionic/vue@npm:^6.3.2":
+  version: 6.3.2
+  resolution: "@ionic/vue@npm:6.3.2"
   dependencies:
-    "@ionic/core": "npm:^6.3.1"
+    "@ionic/core": "npm:^6.3.2"
     ionicons: "npm:^6.0.2"
-  checksum: 897aff9b28900d8f72fef591b4b9cd0854bb5f646ca3b922f4e0263c2010e5380bc30986082d55df39f3d8ffa3d5c1589f270f8dc1d4d38042141041ed28fd74
+  checksum: 5d754e17009ccd34f714feb6212716649ac2648ba8116cdf6213f598b43ddd4716bc917b6493f72d1fc1f78cb6d5e83ffcb58feacd4b6e153237856d0f923f3f
   languageName: node
   linkType: hard
 
@@ -329,10 +329,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/web-bluetooth@npm:^0.0.15":
-  version: 0.0.15
-  resolution: "@types/web-bluetooth@npm:0.0.15"
-  checksum: 85051c141c45cb40ae1f1b1272658dcbfaae94a14adc900eed3c8a7e0c21b4a0a1045cd01040dd2b8cf6f81daa26cead5414027bd088b544e2954ac5b134b42a
+"@types/web-bluetooth@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@types/web-bluetooth@npm:0.0.16"
+  checksum: 80c9f064f683c1a3b9d79f19c6dd02187518fe428d6d89b041c1d36c6dbec9a5a3ef23fa6f727c9e9c5438f7ca15acb423eba2216172b86c870c763967ca4a71
   languageName: node
   linkType: hard
 
@@ -621,15 +621,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:9.3.0, @vueuse/core@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/core@npm:9.3.0"
+"@vueuse/core@npm:9.3.1, @vueuse/core@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/core@npm:9.3.1"
   dependencies:
-    "@types/web-bluetooth": "npm:^0.0.15"
-    "@vueuse/metadata": "npm:9.3.0"
-    "@vueuse/shared": "npm:9.3.0"
+    "@types/web-bluetooth": "npm:^0.0.16"
+    "@vueuse/metadata": "npm:9.3.1"
+    "@vueuse/shared": "npm:9.3.1"
     vue-demi: "npm:*"
-  checksum: b11df3954ba9c819cf5d298f11ae4744bc6299d255b6f63ce4bee0eeea98061a2cc62377a099bdf9692f480ceccca2628c0701104fd850fbd4fb7699afb02707
+  checksum: 459b969a2c7650a9c3fa55a04138dd1c202f59fc7ab8e82cc01e00e96d3925d6a03450b606140a78e7dcee924c8437a5ef117263514045cd090e2ba76f0e7640
   languageName: node
   linkType: hard
 
@@ -646,12 +646,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/integrations@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/integrations@npm:9.3.0"
+"@vueuse/integrations@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/integrations@npm:9.3.1"
   dependencies:
-    "@vueuse/core": "npm:9.3.0"
-    "@vueuse/shared": "npm:9.3.0"
+    "@vueuse/core": "npm:9.3.1"
+    "@vueuse/shared": "npm:9.3.1"
     vue-demi: "npm:*"
   peerDependencies:
     async-validator: "*"
@@ -685,45 +685,45 @@ __metadata:
       optional: true
     universal-cookie:
       optional: true
-  checksum: 7d6ad4b7beeff4566a5299c6b0c7d13ce63290b2b1c2d0135e2fd2124f5a0c4ccfa3d81bc4eb659c713b4736b6d698757e6350b9cf8cd0ca1d0cb96c705d129c
+  checksum: 1ae84e91c89b5651f118c231c8b16b1c8f6d2cdfdde438e430a790f008e76089e0b9113392609d8813bf1862d214f01037b9f730a584bd3ebbf44ed45a71af57
   languageName: node
   linkType: hard
 
-"@vueuse/math@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/math@npm:9.3.0"
+"@vueuse/math@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/math@npm:9.3.1"
   dependencies:
-    "@vueuse/shared": "npm:9.3.0"
+    "@vueuse/shared": "npm:9.3.1"
     vue-demi: "npm:*"
-  checksum: 3a211b128ad1178eb6d86a78224c7dddcb513b44a69a2fc5ef80c179743a06f207a85f95afb4080071ff154cd616527e716afc33f30a3c3ae25d02b944bca70d
+  checksum: a133ad5e373bb0ac10457f5299f2c9a44bbaf4e4e592ac8fe195b5fa9dd44b4335bf424cd2e7db024c0e3b2ad4cda2e14589b4f78dbbdbdf10222e302015ea66
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/metadata@npm:9.3.0"
-  checksum: d9c0b8e4260722b0810934913a986b825121c815236aebfbb62fceb78cd4b87867018544cf1a269b6a6e2444b933d6c5932e20dcafc5b1e458e75fe69c220f2d
+"@vueuse/metadata@npm:9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/metadata@npm:9.3.1"
+  checksum: 531605bdf463868e4f27314fac007a7dd3e77256e1d290b0a808ec4330496db850972a473e4c58c4a963ad5d167ad9e300a7ebe7a63c926cd7d241827b8f38cf
   languageName: node
   linkType: hard
 
-"@vueuse/router@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/router@npm:9.3.0"
+"@vueuse/router@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/router@npm:9.3.1"
   dependencies:
-    "@vueuse/shared": "npm:9.3.0"
+    "@vueuse/shared": "npm:9.3.1"
     vue-demi: "npm:*"
   peerDependencies:
     vue-router: ">=4.0.0-rc.1"
-  checksum: d6bfefbc0a4c97ca303c232c554b9f9e1605fc2bdf9750f22eb4a7631e1aef065674e1e6c4b415a81c6bde2fd6d4f7618ce3714fac6043468be11818f53d0f3a
+  checksum: 3349ed789c3040fde5caa897a86cf9a3b74042742cfd82cf9dfc1d5ee2ea51cd576012db67b5341fa2449490a787e0b2fd5388618dea846dd67cc86ca660c436
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.3.0, @vueuse/shared@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/shared@npm:9.3.0"
+"@vueuse/shared@npm:9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/shared@npm:9.3.1"
   dependencies:
     vue-demi: "npm:*"
-  checksum: 47d4c554c7e2b10b7aa8755935fb5ff65f958dadabc524af71f9732853bce1753ae5446c726d0098f5d8258aa6d95fd0d4a1e17dcd146c9b1564cefd695d16f6
+  checksum: 0279637aa8ac535590e2846830b590fb79f829af23156f9595d970f30ae68083b3d5ef0b539bd169533da237a28f1c63af8a97cc56b6751d851990710146836a
   languageName: node
   linkType: hard
 
@@ -733,6 +733,15 @@ __metadata:
   dependencies:
     vue-demi: "npm:*"
   checksum: 4cf64d675218dea17adb226a5c75ede8f6b0e1ef7d29a49953dbf0bdd9c77347d49635b500afcee6b91ef01366d76a4950d52d11552af02821c17f4348cb4de9
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "@vueuse/shared@npm:9.3.0"
+  dependencies:
+    vue-demi: "npm:*"
+  checksum: 47d4c554c7e2b10b7aa8755935fb5ff65f958dadabc524af71f9732853bce1753ae5446c726d0098f5d8258aa6d95fd0d4a1e17dcd146c9b1564cefd695d16f6
   languageName: node
   linkType: hard
 
@@ -2916,19 +2925,19 @@ __metadata:
     "@capacitor/keyboard": "npm:^4.0.1"
     "@capacitor/preferences": "npm:^4.0.1"
     "@ionic/pwa-elements": "npm:^3.1.1"
-    "@ionic/vue": "npm:^6.3.1"
-    "@ionic/vue-router": "npm:^6.3.1"
+    "@ionic/vue": "npm:^6.3.2"
+    "@ionic/vue-router": "npm:^6.3.2"
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@types/node": "npm:^18.11.0"
     "@types/nprogress": "npm:^0.2.0"
     "@vitejs/plugin-vue": "npm:^3.1.2"
     "@vue/eslint-config-prettier": "npm:^7.0.0"
     "@vue/eslint-config-typescript": "npm:^11.0.2"
-    "@vueuse/core": "npm:^9.3.0"
+    "@vueuse/core": "npm:^9.3.1"
     "@vueuse/head": "npm:^0.9.8"
-    "@vueuse/integrations": "npm:^9.3.0"
-    "@vueuse/math": "npm:^9.3.0"
-    "@vueuse/router": "npm:^9.3.0"
+    "@vueuse/integrations": "npm:^9.3.1"
+    "@vueuse/math": "npm:^9.3.1"
+    "@vueuse/router": "npm:^9.3.1"
     axios: "npm:^1.1.3"
     eslint: "npm:^8.25.0"
     eslint-plugin-vue: "npm:^9.6.0"
