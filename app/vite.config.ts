@@ -20,7 +20,7 @@ export default defineConfig({
 		vue(),
 		ViteWebfontDownload([
 			"https://fonts.googleapis.com/css2?family=Space+Mono&display=swap", // Navigation Font
-			"https://fonts.googleapis.com/css2?family=Poppins&display=swap", // Body Font
+			"https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap", // Body Font
 			"https://fonts.googleapis.com/css?family=Roboto"
 		])
 	],

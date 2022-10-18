@@ -10,7 +10,12 @@
 			<p>Contact us</p>
 		</nav>
 		<!--More icon for mobile devices-->
-		<a href="#" class="moreButton" ref="toggle" id="morebtn">
+		<a
+			href="#"
+			class="moreButton"
+			ref="toggle"
+			id="morebtn"
+			@click="dropDownToggle()">
 			<span class="bar"></span>
 			<span class="bar"></span>
 			<span class="bar"></span>
@@ -40,22 +45,16 @@ const superToggle = function (
 	element.classList.toggle(active)
 	element.classList.toggle(deactive)
 }
-
-/**
- * ! Rewrite to use `@click=""` instead
- */
 // dropdown function
-onMounted(() => {
-	toggle.value.addEventListener("click", () => {
-		if (clicks == 0) {
-			dropDown.value.classList.add("deactive")
-		}
-		clicks++
-		superToggle(dropDown.value, "active", "deactive")
-		// deleting trash div for different spacing
-		trashDiv.value.remove()
-	})
-})
+function dropDownToggle() {
+	if (clicks == 0) {
+		dropDown.value.classList.add("deactive")
+	}
+	clicks++
+	superToggle(dropDown.value, "active", "deactive")
+	// deleting trash div for different spacing
+	trashDiv.value.remove()
+}
 </script>
 <style lang="scss" scoped>
 header {
