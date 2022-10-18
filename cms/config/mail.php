@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'noreply@domain.tld',
-        'name' => 'OctoberCMS',
+        'address' => env('MAIL_SEND_FROM_ADDREESS', 'noreply@domain.tld'),
+        'name' => env('MAIL_SEND_FROM_NAME', 'OctoberCMS'),
     ],
 
     /*

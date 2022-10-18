@@ -40,7 +40,13 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        config([
+            'services.ses' => [
+                'key' => env('SES_KEY'),
+                'secret' => env('SES_SECRET'),
+                'region' => env('SES_REGION'),
+            ]
+        ]);
     }
 
     /**
