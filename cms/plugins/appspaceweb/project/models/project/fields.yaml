@@ -29,6 +29,6 @@ fields:
         imageWidth: 460
         span: right
     is_published:
-        label: is_published
+        label: Is published
         type: switch
 

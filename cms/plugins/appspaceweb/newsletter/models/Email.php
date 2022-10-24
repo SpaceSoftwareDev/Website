@@ -1,6 +1,6 @@
 <?php namespace AppSpaceWeb\Newsletter\Models;
 
-use Model;
+use October\Rain\Database\Model;
 
 /**
  * Email Model
@@ -28,7 +28,7 @@ class Email extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'email'=> 'required|email|unique:appspaceweb_newsletter_emails',
+        'email' => 'required|email|unique:appspaceweb_newsletter_emails'
     ];
 
     /**

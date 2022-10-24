@@ -9,7 +9,8 @@ class ProjectsController extends Controller
     public function index()
     {
         return ProjectResource::collection(
-            Project::isPublished()->get()
+            Project::isPublished()
+                ->get()
         );
     }
 }

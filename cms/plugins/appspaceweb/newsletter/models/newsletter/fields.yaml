@@ -19,5 +19,3 @@ fields:
     content:
         label: Content
         type: richeditor
-
-

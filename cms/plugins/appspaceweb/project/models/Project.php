@@ -1,7 +1,7 @@
 <?php namespace AppSpaceWeb\Project\Models;
 
-use Model;
 use System\Models\File;
+use October\Rain\Database\Model;
 
 /**
  * Project Model
@@ -67,6 +67,7 @@ class Project extends Model
     public $attachMany = [
         'gallery' => File::class
     ];
+
     public function scopeIsPublished($query)
     {
         return $query->where('is_published', true);

@@ -1,6 +1,6 @@
 <?php namespace AppSpaceWeb\Newsletter\Models;
 
-use Model;
+use October\Rain\Database\Model;
 
 /**
  * Newsletter Model
@@ -56,19 +56,4 @@ class Newsletter extends Model
         'created_at',
         'updated_at'
     ];
-
-    /**
-     * @var array Relations
-     */
-    public $hasOne = [];
-    public $hasMany = [];
-    public $hasOneThrough = [];
-    public $hasManyThrough = [];
-    public $belongsTo = [];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
 }

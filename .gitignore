@@ -1,6 +1,5 @@
 # Editor ignores
 .idea/
-.vscode/
 
 nbproject
 _ide_helper.php

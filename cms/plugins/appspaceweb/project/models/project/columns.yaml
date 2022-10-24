@@ -8,5 +8,7 @@ columns:
         searchable: true
     title:
         label: Title
+        searchable: true
     is_published:
-        label: is_published
+        label: Is published
+        type: switch

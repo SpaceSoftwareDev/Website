@@ -1,7 +1,6 @@
 # Composer ignores
 /modules
 /vendor
-composer.lock
 composer.phar
 
 # Framework ignores

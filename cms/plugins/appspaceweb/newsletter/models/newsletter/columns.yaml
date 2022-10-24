@@ -8,5 +8,7 @@ columns:
         searchable: true
     subject:
         label: Subject
+        searchable: true
     status:
         label: Status
+        searchable: true
