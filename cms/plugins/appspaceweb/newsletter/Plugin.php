@@ -1,5 +1,6 @@
 <?php namespace AppSpaceWeb\Newsletter;
 
+use AppSpaceWeb\Newsletter\Helpers\SendMail;
 use Backend;
 use System\Classes\PluginBase;
 
@@ -24,38 +25,13 @@ class Plugin extends PluginBase
     }
 
     /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
-    {
-
-    }
-
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return array
-     */
-    public function boot()
-    {
-        config([
-            'services.ses' => [
-                'key' => env('SES_KEY'),
-                'secret' => env('SES_SECRET'),
-                'region' => env('SES_REGION'),
-            ]
-        ]);
-    }
-
-    /**
      * Registers back-end navigation items for this plugin.
      *
      * @return array
      */
     public function registerNavigation()
     {
+
         return [
             'newsletter' => [
                 'label'       => 'Newsletter',
@@ -82,4 +58,24 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    public function boot()
+    {
+        config([
+            'services.ses' => [
+                'key' => env('SES_KEY'),
+                'secret' => env('SES_SECRET'),
+                'region' => env('SES_REGION'),
+            ]
+        ]);
+    }
+
+    public function registerSchedule($shedule)
+    {
+        $shedule->call(function () {
+            SendMail::send();
+        })->cron('0 10 * * 1');
+    }
+
+
 }

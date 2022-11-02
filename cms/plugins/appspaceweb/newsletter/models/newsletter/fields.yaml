@@ -13,7 +13,7 @@ fields:
         default:
         options:
             for_later: For later
-            for_sent: For sent
+            for_send: For send
             sent: Sent
         span: right
     content:

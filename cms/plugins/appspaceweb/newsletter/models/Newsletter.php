@@ -27,7 +27,11 @@ class Newsletter extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'subject' => 'required',
+        'status' => 'required|in:for_send,sent,for_later',
+        'content' => 'required'
+    ];
 
     /**
      * @var array Attributes to be cast to native types
