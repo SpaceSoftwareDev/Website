@@ -3,14 +3,9 @@
 # ===================================
 
 fields:
-    headline:
-        label: HeadLine
-        type: text
-        span: left
     title:
         label: Title
         type: text
-        span: right
     description:
         label: Description
         type: richeditor
@@ -20,14 +15,12 @@ fields:
         mode: image
         imageHeight: 150
         imageWidth: 150
-        span: left
     gallery:
         label: Gallery
         type: fileupload
         mode: image
         imageHeight: 565
         imageWidth: 460
-        span: right
     is_published:
         label: Is published
         type: switch

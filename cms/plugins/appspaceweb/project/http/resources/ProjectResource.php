@@ -6,9 +6,8 @@ class ProjectResource extends Resource
 {
     public function toArray($request)
     {
-        $response = [
+        return [
             'id'           => $this->id,
-            'headline'     => $this->headline,
             'title'        => $this->title,
             'gallery'      => $this->gallery,
             'icon'         => $this->icon,
@@ -17,7 +16,5 @@ class ProjectResource extends Resource
             'created_at'   => $this->created_at->toDateTimeString(),
             'updated_at'   => $this->updated_at->toDateTimeString()
         ];
-
-        return $response;
     }
 }

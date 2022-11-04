@@ -29,7 +29,10 @@ class Project extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-
+        'title'         => 'required',
+        'icon'          => 'required',
+        'description'   => 'required',
+        'gallery'       => 'nullable',
     ];
 
     /**

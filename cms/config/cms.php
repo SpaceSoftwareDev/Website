@@ -303,16 +303,16 @@ return [
     'storage' => [
 
         'uploads' => [
-            'disk'            => 's3',
+            'disk'            => 'local',
             'folder'          => 'uploads',
-            'path'            => 'https://space-software.s3.eu-central-1.amazonaws.com/uploads',
-            'temporaryUrlTTL' => 3600
+            'path'            => '/storage/app/uploads',
+            'temporaryUrlTTL' => 3600,
         ],
 
         'media' => [
-            'disk'   => 's3',
+            'disk'   => 'local',
             'folder' => 'media',
-            'path'   => 'https://space-software.s3.eu-central-1.amazonaws.com/media'
+            'path'   => '/storage/app/media',
         ],
 
         'resized' => [
