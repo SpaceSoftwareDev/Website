@@ -1,28 +1,17 @@
 [
     {
-        "title": "Zec mi kaar",
-        "description": "<p>asdasdasdas das&nbsp; as</p>",
+        "id": 1,
+        "title": "MemeTime!",
+        "description": "<p>MemeTime is our first project its a new application for android devices.\nMemeTime points out that this is never the bad time to improve your day. The focus of our platform is simple and obvious - just memes and other fun content without any limits or censorship. Purpose of MemeTime! is to make your day better with daily memes of your taste.\n</p>",
         "icon": {
-            "url": "https://conteudo.imguol.com.br/c/esporte/be/2021/10/03/lucas-moura-comemora-gol-marcado-pelo-tottenham-na-premier-league-1633272974796_v2_450x600.jpg"
+            "file": "storage/logo.png"
         },
         "gallery": [
             {
-                "url": "https://i.refresher.sk/users/avatar/268453-6295.jpg"
-            }
-        ]
-    },
-    {
-        "title": "Zec mi kaar vol 2.0",
-        "description": "<p>asdasdasdas das&nbsp; as</p>",
-        "icon": {
-            "url": "https://i.refresher.sk/users/avatar/268453-6295.jpg"
-        },
-        "gallery": [
-            {
-                "url": "https://i.refresher.sk/users/avatar/268453-6295.jpg"
+                "file": "storage/sigma.png"
             },
             {
-                "url": "https://conteudo.imguol.com.br/c/esporte/be/2021/10/03/lucas-moura-comemora-gol-marcado-pelo-tottenham-na-premier-league-1633272974796_v2_450x600.jpg"
+                "file": "storage/koleno.png"
             }
         ]
     }
