@@ -1,10 +1,10 @@
 <template>
 	<div class="dividerLineWrapper">
-		<h1>About us</h1>
+		<h1 id="aboutus">About us</h1>
 		<div class="dividerLine"></div>
 	</div>
 </template>
-<script lang="ts"></script>
+<script lang="ts" setup></script>
 <style lang="scss" scoped>
 .container {
 	display: flex;

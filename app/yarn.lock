@@ -496,13 +496,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/devtools-api@npm:^6.4.4":
-  version: 6.4.4
-  resolution: "@vue/devtools-api@npm:6.4.4"
-  checksum: f16cd8085dd2f950bb768dfc31249ffb6367ec0215f6a2f007d125672de161271735642a28febe776f614e5abe205146ebcc4ab14d2fa48cc91f58ec846bea5c
-  languageName: node
-  linkType: hard
-
 "@vue/devtools-api@npm:^6.4.5":
   version: 6.4.5
   resolution: "@vue/devtools-api@npm:6.4.5"
@@ -2568,25 +2561,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pinia@npm:^2.0.23":
-  version: 2.0.23
-  resolution: "pinia@npm:2.0.23"
-  dependencies:
-    "@vue/devtools-api": "npm:^6.4.4"
-    vue-demi: "npm:*"
-  peerDependencies:
-    "@vue/composition-api": ^1.4.0
-    typescript: ">=4.4.4"
-    vue: ^2.6.14 || ^3.2.0
-  peerDependenciesMeta:
-    "@vue/composition-api":
-      optional: true
-    typescript:
-      optional: true
-  checksum: 31bb375b22341d04662c9dec93d67f0eb636bb2428154f917436fcd6a4a35ff1c4e97fb23fb7bfbab76d8cdea6963a325a3d0c90816622475067ecf90e17fa03
-  languageName: node
-  linkType: hard
-
 "postcss-selector-parser@npm:^6.0.9":
   version: 6.0.10
   resolution: "postcss-selector-parser@npm:6.0.10"
@@ -2812,7 +2786,6 @@ __metadata:
     eslint-plugin-vue: "npm:^9.7.0"
     ionicons: "npm:^6.0.4"
     nprogress: "npm:^0.2.0"
-    pinia: "npm:^2.0.23"
     prettier: "npm:^2.7.1"
     sass: "npm:^1.56.1"
     typescript: "npm:^4.8.4"

@@ -1,10 +1,10 @@
 <template>
 	<div class="dividerLineWrapper">
 		<div class="dividerLine"></div>
-		<h1>Projects</h1>
+		<h1 id="projects">Projects</h1>
 	</div>
 </template>
-<script lang="ts"></script>
+<script lang="ts" setup></script>
 <style lang="scss" scoped>
 .container {
 	display: flex;
@@ -39,11 +39,12 @@ h1 {
 		display: none;
 	}
 	h1 {
-		width: 100%;
+		width: 100vw;
 		text-align: center;
 	}
 	.dividerLineWrapper {
 		margin-left: 0;
+		width: 100vw;
 	}
 }
 </style>

@@ -44,12 +44,14 @@
 				<Divider />
 				<section class="aboutUs">
 					<p class="aboutUsText">
-						We are new sofware studio founded by highschool<br />
+						We are new sofware studio founded by highschool<wbr />
 						students from Slovakia.<br />
 						Currently we are studying on high school SPŠE Hálova
 						16.<br />
 						And we are part of really cool study plan named
-						<br />OPENLAB.
+						<wbr /><a href="https://openlab.sk" target="_blank">
+							OPENLAB </a
+						>.
 					</p>
 					<img src="/assets/LogoAbt.png" class="logoAbt" />
 				</section>
@@ -57,8 +59,13 @@
 					<Member />
 				</section>
 				<Divider2 />
-				<Project />
-				<Footer></Footer>
+				<Project
+					v-for="project in projects"
+					:key="project.title"
+					:title="project.title"
+					:description="project.description"
+					:img="project.icon.path" />
+				<Footer />
 			</div>
 		</ion-content>
 	</ion-page>
@@ -72,6 +79,24 @@ import Member from "@/components/Member.vue"
 import Divider from "@/components/Divider.vue"
 import Divider2 from "@/components/Divider2.vue"
 import Project from "@/components/Project.vue"
+import { ref, onMounted } from "vue"
+import axios from "axios"
+
+interface project {
+	gallery: { path: string }[]
+	icon: { path: string }
+	id: number
+	title: string
+	description: string
+}
+
+const projects = ref<project[]>([])
+onMounted(async () => {
+	const res = await axios.get<{ data: project[] }>(
+		"https://space-software.com/cms/api/v1/projects"
+	)
+	projects.value = res.data.data
+})
 </script>
 <style lang="scss" scoped>
 .container {
@@ -170,6 +195,7 @@ aside {
 	content: attr(data);
 	font-size: 2rem;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
 	transition: 200ms;
@@ -312,6 +338,7 @@ aside {
 		content: attr(data);
 		font-size: 2rem;
 		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
 		transition: 200ms;

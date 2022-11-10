@@ -5,9 +5,9 @@
 		<img src="/assets/logo-nav-bar.svg" class="logo" />
 		<!--Navigation links-->
 		<nav id="navLinks" ref="dropDown">
-			<p>About us</p>
-			<p>Projects</p>
-			<p>Contact us</p>
+			<a href="#aboutus">About us</a>
+			<a href="#projects">Projects</a>
+			<a>Contact us</a>
 		</nav>
 		<!--More icon for mobile devices-->
 		<a
@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue"
+import { ref } from "vue"
 
 // Html elements for changes
 const toggle = ref<HTMLAnchorElement>(null)
@@ -95,9 +95,11 @@ nav {
 	justify-content: space-between;
 	text-align: center;
 	width: 30%;
-	p {
+	a {
 		transition: all 300ms;
 		font-family: "Space Mono", monospace;
+		text-decoration: none;
+		color: black;
 	}
 }
 
