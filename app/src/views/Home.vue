@@ -1,53 +1,98 @@
 <template>
 	<ion-page>
-		<!--Content container div-->
-		<div class="container">
-			<!--Nav Bar-->
-			<header>
+		<ion-content>
+			<!--Content container div-->
+			<div class="container">
 				<NavBar />
-			</header>
-			<!--Right side illustration-->
-			<aside>
-				<img src="/assets/Illustration.png" class="illustration" />
-			</aside>
-			<!--Whole content of landing page-->
-			<article>
-				<p class="landingText">
-					Software studio <br />
-					founded by <br />
-					<span class="coloredText"> highschool students </span>
-				</p>
-				<!--Socials. icons-->
-				<section class="socials">
-					<ion-icon :icon="icons.logoFacebook" id="ic1" />
-					<ion-icon :icon="icons.logoInstagram" id="ic2" />
-					<ion-icon :icon="icons.logoTwitter" id="ic3" />
-					<ion-icon :icon="icons.logoTiktok" id="ic4" />
-				</section>
-				<!--Button for sending email-->
-				<button class="getInTouchBtn" data="Get In Touch"></button>
-			</article>
 
-			<!-- <footer>
-				<Footer />
-			</footer> -->
-		</div>
+				<!--Whole content of landing page-->
+				<article>
+					<p class="landingText">
+						Software studio <br />
+						founded by <br />
+						<span class="coloredText"> highschool students </span>
+					</p>
+
+					<!--Socials. icons-->
+					<section class="socials">
+						<ion-icon :icon="icons.logoFacebook" id="ic1" />
+						<ion-icon :icon="icons.logoInstagram" id="ic2" />
+						<ion-icon :icon="icons.logoTwitter" id="ic3" />
+						<ion-icon :icon="icons.logoTiktok" id="ic4" />
+					</section>
+					<!--Button for sending email-->
+					<button class="getInTouchBtn" data="Get In Touch"></button>
+				</article>
+				<!--Right side illustration-->
+				<aside>
+					<img src="/assets/Illustration.png" class="illustration" />
+				</aside>
+				<div class="trashDiv"></div>
+				<section>
+					<div class="scrollDivider">
+						<div class="textWrapper">
+							<span style="--i: 1" class="letter">S</span>
+							<span style="--i: 2" class="letter">C</span>
+							<span style="--i: 3" class="letter">R</span>
+							<span style="--i: 4" class="letter">O</span>
+							<span style="--i: 5" class="letter">L</span>
+							<span style="--i: 6" class="letter">L</span>
+						</div>
+						<div class="scrollLine"></div>
+					</div>
+				</section>
+				<Divider />
+				<section class="aboutUs">
+					<p class="aboutUsText">
+						We are new sofware studio founded by highschool<br />
+						students from Slovakia.<br />
+						Currently we are studying on high school SPŠE Hálova
+						16.<br />
+						And we are part of really cool study plan named
+						<br />OPENLAB.
+					</p>
+					<img src="/assets/LogoAbt.png" class="logoAbt" />
+				</section>
+				<section class="members">
+					<Member />
+				</section>
+				<Divider2 />
+				<Project />
+				<Footer></Footer>
+			</div>
+		</ion-content>
 	</ion-page>
 </template>
 
 <script setup lang="ts">
-//import Footer from "@/components/Footer.vue"
+import Footer from "@/components/Footer.vue"
 import * as icons from "ionicons/icons"
 import NavBar from "@/components/NavBar.vue"
+import Member from "@/components/Member.vue"
+import Divider from "@/components/Divider.vue"
+import Divider2 from "@/components/Divider2.vue"
+import Project from "@/components/Project.vue"
 </script>
 <style lang="scss" scoped>
 .container {
-	height: 100%;
+	position: relative;
+	height: auto;
 	background: linear-gradient(180deg, #ffffff 0%, #cce2ff 100%);
+}
+
+.trashDiv {
+	margin-top: 30rem;
 }
 
 article {
 	margin-left: 10rem;
+	float: left;
+}
+
+aside {
+	width: 30%;
+	height: auto;
+	float: right;
 	margin-right: 10rem;
 }
 
@@ -73,7 +118,7 @@ article {
 .socials {
 	display: flex;
 	justify-content: space-between;
-	width: 30%;
+	width: 50%;
 	margin-top: 3vh;
 	padding-left: 1vw;
 
@@ -93,7 +138,7 @@ article {
 #ic2:hover,
 #ic3:hover,
 #ic4:hover {
-	color: white;
+	color: #00d1ff;
 }
 
 .getInTouchBtn {
@@ -117,7 +162,7 @@ article {
 	top: 5px;
 	bottom: 5px;
 	border-radius: 50rem;
-	background-color: #dcebff;
+	background-color: #f6faff;
 	z-index: -1;
 	transition: 200ms;
 }
@@ -140,10 +185,174 @@ article {
 	color: white;
 }
 
-aside {
-	width: 30%;
-	height: auto;
-	float: right;
-	margin-right: 10rem;
+.scrollDivider {
+	margin-left: 10rem;
+}
+
+.textWrapper {
+	margin-top: 8vh;
+	font-size: 1rem;
+}
+
+.letter {
+	font-family: "Poppins";
+	position: relative;
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.5vh;
+	animation: waveAnim 3s infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+
+.scrollLine {
+	margin-top: 2vh;
+	width: 0.1vw;
+	height: 40vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin-left: 2.5vw;
+}
+
+@keyframes waveAnim {
+	0%,
+	40%,
+	100% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-20px);
+	}
+}
+
+.aboutUs {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60%;
+	margin-left: 21vw;
+}
+
+.aboutUsText {
+	margin: 0;
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 1.1rem;
+}
+
+.logoAbt {
+	width: 15vw;
+	height: 15vw;
+}
+
+.members {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1160px) {
+	.trashDiv {
+		margin-top: 0rem;
+	}
+
+	article {
+		margin-top: -10rem;
+		float: none;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.landingText {
+		margin-top: 3vh;
+		margin-left: 0vw;
+		margin-right: 0vw;
+		font-size: 3.5vh;
+		width: 80%;
+	}
+	.coloredText {
+		font-size: 3.5vh;
+	}
+
+	.socials {
+		text-align: center;
+		width: 78%;
+		display: none;
+	}
+
+	aside {
+		float: none;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+		width: 80vw;
+		height: auto;
+
+		img {
+			margin-top: 5vh;
+		}
+	}
+
+	.getInTouchBtn {
+		display: none;
+		margin-top: 4vh;
+		padding: 2vh 5vw;
+		font-size: 1vh;
+	}
+	.getInTouchBtn::before {
+		left: 4px;
+		right: 4px;
+		top: 4px;
+		bottom: 4px;
+	}
+	.getInTouchBtn::after {
+		content: attr(data);
+		font-size: 2rem;
+		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+		-webkit-background-clip: text;
+		color: transparent;
+		transition: 200ms;
+	}
+
+	.scrollDivider {
+		margin-left: 3rem;
+	}
+	.scrollLine {
+		margin-left: 2.4rem;
+		width: 1px;
+		height: 30vh;
+	}
+
+	.aboutUsText {
+		margin-top: 10vw;
+		text-align: center;
+	}
+	.logoAbt {
+		display: none;
+	}
+
+	.aboutUs {
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 1375px) and (min-width: 1161px) {
+	aside {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 560px) and (max-width: 1375px) {
+	aside {
+		width: 400px;
+	}
+}
+
+@media screen and (min-width: 326px) and (max-width: 425px) {
+	.coloredText {
+		font-size: 1.7rem;
+	}
 }
 </style>

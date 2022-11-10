@@ -11,10 +11,11 @@ footer {
 	padding-left: 5rem;
 	padding-right: 5rem;
 	background-color: rgba(255, 255, 255, 0.5);
-
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
+	width: 100%;
 }
 
 .rightsImg {

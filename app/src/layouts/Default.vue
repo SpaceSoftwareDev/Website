@@ -7,5 +7,4 @@
 
 <script setup lang="ts">
 import { NavBar } from "@/components"
-import * as icons from "ionicons/icons"
 </script>

@@ -21,8 +21,6 @@
 			<span class="bar"></span>
 		</a>
 	</header>
-	<!--Trash div for spacing when page 1st load on mobile-->
-	<div id="trashDiv" ref="trashDiv"></div>
 </template>
 
 <script setup lang="ts">
@@ -31,7 +29,7 @@ import { ref, onMounted } from "vue"
 // Html elements for changes
 const toggle = ref<HTMLAnchorElement>(null)
 const dropDown = ref<HTMLElement>(null)
-const trashDiv = ref<HTMLDivElement>(null)
+const header = ref<HTMLElement>(null)
 
 // variable for loading first dropdown
 let clicks = 0
@@ -52,8 +50,12 @@ function dropDownToggle() {
 	}
 	clicks++
 	superToggle(dropDown.value, "active", "deactive")
-	// deleting trash div for different spacing
-	trashDiv.value.remove()
+
+	if (dropDown.value.classList.contains("active")) {
+		header.value.style.height = "35vh"
+	} else {
+		header.value.style.height = "15vh"
+	}
 }
 </script>
 <style lang="scss" scoped>
@@ -64,6 +66,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	transition: all 300ms;
 }
 
 .logo {
@@ -105,10 +108,6 @@ nav :hover {
 // Styling for tablets and mobile devices
 
 @media (max-width: 1160px) {
-	#trashDiv {
-		height: 6rem;
-		width: 100%;
-	}
 	.moreButton {
 		display: flex;
 		margin-top: 2.4rem;
@@ -119,11 +118,13 @@ nav :hover {
 		flex-direction: column;
 		width: 10rem;
 
+		margin-top: 4rem;
+
 		margin-left: -6rem;
 	}
 
 	header {
-		height: auto;
+		height: 12vh;
 		margin-left: 10vw;
 		margin-right: 10vw;
 	}
@@ -136,7 +137,7 @@ nav :hover {
 
 	nav.active {
 		display: flex;
-		animation: growDown 600ms ease-in-out normal forwards;
+		animation: growDown 300ms ease-in-out normal forwards;
 		transform-origin: top center;
 
 		@keyframes growDown {
@@ -150,14 +151,14 @@ nav :hover {
 
 			100% {
 				transform: scaleY(1);
-				margin-top: 4rem;
 			}
 		}
 	}
 
 	nav.deactive {
 		display: flex;
-		animation: dissappear 600ms ease-out reverse forwards;
+
+		animation: dissappear 300ms ease-out reverse forwards;
 		transform-origin: top center;
 		@keyframes dissappear {
 			0% {
@@ -170,7 +171,6 @@ nav :hover {
 
 			100% {
 				transform: scaleY(1);
-				margin-top: 4rem;
 			}
 		}
 	}

@@ -15,14 +15,7 @@
 	height: 2px;
 }
 
-ion-content {
-	--overflow: hidden;
-	&::-webkit-scrollbar {
-		display: none;
-	}
-}
-
-body {
-	background: rgb(240, 240, 240);
-	overflow-x: hidden;
+.v-toast {
+	position: relative;
+	margin-top: 1rem;
 }
