@@ -127,7 +127,7 @@ p {
 	height: 10rem;
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1024px) {
 	.project {
 		display: flex;
 		flex-direction: column;

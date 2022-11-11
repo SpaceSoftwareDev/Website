@@ -83,6 +83,7 @@ nav {
 	justify-content: space-between;
 	text-align: center;
 	width: 30%;
+	margin-right: 5rem;
 
 	a {
 		transition: all 300ms;
@@ -97,7 +98,7 @@ nav {
 
 // Styling for tablets and mobile devices
 
-@media (max-width: 1160px) {
+@media (max-width: 1024px) {
 	header {
 		width: 100vw;
 		position: relative;
@@ -116,7 +117,8 @@ nav {
 		width: 100vw;
 		margin: 0;
 		position: absolute;
-		bottom: -1rem;
+		bottom: -2rem;
+		margin-bottom: 2rem;
 		a {
 			width: 90%;
 			padding: 0.5rem 0;

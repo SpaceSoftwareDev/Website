@@ -326,7 +326,7 @@ aside {
 	justify-content: center;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1024px) {
 	.trashDiv {
 		margin-top: 0rem;
 	}
