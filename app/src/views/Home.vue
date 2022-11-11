@@ -374,6 +374,13 @@ aside {
 		}
 	}
 
+	.contact {
+		img {
+			width: 12rem;
+			height: 12rem;
+		}
+	}
+
 	.getInTouchBtn {
 		display: none;
 		margin-top: 4vh;
@@ -408,12 +415,16 @@ aside {
 	.aboutUsText {
 		margin-top: 10vw;
 		text-align: center;
+		width: 100vw;
 	}
 	.logoAbt {
 		display: none;
 	}
 
 	.aboutUs {
+		width: 100vw;
+		margin-left: 0;
+		padding: 0 1rem;
 		justify-content: center;
 	}
 }
