@@ -100,8 +100,8 @@ nav {
 
 @media (max-width: 1024px) {
 	header {
+		min-height: 10vh;
 		width: 100vw;
-		position: relative;
 	}
 
 	.logo {
@@ -116,9 +116,8 @@ nav {
 		justify-content: center;
 		width: 100vw;
 		margin: 0;
-		position: absolute;
-		bottom: -2rem;
-		margin-bottom: 2rem;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
 		a {
 			width: 90%;
 			padding: 0.5rem 0;
