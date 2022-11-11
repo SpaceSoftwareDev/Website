@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: name
+        searchable: true
+    stack:
+        label: stack
+        searchable: true

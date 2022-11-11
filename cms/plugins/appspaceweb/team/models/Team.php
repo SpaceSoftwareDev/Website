@@ -1,0 +1,82 @@
+<?php namespace AppSpaceWeb\Team\Models;
+
+use Model;
+use October\Rain\Support\Facades\Flash;
+use System\Models\File;
+
+/**
+ * Team Model
+ */
+class Team extends Model
+{
+    use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sortable;
+
+    /**
+     * @var string The database table used by the model.
+     */
+    public $table = 'appspaceweb_team_teams';
+
+    /**
+     * @var array Guarded fields
+     */
+    protected $guarded = ['*'];
+
+    /**
+     * @var array Fillable fields
+     */
+    protected $fillable = [];
+
+    /**
+     * @var array Validation rules for attributes
+     */
+    public $rules = [
+        'sort_order' => 'nullable|unique'
+    ];
+
+    /**
+     * @var array Attributes to be cast to native types
+     */
+    protected $casts = [
+        'sort_order' => 'integer'
+    ];
+
+    /**
+     * @var array Attributes to be cast to JSON
+     */
+    protected $jsonable = [];
+
+    /**
+     * @var array Attributes to be appended to the API representation of the model (ex. toArray())
+     */
+    protected $appends = [];
+
+    /**
+     * @var array Attributes to be removed from the API representation of the model (ex. toArray())
+     */
+    protected $hidden = [];
+
+    public $attachOne = [
+        'avatar' => File::class
+    ];
+
+    public function getStackAttribute()
+    {
+        return $this->stack_string ? explode(',', $this->stack_string) : $this->stack_string;
+    }
+
+    public function scopeIsPublished($query)
+    {
+        return $query->where('is_published', true);
+    }
+
+    public function index_onUpdatePosition()
+    {
+        if (($reorderIds = post('checked')) && is_array($reorderIds) && count($reorderIds)) {
+            $model = new Team();
+            $model->setSortableOrder($reorderIds, array_keys($reorderIds));
+            Flash::success('Successfully re-ordered records.');
+        }
+        return $this->listRefresh();
+    }
+}
