@@ -1,37 +1,41 @@
 <template>
 	<div class="dividerLineWrapper">
-		<h1 id="aboutus">About us</h1>
+		<h1><slot /></h1>
 		<div class="dividerLine"></div>
 	</div>
 </template>
 <script lang="ts" setup></script>
 <style lang="scss" scoped>
-.container {
-	display: flex;
-	justify-content: space-between;
-}
-
 h1 {
 	font-family: "Poppins";
 	color: #252525;
 	font-weight: 800;
 	margin: 0;
-	width: 12%;
+	width: 20%;
 }
+
 .dividerLine {
-	margin-right: 22.8vw;
 	background-color: #bbd8ff93;
-	width: 70vw;
+	width: 90vw;
 	height: 3px;
 }
 
 .dividerLineWrapper {
 	margin-top: 10vh;
 	width: 100%;
-	margin-left: 11vw;
+	padding-left: 8vw;
+	padding-right: 8vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	&:nth-child(odd) {
+		flex-direction: row-reverse;
+
+		h1 {
+			text-align: right;
+		}
+	}
 }
 
 @media (max-width: 1160px) {
@@ -43,7 +47,7 @@ h1 {
 		text-align: center;
 	}
 	.dividerLineWrapper {
-		margin-left: 0;
+		padding: 0;
 	}
 }
 </style>

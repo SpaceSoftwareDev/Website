@@ -41,7 +41,7 @@
 						<div class="scrollLine"></div>
 					</div>
 				</section>
-				<Divider />
+				<Divider id="aboutus">About us</Divider>
 				<section class="aboutUs">
 					<p class="aboutUsText">
 						We are new sofware studio founded by highschool<wbr />
@@ -58,37 +58,29 @@
 				<section class="members">
 					<Member />
 				</section>
-				<Divider2 />
-				<Project
-					v-for="project in projects"
-					:key="project.title"
-					:title="project.title"
-					:description="project.description"
-					:img="project.icon.path" />
-				<Footer />
+				<Divider id="projects">Projects</Divider>
+				<section class="projects">
+					<Project
+						v-for="project in projects"
+						:key="project.title"
+						:data="project" />
+					<Footer />
+				</section>
 			</div>
 		</ion-content>
 	</ion-page>
 </template>
 
 <script setup lang="ts">
+import type { project } from "@/types"
 import Footer from "@/components/Footer.vue"
 import * as icons from "ionicons/icons"
 import NavBar from "@/components/NavBar.vue"
 import Member from "@/components/Member.vue"
 import Divider from "@/components/Divider.vue"
-import Divider2 from "@/components/Divider2.vue"
 import Project from "@/components/Project.vue"
 import { ref, onMounted } from "vue"
 import axios from "axios"
-
-interface project {
-	gallery: { path: string }[]
-	icon: { path: string }
-	id: number
-	title: string
-	description: string
-}
 
 const projects = ref<project[]>([])
 onMounted(async () => {
@@ -236,6 +228,13 @@ aside {
 	height: 40vh;
 	background-color: rgba(0, 0, 0, 0.2);
 	margin-left: 2.5vw;
+}
+
+.projects {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 @keyframes waveAnim {

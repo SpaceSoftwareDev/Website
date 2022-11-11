@@ -1170,6 +1170,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom7@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "dom7@npm:4.0.4"
+  dependencies:
+    ssr-window: "npm:^4.0.0"
+  checksum: 37e3867d6e79fef81e3dc58ab8031c7e5bb655de54f5fc6957582f92f61b8932471f9c1bfe0c0a8d9f100c28f4cf1028002856fc6db5123bc86d6accb5f24bac
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -2788,6 +2797,7 @@ __metadata:
     nprogress: "npm:^0.2.0"
     prettier: "npm:^2.7.1"
     sass: "npm:^1.56.1"
+    swiper: "npm:^8.4.4"
     typescript: "npm:^4.8.4"
     vite: "npm:^3.2.3"
     vite-plugin-webfont-dl: "npm:^3.4.1"
@@ -2931,6 +2941,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: 8235ddf1dc542231f534660eaf76a4d605a8c66ee247806e0965099625784b2b781aacbead7e2d1068b9cb5972aa7fc9f53e4396c0ddac0482d101713d4ac0fa
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^9.0.0":
   version: 9.0.1
   resolution: "ssri@npm:9.0.1"
@@ -2989,6 +3006,16 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 14609489b044de2eaffe0e7549173bb39d6997510ac4b7279d07bf2aafe309205abe172a8c8d248062a24e32ab61a2ae85efc5b4cdf7f932c7cdbe81ca1f39ec
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^8.4.4":
+  version: 8.4.4
+  resolution: "swiper@npm:8.4.4"
+  dependencies:
+    dom7: "npm:^4.0.4"
+    ssr-window: "npm:^4.0.2"
+  checksum: 4c3c289d10ee926bdaf70ceca273120a758b275165497aadd96f0ca03e693eb4b2b9de3cb3e80ba37017df8d9ba1cee65389bbd6eb0962e40db479cbd99ef285
   languageName: node
   linkType: hard
 

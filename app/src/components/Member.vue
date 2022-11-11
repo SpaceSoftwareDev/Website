@@ -102,6 +102,7 @@ img {
 	justify-content: space-between;
 	overflow-x: scroll;
 	overflow-y: hidden;
+	scrollbar-width: none;
 }
 
 .wrapper::-webkit-scrollbar {
