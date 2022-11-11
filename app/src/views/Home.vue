@@ -58,14 +58,30 @@
 				<section class="members">
 					<Member />
 				</section>
-				<Divider id="projects">Projects</Divider>
+				<Divider id="projects" right>Projects</Divider>
 				<section class="projects">
 					<Project
 						v-for="project in projects"
 						:key="project.title"
 						:data="project" />
-					<Footer />
 				</section>
+
+				<Divider id="contact">Contact Us</Divider>
+				<section>
+					<a
+						class="contact"
+						href="mailto:space.software.business@gmail.com">
+						<img src="/assets/email.svg" />
+					</a>
+					<p class="contact-desc" v-if="large">
+						You can send us an email through this icon!
+					</p>
+				</section>
+				<section class="newsletter">
+					<Newsletter v-if="!large" />
+				</section>
+
+				<Footer />
 			</div>
 		</ion-content>
 	</ion-page>
@@ -74,6 +90,7 @@
 <script setup lang="ts">
 import type { project } from "@/types"
 import Footer from "@/components/Footer.vue"
+import Newsletter from "@/components/Newsletter.vue"
 import * as icons from "ionicons/icons"
 import NavBar from "@/components/NavBar.vue"
 import Member from "@/components/Member.vue"
@@ -81,14 +98,22 @@ import Divider from "@/components/Divider.vue"
 import Project from "@/components/Project.vue"
 import { ref, onMounted } from "vue"
 import axios from "axios"
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
+
+const large = useBreakpoints(breakpointsTailwind).lg
 
 const projects = ref<project[]>([])
+const email = ref<string>("")
 onMounted(async () => {
 	const res = await axios.get<{ data: project[] }>(
 		"https://space-software.com/cms/api/v1/projects"
 	)
 	projects.value = res.data.data
 })
+
+const newsletterSubmit = () => {
+	console.log(email.value)
+}
 </script>
 <style lang="scss" scoped>
 .container {
@@ -142,6 +167,34 @@ aside {
 	ion-icon {
 		transform: scale(2);
 	}
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100%;
+	margin: 0;
+	margin-top: 2rem;
+}
+
+.contact-desc {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0;
+	margin-top: 1rem;
+	width: 100vw;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.newsletter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
 }
 
 #ic1,

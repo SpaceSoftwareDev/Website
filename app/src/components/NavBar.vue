@@ -7,7 +7,7 @@
 		<nav id="navLinks" ref="dropDown">
 			<a href="#aboutus">About us</a>
 			<a href="#projects">Projects</a>
-			<a>Contact us</a>
+			<a href="#contact">Contact us</a>
 		</nav>
 		<!--More icon for mobile devices-->
 		<a

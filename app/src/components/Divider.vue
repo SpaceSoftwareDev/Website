@@ -1,10 +1,17 @@
 <template>
-	<div class="dividerLineWrapper">
+	<div :class="{ dividerLineWrapper: true, right }">
 		<h1><slot /></h1>
-		<div class="dividerLine"></div>
+		<div v-if="large" class="dividerLine"></div>
 	</div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
+const large = useBreakpoints(breakpointsTailwind).lg
+
+defineProps<{
+	right?: true
+}>()
+</script>
 <style lang="scss" scoped>
 h1 {
 	font-family: "Poppins";
@@ -29,7 +36,7 @@ h1 {
 	justify-content: space-between;
 	align-items: center;
 
-	&:nth-child(odd) {
+	&.right {
 		flex-direction: row-reverse;
 
 		h1 {
@@ -38,13 +45,10 @@ h1 {
 	}
 }
 
-@media (max-width: 1160px) {
-	.dividerLine {
-		display: none;
-	}
+@media (max-width: 1000px) {
 	h1 {
 		width: 100%;
-		text-align: center;
+		text-align: center !important;
 	}
 	.dividerLineWrapper {
 		padding: 0;
