@@ -7,6 +7,13 @@ fields:
         label: Name
         type: text
         span: left
+    avatar:
+        label: Avatar
+        type: fileupload
+        mode: image
+        span: right
+        imageHeight: 180
+        imageWidth: 180
     stack_string:
         type: taglist
         label: Stack
@@ -27,5 +34,6 @@ fields:
         label: Is published
         type: switch
         default: false
+
 
 
