@@ -1,85 +1,73 @@
 <template>
 	<!--Whole header-->
-	<header ref="header">
-		<!--Space Logo-->
-		<img src="/assets/logo-nav-bar.svg" class="logo" />
-		<!--Navigation links-->
-		<nav id="navLinks" ref="dropDown">
-			<a href="#aboutus">About us</a>
-			<a href="#projects">Projects</a>
-			<a href="#contact">Contact us</a>
-		</nav>
-		<!--More icon for mobile devices-->
-		<a
-			href="#"
-			class="moreButton"
-			ref="toggle"
-			id="morebtn"
-			@click="dropDownToggle()">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</a>
+	<header>
+		<div class="container">
+			<!--Space Logo-->
+			<img src="/assets/logo-nav-bar.svg" class="logo" />
+			<!--Navigation links-->
+			<nav v-if="isLarge">
+				<a href="#aboutus">About us</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact us</a>
+			</nav>
+			<!--More icon for mobile devices-->
+			<button class="moreButton" v-if="!isLarge" @click="open = !open">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</button>
+		</div>
+		<Transition name="scale">
+			<nav v-if="!isLarge && open" id="navLinks">
+				<a href="#aboutus" @click="open = false">About us</a>
+				<a href="#projects" @click="open = false">Projects</a>
+				<a href="#contact" @click="open = false">Contact us</a>
+			</nav>
+		</Transition>
 	</header>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue"
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
-// Html elements for changes
-const toggle = ref<HTMLAnchorElement>(null)
-const dropDown = ref<HTMLElement>(null)
-const header = ref<HTMLElement>(null)
+const isLarge = useBreakpoints(breakpointsTailwind).lg
 
-// variable for loading first dropdown
-let clicks = 0
-
-// toggle function between active and not active dropdown
-const superToggle = function (
-	element: HTMLElement,
-	active: string,
-	deactive: string
-) {
-	element.classList.toggle(active)
-	element.classList.toggle(deactive)
-}
-// dropdown function
-function dropDownToggle() {
-	if (clicks == 0) {
-		dropDown.value.classList.add("deactive")
-	}
-	clicks++
-	superToggle(dropDown.value, "active", "deactive")
-
-	if (dropDown.value.classList.contains("active")) {
-		header.value.style.height = "35vh"
-	} else {
-		header.value.style.height = "15vh"
-	}
-}
+const open = ref(false)
 </script>
 <style lang="scss" scoped>
 header {
-	height: 20vh;
-	margin-left: 5rem;
-	margin-right: 5rem;
+	min-height: 20vh;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	transition: all 300ms;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 2.4rem;
 }
 
 .logo {
 	width: 10rem;
 	height: auto;
+	margin-left: 1.5em;
 }
 
 .moreButton {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 30px;
+	width: 40px;
 	height: 21px;
+	background: none;
+	border: none;
+	margin-right: 1.5rem;
 	.bar {
 		height: 3px;
 		width: 100%;
@@ -95,86 +83,83 @@ nav {
 	justify-content: space-between;
 	text-align: center;
 	width: 30%;
+	margin-right: 5rem;
+
 	a {
 		transition: all 300ms;
 		font-family: "Space Mono", monospace;
 		text-decoration: none;
 		color: black;
+		&:hover {
+			letter-spacing: 0.1rem;
+		}
 	}
-}
-
-nav :hover {
-	letter-spacing: 0.1rem;
 }
 
 // Styling for tablets and mobile devices
 
-@media (max-width: 1160px) {
-	.moreButton {
-		display: flex;
-		margin-top: 2.4rem;
-	}
-
-	nav {
-		display: none;
-		flex-direction: column;
-		width: 10rem;
-
-		margin-top: 4rem;
-
-		margin-left: -6rem;
-	}
-
+@media (max-width: 1024px) {
 	header {
-		height: 12vh;
-		margin-left: 10vw;
-		margin-right: 10vw;
+		min-height: 10vh;
+		width: 100vw;
 	}
 
 	.logo {
-		margin-top: 2.4rem;
 		width: 8rem;
 		height: 2rem;
 	}
 
-	nav.active {
+	nav {
 		display: flex;
-		animation: growDown 300ms ease-in-out normal forwards;
-		transform-origin: top center;
-
-		@keyframes growDown {
-			0% {
-				transform: scaleY(0);
-			}
-
-			80% {
-				transform: scaleY(1.1);
-			}
-
-			100% {
-				transform: scaleY(1);
-			}
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		margin: 0;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		a {
+			width: 90%;
+			padding: 0.5rem 0;
+			border-top: 1px solid #7a7a7a43;
 		}
 	}
+}
 
-	nav.deactive {
-		display: flex;
-
-		animation: dissappear 300ms ease-out reverse forwards;
-		transform-origin: top center;
-		@keyframes dissappear {
-			0% {
-				transform: scaleY(0);
-			}
-
-			80% {
-				transform: scaleY(1.1);
-			}
-
-			100% {
-				transform: scaleY(1);
-			}
-		}
+@keyframes growDown {
+	0% {
+		transform: scaleY(0);
 	}
+
+	80% {
+		transform: scaleY(1.1);
+	}
+
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes dissappear {
+	0% {
+		transform: scaleY(0);
+	}
+
+	80% {
+		transform: scaleY(1.1);
+	}
+
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+.scale-enter-active {
+	animation: growDown 300ms ease-in-out normal forwards;
+	transform-origin: top center;
+}
+.scale-leave-active {
+	animation: dissappear 300ms ease-out reverse forwards;
+	transform-origin: top center;
 }
 </style>

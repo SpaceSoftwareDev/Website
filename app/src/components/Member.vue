@@ -122,7 +122,7 @@ p {
 	margin-bottom: 2rem;
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1024px) {
 	ion-card {
 		height: 340px;
 
