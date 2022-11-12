@@ -5,16 +5,19 @@
 fields:
     title:
         label: Title
-        type: text
-    description:
-        label: Description
         type: richeditor
+        size: smaller
+        span: left
     icon:
         label: Icon
         type: fileupload
         mode: image
-        imageHeight: 150
-        imageWidth: 150
+        span: right
+        imageHeight: 100
+        imageWidth: 100
+    description:
+        label: Description
+        type: richeditor
     gallery:
         label: Gallery
         type: fileupload
