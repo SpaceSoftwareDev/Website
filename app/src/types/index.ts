@@ -1,12 +1,25 @@
-interface img {
+interface resource {
 	id: number
+}
+
+export interface CMSData<T> {
+	data: T[]
+}
+
+interface img extends resource {
 	path: string
 }
 
-export interface project {
+export interface project extends resource {
 	gallery: img[]
 	icon: img
-	id: number
 	title: string
 	description: string
+}
+
+export interface TeamMember extends resource {
+	avatar: img
+	name: string
+	portfolio_link: string
+	stack: string[]
 }

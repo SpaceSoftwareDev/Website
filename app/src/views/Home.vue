@@ -77,6 +77,7 @@
 						You can send us an email through this icon!
 					</p>
 				</section>
+
 				<section class="newsletter">
 					<Newsletter v-if="!large" />
 				</section>

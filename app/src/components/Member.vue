@@ -2,51 +2,33 @@
 	<div class="wrapper">
 		<ion-card v-for="member in members" :key="member.name">
 			<div class="memberPic">
-				<img :src="member.img" />
+				<img :src="member.avatar.path" />
 			</div>
 			<h1>{{ member.name }}</h1>
-			<p>{{ member.role }}</p>
-			<a :href="member.portfolio" target="_blank">
+			<p>{{ member.stack[0] }}</p>
+			<a
+				v-if="member.portfolio_link"
+				:href="member.portfolio_link"
+				target="_blank">
 				<Button class="btn">Portfolio</Button>
 			</a>
 		</ion-card>
 	</div>
 </template>
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref, onMounted } from "vue"
+import type { TeamMember, CMSData } from "@/types"
 import Button from "@/components/Button.vue"
-const members = ref([
-	{
-		name: "Lucas Ligas",
-		role: "Front-End Developer",
-		img: "/assets/LucasImg.png",
-		portfolio: ""
-	},
-	{
-		name: "Jakub Krčmárik",
-		role: "Full Stack Developer",
-		img: "/assets/krcmarikMalicky.png",
-		portfolio: ""
-	},
-	{
-		name: "Martin Mojžiš",
-		role: "Full Stack Developer",
-		img: "/assets/nasMatej.png",
-		portfolio: ""
-	},
-	{
-		name: "Daniel Czaja",
-		role: "Back-end Developer",
-		img: "/assets/Danci.png",
-		portfolio: ""
-	},
-	{
-		name: "Daniel Kliman",
-		role: "Back-end Developer",
-		img: "/assets/klinec.png",
-		portfolio: ""
-	}
-])
+import axios from "axios"
+
+const members = ref<TeamMember[]>([])
+
+onMounted(async () => {
+	const { data } = await axios.get<CMSData<TeamMember>>(
+		`${import.meta.env.VITE_CMS_URL}/api/v1/team`
+	)
+	members.value = data.data
+})
 </script>
 <style lang="scss" scoped>
 ion-card {
@@ -70,7 +52,7 @@ ion-card {
 	overflow: hidden;
 
 	&:hover {
-		height: 340px;
+		height: 260px;
 	}
 
 	&:first-of-type {
@@ -124,10 +106,10 @@ p {
 
 @media (max-width: 1024px) {
 	ion-card {
-		height: 340px;
+		height: 260px;
 
 		&:hover {
-			height: 340px;
+			height: 260px;
 		}
 
 		&:first-of-type {
