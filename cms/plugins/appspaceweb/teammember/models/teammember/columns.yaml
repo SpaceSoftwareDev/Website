@@ -5,9 +5,9 @@
 columns:
     sort_order:
         label: Sort Order
-    title:
-        label: Title
+    name:
+        label: name
         searchable: true
-    is_published:
-        label: Is published
-        type: switch
+    stack:
+        label: stack
+        searchable: true

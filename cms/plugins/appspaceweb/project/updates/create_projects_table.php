@@ -16,6 +16,8 @@ class CreateProjectsTable extends Migration
             $table->text('description');
             $table->boolean('is_published')->default('false');
 
+            $table->smallInteger('sort_order')->default('0');
+
             $table->timestamps();
         });
     }

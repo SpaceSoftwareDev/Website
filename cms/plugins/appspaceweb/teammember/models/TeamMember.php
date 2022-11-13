@@ -1,12 +1,13 @@
-<?php namespace AppSpaceWeb\Project\Models;
+<?php namespace AppSpaceWeb\TeamMember\Models;
 
+use Model;
+use October\Rain\Support\Facades\Flash;
 use System\Models\File;
-use October\Rain\Database\Model;
 
 /**
- * Project Model
+ * Team Model
  */
-class Project extends Model
+class TeamMember extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
@@ -14,7 +15,7 @@ class Project extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'appspaceweb_project_projects';
+    public $table = 'appspaceweb_team_members';
 
     /**
      * @var array Guarded fields
@@ -30,16 +31,15 @@ class Project extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'title'         => 'required',
-        'icon'          => 'required',
-        'description'   => 'required',
-        'gallery'       => 'nullable',
+        'sort_order' => 'nullable|unique'
     ];
 
     /**
      * @var array Attributes to be cast to native types
      */
-    protected $casts = [];
+    protected $casts = [
+        'sort_order' => 'integer'
+    ];
 
     /**
      * @var array Attributes to be cast to JSON
@@ -56,24 +56,27 @@ class Project extends Model
      */
     protected $hidden = [];
 
-    /**
-     * @var array Attributes to be cast to Argon (Carbon) instances
-     */
-    protected $dates = [
-        'created_at',
-        'updated_at'
-    ];
-
     public $attachOne = [
-        'icon' => File::class
+        'avatar' => File::class
     ];
 
-    public $attachMany = [
-        'gallery' => File::class
-    ];
+    public function getStackAttribute()
+    {
+        return $this->stack_string ? explode(',', $this->stack_string) : $this->stack_string;
+    }
 
     public function scopeIsPublished($query)
     {
         return $query->where('is_published', true);
+    }
+
+    public function index_onUpdatePosition()
+    {
+        if (($reorderIds = post('checked')) && is_array($reorderIds) && count($reorderIds)) {
+            $model = new TeamMember();
+            $model->setSortableOrder($reorderIds, array_keys($reorderIds));
+            Flash::success('Successfully re-ordered records.');
+        }
+        return $this->listRefresh();
     }
 }

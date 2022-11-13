@@ -1,7 +1,6 @@
 <template>
 	<ion-app>
 		<ion-router-outlet />
-		<!--Nav Bar-->
 	</ion-app>
 </template>
 

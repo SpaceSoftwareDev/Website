@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/appspaceweb/project/models/project/columns.yaml
+list: $/appspaceweb/teammember/models/teammember/columns.yaml
 
 # Model Class name
-modelClass: AppSpaceWeb\Project\Models\Project
+modelClass: AppSpaceWeb\TeamMember\Models\TeamMember
 
 # List Title
-title: Manage Projects
+title: Manage Team Members
 
 # Link URL for each record
-recordUrl: appspaceweb/project/projects/update/:id
+recordUrl: appspaceweb/teammember/teammembers/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

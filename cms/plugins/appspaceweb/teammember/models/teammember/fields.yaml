@@ -1,0 +1,39 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        span: left
+    avatar:
+        label: Avatar
+        type: fileupload
+        mode: image
+        span: right
+        imageHeight: 180
+        imageWidth: 180
+    stack_string:
+        type: taglist
+        label: Stack
+        options:
+            be: Back-End Developer
+            fe: Front-End Developer
+            fs: Full Stack Developer
+            debil: Designer
+            sls: Sales
+            mark: Marketing
+        separator: comma
+        span: left
+    portfolio_link:
+        type: text
+        label: Portfolio link
+        span: left
+    is_published:
+        label: Is published
+        type: switch
+        default: false
+
+
+

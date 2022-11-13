@@ -1,12 +1,12 @@
-<?php namespace AppSpaceWeb\Project\Controllers;
+<?php namespace AppSpaceWeb\TeamMember\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Projects Back-end Controller
+ * Team Members Back-end Controller
  */
-class Projects extends Controller
+class TeamMembers extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -33,6 +33,6 @@ class Projects extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('AppSpaceWeb.Project', 'project', 'projects');
+        BackendMenu::setContext('AppSpaceWeb.TeamMember', 'teammember', 'teammembers');
     }
 }

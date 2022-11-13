@@ -1,0 +1,5 @@
+title: Projects
+modelClass: AppSpaceWeb\Project\Models\Project
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

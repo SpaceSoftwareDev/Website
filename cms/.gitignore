@@ -1,6 +1,6 @@
 # Composer ignores
 /modules
-/vendor
+vendor/
 composer.phar
 
 # Framework ignores

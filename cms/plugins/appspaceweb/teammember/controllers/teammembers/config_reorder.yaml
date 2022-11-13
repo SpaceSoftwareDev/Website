@@ -1,0 +1,5 @@
+title: Team
+modelClass: AppSpaceWeb\TeamMember\Models\TeamMember
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

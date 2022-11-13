@@ -77,6 +77,7 @@
 						You can send us an email through this icon!
 					</p>
 				</section>
+
 				<section class="newsletter">
 					<Newsletter v-if="!large" />
 				</section>
@@ -326,7 +327,7 @@ aside {
 	justify-content: center;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1024px) {
 	.trashDiv {
 		margin-top: 0rem;
 	}
@@ -374,6 +375,13 @@ aside {
 		}
 	}
 
+	.contact {
+		img {
+			width: 12rem;
+			height: 12rem;
+		}
+	}
+
 	.getInTouchBtn {
 		display: none;
 		margin-top: 4vh;
@@ -408,12 +416,16 @@ aside {
 	.aboutUsText {
 		margin-top: 10vw;
 		text-align: center;
+		width: 100vw;
 	}
 	.logoAbt {
 		display: none;
 	}
 
 	.aboutUs {
+		width: 100vw;
+		margin-left: 0;
+		padding: 0 1rem;
 		justify-content: center;
 	}
 }

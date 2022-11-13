@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Team Member
+
+# Model Form Field configuration
+form: $/appspaceweb/teammember/models/teammember/fields.yaml
+
+# Model Class name
+modelClass: AppSpaceWeb\TeamMember\Models\TeamMember
+
+# Default redirect location
+defaultRedirect: appspaceweb/teammember/teammembers
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: appspaceweb/teammember/teammembers/update/:id
+    redirectClose: appspaceweb/teammember/teammembers
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: appspaceweb/teammember/teammembers
+    redirectClose: appspaceweb/teammember/teammembers
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
