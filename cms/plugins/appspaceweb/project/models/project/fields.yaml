@@ -5,7 +5,7 @@
 fields:
     title:
         label: Title
-        type: text
+        type: richeditor
     description:
         label: Description
         type: richeditor
