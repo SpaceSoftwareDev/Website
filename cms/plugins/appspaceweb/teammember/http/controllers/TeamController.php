@@ -1,7 +1,7 @@
 <?php namespace AppSpaceWeb\TeamMember\Http\Controllers;
 
-use AppSpaceWeb\Team\Http\Resources\TeamResource;
-use AppSpaceWeb\Team\Models\Team;
+use AppSpaceWeb\TeamMember\Http\Resources\TeamResource;
+use AppSpaceWeb\TeamMember\Models\TeamMember;
 use Illuminate\Routing\Controller;
 
 class TeamController extends Controller
@@ -9,7 +9,7 @@ class TeamController extends Controller
     public function index()
     {
         return TeamResource::collection(
-            Team::isPublished()
+            TeamMember::isPublished()
                 ->orderBy('sort_order', 'asc')
                 ->get()
         );

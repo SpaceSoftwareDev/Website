@@ -13,5 +13,5 @@ Route::group([
     ]
 ], function (Router $router) {
     $router
-        ->post('newsletter/email', [ProjectsController::class, 'store']);
+        ->post('newsletter/email', [NewsletterController::class, 'store']);
 });

@@ -2,7 +2,7 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-use AppSpaceWeb\Team\Http\Controllers\TeamController;
+use AppSpaceWeb\TeamMember\Http\Controllers\TeamController;
 use WApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
 
 Route::group([
