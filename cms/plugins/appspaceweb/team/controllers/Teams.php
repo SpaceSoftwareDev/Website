@@ -37,24 +37,4 @@ class Teams extends Controller
 
         BackendMenu::setContext('AppSpaceWeb.Team', 'team', 'teams');
     }
-
-    public function update_onUpdateVariantPosition()
-    {
-        $moved = [];
-        $position = 0;
-        if (($reorderIds = post('checked')) && is_array($reorderIds) && count($reorderIds)) {
-            foreach ($reorderIds as $id) {
-                if (in_array($id, $moved)) continue;
-
-                if (!$person = Team::find($id)) continue;
-
-                $person->sort_order = $position;
-                $person->save();
-                $moved[] = $id;
-                $position++;
-            }
-            Flash::success('Successfully re-ordered variants.');
-        }
-    }
-
 }

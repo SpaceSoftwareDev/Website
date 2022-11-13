@@ -3,6 +3,8 @@
 # ===================================
 
 columns:
+    sort_order:
+        label: Sort Order
     name:
         label: name
         searchable: true

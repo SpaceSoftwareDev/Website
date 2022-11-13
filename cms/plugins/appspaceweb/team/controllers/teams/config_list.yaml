@@ -27,7 +27,7 @@ showPageNumbers: true
 showSetup: true
 
 # Displays the sorting link on each column
-showSorting: true
+showSorting: false
 
 # Default sorting column
 defaultSort:

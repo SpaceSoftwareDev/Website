@@ -3,9 +3,8 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    sort_order:
+        label: Sort Order
     title:
         label: Title
         searchable: true

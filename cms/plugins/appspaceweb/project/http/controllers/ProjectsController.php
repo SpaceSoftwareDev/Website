@@ -10,6 +10,7 @@ class ProjectsController extends Controller
     {
         return ProjectResource::collection(
             Project::isPublished()
+                ->orderBy('sort_order', 'asc')
                 ->get()
         );
     }
