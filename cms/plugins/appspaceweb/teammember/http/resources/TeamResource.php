@@ -1,4 +1,4 @@
-<?php namespace AppSpaceWeb\Team\Http\Resources;
+<?php namespace AppSpaceWeb\TeamMember\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
 

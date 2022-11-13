@@ -4,11 +4,11 @@ use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateTeamsTable extends Migration
+class CreateTeamMembersTable extends Migration
 {
     public function up()
     {
-        Schema::create('appspaceweb_team_teams', function (Blueprint $table) {
+        Schema::create('appspaceweb_team_members', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
 
@@ -28,6 +28,6 @@ class CreateTeamsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('appspaceweb_team_teams');
+        Schema::dropIfExists('appspaceweb_team_members');
     }
 }

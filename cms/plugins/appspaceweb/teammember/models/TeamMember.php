@@ -1,4 +1,4 @@
-<?php namespace AppSpaceWeb\Team\Models;
+<?php namespace AppSpaceWeb\TeamMember\Models;
 
 use Model;
 use October\Rain\Support\Facades\Flash;
@@ -7,7 +7,7 @@ use System\Models\File;
 /**
  * Team Model
  */
-class Team extends Model
+class TeamMember extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
@@ -15,7 +15,7 @@ class Team extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'appspaceweb_team_teams';
+    public $table = 'appspaceweb_team_members';
 
     /**
      * @var array Guarded fields
@@ -73,7 +73,7 @@ class Team extends Model
     public function index_onUpdatePosition()
     {
         if (($reorderIds = post('checked')) && is_array($reorderIds) && count($reorderIds)) {
-            $model = new Team();
+            $model = new TeamMember();
             $model->setSortableOrder($reorderIds, array_keys($reorderIds));
             Flash::success('Successfully re-ordered records.');
         }

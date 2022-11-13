@@ -1,4 +1,4 @@
-<?php namespace AppSpaceWeb\Team;
+<?php namespace AppSpaceWeb\TeamMember;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -34,8 +34,8 @@ class Plugin extends PluginBase
         return [
             'team' => [
                 'label'       => 'Team',
-                'url'         => Backend::url('appspaceweb/team/teams'),
-                'icon'        => 'icon-leaf',
+                'url'         => Backend::url('appspaceweb/teammember/teammembers'),
+                'icon'        => 'icon-user',
                 'permissions' => ['appspaceweb.team.*'],
                 'order'       => 500,
             ],

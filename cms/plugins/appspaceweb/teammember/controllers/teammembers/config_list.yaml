@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/appspaceweb/team/models/team/columns.yaml
+list: $/appspaceweb/teammember/models/teammember/columns.yaml
 
 # Model Class name
-modelClass: AppSpaceWeb\Team\Models\Team
+modelClass: AppSpaceWeb\TeamMember\Models\TeamMember
 
 # List Title
 title: Manage Teams
 
 # Link URL for each record
-recordUrl: appspaceweb/team/teams/update/:id
+recordUrl: appspaceweb/teammember/teammembers/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

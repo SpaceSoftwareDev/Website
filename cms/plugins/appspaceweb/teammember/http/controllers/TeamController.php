@@ -1,4 +1,4 @@
-<?php namespace AppSpaceWeb\Team\Http\Controllers;
+<?php namespace AppSpaceWeb\TeamMember\Http\Controllers;
 
 use AppSpaceWeb\Team\Http\Resources\TeamResource;
 use AppSpaceWeb\Team\Models\Team;

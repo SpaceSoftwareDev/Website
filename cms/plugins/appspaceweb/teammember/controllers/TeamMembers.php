@@ -1,14 +1,12 @@
-<?php namespace AppSpaceWeb\Team\Controllers;
+<?php namespace AppSpaceWeb\TeamMember\Controllers;
 
-use AppSpaceWeb\Team\Models\Team;
 use BackendMenu;
 use Backend\Classes\Controller;
-use October\Rain\Support\Facades\Flash;
 
 /**
- * Teams Back-end Controller
+ * Team Members Back-end Controller
  */
-class Teams extends Controller
+class TeamMembers extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -35,6 +33,6 @@ class Teams extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('AppSpaceWeb.Team', 'team', 'teams');
+        BackendMenu::setContext('AppSpaceWeb.TeamMember', 'teammember', 'teammembers');
     }
 }

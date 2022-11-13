@@ -6,25 +6,25 @@
 name: Team
 
 # Model Form Field configuration
-form: $/appspaceweb/team/models/team/fields.yaml
+form: $/appspaceweb/teammember/models/teammember/fields.yaml
 
 # Model Class name
-modelClass: AppSpaceWeb\Team\Models\Team
+modelClass: AppSpaceWeb\TeamMember\Models\TeamMember
 
 # Default redirect location
-defaultRedirect: appspaceweb/team/teams
+defaultRedirect: appspaceweb/teammember/teammembers
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: appspaceweb/team/teams/update/:id
-    redirectClose: appspaceweb/team/teams
+    redirect: appspaceweb/teammember/teammembers/update/:id
+    redirectClose: appspaceweb/teammember/teammembers
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: appspaceweb/team/teams
-    redirectClose: appspaceweb/team/teams
+    redirect: appspaceweb/teammember/teammembers
+    redirectClose: appspaceweb/teammember/teammembers
 
 # Preview page
 preview:
