@@ -9,7 +9,7 @@ list: $/appspaceweb/teammember/models/teammember/columns.yaml
 modelClass: AppSpaceWeb\TeamMember\Models\TeamMember
 
 # List Title
-title: Manage Teams
+title: Manage Team Members
 
 # Link URL for each record
 recordUrl: appspaceweb/teammember/teammembers/update/:id
