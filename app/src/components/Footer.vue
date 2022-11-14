@@ -21,7 +21,7 @@ footer {
 	flex-direction: row;
 	align-items: center;
 
-	width: 100%;
+	width: 100vw;
 }
 
 .rightsImg {
@@ -31,5 +31,12 @@ footer {
 .newsletter {
 	position: absolute;
 	right: 5rem;
+}
+
+@media screen and (max-width: 1024px) {
+	footer {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }
 </style>

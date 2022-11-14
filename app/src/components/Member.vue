@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-		<ion-card v-for="member in members" :key="member.name">
+		<div class="card" v-for="member in members" :key="member.name">
 			<div class="memberPic">
 				<img :src="member.avatar.path" />
 			</div>
@@ -12,7 +12,7 @@
 				target="_blank">
 				<Button class="btn">Portfolio</Button>
 			</a>
-		</ion-card>
+		</div>
 	</div>
 </template>
 <script setup lang="ts">
@@ -31,14 +31,14 @@ onMounted(async () => {
 })
 </script>
 <style lang="scss" scoped>
-ion-card {
+.card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	min-width: 200px;
 	max-width: 200px;
-	height: 230px;
+	height: 220px;
 	border-radius: 2rem;
 
 	transition: all 500ms;
@@ -47,6 +47,8 @@ ion-card {
 	margin: 2rem 1rem;
 	margin-top: 10vh;
 	padding: 1rem;
+
+	background-color: white;
 
 	scroll-snap-align: center;
 	overflow: hidden;
@@ -105,7 +107,7 @@ p {
 }
 
 @media (max-width: 1024px) {
-	ion-card {
+	.card {
 		height: 260px;
 
 		&:hover {

@@ -6,9 +6,15 @@
 			<img src="/assets/logo-nav-bar.svg" class="logo" />
 			<!--Navigation links-->
 			<nav v-if="isLarge">
-				<a href="#aboutus">About us</a>
-				<a href="#projects">Projects</a>
-				<a href="#contact">Contact us</a>
+				<a href="#aboutus" @click.prevent="scrollTo('aboutus')">
+					About us
+				</a>
+				<a href="#projects" @click.prevent="scrollTo('projects')">
+					Projects
+				</a>
+				<a href="#contact" @click.prevent="scrollTo('contact')">
+					Contact us
+				</a>
 			</nav>
 			<!--More icon for mobile devices-->
 			<button class="moreButton" v-if="!isLarge" @click="open = !open">
@@ -19,9 +25,15 @@
 		</div>
 		<Transition name="scale">
 			<nav v-if="!isLarge && open" id="navLinks">
-				<a href="#aboutus" @click="open = false">About us</a>
-				<a href="#projects" @click="open = false">Projects</a>
-				<a href="#contact" @click="open = false">Contact us</a>
+				<a href="#aboutus" @click.prevent="scrollTo('aboutus')">
+					About us
+				</a>
+				<a href="#projects" @click.prevent="scrollTo('projects')">
+					Projects
+				</a>
+				<a href="#contact" @click.prevent="scrollTo('contact')">
+					Contact us
+				</a>
 			</nav>
 		</Transition>
 	</header>
@@ -34,6 +46,13 @@ import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 const isLarge = useBreakpoints(breakpointsTailwind).lg
 
 const open = ref(false)
+
+const scrollTo = (id: string) => {
+	open.value = false
+	const element = document.getElementById(id)
+	if (!element) return
+	element.scrollIntoView({ behavior: "smooth" })
+}
 </script>
 <style lang="scss" scoped>
 header {
@@ -69,7 +88,7 @@ header {
 	border: none;
 	margin-right: 5rem;
 	.bar {
-		height: 3px;
+		height: 3px !important;
 		width: 100%;
 		background-color: #7a7a7a;
 		border-radius: 10px;
@@ -99,8 +118,12 @@ nav {
 // Styling for tablets and mobile devices
 
 @media (max-width: 1024px) {
+	.container {
+		margin-top: 1rem;
+	}
+
 	header {
-		min-height: 10vh;
+		min-height: 5vh;
 		width: 100vw;
 	}
 
@@ -123,6 +146,14 @@ nav {
 			padding: 0.5rem 0;
 			border-top: 1px solid #7a7a7a43;
 		}
+	}
+
+	.logo {
+		margin-left: 2rem;
+	}
+
+	.moreButton {
+		margin-right: 2rem;
 	}
 }
 

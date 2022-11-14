@@ -1,91 +1,80 @@
 <template>
-	<ion-page>
-		<ion-content>
-			<!--Content container div-->
-			<div class="container">
-				<NavBar />
+	<!--Content container div-->
+	<div class="container">
+		<NavBar />
 
-				<!--Whole content of landing page-->
-				<article>
-					<p class="landingText">
-						Software studio <br />
-						founded by <br />
-						<span class="coloredText"> highschool students </span>
-					</p>
+		<!--Whole content of landing page-->
+		<article>
+			<p class="landingText">
+				Software studio <br />
+				founded by <br />
+				<span class="coloredText"> highschool students </span>
+			</p>
 
-					<!--Socials. icons-->
-					<section class="socials">
-						<ion-icon :icon="icons.logoFacebook" id="ic1" />
-						<ion-icon :icon="icons.logoInstagram" id="ic2" />
-						<ion-icon :icon="icons.logoTwitter" id="ic3" />
-						<ion-icon :icon="icons.logoTiktok" id="ic4" />
-					</section>
-					<!--Button for sending email-->
-					<button class="getInTouchBtn" data="Get In Touch"></button>
-				</article>
-				<!--Right side illustration-->
-				<aside>
-					<img src="/assets/Illustration.png" class="illustration" />
-				</aside>
-				<div class="trashDiv"></div>
-				<section>
-					<div class="scrollDivider">
-						<div class="textWrapper">
-							<span style="--i: 1" class="letter">S</span>
-							<span style="--i: 2" class="letter">C</span>
-							<span style="--i: 3" class="letter">R</span>
-							<span style="--i: 4" class="letter">O</span>
-							<span style="--i: 5" class="letter">L</span>
-							<span style="--i: 6" class="letter">L</span>
-						</div>
-						<div class="scrollLine"></div>
-					</div>
-				</section>
-				<Divider id="aboutus">About us</Divider>
-				<section class="aboutUs">
-					<p class="aboutUsText">
-						We are new sofware studio founded by highschool<wbr />
-						students from Slovakia.<br />
-						Currently we are studying on high school SPŠE Hálova
-						16.<br />
-						And we are part of really cool study plan named
-						<wbr /><a href="https://openlab.sk" target="_blank">
-							OPENLAB </a
-						>.
-					</p>
-					<img src="/assets/LogoAbt.png" class="logoAbt" />
-				</section>
-				<section class="members">
-					<Member />
-				</section>
-				<Divider id="projects" right>Projects</Divider>
-				<section class="projects">
-					<Project
-						v-for="project in projects"
-						:key="project.title"
-						:data="project" />
-				</section>
-
-				<Divider id="contact">Contact Us</Divider>
-				<section>
-					<a
-						class="contact"
-						href="mailto:space.software.business@gmail.com">
-						<img src="/assets/email.svg" />
-					</a>
-					<p class="contact-desc" v-if="large">
-						You can send us an email through this icon!
-					</p>
-				</section>
-
-				<section class="newsletter">
-					<Newsletter v-if="!large" />
-				</section>
-
-				<Footer />
+			<!--Socials. icons-->
+			<section class="socials">
+				<ion-icon :icon="icons.logoFacebook" id="ic1" />
+				<ion-icon :icon="icons.logoInstagram" id="ic2" />
+				<ion-icon :icon="icons.logoTwitter" id="ic3" />
+				<ion-icon :icon="icons.logoTiktok" id="ic4" />
+			</section>
+			<!--Button for sending email-->
+			<button class="getInTouchBtn" data="Get In Touch"></button>
+		</article>
+		<!--Right side illustration-->
+		<aside>
+			<img src="/assets/Illustration.png" class="illustration" />
+		</aside>
+		<div class="trashDiv"></div>
+		<section>
+			<div class="scrollDivider">
+				<div class="textWrapper">
+					<span style="--i: 1" class="letter">S</span>
+					<span style="--i: 2" class="letter">C</span>
+					<span style="--i: 3" class="letter">R</span>
+					<span style="--i: 4" class="letter">O</span>
+					<span style="--i: 5" class="letter">L</span>
+					<span style="--i: 6" class="letter">L</span>
+				</div>
+				<div class="scrollLine"></div>
 			</div>
-		</ion-content>
-	</ion-page>
+		</section>
+		<Divider id="aboutus">About us</Divider>
+		<section class="aboutUs">
+			<p class="aboutUsText">
+				We are new sofware studio founded by highschool<wbr /> students
+				from Slovakia.<br />
+				Currently we are studying on high school SPŠE Hálova 16.<br />
+				And we are part of really cool study plan named
+				<wbr /><a href="https://openlab.sk" target="_blank"> OPENLAB </a
+				>.
+			</p>
+			<img src="/assets/LogoAbt.png" class="logoAbt" />
+		</section>
+		<section class="members">
+			<Member />
+		</section>
+		<Divider id="projects" right>Projects</Divider>
+		<section class="projects">
+			<Project
+				v-for="project in projects"
+				:key="project.title"
+				:data="project" />
+		</section>
+
+		<Divider id="contact">Contact Us</Divider>
+		<section>
+			<a class="contact" href="mailto:space.software.business@gmail.com">
+				<img src="/assets/email.svg" />
+			</a>
+		</section>
+
+		<section class="newsletter">
+			<Newsletter v-if="!large" />
+		</section>
+
+		<Footer />
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -99,7 +88,6 @@ import Divider from "@/components/Divider.vue"
 import Project from "@/components/Project.vue"
 import { ref, onMounted } from "vue"
 import axios from "axios"
-import type { CMSData } from "@/types"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
@@ -112,16 +100,16 @@ onMounted(async () => {
 	)
 	projects.value = res.data.data
 })
-
-const newsletterSubmit = () => {
-	console.log(email.value)
-}
 </script>
 <style lang="scss" scoped>
 .container {
 	position: relative;
-	height: auto;
 	background: linear-gradient(180deg, #ffffff 0%, #cce2ff 100%);
+	overflow-x: hidden;
+	max-width: 100vw;
+	height: auto;
+	width: 100vw;
+	min-height: 100vh;
 }
 
 .trashDiv {
@@ -159,6 +147,13 @@ aside {
 	font-family: "Poppins";
 }
 
+a {
+	background: linear-gradient(101.18deg, #2400ff -13.93%, #8000ff 90.86%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .socials {
 	display: flex;
 	justify-content: space-between;
@@ -171,6 +166,18 @@ aside {
 	}
 }
 
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
 .contact {
 	display: flex;
 	justify-content: center;
@@ -179,6 +186,7 @@ aside {
 	height: 100%;
 	margin: 0;
 	margin-top: 2rem;
+	animation: pulse 3s infinite;
 }
 
 .contact-desc {
@@ -292,6 +300,10 @@ aside {
 	align-items: center;
 }
 
+.illustration {
+	width: 30vw;
+}
+
 @keyframes waveAnim {
 	0%,
 	40%,
@@ -315,6 +327,7 @@ aside {
 	margin: 0;
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 1.1rem;
+	padding: 0 1rem;
 }
 
 .logoAbt {
@@ -426,8 +439,11 @@ aside {
 	.aboutUs {
 		width: 100vw;
 		margin-left: 0;
-		padding: 0 1rem;
 		justify-content: center;
+	}
+
+	.illustration {
+		width: min(90vw, 400px);
 	}
 }
 @media screen and (max-width: 1375px) and (min-width: 1161px) {

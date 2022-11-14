@@ -49,12 +49,11 @@ h3 {
 
 	input {
 		width: 80%;
-		height: 100%;
+		height: 50px;
 		border: none;
 		border-bottom-left-radius: 20px;
 		border-top-left-radius: 20px;
-		padding: 0.5rem 1rem;
-
+		padding: 0 1rem;
 		outline: none;
 
 		&:focus {
@@ -64,7 +63,7 @@ h3 {
 
 	button {
 		width: 20%;
-		height: 100%;
+		height: 50px;
 		border: none;
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
