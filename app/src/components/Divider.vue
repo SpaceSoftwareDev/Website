@@ -18,20 +18,24 @@ h1 {
 	color: #252525;
 	font-weight: 800;
 	margin: 0;
-	width: 20%;
+	margin-right: 2rem;
+	min-width: 20vw;
+	text-align: right;
 }
 
 .dividerLine {
 	background-color: #bbd8ff93;
 	width: 90vw;
+	margin-right: 8rem;
 	height: 3px;
 }
 
 .dividerLineWrapper {
 	margin-top: 10vh;
 	width: 100%;
-	padding-left: 8vw;
-	padding-right: 8vw;
+	max-width: 100%;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -40,18 +44,38 @@ h1 {
 		flex-direction: row-reverse;
 
 		h1 {
-			text-align: right;
+			text-align: left;
+			margin-left: 2rem;
+			margin-right: 4rem;
+		}
+
+		.dividerLine {
+			margin-left: 8rem;
+			margin-right: 0;
 		}
 	}
 }
 
 @media (max-width: 1000px) {
 	h1 {
-		width: 100%;
 		text-align: center !important;
+		margin: 0;
+		width: 100%;
 	}
 	.dividerLineWrapper {
 		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
+
+		&.right {
+			margin-left: 0;
+			margin-right: 0;
+
+			h1 {
+				margin: 0;
+				text-align: center !important;
+			}
+		}
 	}
 }
 </style>

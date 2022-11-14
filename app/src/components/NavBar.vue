@@ -51,7 +51,12 @@ const scrollTo = (id: string) => {
 	open.value = false
 	const element = document.getElementById(id)
 	if (!element) return
-	element.scrollIntoView({ behavior: "smooth" })
+	const rect = element.getBoundingClientRect()
+	window.scroll({
+		top: rect.top + window.scrollY - 65,
+		left: 0,
+		behavior: "smooth"
+	})
 }
 </script>
 <style lang="scss" scoped>
@@ -124,7 +129,7 @@ nav {
 
 	header {
 		min-height: 5vh;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.logo {
@@ -137,7 +142,7 @@ nav {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 100vw;
+		width: 100%;
 		margin: 0;
 		margin-top: 0.5rem;
 		margin-bottom: 1rem;

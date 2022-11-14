@@ -105,11 +105,8 @@ onMounted(async () => {
 .container {
 	position: relative;
 	background: linear-gradient(180deg, #ffffff 0%, #cce2ff 100%);
-	overflow-x: hidden;
-	max-width: 100vw;
 	height: auto;
-	width: 100vw;
-	min-height: 100vh;
+	max-width: 100%;
 }
 
 .trashDiv {
@@ -182,7 +179,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	margin: 0;
 	margin-top: 2rem;
@@ -194,7 +191,7 @@ a {
 	font-weight: 600;
 	margin: 0;
 	margin-top: 1rem;
-	width: 100vw;
+	width: 100%;
 	text-align: center;
 	color: rgba(0, 0, 0, 0.4);
 }
@@ -294,7 +291,7 @@ a {
 }
 
 .projects {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -430,14 +427,14 @@ a {
 	.aboutUsText {
 		margin-top: 10vw;
 		text-align: center;
-		width: 100vw;
+		width: 100%;
 	}
 	.logoAbt {
 		display: none;
 	}
 
 	.aboutUs {
-		width: 100vw;
+		width: 100%;
 		margin-left: 0;
 		justify-content: center;
 	}

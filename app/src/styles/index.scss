@@ -1,5 +1,9 @@
 @use "sass:string";
 
+* {
+	padding: 0;
+}
+
 #nprogress {
 	pointer-events: none;
 }
@@ -23,4 +27,5 @@
 body {
 	overflow-x: hidden;
 	font-family: "Poppins";
+	padding: 0;
 }

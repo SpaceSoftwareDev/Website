@@ -39,66 +39,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@capacitor/app@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "@capacitor/app@npm:4.1.0"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-  checksum: c3cb2c90cf371eea5147aa267593dc0f4de0817cbfc9e9bc123d06175be3fc2568a26c0e9695154204842afddf469d1842547fc3592f3d86ab8a7bc1b2b7003f
-  languageName: node
-  linkType: hard
-
-"@capacitor/clipboard@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@capacitor/clipboard@npm:4.0.1"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-  checksum: 82c2523c2365d73e0cebf434f7d667b5e9de08cdf514ae9ecda5c6fdadba1b74a5b83f0547d475984e4cf14cf7dde83fa24895036fc7f9407444aef6591273bc
-  languageName: node
-  linkType: hard
-
 "@capacitor/core@npm:^4.4.0":
   version: 4.4.0
   resolution: "@capacitor/core@npm:4.4.0"
   dependencies:
     tslib: "npm:^2.1.0"
   checksum: 1613b05b819908e672ce5613df826aded0156ab41949c033c984c46542f8e736a1357a940a05a6144492a3d380bf34f69ce1b9a2beb49e67b26dfe0f9083f206
-  languageName: node
-  linkType: hard
-
-"@capacitor/device@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@capacitor/device@npm:4.0.1"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-  checksum: ce72c06066aaff67dd1f2fabd652e8bc6f0980300969c51425fd2ab84c57ce5302474c4f10d2843c215c586c18a750f2404ca6297f6f0b0c0f4a1dd01af91864
-  languageName: node
-  linkType: hard
-
-"@capacitor/dialog@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@capacitor/dialog@npm:4.0.1"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-  checksum: 2c6674aae6dbeaea3cb80cf933ad4d2e6447596dd81d63abd5bdce8f1e10a93161d1eb2c35b2e0283f7446121d9eb4108da0595584bc782dd85dc234570ce6cf
-  languageName: node
-  linkType: hard
-
-"@capacitor/filesystem@npm:^4.1.3":
-  version: 4.1.3
-  resolution: "@capacitor/filesystem@npm:4.1.3"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-  checksum: 522d965076769e091c563eb2e7a2fd271f5b35a5e52ca017c1d0dfcd7c06f1bc18e80577498136a798e5517bcbaec76c938459ec624e4c361536f993c0210c36
-  languageName: node
-  linkType: hard
-
-"@capacitor/ios@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@capacitor/ios@npm:4.4.0"
-  peerDependencies:
-    "@capacitor/core": ^4.3.0
-  checksum: ac546d9c206bbf5896829001c788cc9648c513512a82802d4964d7e9b1ca6fccd7c863580f171f9995e13a6889e3d5844c0cc0945a9ef2406d38ef21156637c6
   languageName: node
   linkType: hard
 
@@ -182,22 +128,6 @@ __metadata:
     ionicons: "npm:^6.0.3"
     tslib: "npm:^2.1.0"
   checksum: 965340d9b5da3ca9755ab35145efe3a469a521112709ce466a74a4fd4ebe0ef25924309f1131a9012556f148e1f4f5eafcd398ba2521c5cd4b0a6e5c0223aaec
-  languageName: node
-  linkType: hard
-
-"@ionic/pwa-elements@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@ionic/pwa-elements@npm:3.1.1"
-  checksum: 562c9581435148ec267fd0f520e24380c68849014e89684620c794b6d796b84ac0ce3dc623c0a26d11b2b42744930bdee4f14adbef7af5274902dff7f36f7de1
-  languageName: node
-  linkType: hard
-
-"@ionic/vue-router@npm:^6.3.5":
-  version: 6.3.5
-  resolution: "@ionic/vue-router@npm:6.3.5"
-  dependencies:
-    "@ionic/vue": "npm:^6.3.5"
-  checksum: 663caa5b4bc32939aaa19bbc74691d4a3498c034be921356aea30a12d05c992f13dc15ccd0bec7770e2c84e878fa2062c290414d7166da561cd9a2cd67fa5c5f
   languageName: node
   linkType: hard
 
@@ -636,7 +566,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:9.5.0, @vueuse/core@npm:^9.5.0":
+"@vueuse/core@npm:^9.5.0":
   version: 9.5.0
   resolution: "@vueuse/core@npm:9.5.0"
   dependencies:
@@ -662,78 +592,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/integrations@npm:^9.5.0":
-  version: 9.5.0
-  resolution: "@vueuse/integrations@npm:9.5.0"
-  dependencies:
-    "@vueuse/core": "npm:9.5.0"
-    "@vueuse/shared": "npm:9.5.0"
-    vue-demi: "npm:*"
-  peerDependencies:
-    async-validator: "*"
-    axios: "*"
-    change-case: "*"
-    drauu: "*"
-    focus-trap: "*"
-    fuse.js: "*"
-    idb-keyval: "*"
-    jwt-decode: "*"
-    nprogress: "*"
-    qrcode: "*"
-    universal-cookie: "*"
-  peerDependenciesMeta:
-    async-validator:
-      optional: true
-    axios:
-      optional: true
-    change-case:
-      optional: true
-    drauu:
-      optional: true
-    focus-trap:
-      optional: true
-    fuse.js:
-      optional: true
-    idb-keyval:
-      optional: true
-    jwt-decode:
-      optional: true
-    nprogress:
-      optional: true
-    qrcode:
-      optional: true
-    universal-cookie:
-      optional: true
-  checksum: 1105001eac8d9aed882cceb441a282ee48e30b7fba306bfcf0f22163b2eff7237647d5ecb5f1a6259ebfb5354388494929d76a6ca7ef0d731cc7bbf9f8a139d5
-  languageName: node
-  linkType: hard
-
-"@vueuse/math@npm:^9.5.0":
-  version: 9.5.0
-  resolution: "@vueuse/math@npm:9.5.0"
-  dependencies:
-    "@vueuse/shared": "npm:9.5.0"
-    vue-demi: "npm:*"
-  checksum: 1f3201c4b630820491e18db9a1427b98a545f6dd260eeaee452e7a3b15fbed06b4705dd216cb6d864547a6c53c68217bfa70a2fc8d745cdc623dc6dbfb7fb8ed
-  languageName: node
-  linkType: hard
-
 "@vueuse/metadata@npm:9.5.0":
   version: 9.5.0
   resolution: "@vueuse/metadata@npm:9.5.0"
   checksum: 8d4c2f8c92958c5c2131cee824a286dc50638e462f412929aaa01f59d79a9ea96f1a83f0ca501dfccd3541d1461c12326b5c3e931db818227c0666618d0d2dd6
-  languageName: node
-  linkType: hard
-
-"@vueuse/router@npm:^9.5.0":
-  version: 9.5.0
-  resolution: "@vueuse/router@npm:9.5.0"
-  dependencies:
-    "@vueuse/shared": "npm:9.5.0"
-    vue-demi: "npm:*"
-  peerDependencies:
-    vue-router: ">=4.0.0-rc.1"
-  checksum: c850380af542b5649f877c4b9fdaa17eb0f2d6e9dc0b8d2949188ef2ba0312504b60ee2a15d0c8d2bd2c6af9b54564b07d281775275a54d33c1e01ab91325416
   languageName: node
   linkType: hard
 
@@ -2776,17 +2638,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@capacitor/app": "npm:^4.1.0"
-    "@capacitor/clipboard": "npm:^4.0.1"
     "@capacitor/core": "npm:^4.4.0"
-    "@capacitor/device": "npm:^4.0.1"
-    "@capacitor/dialog": "npm:^4.0.1"
-    "@capacitor/filesystem": "npm:^4.1.3"
-    "@capacitor/ios": "npm:4.4.0"
     "@capacitor/preferences": "npm:^4.0.1"
-    "@ionic/pwa-elements": "npm:^3.1.1"
     "@ionic/vue": "npm:^6.3.5"
-    "@ionic/vue-router": "npm:^6.3.5"
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@types/node": "npm:^18.11.9"
     "@types/nprogress": "npm:^0.2.0"
@@ -2795,9 +2649,6 @@ __metadata:
     "@vue/eslint-config-typescript": "npm:^11.0.2"
     "@vueuse/core": "npm:^9.5.0"
     "@vueuse/head": "npm:^1.0.12"
-    "@vueuse/integrations": "npm:^9.5.0"
-    "@vueuse/math": "npm:^9.5.0"
-    "@vueuse/router": "npm:^9.5.0"
     axios: "npm:^1.1.3"
     eslint: "npm:^8.27.0"
     eslint-plugin-vue: "npm:^9.7.0"

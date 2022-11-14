@@ -21,7 +21,7 @@ footer {
 	flex-direction: row;
 	align-items: center;
 
-	width: 100vw;
+	width: 100%;
 }
 
 .rightsImg {

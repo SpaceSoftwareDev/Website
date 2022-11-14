@@ -56,14 +56,6 @@ onMounted(async () => {
 	&:hover {
 		height: 260px;
 	}
-
-	&:first-of-type {
-		margin-left: 15vw;
-	}
-
-	&:last-of-type {
-		margin-right: 15vw;
-	}
 }
 
 h1 {
@@ -81,12 +73,11 @@ img {
 
 .wrapper {
 	scroll-snap-type: x mandatory;
-	min-width: 100vw;
+	min-width: 100%;
+	max-width: 100%;
 	display: flex;
-	justify-content: space-between;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	scrollbar-width: none;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .wrapper::-webkit-scrollbar {
@@ -121,6 +112,14 @@ p {
 		&:last-of-type {
 			margin-right: calc(50vw - 100px);
 		}
+	}
+
+	.wrapper {
+		max-width: 1000vw;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		scrollbar-width: none;
+		justify-content: space-between;
 	}
 }
 </style>
