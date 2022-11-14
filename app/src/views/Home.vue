@@ -99,6 +99,7 @@ import Divider from "@/components/Divider.vue"
 import Project from "@/components/Project.vue"
 import { ref, onMounted } from "vue"
 import axios from "axios"
+import type { CMSData } from "@/types"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
@@ -107,7 +108,7 @@ const projects = ref<project[]>([])
 const email = ref<string>("")
 onMounted(async () => {
 	const res = await axios.get<{ data: project[] }>(
-		"https://space-software.com/cms/api/v1/projects"
+		`${import.meta.env.VITE_CMS_URL}/api/v1/projects`
 	)
 	projects.value = res.data.data
 })

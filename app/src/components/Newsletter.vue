@@ -5,6 +5,7 @@
 			<input
 				type="email"
 				v-model="email"
+				required
 				placeholder="example@example.com"
 				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
@@ -14,11 +15,18 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue"
+import axios from "axios"
 
 const email = ref<string>("")
 
-const newsletterSubmit = () => {
-	console.log(email.value)
+const newsletterSubmit = async () => {
+	await axios.post(
+		`${import.meta.env.VITE_CMS_URL}/api/v1/newsletter/email`,
+		{
+			email: email.value
+		}
+	)
+	email.value = ""
 }
 </script>
 
