@@ -31,7 +31,10 @@
 				/></a>
 			</section>
 			<!--Button for sending email-->
-			<button class="getInTouchBtn" data="Get In Touch"></button>
+			<button
+				class="getInTouchBtn"
+				data="Get In Touch"
+				@click="scrollTo('contact')"></button>
 		</article>
 		<!--Right side illustration-->
 		<aside>
@@ -51,7 +54,7 @@
 				<div class="scrollLine"></div>
 			</div>
 		</section>
-		<Divider id="aboutus">About us</Divider>
+		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
 				We are new sofware studio founded by highschool<wbr /> students
@@ -105,13 +108,23 @@ import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 const large = useBreakpoints(breakpointsTailwind).lg
 
 const projects = ref<project[]>([])
-const email = ref<string>("")
 onMounted(async () => {
 	const res = await axios.get<{ data: project[] }>(
 		`${import.meta.env.VITE_CMS_URL}/api/v1/projects`
 	)
 	projects.value = res.data.data
 })
+
+const scrollTo = (id: string) => {
+	const element = document.getElementById(id)
+	if (!element) return
+	const rect = element.getBoundingClientRect()
+	window.scroll({
+		top: rect.top + window.scrollY - 65,
+		left: 0,
+		behavior: "smooth"
+	})
+}
 </script>
 <style lang="scss" scoped>
 .container {
@@ -119,6 +132,10 @@ onMounted(async () => {
 	background: linear-gradient(180deg, #ffffff 0%, #cce2ff 100%);
 	height: auto;
 	max-width: 100%;
+}
+
+.getInTouchBtn:hover::after {
+	color: white;
 }
 
 .trashDiv {

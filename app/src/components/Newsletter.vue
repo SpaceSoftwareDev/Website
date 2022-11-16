@@ -38,6 +38,7 @@ form {
 h3 {
 	color: rgba(0, 0, 0, 0.4);
 	text-align: center;
+	margin: 0;
 }
 .input {
 	width: 300px;

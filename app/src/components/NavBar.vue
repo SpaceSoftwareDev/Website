@@ -6,7 +6,7 @@
 			<img src="/assets/logo-nav-bar.svg" class="logo" />
 			<!--Navigation links-->
 			<nav v-if="isLarge">
-				<a href="#aboutus" @click.prevent="scrollTo('aboutus')">
+				<a href="#about" @click.prevent="scrollTo('about')">
 					About us
 				</a>
 				<a href="#projects" @click.prevent="scrollTo('projects')">
@@ -25,7 +25,7 @@
 		</div>
 		<Transition name="scale">
 			<nav v-if="!isLarge && open" id="navLinks">
-				<a href="#aboutus" @click.prevent="scrollTo('aboutus')">
+				<a href="#about" @click.prevent="scrollTo('about')">
 					About us
 				</a>
 				<a href="#projects" @click.prevent="scrollTo('projects')">
