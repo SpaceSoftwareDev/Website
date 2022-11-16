@@ -13,10 +13,22 @@
 
 			<!--Socials. icons-->
 			<section class="socials">
-				<ion-icon :icon="icons.logoFacebook" id="ic1" />
-				<ion-icon :icon="icons.logoInstagram" id="ic2" />
-				<ion-icon :icon="icons.logoTwitter" id="ic3" />
-				<ion-icon :icon="icons.logoTiktok" id="ic4" />
+				<a
+					href="https://www.facebook.com/profile.php?id=100076217131544"
+					target="_blank">
+					<ion-icon :icon="icons.logoFacebook" id="ic1" />
+				</a>
+				<a
+					href="https://www.instagram.com/spacesoftwarestudio/"
+					target="_blank">
+					<ion-icon :icon="icons.logoInstagram" id="ic2" />
+				</a>
+				<a href="https://twitter.com/spacesoftstudio" target="_blank">
+					<ion-icon :icon="icons.logoTwitter" id="ic3" />
+				</a>
+				<a href="https://www.tiktok.com/@spacesoftware" target="_blank"
+					><ion-icon :icon="icons.logoTiktok" id="ic4"
+				/></a>
 			</section>
 			<!--Button for sending email-->
 			<button class="getInTouchBtn" data="Get In Touch"></button>
@@ -209,6 +221,7 @@ a {
 #ic3,
 #ic4 {
 	transition: all 300ms ease-in-out;
+	color: black;
 }
 
 #ic1:hover,
