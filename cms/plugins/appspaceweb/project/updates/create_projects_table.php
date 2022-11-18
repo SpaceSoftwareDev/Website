@@ -14,7 +14,7 @@ class CreateProjectsTable extends Migration
 
             $table->string('title');
             $table->text('description');
-            $table->boolean('is_published')->default('false');
+            $table->boolean('is_published')->default(false);
 
             $table->smallInteger('sort_order')->default('0');
 
