@@ -21,11 +21,13 @@ footer {
 	flex-direction: row;
 	align-items: center;
 
-	width: 100%;
+	max-width: 100vw;
+	width: 100vw;
 }
 
 .rightsImg {
-	width: 20rem;
+	max-width: 20rem;
+	height: 40px;
 }
 
 .newsletter {
@@ -35,8 +37,9 @@ footer {
 
 @media screen and (max-width: 1024px) {
 	footer {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: 0;
+		padding-right: 0;
+		justify-content: center;
 	}
 }
 </style>

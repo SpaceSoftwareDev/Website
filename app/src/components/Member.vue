@@ -74,7 +74,7 @@ img {
 .wrapper {
 	scroll-snap-type: x mandatory;
 	min-width: 100%;
-	max-width: 100%;
+	max-width: 100vw;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;

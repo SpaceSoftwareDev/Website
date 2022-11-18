@@ -132,6 +132,7 @@ const scrollTo = (id: string) => {
 	background: linear-gradient(180deg, #ffffff 0%, #cce2ff 100%);
 	height: auto;
 	max-width: 100%;
+	overflow-x: hidden;
 }
 
 .getInTouchBtn:hover::after {
