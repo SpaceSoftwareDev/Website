@@ -65,6 +65,7 @@ h1 {
 	font-family: "Poppins";
 	width: 200%;
 	font-size: 1.4rem;
+	font-weight: 100;
 }
 
 img {

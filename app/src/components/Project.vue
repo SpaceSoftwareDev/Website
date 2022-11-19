@@ -45,6 +45,13 @@ const pagination = {
 }
 </script>
 <style lang="scss" scoped>
+h1 {
+	background: linear-gradient(94.81deg, #00b232 3.76%, #048383 41.45%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
 .project {
 	display: flex;
 	width: 80vw;

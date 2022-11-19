@@ -56,7 +56,7 @@ h1 {
 	}
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
 	h1 {
 		text-align: center !important;
 		margin: 0;

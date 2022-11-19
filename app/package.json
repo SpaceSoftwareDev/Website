@@ -8,11 +8,11 @@
 		"upgrade": "yarn upgrade-interactive"
 	},
 	"dependencies": {
-		"@capacitor/core": "^4.4.0",
-		"@capacitor/preferences": "^4.0.1",
+		"@capacitor/core": "^4.5.0",
+		"@capacitor/preferences": "^4.0.2",
 		"@ionic/vue": "^6.3.7",
 		"@vueuse/core": "^9.5.0",
-		"@vueuse/head": "^1.0.15",
+		"@vueuse/head": "^1.0.16",
 		"axios": "^1.1.3",
 		"ionicons": "^6.0.4",
 		"nprogress": "^0.2.0",
@@ -29,7 +29,7 @@
 		"@vitejs/plugin-vue": "^3.2.0",
 		"@vue/eslint-config-prettier": "^7.0.0",
 		"@vue/eslint-config-typescript": "^11.0.2",
-		"eslint": "^8.27.0",
+		"eslint": "^8.28.0",
 		"eslint-plugin-vue": "^9.7.0",
 		"prettier": "^2.7.1",
 		"sass": "^1.56.1",

@@ -77,7 +77,7 @@
 				:data="project" />
 		</section>
 
-		<Divider id="contact">Contact Us</Divider>
+		<Divider id="contact">Contact us</Divider>
 		<section>
 			<a class="contact" href="mailto:space.software.business@gmail.com">
 				<img src="/assets/email.svg" />
@@ -474,7 +474,7 @@ a {
 		width: min(90vw, 400px);
 	}
 }
-@media screen and (max-width: 1375px) and (min-width: 1161px) {
+@media screen and (max-width: 1375px) and (min-width: 1024px) {
 	aside {
 		display: none;
 	}
