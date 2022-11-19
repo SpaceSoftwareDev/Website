@@ -57,7 +57,7 @@
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
-				We are new sofware studio founded by highschool<wbr /> students
+				We are new software studio founded by high school<wbr /> students
 				from Slovakia.<br />
 				Currently we are studying on high school SPŠE Hálova 16.<br />
 				And we are part of really cool study plan named
@@ -77,7 +77,7 @@
 				:data="project" />
 		</section>
 
-		<Divider id="contact">Contact Us</Divider>
+		<Divider id="contact">Contact us</Divider>
 		<section>
 			<a class="contact" href="mailto:space.software.business@gmail.com">
 				<img src="/assets/email.svg" />
