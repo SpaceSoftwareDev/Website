@@ -1,9 +1,0 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
-fields:
-    email:
-        label: Email
-        type: email
-        span: left

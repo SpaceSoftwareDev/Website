@@ -2,8 +2,8 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-use AppSpaceWeb\Newsletter\Http\Controllers\NewsletterController;
 use WApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
+use AppSpaceWeb\Newsletter\Http\Controllers\NewsletterController;
 
 Route::group([
     'prefix'      => 'api/v1',

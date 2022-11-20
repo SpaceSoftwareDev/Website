@@ -1,18 +1,38 @@
 <?php namespace AppSpaceWeb\Newsletter\Http\Controllers;
 
-use AppSpaceWeb\Newsletter\Models\Email;
+use Exception;
+use Mailjet\Client;
+use Mailjet\Resources;
 use Illuminate\Routing\Controller;
-use AppSpaceWeb\Newsletter\Http\Resources\NewsletterResource;
 
 class NewsletterController extends Controller
 {
     public function store()
     {
-        $email = new Email();
-        $email->email = post('email');
+        request()->validate([
+            'email' => 'email|required'
+        ]);
 
-        $email->save();
+        $mj = new Client(env('MJ_APIKEY_PUBLIC'), env('MJ_APIKEY_PRIVATE'),true, [
+            'version' => 'v3'
+        ]);
 
-        return new NewsletterResource($email);
+        $body = [
+            'Action' => 'addforce',
+            'Email'  => post('email')
+        ];
+
+        $response = $mj->post(Resources::$ContactslistManagecontact, [
+            'id'   => env('MJ_CONTACT_LIST_ID'),
+            'body' => $body
+        ]);
+
+        if (!$response->success()) {
+            throw new Exception('Error occurred!');
+        }
+
+        return [
+            'success' => true
+        ];
     }
 }
