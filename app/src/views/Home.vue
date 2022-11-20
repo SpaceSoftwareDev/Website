@@ -57,8 +57,8 @@
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
-				We are new software studio founded by high school<wbr /> students
-				from Slovakia.<br />
+				We are new software studio founded by high school<wbr />
+				students from Slovakia.<br />
 				Currently we are studying on high school SPŠE Hálova 16.<br />
 				And we are part of really cool study plan named
 				<wbr /><a href="https://openlab.sk" target="_blank"> OPENLAB </a

@@ -50,11 +50,11 @@ h1 {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent;
+	color: transparent;
 }
 .project {
 	display: flex;
-	width: 80vw;
+	width: 90vw;
 	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: center;
@@ -72,7 +72,6 @@ h1 {
 }
 
 .swiper {
-	height: 460px;
 	width: 20vw;
 
 	display: flex;
@@ -95,18 +94,17 @@ h1 {
 
 	.slide {
 		width: auto;
-		height: auto;
+		height: 500px;
 		object-fit: cover;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
 
-	img {
-		max-height: 100%;
-		height: auto;
-		width: auto;
-		object-fit: contain;
+		img {
+			padding-top: 20px;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 }
 
@@ -165,6 +163,8 @@ p {
 	img {
 		margin: 0;
 		margin-bottom: 1rem;
+		padding-left: 1rem;
+		padding-bottom: 0.5rem;
 
 		&:nth-child(odd) {
 			margin: 0;
