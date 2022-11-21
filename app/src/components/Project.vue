@@ -81,7 +81,7 @@ h1 {
 	margin: 0;
 	margin-right: 1rem;
 
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 
 	:global(.swiper-pagination) {
 		bottom: 0 !important;
@@ -150,7 +150,8 @@ p {
 	}
 
 	.swiper {
-		width: 80vw;
+		width: 100%;
+		padding-bottom: 20px;
 	}
 
 	.title {

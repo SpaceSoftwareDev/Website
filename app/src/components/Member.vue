@@ -73,7 +73,7 @@ img {
 }
 
 .wrapper {
-	scroll-snap-type: x mandatory;
+	scroll-snap-type: x proximity;
 	min-width: 100%;
 	max-width: 100vw;
 	display: flex;
@@ -116,7 +116,8 @@ p {
 	}
 
 	.wrapper {
-		max-width: 1000vw;
+		max-width: 5000px;
+		min-width: 100vw;
 		overflow-x: scroll;
 		overflow-y: hidden;
 		scrollbar-width: none;
