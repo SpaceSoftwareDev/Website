@@ -79,7 +79,7 @@
 
 		<Divider id="contact">Contact us</Divider>
 		<section>
-			<a class="contact" href="mailto:space.software.business@gmail.com">
+			<a class="contact" href="mailto:info@space-software.com">
 				<img src="/assets/email.svg" />
 			</a>
 		</section>

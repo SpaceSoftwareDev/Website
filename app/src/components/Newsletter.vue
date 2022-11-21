@@ -21,7 +21,7 @@ const email = ref<string>("")
 
 const newsletterSubmit = async () => {
 	await axios.post(
-		`${import.meta.env.VITE_CMS_URL}/api/v1/newsletter/email`,
+		`${import.meta.env.VITE_CMS_URL}/api/v1/newsletter`,
 		{
 			email: email.value
 		}
