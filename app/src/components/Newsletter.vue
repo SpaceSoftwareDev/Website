@@ -70,6 +70,7 @@ h3 {
 		border-top-right-radius: 20px;
 		background-color: #6babff;
 		color: #ffffff;
+		cursor: pointer;
 	}
 }
 </style>
