@@ -24,26 +24,40 @@ class Plugin extends PluginBase
     }
 
     /**
+     * Register method, called when the plugin is first registered.
+     *
+     * @return void
+     */
+    public function register()
+    {
+
+    }
+
+    /**
+     * Boot method, called right before the request route.
+     *
+     * @return array
+     */
+    public function boot()
+    {
+
+    }
+
+    /**
      * Registers back-end navigation items for this plugin.
      *
      * @return array
      */
     public function registerNavigation()
     {
-
         return [
-            'team' => [
+            'teammember' => [
                 'label'       => 'Team',
                 'url'         => Backend::url('appspaceweb/teammember/teammembers'),
                 'icon'        => 'icon-user',
                 'permissions' => ['appspaceweb.team.*'],
-                'order'       => 500,
+                'order'       => 500
             ],
         ];
-    }
-
-    public function boot()
-    {
-
     }
 }

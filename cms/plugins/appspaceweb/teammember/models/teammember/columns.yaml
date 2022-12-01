@@ -4,10 +4,18 @@
 
 columns:
     sort_order:
-        label: Sort Order
+        label: Sort order
+        invisible: true
+    avatar:
+        label: Avatar
+        type: partial
+        path: ~/plugins/appspaceweb/teammember/controllers/teammembers/_avatar.htm
     name:
-        label: name
+        label: Name
         searchable: true
     stack:
-        label: stack
+        label: Stack
         searchable: true
+    is_published:
+        label: Is published
+        type: switch

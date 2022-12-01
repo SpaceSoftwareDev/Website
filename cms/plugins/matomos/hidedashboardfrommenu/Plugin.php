@@ -1,8 +1,8 @@
 <?php namespace Matomos\HideDashboardFromMenu;
 
 use Backend;
-use Event;
 use System\Classes\PluginBase;
+use October\Rain\Support\Facades\Event;
 
 /**
  * HideDashboardFromMenu Plugin Information File

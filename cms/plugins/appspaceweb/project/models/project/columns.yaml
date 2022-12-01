@@ -4,7 +4,12 @@
 
 columns:
     sort_order:
-        label: Sort Order
+        label: Sort order
+        invisible: true
+    icon:
+        label: Icon
+        type: partial
+        path: ~/plugins/appspaceweb/project/controllers/projects/_icon.htm
     title:
         label: Title
         searchable: true

@@ -15,10 +15,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'BackendRedirect',
+            'name'        => 'BackendRedirect',
             'description' => 'No description provided yet...',
-            'author' => 'WCms',
-            'icon' => 'icon-leaf'
+            'author'      => 'WCms',
+            'icon'        => 'icon-leaf'
         ];
     }
 }

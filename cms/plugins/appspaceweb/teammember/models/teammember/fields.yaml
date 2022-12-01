@@ -21,9 +21,9 @@ fields:
             be: Back-End Developer
             fe: Front-End Developer
             fs: Full Stack Developer
-            debil: Designer
-            sls: Sales
-            mark: Marketing
+            design: Designer
+            sales: Sales
+            market: Marketing
         separator: comma
         span: left
     portfolio_link:

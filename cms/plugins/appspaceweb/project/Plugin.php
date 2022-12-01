@@ -56,7 +56,7 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('appspaceweb/project/projects'),
                 'icon'        => 'icon-laptop',
                 'permissions' => ['appspaceweb.project.*'],
-                'order'       => 500,
+                'order'       => 500
             ],
         ];
     }
