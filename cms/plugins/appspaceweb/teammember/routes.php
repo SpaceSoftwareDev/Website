@@ -6,7 +6,7 @@ use AppSpaceWeb\TeamMember\Http\Controllers\TeamController;
 use WApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
 
 Route::group([
-    'prefix'     => 'api/v1',
+    'prefix'      => 'api/v1',
     'middleware' => [
         ApiExceptionMiddleware::class,
         'api'

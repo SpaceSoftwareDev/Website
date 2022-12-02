@@ -2,8 +2,8 @@
 
 use Exception;
 use Illuminate\Support\Facades\Event;
-use October\Rain\Database\ModelException;
 use W\Seeder\Facades\SeederProviders;
+use October\Rain\Database\ModelException;
 
 class Seeder
 {
@@ -79,11 +79,11 @@ class Seeder
 
             foreach ($data as $modelData) {
                 $model = ModelSeeder::seed($seeder->model, $modelData);
-                
+
                 if (Event::fire('w.seeder.beforeSave', [$model, $modelData], true) === false) {
                     continue;
                 }
-                
+
                 $model->push();
 
                 $processedModels->push($model);

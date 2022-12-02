@@ -1,9 +1,6 @@
 <?php namespace W\Importer\Controllers;
 
 use Backend\Classes\Controller;
-use Exception;
-use October\Rain\Support\Facades\Flash;
-use Illuminate\Support\Facades\Input;
 use W\Importer\Classes\Importer;
 use W\Importer\Classes\Services\ImportService;
 
@@ -32,7 +29,7 @@ class Import extends Controller
         [$processedData, $flash] = Importer::import($data, $aliases);
 
         return [
-            '#importer-flash' => sprintf("<div class='importer-flash-msg %s-flash'>%s</div>", $flash[0], $flash[1]),
+            '#importer-flash'     => sprintf("<div class='importer-flash-msg %s-flash'>%s</div>", $flash[0], $flash[1]),
             '#importer-response' => $this->makePartial('importer-response', [
                 'data' => $processedData
             ]),

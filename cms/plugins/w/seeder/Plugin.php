@@ -1,10 +1,10 @@
 <?php namespace W\Seeder;
 
-use Illuminate\Support\Facades\App;
+use W\Seeder\Console\Seed;
 use System\Classes\PluginBase;
 use W\Seeder\Classes\Providers;
 use W\Seeder\Console\DropTables;
-use W\Seeder\Console\Seed;
+use Illuminate\Support\Facades\App;
 use W\Seeder\Facades\SeederProviders;
 
 /**
@@ -20,10 +20,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Seeder',
+            'name'        => 'Seeder',
             'description' => 'Seed models from data source.',
-            'author' => 'W',
-            'icon' => 'icon-leaf'
+            'author'      => 'W',
+            'icon'        => 'icon-leaf'
         ];
     }
 

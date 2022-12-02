@@ -13,10 +13,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Importer',
+            'name'        => 'Importer',
             'description' => 'Imports data from CSV file',
-            'author' => 'W',
-            'icon' => 'icon-list'
+            'author'      => 'W',
+            'icon'        => 'icon-list'
         ];
     }
 
@@ -24,10 +24,10 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'importer' => [
+            'importer'  => [
                 'label' => 'Import',
-                'url' => Backend::url('w/importer/import'),
-                'icon' => 'icon-list',
+                'url'   => Backend::url('w/importer/import'),
+                'icon'  => 'icon-list'
             ],
         ];
     }
