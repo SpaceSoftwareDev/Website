@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_SEND_FROM_ADDREESS', 'noreply@domain.tld'),
-        'name' => env('MAIL_SEND_FROM_NAME', 'OctoberCMS'),
+        'address' => env('MAIL_SEND_FROM_ADDRESS', 'noreply@domain.tld'),
+        'name'    => env('MAIL_SEND_FROM_NAME', 'OctoberCMS')
     ],
 
     /*
@@ -110,6 +110,6 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => '/usr/sbin/sendmail -bs'
 
 ];
