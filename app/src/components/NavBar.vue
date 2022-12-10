@@ -3,7 +3,9 @@
 	<header>
 		<div class="container">
 			<!--Space Logo-->
-			<img src="/assets/logo-nav-bar.svg" class="logo" />
+			<a href="https://space-software.com/">
+				<img alt="logo" src="/assets/logo-nav-bar.svg" class="logo" />
+			</a>
 			<!--Navigation links-->
 			<nav v-if="isLarge">
 				<a href="#about" @click.prevent="scrollTo('about')">

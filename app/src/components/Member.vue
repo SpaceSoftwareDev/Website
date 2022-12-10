@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<div class="card" v-for="member in members" :key="member.name">
 			<div class="memberPic">
-				<img :src="member.avatar.path" />
+				<img alt="avatar" :src="member.avatar.path" />
 			</div>
 			<h1>{{ member.name }}</h1>
 			<p>{{ member.stack[0] }}</p>

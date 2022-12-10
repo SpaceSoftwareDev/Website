@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<img src="/assets/rights-footer.svg" class="rightsImg" />
+		<img alt="footer" src="/assets/rights-footer.svg" class="rightsImg" />
 		<Newsletter class="newsletter" v-if="large" />
 	</footer>
 </template>

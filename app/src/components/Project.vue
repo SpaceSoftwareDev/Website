@@ -2,14 +2,14 @@
 	<div class="project">
 		<div v-if="!large" class="title">
 			<h1 v-html="data.title" />
-			<img class="icon" :src="data.icon.path" />
+			<img alt="icon" class="icon" :src="data.icon.path" />
 		</div>
 		<swiper class="swipper" :pagination="(pagination as any)">
 			<swiper-slide
 				class="slide"
 				v-for="media in data.gallery"
 				:key="media.id">
-				<img :src="media?.path" />
+				<img alt="media" :src="media?.path" />
 			</swiper-slide>
 		</swiper>
 		<div class="projectInfo">
