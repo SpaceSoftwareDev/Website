@@ -27,7 +27,7 @@ footer {
 
 .rightsImg {
 	max-width: 20rem;
-	height: 40px;
+	height: 50px;
 }
 
 .newsletter {
