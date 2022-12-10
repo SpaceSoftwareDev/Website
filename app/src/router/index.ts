@@ -5,6 +5,10 @@ const routes: RouteRecordRaw[] = [
 		name: "Home",
 		path: "/",
 		component: () => import("@/views/Home.vue")
+	},
+	{
+		path: "/:pathMatch(.*)*",
+		redirect: { name: "Home" }
 	}
 ]
 
