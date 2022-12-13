@@ -16,21 +16,18 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted, computed } from "vue"
+import { ref } from "vue"
 import type { TeamMember, CMSData } from "@/types"
 import Button from "@/components/Button.vue"
 import axios from "axios"
 
 const members = ref<TeamMember[]>([])
 
-const width = computed(() => `${200 * members.value.length}px`)
-
-onMounted(async () => {
-	const { data } = await axios.get<CMSData<TeamMember>>(
-		`${import.meta.env.VITE_CMS_URL}/api/v1/team`
-	)
-	members.value = data.data
-})
+axios
+	.get<CMSData<TeamMember>>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`)
+	.then((res) => {
+		members.value = res.data.data
+	})
 </script>
 <style lang="scss" scoped>
 .card {

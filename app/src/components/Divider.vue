@@ -1,7 +1,9 @@
 <template>
 	<div :class="{ dividerLineWrapper: true, right }">
-		<h1><slot /></h1>
-		<div v-if="large" class="dividerLine"></div>
+		<h1>
+			<slot />
+		</h1>
+		<div v-if="large" class="dividerLine" />
 	</div>
 </template>
 <script lang="ts" setup>
