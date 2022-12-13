@@ -20,3 +20,17 @@
 - Frontend Tooling: [Vite 3.2](https://vitejs.dev/)
 
 ----------------------------------------------------------
+
+## Build
+
+### Normal Build
+```bash
+yarn build
+```
+
+### SSG Build
+```bash
+yarn generate
+```
+
+----------------------------------------------------------
