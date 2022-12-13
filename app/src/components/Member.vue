@@ -16,12 +16,14 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted } from "vue"
+import { ref, onMounted, computed } from "vue"
 import type { TeamMember, CMSData } from "@/types"
 import Button from "@/components/Button.vue"
 import axios from "axios"
 
 const members = ref<TeamMember[]>([])
+
+const width = computed(() => `${200 * members.value.length}px`)
 
 onMounted(async () => {
 	const { data } = await axios.get<CMSData<TeamMember>>(
@@ -98,7 +100,7 @@ p {
 	margin-bottom: 2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1600px) {
 	.card {
 		height: 260px;
 
