@@ -1,27 +1,58 @@
 <template>
 	<div class="wrapper">
-		<div class="card" v-for="member in members" :key="member.name">
-			<div class="memberPic">
-				<img alt="avatar" :src="member.avatar.path" />
-			</div>
-			<h1>{{ member.name }}</h1>
-			<p>{{ member.stack[0] }}</p>
-			<a
-				v-if="member.portfolio_link"
-				:href="member.portfolio_link"
-				target="_blank">
-				<Button class="btn">Portfolio</Button>
-			</a>
-		</div>
+		<swiper
+			class="swipper"
+			:pagination="(pagination as any)"
+			:slides-per-view="count"
+			:virtual="(true as any)">
+			<swiper-slide v-for="member in members" :key="member.name">
+				<div class="slide">
+					<div class="card">
+						<div class="memberPic">
+							<img alt="avatar" :src="member.avatar.path" />
+						</div>
+						<h1>{{ member.name }}</h1>
+						<p>{{ member.stack[0] }}</p>
+						<a
+							v-if="member.portfolio_link"
+							:href="member.portfolio_link"
+							target="_blank">
+							<Button class="btn">Portfolio</Button>
+						</a>
+					</div>
+				</div>
+			</swiper-slide>
+		</swiper>
 	</div>
 </template>
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref, computed } from "vue"
 import type { TeamMember, CMSData } from "@/types"
+
+import SwiperCore, { Pagination, Virtual } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/vue"
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
+
 import Button from "@/components/Button.vue"
 import axios from "axios"
 
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
+const count = computed(() => {
+	if (breakpoints.lg.value) return 3
+	if (breakpoints.md.value) return 2
+	return 1
+})
+
 const members = ref<TeamMember[]>([])
+
+SwiperCore.use([Pagination, Virtual])
+const pagination = {
+	clickable: true,
+	renderBullet(_index: number, className: string) {
+		return `<span class="${className} dots"></span>`
+	}
+}
 
 axios
 	.get<CMSData<TeamMember>>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`)
@@ -39,11 +70,10 @@ axios
 	max-width: 200px;
 	height: 220px;
 	border-radius: 2rem;
-
 	transition: all 500ms;
 
 	position: relative;
-	margin: 2rem 1rem;
+	margin: 2rem 0.5rem;
 	margin-top: 10vh;
 	padding: 1rem;
 
@@ -67,21 +97,28 @@ h1 {
 	font-weight: 100;
 }
 
+.swiper {
+	width: 50vw;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 img {
 	transform: scale(0.8);
 }
 
 .wrapper {
-	scroll-snap-type: x proximity;
 	min-width: 100%;
-	max-width: 100vw;
+	max-width: 800vw;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
-}
-
-.wrapper::-webkit-scrollbar {
-	display: none;
 }
 
 p {
@@ -100,27 +137,10 @@ p {
 @media (max-width: 1600px) {
 	.card {
 		height: 260px;
-
-		&:hover {
-			height: 260px;
-		}
-
-		&:first-of-type {
-			margin-left: calc(50vw - 100px);
-		}
-
-		&:last-of-type {
-			margin-right: calc(50vw - 100px);
-		}
 	}
 
-	.wrapper {
-		max-width: 5000px;
-		min-width: 100vw;
-		overflow-x: scroll;
-		overflow-y: hidden;
-		scrollbar-width: none;
-		justify-content: space-between;
+	.swiper {
+		width: 70vw;
 	}
 }
 </style>
