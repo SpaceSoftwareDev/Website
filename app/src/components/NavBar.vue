@@ -3,7 +3,7 @@
 	<header>
 		<div class="container">
 			<!--Space Logo-->
-			<a href="https://space-software.com/">
+			<a href="https://space-software.com/" class="logoLink">
 				<img alt="logo" src="/assets/logo-nav-bar.svg" class="logo" />
 			</a>
 			<!--Navigation links-->
@@ -79,6 +79,12 @@ header {
 	margin-top: 2.4rem;
 }
 
+.logoLink {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .logo {
 	width: 10rem;
 	height: auto;
@@ -89,8 +95,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 40px;
-	height: 21px;
+	width: 38px;
+	height: 28px;
 	background: none;
 	border: none;
 	margin-right: 5rem;
@@ -99,6 +105,14 @@ header {
 		width: 100%;
 		background-color: #7a7a7a;
 		border-radius: 10px;
+
+		&:first-of-type {
+			margin-top: 2px;
+		}
+
+		&:last-of-type {
+			margin-bottom: 2px;
+		}
 	}
 }
 
@@ -112,6 +126,7 @@ nav {
 	margin-right: 5rem;
 
 	a {
+		width: 200px;
 		transition: all 300ms;
 		font-family: "Space Mono", monospace;
 		text-decoration: none;

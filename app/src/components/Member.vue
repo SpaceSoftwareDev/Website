@@ -5,10 +5,13 @@
 			:pagination="(pagination as any)"
 			:slides-per-view="count"
 			:virtual="(true as any)">
-			<swiper-slide v-for="member in members" :key="member.name">
+			<swiper-slide
+				v-for="member in members"
+				:key="member.name"
+				v-slot="{ isActive }">
 				<div class="slide">
 					<div class="card">
-						<div class="memberPic">
+						<div class="memberPic" v-if="!isActive">
 							<img alt="avatar" :src="member.avatar.path" />
 						</div>
 						<h1>{{ member.name }}</h1>
@@ -72,7 +75,6 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 
 	position: relative;
 	margin: 2rem 0.5rem;
-	margin-top: 10vh;
 	padding: 1rem;
 
 	background-color: white;
@@ -101,7 +103,7 @@ h1 {
 
 .slide {
 	width: 100%;
-	height: 100%;
+	height: 360px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -116,6 +118,7 @@ img {
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
+	margin-top: min(6vh, 2rem);
 }
 
 p {

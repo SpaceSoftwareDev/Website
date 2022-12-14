@@ -23,9 +23,9 @@
 				<a href="https://twitter.com/spacesoftstudio" target="_blank">
 					<ion-icon :icon="logoTwitter" id="ic3" />
 				</a>
-				<a href="https://tiktok.com/@spacesoftware" target="_blank"
-					><ion-icon :icon="logoTiktok" id="ic4"
-				/></a>
+				<a href="https://tiktok.com/@spacesoftware" target="_blank">
+					<ion-icon :icon="logoTiktok" id="ic4" />
+				</a>
 			</section>
 
 			<button
@@ -92,7 +92,6 @@
 
 <script setup lang="ts">
 import { IonIcon } from "@ionic/vue"
-import type { project } from "@/types"
 import Footer from "@/components/Footer.vue"
 import Newsletter from "@/components/Newsletter.vue"
 import {
@@ -153,7 +152,6 @@ aside {
 	margin: 0;
 	font-size: 3.7rem;
 	font-weight: 600;
-	font-family: "Poppins";
 }
 
 .coloredText {
@@ -165,7 +163,6 @@ aside {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin-bottom: 0;
-	font-family: "Poppins";
 }
 
 a {
@@ -254,7 +251,6 @@ a {
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	cursor: pointer;
 	font-weight: 800;
-	font-family: "Poppins", sans-serif;
 }
 .getInTouchBtn::before {
 	content: "";
@@ -298,7 +294,6 @@ a {
 }
 
 .letter {
-	font-family: "Poppins";
 	position: relative;
 	display: inline-block;
 	color: rgba(0, 0, 0, 0.3);
@@ -392,7 +387,6 @@ a {
 	.socials {
 		text-align: center;
 		width: 78%;
-		display: none;
 	}
 
 	aside {
