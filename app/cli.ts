@@ -26,6 +26,7 @@ class ServerAPI {
 		const html = template
 			.replace("<!--head-html-->", preloadLinks)
 			.replace(`<div id="app"></div>`, `<div id="app">${app}</div>`)
+			.replace(`<link href="[CSS URL]" rel="stylesheet" />`, "")
 			.replaceAll(/^\s*$(?:\r\n?|\n)/gm, "")
 		return html
 	}
@@ -53,7 +54,7 @@ class ServerAPI {
 			})
 		)
 
-		app.use("*", async ({ originalUrl }, res) => {
+		app.use("*", async (_req, res) => {
 			const path = "./dist/server/entry-server.mjs"
 			const render: typeof renderType = (await import(path)).render
 
@@ -63,7 +64,7 @@ class ServerAPI {
 			res.status(200).set({ "Content-Type": "text/html" }).end(html)
 		})
 
-		const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
+		const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
 			res.status(500).end(err.stack)
 		}
 

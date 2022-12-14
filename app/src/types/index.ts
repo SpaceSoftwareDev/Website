@@ -1,9 +1,11 @@
+import axios from "axios"
+
 interface resource {
 	id: number
 }
 
 export interface CMSData<T> {
-	data: T[]
+	data: T
 }
 
 interface img extends resource {
@@ -22,4 +24,8 @@ export interface TeamMember extends resource {
 	name: string
 	portfolio_link: string
 	stack: string[]
+}
+
+export function Get<T>(url: string) {
+	return axios.get<CMSData<T>>(url)
 }

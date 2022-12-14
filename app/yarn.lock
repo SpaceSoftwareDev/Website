@@ -304,24 +304,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ionic/core@npm:6.4.0":
-  version: 6.4.0
-  resolution: "@ionic/core@npm:6.4.0"
+"@ionic/core@npm:6.4.1":
+  version: 6.4.1
+  resolution: "@ionic/core@npm:6.4.1"
   dependencies:
     "@stencil/core": "npm:^2.18.0"
     ionicons: "npm:^6.0.4"
     tslib: "npm:^2.1.0"
-  checksum: a0d893b97ae93180a2a2130ca2714f105afda95e8074d02cd4cd0b70df8ee4e846b1a6da6ace79f2791faca2cc4cc953b10735930b01bb5bd840a8be82f52785
+  checksum: 82529bb30a3bd6360d021a0eb5d60d1ebae6ce2d2889992368e082d90ea16538f345e80c2f7d99fdac7d6ecc23b1a058fe9d19ea5735e838dcdaa9dcefd3e6db
   languageName: node
   linkType: hard
 
-"@ionic/vue@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@ionic/vue@npm:6.4.0"
+"@ionic/vue@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@ionic/vue@npm:6.4.1"
   dependencies:
-    "@ionic/core": "npm:6.4.0"
+    "@ionic/core": "npm:6.4.1"
     ionicons: "npm:^6.0.2"
-  checksum: 3532a74ca094741a296976764f90b373c20e40dafd6ec2247a107c01921c802053deccf0ea2ae43ece1434a430a1b81fe0fd29538271a39eee0a3f185c56002b
+  checksum: b7b6b38122d40b39d9654a2afa5d6b5997a270e220b59acbd821b60ee536285657ab358d15bce48f53b18987a5ae4e23259914456a039c616dac30763cf36943
   languageName: node
   linkType: hard
 
@@ -423,7 +423,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:^4.17.18":
+"@types/express-serve-static-core@npm:^4.17.18, @types/express-serve-static-core@npm:^4.17.31":
   version: 4.17.31
   resolution: "@types/express-serve-static-core@npm:4.17.31"
   dependencies:
@@ -434,7 +434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:^4.17.14":
+"@types/express@npm:*":
   version: 4.17.14
   resolution: "@types/express@npm:4.17.14"
   dependencies:
@@ -443,6 +443,18 @@ __metadata:
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
   checksum: 7e2d23081f1aa8d8e4218fba4e305f2a52e221a99340ecc4694482cd2878cbb344deae1b8899e7682a05cf95c9a130e97534bf0e22d983c45d25a8788351803d
+  languageName: node
+  linkType: hard
+
+"@types/express@npm:^4.17.15":
+  version: 4.17.15
+  resolution: "@types/express@npm:4.17.15"
+  dependencies:
+    "@types/body-parser": "npm:*"
+    "@types/express-serve-static-core": "npm:^4.17.31"
+    "@types/qs": "npm:*"
+    "@types/serve-static": "npm:*"
+  checksum: 24fd75dbb8eb9b134bb3acf4b2e87a04402a3bdb4200dd3e9a477153a61a4d027f9b237510f1d48628965884e7f7ebf9fdfd54818683c8d7e2b3074d86d462ae
   languageName: node
   linkType: hard
 
@@ -460,10 +472,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.11.14":
+"@types/node@npm:*":
   version: 18.11.14
   resolution: "@types/node@npm:18.11.14"
   checksum: 7dfe06e0fff6ac4cc8c939bf591ce541d436260616b0a341b821e4d48cbfe897872845db6589d73b10e2428530526bf3b669969c3fe057d4bc7954649f78de12
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.15":
+  version: 18.11.15
+  resolution: "@types/node@npm:18.11.15"
+  checksum: bb38a882fdb9ddc03aee96dbc3145f11ebec7ec703a7c1c1d5d096878ab6ab1b9963f73d3bb11b05f5ab26e17a11fc4298b05904d6761eaee4d3617d67d009d6
   languageName: node
   linkType: hard
 
@@ -3375,11 +3394,11 @@ __metadata:
   dependencies:
     "@capacitor/core": "npm:^4.6.1"
     "@capacitor/preferences": "npm:^4.0.2"
-    "@ionic/vue": "npm:^6.4.0"
+    "@ionic/vue": "npm:^6.4.1"
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@types/compression": "npm:^1.7.2"
-    "@types/express": "npm:^4.17.14"
-    "@types/node": "npm:^18.11.14"
+    "@types/express": "npm:^4.17.15"
+    "@types/node": "npm:^18.11.15"
     "@types/serve-static": "npm:^1.15.0"
     "@vitejs/plugin-vue": "npm:^4.0.0"
     "@vue/eslint-config-prettier": "npm:^7.0.0"
@@ -3819,11 +3838,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^4.9.4#optional!builtin<compat/typescript>":
   version: 4.9.4
-  resolution: "typescript@patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=d73830"
+  resolution: "typescript@patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=ad5954"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: b53b083cf90883c6c73d66ce2e8b39115f06a642dfc538085c32e030687cf9872c5ea8720c5f361d4d2d14a8af946bb5423e0bf6b472b11f776e020ba6332ced
+  checksum: e7321aeb1e2c0e3c19599808707208e2b730de8d17a5624f0a7297b9a1ffa39974edd4a819108b3b635bc00171476ddfa339e04d928a03ce8d8c6944cb8ec008
   languageName: node
   linkType: hard
 

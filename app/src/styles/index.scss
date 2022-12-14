@@ -4,26 +4,6 @@
 	padding: 0;
 }
 
-#nprogress {
-	pointer-events: none;
-}
-
-#nprogress .bar {
-	background: #3880ff;
-	opacity: 0.75;
-	position: fixed;
-	z-index: 1031;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-}
-
-.v-toast {
-	position: relative;
-	margin-top: 1rem;
-}
-
 body {
 	overflow-x: hidden;
 	font-family: "Poppins";

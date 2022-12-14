@@ -27,14 +27,14 @@
 </template>
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import type { TeamMember, CMSData } from "@/types"
+import { Get } from "@/types"
+import type { TeamMember } from "@/types"
 
 import SwiperCore, { Pagination, Virtual } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 import Button from "@/components/Button.vue"
-import axios from "axios"
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
@@ -54,11 +54,9 @@ const pagination = {
 	}
 }
 
-axios
-	.get<CMSData<TeamMember>>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`)
-	.then((res) => {
-		members.value = res.data.data
-	})
+Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
+	members.value = res.data.data
+})
 </script>
 <style lang="scss" scoped>
 .card {
@@ -115,7 +113,6 @@ img {
 
 .wrapper {
 	min-width: 100%;
-	max-width: 800vw;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
@@ -140,7 +137,7 @@ p {
 	}
 
 	.swiper {
-		width: 70vw;
+		width: 99vw;
 	}
 }
 </style>

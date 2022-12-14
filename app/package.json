@@ -13,7 +13,7 @@
 	"dependencies": {
 		"@capacitor/core": "^4.6.1",
 		"@capacitor/preferences": "^4.0.2",
-		"@ionic/vue": "^6.4.0",
+		"@ionic/vue": "^6.4.1",
 		"@vueuse/core": "^9.6.0",
 		"axios": "^1.2.1",
 		"global": "^4.4.0",
@@ -26,8 +26,8 @@
 	"devDependencies": {
 		"@rushstack/eslint-patch": "^1.2.0",
 		"@types/compression": "^1.7.2",
-		"@types/express": "^4.17.14",
-		"@types/node": "^18.11.14",
+		"@types/express": "^4.17.15",
+		"@types/node": "^18.11.15",
 		"@types/serve-static": "^1.15.0",
 		"@vitejs/plugin-vue": "^4.0.0",
 		"@vue/eslint-config-prettier": "^7.0.0",
@@ -47,5 +47,5 @@
 		"vite": "^4.0.1",
 		"vite-plugin-webfont-dl": "^3.4.2"
 	},
-	"packageManager": "yarn@4.0.0-rc.30"
+	"packageManager": "yarn@4.0.0-rc.33"
 }

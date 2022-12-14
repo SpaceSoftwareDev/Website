@@ -1,9 +1,7 @@
 <template>
-	<!--Content container div-->
 	<div class="container">
 		<NavBar />
 
-		<!--Whole content of landing page-->
 		<article>
 			<p class="landingText">
 				Software studio <br />
@@ -11,36 +9,37 @@
 				<span class="coloredText"> highschool students </span>
 			</p>
 
-			<!--Socials. icons-->
 			<section class="socials">
 				<a
-					href="https://www.facebook.com/profile.php?id=100076217131544"
+					href="https://facebook.com/profile/100076217131544"
 					target="_blank">
-					<ion-icon :icon="icons.logoFacebook" id="ic1" />
+					<ion-icon :icon="logoFacebook" id="ic1" />
 				</a>
 				<a
-					href="https://www.instagram.com/spacesoftwarestudio/"
+					href="https://instagram.com/spacesoftwarestudio/"
 					target="_blank">
-					<ion-icon :icon="icons.logoInstagram" id="ic2" />
+					<ion-icon :icon="logoInstagram" id="ic2" />
 				</a>
 				<a href="https://twitter.com/spacesoftstudio" target="_blank">
-					<ion-icon :icon="icons.logoTwitter" id="ic3" />
+					<ion-icon :icon="logoTwitter" id="ic3" />
 				</a>
-				<a href="https://www.tiktok.com/@spacesoftware" target="_blank"
-					><ion-icon :icon="icons.logoTiktok" id="ic4"
+				<a href="https://tiktok.com/@spacesoftware" target="_blank"
+					><ion-icon :icon="logoTiktok" id="ic4"
 				/></a>
 			</section>
-			<!--Button for sending email-->
+
 			<button
 				class="getInTouchBtn"
 				data="Get In Touch"
 				@click="scrollTo('contact')"></button>
 		</article>
-		<!--Right side illustration-->
+
 		<aside>
 			<img src="/assets/Illustration.png" class="illustration" />
 		</aside>
+
 		<div class="trashDiv"></div>
+
 		<section>
 			<div class="scrollDivider">
 				<div class="textWrapper">
@@ -54,6 +53,7 @@
 				<div class="scrollLine"></div>
 			</div>
 		</section>
+
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
@@ -69,12 +69,10 @@
 		<section class="members">
 			<Member />
 		</section>
+
 		<Divider id="projects" right>Projects</Divider>
 		<section class="projects">
-			<Project
-				v-for="project in projects"
-				:key="project.title"
-				:data="project" />
+			<Project />
 		</section>
 
 		<Divider id="contact">Contact us</Divider>
@@ -93,26 +91,23 @@
 </template>
 
 <script setup lang="ts">
+import { IonIcon } from "@ionic/vue"
 import type { project } from "@/types"
 import Footer from "@/components/Footer.vue"
 import Newsletter from "@/components/Newsletter.vue"
-import * as icons from "ionicons/icons"
+import {
+	logoFacebook,
+	logoTwitter,
+	logoInstagram,
+	logoTiktok
+} from "ionicons/icons"
 import NavBar from "@/components/NavBar.vue"
 import Member from "@/components/Member.vue"
 import Divider from "@/components/Divider.vue"
 import Project from "@/components/Project.vue"
-import { ref } from "vue"
-import axios from "axios"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
-
-const projects = ref<project[]>([])
-axios
-	.get<{ data: project[] }>(`${import.meta.env.VITE_CMS_URL}/api/v1/projects`)
-	.then((res) => {
-		projects.value = res.data.data
-	})
 
 const scrollTo = (id: string) => {
 	const element = document.getElementById(id)

@@ -1,5 +1,5 @@
 <template>
-	<div class="project">
+	<div v-for="data in projects" :key="data.id" class="project">
 		<div v-if="!large" class="title">
 			<h1 v-html="data.title" />
 			<img alt="icon" class="icon" :src="data.icon.path" />
@@ -22,15 +22,20 @@
 	</div>
 </template>
 <script lang="ts" setup>
+import { ref } from "vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
+import { Get } from "@/types"
 import type { project } from "@/types"
 import SwiperCore, { Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/vue"
 
-defineProps<{
-	data: project
-}>()
+const projects = ref<project[]>([])
+Get<project[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/projects`).then(
+	(res) => {
+		projects.value = res.data.data
+	}
+)
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
