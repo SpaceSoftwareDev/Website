@@ -34,7 +34,6 @@ class TeamMember extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'sort_order'   => 'nullable|unique',
         'name'         => 'required',
         'stack_string' => 'required',
         'avatar'       => 'required'

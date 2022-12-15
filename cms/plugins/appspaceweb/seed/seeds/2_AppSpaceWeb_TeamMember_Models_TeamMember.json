@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Lucas Ligas",
+        "stack_string": "Front-End Developer",
+        "portfolio_link": "",
+        "avatar": {
+            "file": "storage/assets/ligmas.png"
+        },
+        "sort_order": 1,
+        "is_published": 1
+    },
+    {
+        "id": 2,
+        "name": "Jakub Krčmárik",
+        "stack_string": "Full Stack Developer",
+        "portfolio_link": "",
+        "avatar": {
+            "file": "storage/assets/krcmar.png"
+        },
+        "sort_order": 2,
+        "is_published": 1
+    },
+    {
+        "id": 3,
+        "name": "Martin Mojžiš",
+        "stack_string": "Full Stack Developer",
+        "portfolio_link": "",
+        "avatar": {
+            "file": "storage/assets/milan.png"
+        },
+        "sort_order": 3,
+        "is_published": 1
+    },
+    {
+        "id": 4,
+        "name": "Daniel Czaja",
+        "stack_string": "Back-End Developer",
+        "portfolio_link": "",
+        "avatar": {
+            "file": "storage/assets/cajin.png"
+        },
+        "sort_order": 4,
+        "is_published": 1
+    },
+    {
+        "id": 5,
+        "name": "Daniel Kliman",
+        "stack_string": "Back-End Developer",
+        "portfolio_link": "",
+        "avatar": {
+            "file": "storage/assets/klinec.png"
+        },
+        "sort_order": 5,
+        "is_published": 1
+    },
+    {
+        "id": 6,
+        "name": "Sára Perdeková",
+        "stack_string": "Designer",
+        "portfolio_link": "",
+        "avatar": {
+            "file": "storage/assets/pelendrekova.png"
+        },
+        "sort_order": 6,
+        "is_published": 1
+    }
+]
