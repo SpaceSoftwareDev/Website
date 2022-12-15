@@ -1,8 +1,8 @@
 <?php namespace AppSpaceWeb\TeamMember\Http\Controllers;
 
-use AppSpaceWeb\TeamMember\Http\Resources\TeamResource;
-use AppSpaceWeb\TeamMember\Models\TeamMember;
 use Illuminate\Routing\Controller;
+use AppSpaceWeb\TeamMember\Models\TeamMember;
+use AppSpaceWeb\TeamMember\Http\Resources\TeamResource;
 
 class TeamController extends Controller
 {

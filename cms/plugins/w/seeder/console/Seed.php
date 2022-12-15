@@ -1,9 +1,10 @@
 <?php namespace W\Seeder\Console;
 
-use W\Seeder\Classes\Seeder;
 use Illuminate\Console\Command;
-use System\Classes\PluginManager;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
+use System\Classes\PluginManager;
+use W\Seeder\Classes\Seeder;
 
 class Seed extends Command
 {

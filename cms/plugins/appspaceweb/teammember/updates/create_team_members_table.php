@@ -1,6 +1,6 @@
 <?php namespace AppSpaceWeb\Team\Updates;
 
-use Schema;
+use October\Rain\Support\Facades\Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
@@ -21,7 +21,7 @@ class CreateTeamMembersTable extends Migration
             $table->boolean('is_published')->default(false);
 
             $table->timestamps();
-
+            $table->softDeletes();
         });
 
     }

@@ -2,7 +2,7 @@
 
 use Exception;
 use League\Csv\Reader;
-use Illuminate\Support\Facades\Event;
+use October\Rain\Support\Facades\Event;
 use W\Importer\Classes\Seeder\ModelSeeder;
 use W\Importer\Classes\Parsers\UtilParser;
 use W\Importer\Classes\Parsers\HeaderParser;

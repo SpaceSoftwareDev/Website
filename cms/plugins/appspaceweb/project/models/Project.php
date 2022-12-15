@@ -8,8 +8,11 @@ use October\Rain\Database\Model;
  */
 class Project extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
+
+    use \October\Rain\Database\Traits\Validation;
+
+    use \October\Rain\Database\Traits\SoftDelete;
 
     /**
      * @var string The database table used by the model.
@@ -30,10 +33,10 @@ class Project extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'title'         => 'required',
-        'icon'          => 'required',
-        'description'   => 'required',
-        'gallery'       => 'nullable',
+        'title'       => 'required',
+        'icon'        => 'required',
+        'description' => 'required',
+        'gallery'     => 'nullable'
     ];
 
     /**

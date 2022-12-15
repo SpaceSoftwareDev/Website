@@ -24,11 +24,11 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'importer'  => [
+            'importer' => [
                 'label' => 'Import',
                 'url'   => Backend::url('w/importer/import'),
                 'icon'  => 'icon-list'
-            ],
+            ]
         ];
     }
 }

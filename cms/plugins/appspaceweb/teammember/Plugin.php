@@ -1,6 +1,6 @@
 <?php namespace AppSpaceWeb\TeamMember;
 
-use Backend;
+use Backend\Facades\Backend;
 use System\Classes\PluginBase;
 
 /**

@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration
             $table->smallInteger('sort_order')->default('0');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

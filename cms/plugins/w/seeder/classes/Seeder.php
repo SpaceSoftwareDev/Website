@@ -1,8 +1,8 @@
 <?php namespace W\Seeder\Classes;
 
 use Exception;
-use Illuminate\Support\Facades\Event;
 use W\Seeder\Facades\SeederProviders;
+use October\Rain\Support\Facades\Event;
 use October\Rain\Database\ModelException;
 
 class Seeder

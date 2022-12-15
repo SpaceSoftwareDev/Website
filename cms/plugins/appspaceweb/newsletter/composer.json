@@ -1,7 +1,0 @@
-{
-    "name": "appspaceweb/newsletter",
-    "type": "october-plugin",
-    "require": {
-        "mailjet/mailjet-apiv3-php": "^1.5"
-    }
-}

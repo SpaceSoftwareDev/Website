@@ -2,7 +2,7 @@
 
 use Exception;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Event;
+use October\Rain\Support\Facades\Event;
 use October\Rain\Database\ModelException;
 use October\Rain\Database\Relations\HasOne;
 use October\Rain\Database\Relations\HasMany;
@@ -55,7 +55,8 @@ class ModelSeeder
     {
         if (in_array($attribute, $this->model->getDates())) {
             $this->model->attributes[$attribute] = Carbon::parse($value);
-        } else {
+        }
+        else {
             $this->model->{$attribute} = $value;
         }
     }
@@ -66,17 +67,23 @@ class ModelSeeder
 
         if ($relation instanceof BelongsTo) {
             BelongsToSeeder::seed($relation, $data);
-        } elseif ($relation instanceof HasOne) {
+        }
+        elseif ($relation instanceof HasOne) {
             HasOneSeeder::seed($relation, $data);
-        } elseif ($relation instanceof HasMany) {
+        }
+        elseif ($relation instanceof HasMany) {
             HasManySeeder::seed($relation, $data);
-        } elseif ($relation instanceof BelongsToMany) {
+        }
+        elseif ($relation instanceof BelongsToMany) {
             BelongsToManySeeder::seed($relation, $data);
-        } elseif ($relation instanceof AttachOne) {
+        }
+        elseif ($relation instanceof AttachOne) {
             AttachOneSeeder::seed($relation, $data);
-        } elseif ($relation instanceof AttachMany) {
+        }
+        elseif ($relation instanceof AttachMany) {
             AttachManySeeder::seed($relation, $data);
-        } else {
+        }
+        else {
             throw new ApplicationException('Relation is not supported in seeder');
         }
     }
@@ -91,7 +98,8 @@ class ModelSeeder
         foreach ($this->data as $attribute => $value) {
             if ($this->model->hasRelation($attribute)) {
                 $this->fillRelation($attribute, $value);
-            } else {
+            }
+            else {
                 $this->fillAttribute($attribute, $value);
             }
         }
@@ -117,7 +125,8 @@ class ModelSeeder
 
         try {
             $this->model->push();
-        } catch (ModelException $exception) {
+        }
+        catch (ModelException $exception) {
             $errors = [];
             foreach ($exception->getErrors()->getMessages() as $field => $error) {
                 $errors[] = sprintf('%s (%s)', $field, implode(', ', $error));

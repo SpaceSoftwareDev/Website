@@ -1,6 +1,6 @@
 <?php namespace AppSpaceWeb\Project;
 
-use Backend;
+use Backend\Facades\Backend;
 use System\Classes\PluginBase;
 
 /**
@@ -52,12 +52,12 @@ class Plugin extends PluginBase
     {
         return [
             'project' => [
-                'label'       => 'Project',
+                'label'       => 'Projects',
                 'url'         => Backend::url('appspaceweb/project/projects'),
                 'icon'        => 'icon-laptop',
                 'permissions' => ['appspaceweb.project.*'],
                 'order'       => 500
-            ],
+            ]
         ];
     }
 }

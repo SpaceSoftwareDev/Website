@@ -1,0 +1,7 @@
+{
+    "name": "spaceintegration/mailjetnewsletter",
+    "type": "october-plugin",
+    "require": {
+        "mailjet/mailjet-apiv3-php": "^1.5"
+    }
+}

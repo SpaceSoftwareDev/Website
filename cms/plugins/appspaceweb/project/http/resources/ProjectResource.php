@@ -9,12 +9,9 @@ class ProjectResource extends Resource
         return [
             'id'           => $this->id,
             'title'        => $this->title,
-            'gallery'      => $this->gallery,
             'icon'         => $this->icon,
-            'description'  => $this->description,
-            'is_published' => $this->is_published,
-            'created_at'   => $this->created_at->toDateTimeString(),
-            'updated_at'   => $this->updated_at->toDateTimeString()
+            'gallery'      => $this->gallery,
+            'description'  => $this->description
         ];
     }
 }

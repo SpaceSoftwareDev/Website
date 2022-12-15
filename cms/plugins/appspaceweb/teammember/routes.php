@@ -3,7 +3,7 @@
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use AppSpaceWeb\TeamMember\Http\Controllers\TeamController;
-use WApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
+use SpaceApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
 
 Route::group([
     'prefix'      => 'api/v1',

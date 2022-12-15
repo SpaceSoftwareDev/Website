@@ -2,8 +2,8 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-use AppSpaceWeb\Project\Http\Controllers\ProjectsController;
 use SpaceApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
+use SpaceIntegration\MailJetNewsletter\Http\Controllers\NewsletterController;
 
 Route::group([
     'prefix'      => 'api/v1',
@@ -13,5 +13,7 @@ Route::group([
     ]
 ], function (Router $router) {
     $router
-        ->get('projects', [ProjectsController::class, 'index']);
+        ->post('newsletter/subscribe', [NewsletterController::class, 'store']);
+    $router
+        ->post('newsletter/unsubscribe', [NewsletterController::class, 'destroy']);
 });
