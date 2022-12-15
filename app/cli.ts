@@ -17,6 +17,9 @@ import type { render as renderType } from "src/scripts/entry-server"
 
 const VERSION = "1.0"
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const resolve = (p: string) => path.resolve(__dirname, p)
+
 class ServerAPI {
 	static replaceHTML(
 		template: string,
@@ -34,15 +37,12 @@ class ServerAPI {
 	static async createServer(
 		port = 80
 	): Promise<{ app: express.Application; port: number }> {
-		const __dirname = path.dirname(fileURLToPath(import.meta.url))
-		const resolve = (p: string) => path.resolve(__dirname, p)
-
 		const template = fs.readFileSync(
-			resolve("./dist/client/index.html"),
+			resolve("dist/client/index.html"),
 			"utf-8"
 		)
 		const manifest = fs
-			.readFileSync("./dist/client/ssr-manifest.json")
+			.readFileSync(resolve("dist/client/ssr-manifest.json"))
 			.toJSON()
 
 		const app = express()
@@ -75,22 +75,18 @@ class ServerAPI {
 
 	static async prerender() {
 		const manifest = fs
-			.readFileSync("./dist/static/ssr-manifest.json")
+			.readFileSync("dist/static/ssr-manifest.json")
 			.toJSON()
-		const template = fs.readFileSync("./dist/static/index.html", "utf-8")
+		const template = fs.readFileSync("dist/static/index.html", "utf-8")
 
-		const path = "./dist/server/entry-server.mjs"
+		const path = "dist/server/entry-server.mjs"
 		const render: typeof renderType = (await import(path)).render
 
 		const { appHtml, preloadLinks } = await render(manifest)
 		const html = this.replaceHTML(template, appHtml, preloadLinks)
 
-		const filePath = `./dist/static/index.html`
+		const filePath = "dist/static/index.html"
 		fs.writeFileSync(filePath, html)
-		// console.log(
-		// 	`  ${pc.green("➜")}  ${pc.bold("Pre-Rendered")}: ${filePath}`
-		// )
-
 		fs.unlinkSync("./dist/static/ssr-manifest.json")
 	}
 }
@@ -105,8 +101,8 @@ class Build {
 	static async server() {
 		await build({
 			build: {
-				ssr: "src/scripts/entry-server.ts",
-				outDir: "dist/server",
+				ssr: resolve("src/scripts/entry-server.ts"),
+				outDir: resolve("dist/server"),
 				minify: "esbuild"
 			}
 		})
@@ -116,7 +112,7 @@ class Build {
 		await build({
 			build: {
 				ssrManifest: true,
-				outDir: "dist/client",
+				outDir: resolve("dist/client"),
 				minify: "esbuild"
 			}
 		})
@@ -126,7 +122,7 @@ class Build {
 		await build({
 			build: {
 				ssrManifest: true,
-				outDir: "dist/static",
+				outDir: resolve("dist/static"),
 				minify: "esbuild"
 			}
 		})
@@ -147,7 +143,7 @@ const buildCommand = async (mode: "ssr" | "ssg") => {
 
 const clean = () => {
 	console.log(pc.dim(`Removing ${pc.bold("dist")} directory...`))
-	fs.rmSync("dist", { recursive: true })
+	fs.rmSync(resolve("dist"), { recursive: true })
 }
 
 const cli = cac()
@@ -172,7 +168,7 @@ cli.command("server", "Start the SSR server")
 	})
 	.action(async (options: { port: number; open: boolean }) => {
 		title()
-		if (!fs.existsSync("dist")) {
+		if (!fs.existsSync(resolve("dist"))) {
 			console.log(pc.bold(pc.dim("Project not built, building...")))
 			await buildCommand("ssr")
 		}
