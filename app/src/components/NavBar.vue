@@ -160,9 +160,8 @@ nav {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		margin: 0;
-		margin-top: 0.5rem;
-		margin-bottom: 1rem;
+		margin: 0.5rem 0 1rem;
+
 		a {
 			width: 90%;
 			padding: 0.5rem 0;

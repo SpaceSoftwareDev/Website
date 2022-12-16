@@ -19,8 +19,7 @@ h1 {
 	font-family: "Poppins", sans-serif;
 	color: #252525;
 	font-weight: 800;
-	margin: 0;
-	margin-right: 2rem;
+	margin: 0 2rem 0 0;
 	min-width: 20vw;
 	text-align: right;
 }

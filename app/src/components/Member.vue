@@ -69,7 +69,7 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 
 	min-width: 200px;
 	max-width: 200px;
-	height: 220px;
+	height: 230px;
 	border-radius: 2rem;
 	transition: all 500ms;
 
@@ -83,11 +83,11 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 	overflow: hidden;
 
 	&:hover {
-		height: 260px;
+		height: 270px;
 	}
 
 	&.hasLink:hover {
-		height: 340px;
+		height: 350px;
 	}
 }
 
@@ -97,7 +97,7 @@ h1 {
 	color: #252525;
 	font-family: "Poppins", sans-serif;
 	width: 200%;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	font-weight: 100;
 }
 
@@ -140,10 +140,10 @@ p {
 
 @media (max-width: 1600px) {
 	.card {
-		height: 260px;
+		height: 270px;
 
 		&.hasLink {
-			height: 340px;
+			height: 350px;
 		}
 	}
 

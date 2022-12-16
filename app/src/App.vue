@@ -262,7 +262,7 @@ a {
 	border-radius: 50rem;
 	background-color: #f6faff;
 	z-index: -1;
-	transition: 200ms;
+	transition: all 0.2s ease-in-out;
 }
 .getInTouchBtn::after {
 	content: attr(data);
@@ -271,7 +271,7 @@ a {
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
-	transition: 200ms;
+	transition: all 0.2s ease-in-out;
 }
 .getInTouchBtn:hover::before {
 	opacity: 20%;
@@ -431,7 +431,7 @@ a {
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
-		transition: 200ms;
+		transition: all 0.2s ease-in-out;
 	}
 
 	.scrollDivider {

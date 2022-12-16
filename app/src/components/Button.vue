@@ -13,12 +13,11 @@ button {
 	box-sizing: border-box;
 	width: 180px;
 	min-height: calc(40px + 1.5rem);
-	border: none;
 	outline: none;
 	position: relative;
 	z-index: 1;
-	border-radius: 22px;
-	border: 4px solid transparent;
+	border-radius: 50rem;
+	border: 3px solid transparent;
 	background: linear-gradient(white, white) padding-box,
 		linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%) border-box;
 	cursor: pointer;
@@ -31,7 +30,6 @@ button {
 				padding-box,
 			linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%)
 				border-box;
-		border-width: 0px;
 	}
 }
 
@@ -59,7 +57,6 @@ button:hover .text {
 				padding-box,
 			linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%)
 				border-box;
-		border-width: 0px;
 
 		.text {
 			color: white;

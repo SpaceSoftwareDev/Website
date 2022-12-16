@@ -83,8 +83,7 @@ h1 {
 	align-items: center;
 	justify-content: center;
 
-	margin: 0;
-	margin-right: 1rem;
+	margin: 0 1rem 0 0;
 
 	padding-bottom: 40px;
 
@@ -93,8 +92,7 @@ h1 {
 	}
 
 	&:nth-child(odd) {
-		margin: 0;
-		margin-left: 1rem;
+		margin: 0 0 0 1rem;
 	}
 
 	.slide {
@@ -167,14 +165,12 @@ p {
 	}
 
 	img {
-		margin: 0;
-		margin-bottom: 1rem;
+		margin: 0 0 1rem;
 		padding-left: 1rem;
 		padding-bottom: 0.5rem;
 
 		&:nth-child(odd) {
-			margin: 0;
-			margin-bottom: 1rem;
+			margin: 0 0 1rem;
 		}
 	}
 
