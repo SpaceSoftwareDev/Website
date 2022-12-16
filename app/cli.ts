@@ -2,7 +2,6 @@
 
 import fs from "node:fs"
 import path from "node:path"
-import { fileURLToPath } from "node:url"
 
 import { build } from "vite"
 import { cac } from "cac"
@@ -17,8 +16,9 @@ import type { render as renderType } from "src/scripts/entry-server"
 
 const VERSION = "1.0"
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __dirname = process.cwd()
 const resolve = (p: string) => path.resolve(__dirname, p)
+const relative = (p: string) => path.relative(__dirname, resolve(p))
 
 class ServerAPI {
 	static replaceHTML(
@@ -55,7 +55,7 @@ class ServerAPI {
 		)
 
 		app.use("*", async (_req, res) => {
-			const path = "./dist/server/entry-server.mjs"
+			const path = relative("dist/server/entry-server.mjs")
 			const render: typeof renderType = (await import(path)).render
 
 			const { appHtml, preloadLinks } = await render(manifest)
@@ -75,19 +75,22 @@ class ServerAPI {
 
 	static async prerender() {
 		const manifest = fs
-			.readFileSync("dist/static/ssr-manifest.json")
+			.readFileSync(relative("dist/static/ssr-manifest.json"))
 			.toJSON()
-		const template = fs.readFileSync("dist/static/index.html", "utf-8")
+		const template = fs.readFileSync(
+			relative("dist/static/index.html"),
+			"utf-8"
+		)
 
-		const path = "dist/server/entry-server.mjs"
+		const path = relative("dist/server/entry-server.mjs")
 		const render: typeof renderType = (await import(path)).render
 
 		const { appHtml, preloadLinks } = await render(manifest)
 		const html = this.replaceHTML(template, appHtml, preloadLinks)
 
-		const filePath = "dist/static/index.html"
+		const filePath = relative("dist/static/index.html")
 		fs.writeFileSync(filePath, html)
-		fs.unlinkSync("./dist/static/ssr-manifest.json")
+		fs.unlinkSync(resolve("dist/static/ssr-manifest.json"))
 	}
 }
 
@@ -195,7 +198,10 @@ cli.version("1.0a")
 
 try {
 	cli.parse(process.argv, { run: false })
+	if (!fs.readdirSync(resolve(".")).includes("vite.config.ts"))
+		throw new Error("Invalid directory")
 	cli.runMatchedCommand()
 } catch (error) {
+	console.log(pc.red(error.message))
 	process.exit(1)
 }

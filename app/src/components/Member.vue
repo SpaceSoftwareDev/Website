@@ -10,7 +10,7 @@
 				:key="member.name"
 				v-slot="{ isActive }">
 				<div class="slide">
-					<div class="card">
+					<div :class="{ card: true, hasLink: !!member.link }">
 						<div class="memberPic" v-if="!isActive">
 							<img alt="avatar" :src="member.avatar.path" />
 						</div>
@@ -85,6 +85,10 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 	&:hover {
 		height: 260px;
 	}
+
+	&.hasLink:hover {
+		height: 340px;
+	}
 }
 
 h1 {
@@ -103,7 +107,7 @@ h1 {
 
 .slide {
 	width: 100%;
-	height: 360px;
+	height: 380px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -137,6 +141,10 @@ p {
 @media (max-width: 1600px) {
 	.card {
 		height: 260px;
+
+		&.hasLink {
+			height: 340px;
+		}
 	}
 
 	.swiper {

@@ -52,4 +52,18 @@ button:hover .text {
 	-webkit-background-clip: text;
 	font-size: 1.5rem;
 }
+
+@media (max-width: 1600px) {
+	button {
+		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%)
+				padding-box,
+			linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%)
+				border-box;
+		border-width: 0px;
+
+		.text {
+			color: white;
+		}
+	}
+}
 </style>
