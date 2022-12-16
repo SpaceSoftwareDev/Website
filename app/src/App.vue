@@ -6,7 +6,7 @@
 			<p class="landingText">
 				Software studio <br />
 				founded by <br />
-				<span class="coloredText"> highschool students </span>
+				<span class="coloredText"> high school students </span>
 			</p>
 
 			<section class="socials">
@@ -57,14 +57,14 @@
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
-				We are new software studio founded by high school<wbr />
+				We are a small software studio founded by high school<wbr />
 				students from Slovakia.<br />
-				Currently we are studying on high school SPŠE Hálova 16.<br />
-				And we are part of really cool study plan named
-				<wbr /><a href="https://openlab.sk" target="_blank"> OPENLAB </a
+				Currently we are studying on high school SPŠE Hálova 16, Bratislava,
+				where we are also a part of a new study program called
+				<wbr /><a href="https://openlab.sk" target="_blank"> OpenLab</a
 				>.
 			</p>
-			<img src="/assets/LogoAbt.png" class="logoAbt" />
+			<img src="/assets/LogoAbt.png" class="logoAbt" alt="logo" />
 		</section>
 		<section class="members">
 			<Member />
@@ -78,7 +78,7 @@
 		<Divider id="contact">Contact us</Divider>
 		<section>
 			<a class="contact" href="mailto:info@space-software.com">
-				<img src="/assets/email.svg" />
+				<img src="/assets/email.svg" alt="email" />
 			</a>
 		</section>
 
@@ -162,7 +162,7 @@ aside {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin-bottom: 0;
+	margin: 0;
 }
 
 a {
@@ -250,15 +250,15 @@ a {
 	border-radius: 50rem;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	cursor: pointer;
-	font-weight: 800;
+	font-weight: 650;
 }
 .getInTouchBtn::before {
 	content: "";
 	position: absolute;
-	left: 5px;
-	right: 5px;
-	top: 5px;
-	bottom: 5px;
+	left: 4px;
+	right: 4px;
+	top: 4px;
+	bottom: 4px;
 	border-radius: 50rem;
 	background-color: #f6faff;
 	z-index: -1;
@@ -266,7 +266,7 @@ a {
 }
 .getInTouchBtn::after {
 	content: attr(data);
-	font-size: 2rem;
+	font-size: 1.7rem;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -274,7 +274,7 @@ a {
 	transition: 200ms;
 }
 .getInTouchBtn:hover::before {
-	opacity: 50%;
+	opacity: 20%;
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
@@ -416,17 +416,17 @@ a {
 		display: none;
 		margin-top: 4vh;
 		padding: 2vh 5vw;
-		font-size: 1vh;
+		font-size: 0.7vh;
 	}
 	.getInTouchBtn::before {
-		left: 4px;
-		right: 4px;
-		top: 4px;
-		bottom: 4px;
+		left: 3px;
+		right: 3px;
+		top: 3px;
+		bottom: 3px;
 	}
 	.getInTouchBtn::after {
 		content: attr(data);
-		font-size: 2rem;
+		font-size: 1.7rem;
 		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 		background-clip: text;
 		-webkit-background-clip: text;

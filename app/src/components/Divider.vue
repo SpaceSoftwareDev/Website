@@ -16,7 +16,7 @@ defineProps<{
 </script>
 <style lang="scss" scoped>
 h1 {
-	font-family: "Poppins";
+	font-family: "Poppins", sans-serif;
 	color: #252525;
 	font-weight: 800;
 	margin: 0;

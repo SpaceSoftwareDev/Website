@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "MemeTime!",
-        "description": "<p>MemeTime! is our first project its a new application for iOS and Android devices. This app points out that this is never the bad time to improve your day. The focus of our platform is simple and obvious - just memes and other fun content without any limits or censorship. Purpose of MemeTime! is to make your day better with daily memes of your taste.</p>",
+        "description": "MemeTime! is our first project it's a new application for iOS and Android devices. This app points out that it is never a bad time to improve your day. The focus of our platform is simple and obvious - just memes and other fun content without any limits or censorship. Purpose of MemeTime! is to make your day better with daily memes based on your taste.",
         "icon": {
             "file": "storage/assets/memetime.png"
         },

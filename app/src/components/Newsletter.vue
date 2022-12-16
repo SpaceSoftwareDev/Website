@@ -6,14 +6,18 @@
 				type="email"
 				v-model="email"
 				required
-				placeholder="example@example.com"
+				placeholder="Your email..."
 				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
-			<button type="submit">Submit</button>
+			<button type="submit">
+				<ion-icon :icon="send" />
+			</button>
 		</div>
 	</form>
 </template>
 <script setup lang="ts">
+import { IonIcon } from "@ionic/vue"
+import { send } from "ionicons/icons"
 import { ref } from "vue"
 import axios from "axios"
 
@@ -38,6 +42,8 @@ form {
 h3 {
 	color: rgba(0, 0, 0, 0.4);
 	text-align: center;
+	font-weight: 600;
+	padding-bottom: 1rem;
 	margin: 0;
 }
 .input {
@@ -52,6 +58,8 @@ h3 {
 		width: 80%;
 		height: 50px;
 		border: none;
+		font-family: "Poppins", sans-serif;
+		font-size: 0.85rem;
 		border-bottom-left-radius: 20px;
 		border-top-left-radius: 20px;
 		padding: 0 1rem;
@@ -68,9 +76,20 @@ h3 {
 		border: none;
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
-		background-color: #6babff;
+		background: #00d1ff;
+		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 		color: #ffffff;
 		cursor: pointer;
+
+		ion-icon {
+			transform: scale(1.5);
+			margin-top: 0.2rem;
+		}
+	}
+	button:hover {
+		color: #00d1ff;
+		background: #ffffff;
+		transition: 200ms;
 	}
 }
 </style>
