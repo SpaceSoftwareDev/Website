@@ -2,16 +2,16 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-use AppSpaceWeb\Project\Http\Controllers\ProjectsController;
 use SpaceApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
 
 Route::group([
     'prefix'      => 'api/v1',
+    'namespace'  => 'AppSpaceWeb\Project\Http\Controllers',
     'middleware' => [
         ApiExceptionMiddleware::class,
         'api'
     ]
 ], function (Router $router) {
     $router
-        ->get('projects', [ProjectsController::class, 'index']);
+        ->get('projects', 'ProjectsController@index');
 });
