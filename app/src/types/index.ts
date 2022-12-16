@@ -22,7 +22,7 @@ export interface project extends resource {
 export interface TeamMember extends resource {
 	avatar: img
 	name: string
-	portfolio_link: string
+	link: string
 	stack: string[]
 }
 

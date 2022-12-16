@@ -15,8 +15,8 @@ fields:
         imageHeight: 180
         imageWidth: 180
     stack_string:
-        type: taglist
         label: Stack
+        type: taglist
         options:
             be: Back-End Developer
             fe: Front-End Developer
@@ -26,9 +26,9 @@ fields:
             market: Marketing
         separator: comma
         span: left
-    portfolio_link:
+    link:
+        label: Link
         type: text
-        label: Portfolio link
         span: left
     is_published:
         label: Is published

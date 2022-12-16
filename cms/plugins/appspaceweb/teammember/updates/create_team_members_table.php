@@ -15,7 +15,7 @@ class CreateTeamMembersTable extends Migration
             $table->string('name');
             $table->string('stack_string');
 
-            $table->string('portfolio_link');
+            $table->string('link');
 
             $table->smallInteger('sort_order')->default(0);
             $table->boolean('is_published')->default(false);

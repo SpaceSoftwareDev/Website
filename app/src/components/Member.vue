@@ -15,12 +15,12 @@
 							<img alt="avatar" :src="member.avatar.path" />
 						</div>
 						<h1>{{ member.name }}</h1>
-						<p>{{ member.stack[0] }}</p>
+						<p>{{ member.stack.join(", ") }}</p>
 						<a
-							v-if="member.portfolio_link"
-							:href="member.portfolio_link"
+							v-if="member.link"
+							:href="member.link"
 							target="_blank">
-							<Button class="btn">Portfolio</Button>
+							<Button class="btn">Explore</Button>
 						</a>
 					</div>
 				</div>
@@ -91,7 +91,7 @@ h1 {
 	margin-top: 0;
 	text-align: center;
 	color: #252525;
-	font-family: "Poppins";
+	font-family: "Poppins", sans-serif;
 	width: 200%;
 	font-size: 1.4rem;
 	font-weight: 100;
@@ -124,7 +124,7 @@ img {
 p {
 	margin-top: 0;
 	color: #2525257a;
-	font-family: "Poppins";
+	font-family: "Poppins", sans-serif;
 	font-size: 1rem;
 	text-align: center;
 }

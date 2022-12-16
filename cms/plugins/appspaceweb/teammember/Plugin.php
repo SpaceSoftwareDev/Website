@@ -57,7 +57,7 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-user',
                 'permissions' => ['appspaceweb.team.*'],
                 'order'       => 500
-            ],
+            ]
         ];
     }
 }

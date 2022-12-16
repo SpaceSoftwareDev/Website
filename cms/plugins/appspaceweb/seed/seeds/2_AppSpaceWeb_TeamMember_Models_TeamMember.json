@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Lucas Ligas",
         "stack_string": "Front-End Developer",
-        "portfolio_link": "",
+        "link": "",
         "avatar": {
             "file": "storage/assets/ligmas.png"
         },
@@ -14,7 +14,7 @@
         "id": 2,
         "name": "Jakub Krčmárik",
         "stack_string": "Full Stack Developer",
-        "portfolio_link": "",
+        "link": "",
         "avatar": {
             "file": "storage/assets/krcmar.png"
         },
@@ -25,7 +25,7 @@
         "id": 3,
         "name": "Martin Mojžiš",
         "stack_string": "Full Stack Developer",
-        "portfolio_link": "",
+        "link": "",
         "avatar": {
             "file": "storage/assets/milan.png"
         },
@@ -36,7 +36,7 @@
         "id": 4,
         "name": "Daniel Czaja",
         "stack_string": "Back-End Developer",
-        "portfolio_link": "",
+        "link": "",
         "avatar": {
             "file": "storage/assets/cajin.png"
         },
@@ -47,7 +47,7 @@
         "id": 5,
         "name": "Daniel Kliman",
         "stack_string": "Back-End Developer",
-        "portfolio_link": "",
+        "link": "",
         "avatar": {
             "file": "storage/assets/klinec.png"
         },
@@ -58,7 +58,7 @@
         "id": 6,
         "name": "Sára Perdeková",
         "stack_string": "Designer",
-        "portfolio_link": "",
+        "link": "",
         "avatar": {
             "file": "storage/assets/pelendrekova.png"
         },
