@@ -16,10 +16,11 @@
 	</form>
 </template>
 <script setup lang="ts">
-import { IonIcon } from "@ionic/vue"
-import { send } from "ionicons/icons"
 import { ref } from "vue"
 import axios from "axios"
+
+import { IonIcon } from "@ionic/vue"
+import { send } from "ionicons/icons"
 
 const email = ref<string>("")
 
@@ -46,6 +47,7 @@ h3 {
 	padding-bottom: 1rem;
 	margin: 0;
 }
+
 .input {
 	width: 300px;
 	height: 50px;
@@ -76,7 +78,6 @@ h3 {
 		border: none;
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
-		background: #00d1ff;
 		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 		color: #ffffff;
 		cursor: pointer;
@@ -86,10 +87,10 @@ h3 {
 			margin-top: 0.2rem;
 		}
 	}
+
 	button:hover {
 		color: #00d1ff;
 		background: #ffffff;
-		transition: 200ms;
 	}
 }
 </style>

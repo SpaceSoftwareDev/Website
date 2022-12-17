@@ -17,7 +17,7 @@
 				<h1 v-html="data.title" />
 			</div>
 			<p v-html="data.description" />
-			<img v-if="large" class="icon" :src="data.icon.path" />
+			<img v-if="large" class="icon" :src="data.icon.path" alt="icon" />
 		</div>
 	</div>
 </template>
@@ -56,7 +56,10 @@ h1 {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	color: transparent;
+	font-size: 2rem;
+	margin: 0.5rem 0;
 }
+
 .project {
 	display: flex;
 	width: 90vw;
@@ -69,6 +72,7 @@ h1 {
 		flex-direction: row;
 	}
 }
+
 .projectInfo {
 	width: 40vw;
 	display: flex;
@@ -89,6 +93,10 @@ h1 {
 
 	:global(.swiper-pagination) {
 		bottom: 0 !important;
+	}
+
+	:global(.swiper-pagination-bullet-active) {
+		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%) !important;
 	}
 
 	&:nth-child(odd) {
@@ -160,6 +168,7 @@ p {
 	.title {
 		justify-content: center;
 	}
+
 	p {
 		text-align: center;
 	}

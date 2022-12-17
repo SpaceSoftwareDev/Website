@@ -1,5 +1,6 @@
 <template>
 	<div class="wrapper">
+		<h2>Meet our team</h2>
 		<swiper
 			class="swipper"
 			:pagination="(pagination as any)"
@@ -20,7 +21,7 @@
 							v-if="member.link"
 							:href="member.link"
 							target="_blank">
-							<Button class="btn">Explore</Button>
+							<ion-icon :icon="logoLinkedin" id="ic1" />
 						</a>
 					</div>
 				</div>
@@ -31,13 +32,15 @@
 <script setup lang="ts">
 import { ref, computed } from "vue"
 import { Get } from "@/types"
+
+import { IonIcon } from "@ionic/vue"
+import { logoLinkedin } from "ionicons/icons"
+
 import type { TeamMember } from "@/types"
 
 import SwiperCore, { Pagination, Virtual } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
-
-import Button from "@/components/Button.vue"
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
@@ -69,7 +72,7 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 
 	min-width: 200px;
 	max-width: 200px;
-	height: 230px;
+	height: 220px;
 	border-radius: 2rem;
 	transition: all 500ms;
 
@@ -83,16 +86,23 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 	overflow: hidden;
 
 	&:hover {
-		height: 270px;
+		height: 260px;
 	}
 
 	&.hasLink:hover {
-		height: 350px;
+		height: 310px;
 	}
+}
+
+img {
+	height: 180px;
+	width: 180px;
+	transform: scale(0.8);
 }
 
 h1 {
 	margin-top: 0;
+	margin-bottom: 0.5rem;
 	text-align: center;
 	color: #252525;
 	font-family: "Poppins", sans-serif;
@@ -101,8 +111,31 @@ h1 {
 	font-weight: 100;
 }
 
+p {
+	margin-top: 0;
+	color: #2525257a;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 100;
+	text-align: center;
+}
+
+ion-icon {
+	transform: scale(2);
+	margin-top: 0.5rem;
+}
+
+#ic1 {
+	transition: all 300ms ease-in-out;
+	color: black;
+}
+
+#ic1:hover {
+	color: #00d1ff;
+}
+
 .swiper {
-	width: 50vw;
+	width: 65vw;
 }
 
 .slide {
@@ -113,37 +146,27 @@ h1 {
 	align-items: center;
 }
 
-img {
-	transform: scale(0.8);
-}
-
 .wrapper {
 	min-width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	overflow: hidden;
 	margin-top: min(6vh, 2rem);
+
+	h2 {
+		margin-bottom: 0;
+		font-weight: 600;
+	}
 }
 
-p {
-	margin-top: 0;
-	color: #2525257a;
-	font-family: "Poppins", sans-serif;
-	font-size: 1rem;
-	text-align: center;
-}
-
-.btn {
-	width: 180px;
-	margin-bottom: 2rem;
-}
-
-@media (max-width: 1600px) {
+@media (max-width: 1024px) {
 	.card {
-		height: 270px;
+		height: 260px;
 
 		&.hasLink {
-			height: 350px;
+			height: 310px;
 		}
 	}
 

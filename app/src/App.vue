@@ -6,7 +6,7 @@
 			<p class="landingText">
 				Software studio <br />
 				founded by <br />
-				<span class="coloredText"> high school students </span>
+				<span class="highlightText"> high school students </span>
 			</p>
 
 			<section class="socials">
@@ -35,7 +35,7 @@
 		</article>
 
 		<aside>
-			<img src="/assets/Illustration.png" class="illustration" />
+			<img src="/assets/Illustration.png" class="illustration" alt="illustration"/>
 		</aside>
 
 		<div class="trashDiv"></div>
@@ -57,15 +57,17 @@
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
-				We are a small software studio founded by high school<wbr />
-				students from Slovakia.<br />
-				Currently we are studying on high school SPŠE Hálova 16, Bratislava,
+				We are a software studio founded by high school students from
+				Slovakia.<br />
+				Currently we are studying on high school SPŠE Hálova 16,
+				Bratislava,<br />
 				where we are also a part of a new study program called
 				<wbr /><a href="https://openlab.sk" target="_blank"> OpenLab</a
 				>.
 			</p>
-			<img src="/assets/LogoAbt.png" class="logoAbt" alt="logo" />
+			<img src="/assets/logo.png" class="logo" alt="logo" />
 		</section>
+
 		<section class="members">
 			<Member />
 		</section>
@@ -154,10 +156,9 @@ aside {
 	font-weight: 600;
 }
 
-.coloredText {
+.highlightText {
 	font-size: 3.7rem;
 	font-weight: 800;
-	background: #00d1ff;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -166,7 +167,8 @@ aside {
 }
 
 a {
-	background: linear-gradient(101.18deg, #2400ff -13.93%, #8000ff 90.86%);
+	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+	font-weight: 600;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -205,6 +207,14 @@ a {
 	margin: 0;
 	margin-top: 2rem;
 	animation: pulse 3s infinite;
+
+	img {
+		-webkit-user-drag: none;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
 }
 
 .contact-desc {
@@ -252,6 +262,7 @@ a {
 	cursor: pointer;
 	font-weight: 650;
 }
+
 .getInTouchBtn::before {
 	content: "";
 	position: absolute;
@@ -262,8 +273,9 @@ a {
 	border-radius: 50rem;
 	background-color: #f6faff;
 	z-index: -1;
-	transition: all 0.2s ease-in-out;
+	transition: all 300ms ease-in-out;
 }
+
 .getInTouchBtn::after {
 	content: attr(data);
 	font-size: 1.7rem;
@@ -271,8 +283,9 @@ a {
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
-	transition: all 0.2s ease-in-out;
+	transition: all 300ms ease-in-out;
 }
+
 .getInTouchBtn:hover::before {
 	opacity: 20%;
 	top: 0px;
@@ -280,6 +293,7 @@ a {
 	bottom: 0px;
 	left: 0px;
 }
+
 .getInTouchBtn:hover::after {
 	color: white;
 }
@@ -334,10 +348,10 @@ a {
 
 .aboutUs {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	width: 60%;
-	margin-left: 21vw;
+	margin: 0 20vw;
 }
 
 .aboutUsText {
@@ -347,9 +361,9 @@ a {
 	padding: 0 1rem;
 }
 
-.logoAbt {
-	width: 15vw;
-	height: 15vw;
+.logo {
+	width: 10rem;
+	height: 10rem;
 }
 
 .members {
@@ -373,6 +387,7 @@ a {
 		flex-direction: column;
 		justify-content: center;
 	}
+
 	.landingText {
 		margin-top: 3vh;
 		margin-left: 0vw;
@@ -380,7 +395,8 @@ a {
 		font-size: 3.5vh;
 		width: 80%;
 	}
-	.coloredText {
+
+	.highlightText {
 		font-size: 3.5vh;
 	}
 
@@ -409,6 +425,12 @@ a {
 		img {
 			width: 12rem;
 			height: 12rem;
+
+			-webkit-user-drag: none;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
 		}
 	}
 
@@ -418,12 +440,14 @@ a {
 		padding: 2vh 5vw;
 		font-size: 0.7vh;
 	}
+
 	.getInTouchBtn::before {
 		left: 3px;
 		right: 3px;
 		top: 3px;
 		bottom: 3px;
 	}
+
 	.getInTouchBtn::after {
 		content: attr(data);
 		font-size: 1.7rem;
@@ -431,12 +455,13 @@ a {
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
-		transition: all 0.2s ease-in-out;
+		transition: all 300ms ease-in-out;
 	}
 
 	.scrollDivider {
 		margin-left: 3rem;
 	}
+
 	.scrollLine {
 		margin-left: 2.4rem;
 		width: 1px;
@@ -448,13 +473,14 @@ a {
 		text-align: center;
 		width: 100%;
 	}
-	.logoAbt {
+
+	.logo {
 		display: none;
 	}
 
 	.aboutUs {
 		width: 100%;
-		margin-left: 0;
+		margin: 0;
 		justify-content: center;
 	}
 
@@ -475,7 +501,7 @@ a {
 }
 
 @media screen and (min-width: 326px) and (max-width: 425px) {
-	.coloredText {
+	.highlightText {
 		font-size: 1.7rem;
 	}
 }
