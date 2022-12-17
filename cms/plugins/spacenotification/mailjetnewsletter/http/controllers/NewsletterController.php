@@ -1,7 +1,7 @@
-<?php namespace SpaceIntegration\MailJetNewsletter\Http\Controllers;
+<?php namespace SpaceNotification\MailJetNewsletter\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use SpaceIntegration\MailJetNewsletter\Classes\Services\NewsletterService;
+use SpaceNotification\MailJetNewsletter\Classes\Services\NewsletterService;
 
 class NewsletterController extends Controller
 {

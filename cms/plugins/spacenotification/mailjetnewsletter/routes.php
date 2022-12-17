@@ -6,7 +6,7 @@ use SpaceApi\ApiException\Http\Middlewares\ApiExceptionMiddleware;
 
 Route::group([
     'prefix'      => 'api/v1',
-    'namespace'  => 'SpaceIntegration\MailJetNewsletter\Http\Controllers',
+    'namespace'  => 'SpaceNotification\MailJetNewsletter\Http\Controllers',
     'middleware' => [
         ApiExceptionMiddleware::class,
         'api'
