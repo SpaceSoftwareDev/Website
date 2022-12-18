@@ -12,22 +12,22 @@
     },
     {
         "id": 2,
-        "name": "Jakub Krčmárik",
+        "name": "Martin Mojžiš",
         "stack_string": "Full Stack Developer",
-        "link": "",
+        "link": "https://www.linkedin.com/in/martin-mojzis-550263223",
         "avatar": {
-            "file": "storage/assets/krcmar.png"
+            "file": "storage/assets/miki.png"
         },
         "sort_order": 2,
         "is_published": 1
     },
     {
         "id": 3,
-        "name": "Martin Mojžiš",
+        "name": "Jakub Krčmárik",
         "stack_string": "Full Stack Developer",
         "link": "",
         "avatar": {
-            "file": "storage/assets/milan.png"
+            "file": "storage/assets/malicky.png"
         },
         "sort_order": 3,
         "is_published": 1
@@ -36,7 +36,7 @@
         "id": 4,
         "name": "Daniel Czaja",
         "stack_string": "Back-End Developer",
-        "link": "",
+        "link": "https://www.linkedin.com/in/daniel-adam-czaja-2aab07257",
         "avatar": {
             "file": "storage/assets/cajin.png"
         },
@@ -58,7 +58,7 @@
         "id": 6,
         "name": "Sára Perdeková",
         "stack_string": "Designer",
-        "link": "",
+        "link": "https://www.linkedin.com/in/sára-perdeková-2bb778240",
         "avatar": {
             "file": "storage/assets/pelendrekova.png"
         },
