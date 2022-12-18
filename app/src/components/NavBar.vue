@@ -70,6 +70,14 @@ header {
 	transition: all 300ms;
 }
 
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 .container {
 	width: 100%;
 	display: flex;
@@ -100,6 +108,7 @@ header {
 	background: none;
 	border: none;
 	margin-right: 5rem;
+
 	.bar {
 		height: 3px !important;
 		width: 100%;

@@ -49,6 +49,14 @@ footer {
 	height: 50px;
 }
 
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 .contacts {
 	display: flex;
 	justify-content: center;
