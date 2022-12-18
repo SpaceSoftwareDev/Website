@@ -36,7 +36,7 @@
 
 		<aside>
 			<img
-				src="/assets/Illustration.png"
+				src="/assets/illustration.png"
 				class="illustration"
 				alt="illustration" />
 		</aside>
@@ -65,8 +65,7 @@
 				Currently we are studying on high school SPŠE Hálova 16,
 				Bratislava,<br />
 				where we are also a part of a new study program called
-				<wbr /><a href="https://openlab.sk" target="_blank"> OpenLab</a
-				>.
+				<a href="https://openlab.sk" target="_blank"> OpenLab</a>.
 			</p>
 			<img src="/assets/logo.png" class="logo" alt="logo" />
 		</section>
@@ -133,10 +132,6 @@ const scrollTo = (id: string) => {
 	overflow-x: hidden;
 }
 
-.getInTouchBtn:hover::after {
-	color: white;
-}
-
 .trashDiv {
 	margin-top: 30rem;
 }
@@ -181,8 +176,8 @@ a {
 	display: flex;
 	justify-content: space-between;
 	width: 50%;
-	margin-top: 3vh;
-	padding-left: 1vw;
+	margin-top: 4vh;
+	padding-left: 0.4vw;
 
 	ion-icon {
 		transform: scale(2);
@@ -253,7 +248,7 @@ a {
 	border-radius: 50rem;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	cursor: pointer;
-	font-weight: 650;
+	font-weight: 600;
 }
 
 .getInTouchBtn::before {
@@ -352,6 +347,7 @@ a {
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 1.1rem;
 	padding: 0 1rem;
+	line-height: 1.8;
 }
 
 .logo {
@@ -382,10 +378,10 @@ a {
 
 	.landingText {
 		margin-top: 3vh;
-		margin-left: 0vw;
-		margin-right: 0vw;
+		margin-left: 0;
+		margin-right: 0;
 		font-size: 3.5vh;
-		width: 80%;
+		width: 85%;
 	}
 
 	.highlightText {
@@ -421,10 +417,7 @@ a {
 	}
 
 	.getInTouchBtn {
-		display: none;
-		margin-top: 4vh;
-		padding: 2vh 5vw;
-		font-size: 0.7vh;
+		padding: 2vh 6vw;
 	}
 
 	.getInTouchBtn::before {
@@ -435,13 +428,7 @@ a {
 	}
 
 	.getInTouchBtn::after {
-		content: attr(data);
-		font-size: 1.7rem;
-		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		color: transparent;
-		transition: all 300ms ease-in-out;
+		font-size: 1.3rem;
 	}
 
 	.scrollDivider {
@@ -454,12 +441,6 @@ a {
 		height: 30vh;
 	}
 
-	.aboutUsText {
-		margin-top: 10vw;
-		text-align: center;
-		width: 100%;
-	}
-
 	.logo {
 		display: none;
 	}
@@ -468,6 +449,12 @@ a {
 		width: 100%;
 		margin: 0;
 		justify-content: center;
+	}
+
+	.aboutUsText {
+		margin-top: 10vw;
+		text-align: center;
+		width: 100%;
 	}
 
 	.illustration {
@@ -483,12 +470,6 @@ a {
 @media screen and (min-width: 560px) and (max-width: 1375px) {
 	aside {
 		width: 400px;
-	}
-}
-
-@media screen and (min-width: 326px) and (max-width: 425px) {
-	.highlightText {
-		font-size: 1.7rem;
 	}
 }
 </style>

@@ -64,13 +64,15 @@ footer {
 
 ion-icon {
 	color: #2f2f2f;
-	margin-right: 0.5rem;
+	margin-right: 1rem;
 	transform: scale(1.3);
 }
 
 p {
-	margin: 0.4rem 0;
+	font-family: "Space Mono", monospace;
+	margin: 0.3rem 0;
 	color: rgba(0, 0, 0, 0.4);
+	line-height: 1.8;
 }
 
 .contact:hover {

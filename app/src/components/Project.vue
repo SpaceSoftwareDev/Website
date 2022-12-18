@@ -60,6 +60,10 @@ h1 {
 	margin: 0.5rem 0;
 }
 
+p {
+	line-height: 1.8;
+}
+
 .project {
 	display: flex;
 	width: 90vw;
@@ -97,7 +101,11 @@ h1 {
 	}
 
 	:global(.swiper-pagination-bullet-active) {
-		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%) !important;
+		background: linear-gradient(
+			to bottom right,
+			rgb(0, 209, 255, 0.8) 17%,
+			rgb(2, 9, 181, 0.8) 100%
+		) !important;
 	}
 
 	&:nth-child(odd) {
@@ -123,7 +131,6 @@ h1 {
 p {
 	margin: 0;
 	color: rgba(0, 0, 0, 0.4);
-	font-size: 1.1rem;
 }
 
 .title {
@@ -142,6 +149,7 @@ p {
 .icon {
 	width: 10rem;
 	height: 10rem;
+	margin-top: 1rem;
 }
 
 @media (max-width: 1024px) {
