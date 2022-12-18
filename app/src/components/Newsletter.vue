@@ -59,17 +59,9 @@ h3 {
 	input {
 		width: 80%;
 		height: 50px;
-		border: none;
-		font-family: "Poppins", sans-serif;
-		font-size: 0.85rem;
 		border-bottom-left-radius: 20px;
 		border-top-left-radius: 20px;
 		padding: 0 1rem;
-		outline: none;
-
-		&:focus {
-			outline: none;
-		}
 	}
 
 	button {
@@ -86,11 +78,11 @@ h3 {
 			transform: scale(1.5);
 			margin-top: 0.2rem;
 		}
-	}
 
-	button:hover {
-		color: #00d1ff;
-		background: #ffffff;
+		&:hover {
+			color: #00d1ff;
+			background: #ffffff;
+		}
 	}
 }
 </style>

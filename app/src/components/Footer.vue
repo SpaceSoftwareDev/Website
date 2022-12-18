@@ -49,14 +49,6 @@ footer {
 	height: 50px;
 }
 
-img {
-	-webkit-user-drag: none;
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-}
-
 .contacts {
 	display: flex;
 	justify-content: center;
@@ -71,13 +63,13 @@ img {
 }
 
 ion-icon {
-	color: black;
-	margin: 0 1rem;
-	transform: scale(1.5);
+	color: #2f2f2f;
+	margin-right: 0.5rem;
+	transform: scale(1.3);
 }
 
 p {
-	margin: 0.5rem 0;
+	margin: 0.4rem 0;
 	color: rgba(0, 0, 0, 0.4);
 }
 
@@ -96,12 +88,12 @@ p {
 
 @media screen and (max-width: 1024px) {
 	footer {
-		height: 30vh;
+		height: 40vh;
 
 		padding-left: 0;
 		padding-right: 0;
 
-		justify-content: space-evenly;
+		justify-content: space-around;
 		flex-direction: column-reverse;
 	}
 }

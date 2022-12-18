@@ -19,3 +19,21 @@ a {
 		outline: none;
 	}
 }
+
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+input {
+	border: none;
+	font-family: "Poppins", sans-serif;
+	font-size: 0.85rem;
+
+	&:focus {
+		outline: none;
+	}
+}

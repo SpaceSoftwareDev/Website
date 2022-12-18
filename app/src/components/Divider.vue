@@ -17,7 +17,7 @@ defineProps<{
 <style lang="scss" scoped>
 h1 {
 	font-family: "Poppins", sans-serif;
-	color: #252525;
+	color: #2f2f2f;
 	margin: 0 2rem 0 0;
 	min-width: 20vw;
 	text-align: right;
@@ -62,6 +62,7 @@ h1 {
 		margin: 0;
 		width: 100%;
 	}
+
 	.dividerLineWrapper {
 		padding: 0;
 		margin-left: 0;

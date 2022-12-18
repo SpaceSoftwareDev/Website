@@ -35,7 +35,10 @@
 		</article>
 
 		<aside>
-			<img src="/assets/Illustration.png" class="illustration" alt="illustration"/>
+			<img
+				src="/assets/Illustration.png"
+				class="illustration"
+				alt="illustration" />
 		</aside>
 
 		<div class="trashDiv"></div>
@@ -204,23 +207,13 @@ a {
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	margin: 0;
 	margin-top: 2rem;
 	animation: pulse 3s infinite;
-
-	img {
-		-webkit-user-drag: none;
-		user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
 }
 
 .contact-desc {
 	font-size: 1.5rem;
 	font-weight: 600;
-	margin: 0;
 	margin-top: 1rem;
 	width: 100%;
 	text-align: center;
@@ -288,10 +281,10 @@ a {
 
 .getInTouchBtn:hover::before {
 	opacity: 20%;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .getInTouchBtn:hover::after {
@@ -378,7 +371,6 @@ a {
 	}
 
 	article {
-		margin-top: -10rem;
 		float: none;
 		margin: auto;
 		display: flex;
@@ -425,12 +417,6 @@ a {
 		img {
 			width: 12rem;
 			height: 12rem;
-
-			-webkit-user-drag: none;
-			user-select: none;
-			-moz-user-select: none;
-			-webkit-user-select: none;
-			-ms-user-select: none;
 		}
 	}
 

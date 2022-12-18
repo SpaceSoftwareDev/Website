@@ -104,7 +104,7 @@ h1 {
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 	text-align: center;
-	color: #252525;
+	color: #2f2f2f;
 	font-family: "Poppins", sans-serif;
 	width: 200%;
 	font-size: 1.5rem;
@@ -113,7 +113,7 @@ h1 {
 
 p {
 	margin-top: 0;
-	color: #2525257a;
+	color: #2f2f2f7a;
 	font-family: "Poppins", sans-serif;
 	font-size: 1rem;
 	font-weight: 100;
@@ -156,6 +156,7 @@ ion-icon {
 	margin-top: min(6vh, 2rem);
 
 	h2 {
+		color: #2f2f2f;
 		margin-bottom: 0;
 		font-weight: 600;
 	}

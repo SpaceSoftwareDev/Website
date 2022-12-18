@@ -68,6 +68,7 @@ h1 {
 	justify-content: center;
 	margin: 0;
 	padding: 6vh 12vh;
+
 	&:nth-child(odd) {
 		flex-direction: row;
 	}

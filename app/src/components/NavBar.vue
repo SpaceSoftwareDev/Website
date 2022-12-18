@@ -70,14 +70,6 @@ header {
 	transition: all 300ms;
 }
 
-img {
-	-webkit-user-drag: none;
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-}
-
 .container {
 	width: 100%;
 	display: flex;
@@ -149,10 +141,6 @@ nav {
 // Styling for tablets and mobile devices
 
 @media (max-width: 1024px) {
-	.container {
-		margin-top: 1rem;
-	}
-
 	header {
 		min-height: 5vh;
 		width: 100%;
@@ -219,6 +207,7 @@ nav {
 	animation: growDown 300ms ease-in-out normal forwards;
 	transform-origin: top center;
 }
+
 .scale-leave-active {
 	animation: dissappear 300ms ease-out reverse forwards;
 	transform-origin: top center;
