@@ -4,7 +4,7 @@
 			<h1 v-html="data.title" />
 			<img alt="icon" class="icon" :src="data.icon.path" />
 		</div>
-		<swiper class="swipper" :pagination="(pagination as any)">
+		<swiper class="swipper" :pagination="pagination">
 			<swiper-slide
 				class="slide"
 				v-for="media in data.gallery"
@@ -27,8 +27,8 @@ import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 import { Get } from "@/types"
 import type { project } from "@/types"
-import SwiperCore, { Pagination } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/vue"
+import Swiper from "./Swiper.vue"
+import { SwiperSlide } from "swiper/vue"
 
 const projects = ref<project[]>([])
 Get<project[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/projects`).then(
@@ -41,7 +41,6 @@ const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const large = breakpoints.lg
 
-SwiperCore.use([Pagination])
 const pagination = {
 	clickable: true,
 	renderBullet(_index: number, className: string) {

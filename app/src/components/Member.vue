@@ -3,9 +3,9 @@
 		<h2>Meet our team</h2>
 		<swiper
 			class="swipper"
-			:pagination="(pagination as any)"
+			:pagination="pagination"
 			:slides-per-view="count"
-			:virtual="(true as any)">
+			virtual>
 			<swiper-slide
 				v-for="member in members"
 				:key="member.name"
@@ -21,7 +21,7 @@
 							v-if="member.link"
 							:href="member.link"
 							target="_blank">
-							<ion-icon :icon="logoLinkedin" id="ic1" />
+							<ion-icon :icon="logoLinkedin" class="icon" />
 						</a>
 					</div>
 				</div>
@@ -38,8 +38,8 @@ import { logoLinkedin } from "ionicons/icons"
 
 import type { TeamMember } from "@/types"
 
-import SwiperCore, { Pagination, Virtual } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/vue"
+import Swiper from "./Swiper.vue"
+import { SwiperSlide } from "swiper/vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
@@ -52,7 +52,6 @@ const count = computed(() => {
 
 const members = ref<TeamMember[]>([])
 
-SwiperCore.use([Pagination, Virtual])
 const pagination = {
 	clickable: true,
 	renderBullet(_index: number, className: string) {
@@ -125,13 +124,13 @@ ion-icon {
 	margin-top: 0.5rem;
 }
 
-#ic1 {
+.icon {
 	transition: all 300ms ease-in-out;
 	color: black;
-}
 
-#ic1:hover {
-	color: #00d1ff;
+	&:hover {
+		color: #00d1ff;
+	}
 }
 
 .swiper {

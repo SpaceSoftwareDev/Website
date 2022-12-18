@@ -6,7 +6,7 @@ import path from "node:path"
 import { build } from "vite"
 import { cac } from "cac"
 import pc from "picocolors"
-import openLink from "open"
+import open from "open"
 
 import express, { ErrorRequestHandler } from "express"
 import compression from "compression"
@@ -184,8 +184,7 @@ cli.command("server", "Start the SSR server")
 			const colorUrl = pc.cyan(`http://localhost:${pc.bold(port)}/`)
 			console.log(`  ${pc.green("➜")}  ${pc.bold("Local")}: ${colorUrl}`)
 
-			if (options.open)
-				openLink(`http://localhost:${port}`, { wait: false })
+			if (options.open) open(`http://localhost:${port}`, { wait: false })
 		})
 	})
 
@@ -199,9 +198,13 @@ cli.version("1.0a")
 try {
 	cli.parse(process.argv, { run: false })
 	if (!fs.readdirSync(resolve(".")).includes("vite.config.ts"))
-		throw new Error("Invalid directory")
+		throw new Error("Invalid directory", {
+			cause: "User executed script in an invalid directory\n → Directory must contain a valid vite vue.js project"
+		})
 	cli.runMatchedCommand()
 } catch (error) {
-	console.log(pc.red(error.message))
+	console.log(pc.bold(pc.red(error.message)))
+	if (error.cause) console.log(pc.dim(error.cause))
+	else console.log(error)
 	process.exit(1)
 }
