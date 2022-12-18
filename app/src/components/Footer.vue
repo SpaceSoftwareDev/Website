@@ -63,7 +63,7 @@ footer {
 }
 
 ion-icon {
-	color: #252525;
+	color: black;
 	margin: 0 1rem;
 	transform: scale(1.5);
 }
