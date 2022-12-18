@@ -7,6 +7,8 @@
 		"serve": "vite preview",
 		"upgrade": "yarn upgrade-interactive",
 		"generate": "tsx cli.ts build ssg",
+		"ssg:build": "tsx cli.ts build ssg",
+		"ssg:serve": "tsx cli.ts serve",
 		"ssr:build": "tsx cli.ts build ssr",
 		"ssr:serve": "tsx cli.ts server"
 	},

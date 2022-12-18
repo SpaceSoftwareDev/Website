@@ -20,6 +20,18 @@ const __dirname = process.cwd()
 const resolve = (p: string) => path.resolve(__dirname, p)
 const relative = (p: string) => path.relative(__dirname, resolve(p))
 
+function createServer() {
+	const app = express()
+
+	const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
+		res.status(500).end(err.stack)
+	}
+
+	app.use(errorHandler)
+
+	return app
+}
+
 class ServerAPI {
 	static replaceHTML(
 		template: string,
@@ -45,7 +57,7 @@ class ServerAPI {
 			.readFileSync(resolve("dist/client/ssr-manifest.json"))
 			.toJSON()
 
-		const app = express()
+		const app = createServer()
 
 		app.use(compression()).use(
 			"/",
@@ -63,12 +75,6 @@ class ServerAPI {
 
 			res.status(200).set({ "Content-Type": "text/html" }).end(html)
 		})
-
-		const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
-			res.status(500).end(err.stack)
-		}
-
-		app.use(errorHandler)
 
 		return { app, port }
 	}
@@ -92,11 +98,33 @@ class ServerAPI {
 		fs.writeFileSync(filePath, html)
 		fs.unlinkSync(resolve("dist/static/ssr-manifest.json"))
 	}
+
+	static async staticServer(port = 80): Promise<{
+		app: express.Application
+		port: number
+	}> {
+		const app = createServer()
+
+		app.use(compression()).use(
+			"/",
+			servestatic(resolve("./dist/static"), {
+				index: false
+			})
+		)
+
+		app.use("*", async (req, res) => {
+			const path = req.path === "/" ? "index.html" : req.path
+			const html = fs.readFileSync(resolve(`dist/static/${path}`))
+			res.status(200).set({ "Content-Type": "text/html" }).end(html)
+		})
+
+		return { app, port }
+	}
 }
 
-function title() {
+function title(mode = "SSR") {
 	console.log(
-		`\n${pc.green(`${pc.cyan("SSR")} ${pc.yellow("CLI")} v${VERSION}`)}\n`
+		`\n${pc.green(`${pc.cyan(mode)} ${pc.yellow("CLI")} v${VERSION}`)}\n`
 	)
 }
 
@@ -162,7 +190,6 @@ cli.command("build <mode>", "Build the project", {
 	})
 
 cli.command("server", "Start the SSR server")
-	.alias("serve")
 	.option("--port [port]", "Port for the SSR server", {
 		default: 80
 	})
@@ -179,6 +206,32 @@ cli.command("server", "Start the SSR server")
 		ServerAPI.createServer(options.port).then(({ app, port }) => {
 			console.clear()
 			title()
+
+			app.listen(port)
+			const colorUrl = pc.cyan(`http://localhost:${pc.bold(port)}/`)
+			console.log(`  ${pc.green("➜")}  ${pc.bold("Local")}: ${colorUrl}`)
+
+			if (options.open) open(`http://localhost:${port}`, { wait: false })
+		})
+	})
+
+cli.command("serve", "Start the SSG server")
+	.option("--port [port]", "Port for the SSG server", {
+		default: 80
+	})
+	.option("--open", "Open link in browser", {
+		default: false
+	})
+	.action(async (options: { port: number; open: boolean }) => {
+		title()
+		if (!fs.existsSync(resolve("dist/static"))) {
+			console.log(pc.bold(pc.dim("Project not built, building...")))
+			await buildCommand("ssg")
+		}
+
+		ServerAPI.staticServer(options.port).then(({ app, port }) => {
+			console.clear()
+			title("SSG")
 
 			app.listen(port)
 			const colorUrl = pc.cyan(`http://localhost:${pc.bold(port)}/`)
