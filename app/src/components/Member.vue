@@ -89,7 +89,7 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 	}
 
 	&.hasLink:hover {
-		height: 310px;
+		height: 300px;
 	}
 }
 
@@ -121,7 +121,7 @@ p {
 
 ion-icon {
 	transform: scale(2);
-	margin-top: 0.5rem;
+	margin-top: 0.25rem;
 }
 
 .icon {
@@ -134,7 +134,7 @@ ion-icon {
 }
 
 .swiper {
-	width: 65vw;
+	width: min(65vw, 850px);
 }
 
 .slide {
@@ -166,7 +166,7 @@ ion-icon {
 		height: 260px;
 
 		&.hasLink {
-			height: 310px;
+			height: 300px;
 		}
 	}
 

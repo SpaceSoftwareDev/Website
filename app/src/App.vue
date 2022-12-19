@@ -35,10 +35,11 @@
 		</article>
 
 		<aside>
-			<img
-				src="/assets/illustration.png"
-				class="illustration"
-				alt="illustration" />
+			<picture alt="illustration">
+				<source type="image/webp" srcset="/assets/tech-stack.webp" />
+				<source type="image/png" srcset="/assets/tech-stack.png" />
+				<img class="illustration" src="/assets/tech-stack.png" />
+			</picture>
 		</aside>
 
 		<div class="trashDiv"></div>

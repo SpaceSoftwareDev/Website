@@ -95,18 +95,6 @@ p {
 
 	padding-bottom: 40px;
 
-	:global(.swiper-pagination) {
-		bottom: 0 !important;
-	}
-
-	:global(.swiper-pagination-bullet-active) {
-		background: linear-gradient(
-			to bottom right,
-			rgb(0, 209, 255, 0.8) 17%,
-			rgb(2, 9, 181, 0.8) 100%
-		) !important;
-	}
-
 	&:nth-child(odd) {
 		margin: 0 0 0 1rem;
 	}

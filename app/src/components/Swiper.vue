@@ -29,3 +29,17 @@ if (props?.virtual) modules.push(Virtual)
 
 SwiperCore.use(modules)
 </script>
+
+<style lang="scss" scoped>
+:global(.swiper-pagination) {
+	bottom: 0 !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+	background: linear-gradient(
+		to bottom left,
+		#00d1ff 10%,
+		#007aff 80%
+	) !important;
+}
+</style>
