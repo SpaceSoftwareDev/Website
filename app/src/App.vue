@@ -13,18 +13,18 @@
 				<a
 					href="https://facebook.com/profile/100076217131544"
 					target="_blank">
-					<ion-icon :icon="logoFacebook" id="ic1" />
+					<ion-icon :icon="logos.facebook" id="ic1" />
 				</a>
 				<a
 					href="https://instagram.com/spacesoftwarestudio/"
 					target="_blank">
-					<ion-icon :icon="logoInstagram" id="ic2" />
+					<ion-icon :icon="logos.instagram" id="ic2" />
 				</a>
 				<a href="https://twitter.com/spacesoftstudio" target="_blank">
-					<ion-icon :icon="logoTwitter" id="ic3" />
+					<ion-icon :icon="logos.twitter" id="ic3" />
 				</a>
 				<a href="https://tiktok.com/@spacesoftware" target="_blank">
-					<ion-icon :icon="logoTiktok" id="ic4" />
+					<ion-icon :icon="logos.tiktok" id="ic4" />
 				</a>
 			</section>
 
@@ -111,6 +111,13 @@ import Project from "@/components/Project.vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
+
+const logos = {
+	facebook: logoFacebook.replace("Logo Facebook", ""),
+	instagram: logoInstagram.replace("Logo Instagram", ""),
+	twitter: logoTwitter.replace("Logo Twitter", ""),
+	tiktok: logoTiktok.replace("Logo Tiktok", "")
+}
 
 const scrollTo = (id: string) => {
 	const element = document.getElementById(id)
@@ -240,10 +247,9 @@ a {
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	cursor: pointer;
 	font-weight: 600;
-	transition: all 0.5s ease-in-out;
 
 	&:hover {
-		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 	}
 
 	&:active {
