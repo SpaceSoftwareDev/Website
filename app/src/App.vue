@@ -35,10 +35,13 @@
 		</article>
 
 		<aside>
-			<picture alt="illustration">
+			<picture>
 				<source type="image/webp" srcset="/assets/tech-stack.webp" />
 				<source type="image/png" srcset="/assets/tech-stack.png" />
-				<img class="illustration" src="/assets/tech-stack.png" />
+				<img
+					class="illustration"
+					alt="Tech Stack Illustration"
+					src="/assets/tech-stack.png" />
 			</picture>
 		</aside>
 
@@ -68,7 +71,11 @@
 				where we are also a part of a new study program called
 				<a href="https://openlab.sk" target="_blank"> OpenLab</a>.
 			</p>
-			<img src="/assets/logo.png" class="logo" alt="logo" />
+			<picture>
+				<source type="image/webp" srcset="/assets/logo.webp" />
+				<source type="image/png" srcset="/assets/logo.png" />
+				<img src="/assets/logo.png" class="logo" alt="logo" />
+			</picture>
 		</section>
 
 		<section class="members">
@@ -244,7 +251,7 @@ a {
 	outline: none;
 	position: relative;
 	z-index: 1;
-	border-radius: 50rem;
+	border-radius: 5rem;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	cursor: pointer;
 	font-weight: 600;

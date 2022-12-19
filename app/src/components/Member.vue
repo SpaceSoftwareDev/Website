@@ -13,7 +13,10 @@
 				<div class="slide">
 					<div :class="{ card: true, hasLink: !!member.link }">
 						<div class="memberPic" v-if="!isActive">
-							<img alt="avatar" :src="member.avatar.path" />
+							<img
+								alt="avatar"
+								:src="member.avatar.path"
+								loading="lazy" />
 						</div>
 						<h1>{{ member.name }}</h1>
 						<p>{{ member.stack.join(", ") }}</p>
@@ -21,7 +24,7 @@
 							v-if="member.link"
 							:href="member.link"
 							target="_blank">
-							<ion-icon :icon="logoLinkedin" class="icon" />
+							<ion-icon :icon="linkedin" class="icon" />
 						</a>
 					</div>
 				</div>
@@ -51,6 +54,7 @@ const count = computed(() => {
 })
 
 const members = ref<TeamMember[]>([])
+const linkedin = logoLinkedin.replace("Logo Linkedin", "")
 
 const pagination = {
 	clickable: true,
