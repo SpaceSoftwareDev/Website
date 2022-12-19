@@ -3,11 +3,11 @@
 		<NavBar />
 
 		<article>
-			<p class="landingText">
+			<h1 class="landingText">
 				Software studio <br />
 				founded by <br />
 				<span class="highlightText"> high school students </span>
-			</p>
+			</h1>
 
 			<section class="socials">
 				<a
@@ -206,15 +206,6 @@ a {
 	animation: pulse 3s infinite;
 }
 
-.contact-desc {
-	font-size: 1.5rem;
-	font-weight: 600;
-	margin-top: 1rem;
-	width: 100%;
-	text-align: center;
-	color: rgba(0, 0, 0, 0.4);
-}
-
 .newsletter {
 	display: flex;
 	justify-content: center;
@@ -249,41 +240,22 @@ a {
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	cursor: pointer;
 	font-weight: 600;
-}
+	transition: all 0.5s ease-in-out;
 
-.getInTouchBtn::before {
-	content: "";
-	position: absolute;
-	left: 4px;
-	right: 4px;
-	top: 4px;
-	bottom: 4px;
-	border-radius: 50rem;
-	background-color: #f6faff;
-	z-index: -1;
-	transition: all 300ms ease-in-out;
+	&:hover {
+		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+	}
+
+	&:active {
+		filter: none;
+	}
 }
 
 .getInTouchBtn::after {
 	content: attr(data);
 	font-size: 1.7rem;
-	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	transition: all 300ms ease-in-out;
-}
-
-.getInTouchBtn:hover::before {
-	opacity: 20%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.getInTouchBtn:hover::after {
 	color: white;
+	transition: all 300ms ease-in-out;
 }
 
 .scrollDivider {

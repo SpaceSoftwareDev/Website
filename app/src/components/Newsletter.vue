@@ -82,6 +82,10 @@ h3 {
 		&:hover {
 			color: #00d1ff;
 			background: #ffffff;
+
+			ion-icon {
+				filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+			}
 		}
 	}
 }
