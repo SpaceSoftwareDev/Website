@@ -125,7 +125,6 @@ h2 {
 
 	p {
 		margin-top: 0.5rem;
-		margin-bottom: 0.9rem;
 		font-weight: 400;
 		text-align: center;
 	}

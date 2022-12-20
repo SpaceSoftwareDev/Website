@@ -35,12 +35,11 @@ const large = useBreakpoints(breakpointsTailwind).lg
 </script>
 <style lang="scss" scoped>
 footer {
-	background-color: rgba(255, 255, 255, 0.5);
-
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .rightsImg {
@@ -59,28 +58,32 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
 
-ion-icon {
-	color: #2f2f2f;
-	margin-right: 1rem;
-	transform: scale(1.3);
-}
-
-p {
-	margin: 0.3rem 0;
-}
-
-.contact:hover {
 	ion-icon {
-		color: #00d1ff;
+		color: #2f2f2f;
+		margin-right: 1rem;
+		transform: scale(1.3);
 	}
 
 	p {
-		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		margin: 0.3rem 0;
+	}
+
+	&:hover {
+		ion-icon {
+			color: #00d1ff;
+		}
+
+		p {
+			background: linear-gradient(
+				to bottom right,
+				#00d1ff 17%,
+				#0209b5 100%
+			);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	}
 }
 
