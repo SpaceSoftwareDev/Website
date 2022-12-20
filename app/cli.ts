@@ -15,7 +15,6 @@ import servestatic from "serve-static"
 import type { render as renderType } from "src/scripts/entry-server"
 
 const VERSION = "1.0"
-
 const __dirname = process.cwd()
 const resolve = (p: string) => path.resolve(__dirname, p)
 const relative = (p: string) => path.relative(__dirname, resolve(p))
@@ -39,9 +38,8 @@ class ServerAPI {
 		preloadLinks: string
 	): string {
 		const html = template
-			.replace("<!--head-html-->", preloadLinks)
 			.replace(`<div id="app"></div>`, `<div id="app">${app}</div>`)
-			.replace(`<link href="[CSS URL]" rel="stylesheet" />`, "")
+			.replace(`<link href="[CSS URL]" rel="stylesheet" />`, preloadLinks)
 			.replaceAll(/^\s*$(?:\r\n?|\n)/gm, "")
 		return html
 	}
@@ -184,7 +182,7 @@ cli.command("build <mode>", "Build the project", {
 })
 	.option("--clean", "Clean build")
 	.action((mode: "ssr" | "ssg", options: { clean: boolean }) => {
-		title()
+		title(mode.toUpperCase())
 		if (options.clean) clean()
 		buildCommand(mode)
 	})

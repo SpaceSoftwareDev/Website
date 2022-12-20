@@ -811,31 +811,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:^9.7.0":
-  version: 9.7.0
-  resolution: "@vueuse/core@npm:9.7.0"
+"@vueuse/core@npm:^9.8.2":
+  version: 9.8.2
+  resolution: "@vueuse/core@npm:9.8.2"
   dependencies:
     "@types/web-bluetooth": "npm:^0.0.16"
-    "@vueuse/metadata": "npm:9.7.0"
-    "@vueuse/shared": "npm:9.7.0"
+    "@vueuse/metadata": "npm:9.8.2"
+    "@vueuse/shared": "npm:9.8.2"
     vue-demi: "npm:*"
-  checksum: 82371e07da0d7903d69a09ae0b51daa2725b27002add67715d9e65d8785336df2d76182b84b8581725aafc9513d37e5ab73ce0b9baf37888e7179708af915617
+  checksum: f079d9807be3272318e33070304f306f6aece5060835a67ba0aefbe31819416e6990257629f44a1ae2cc200bda82fa48a8184ff6dcf22ac45d7a0a2a7338a7ca
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:9.7.0":
-  version: 9.7.0
-  resolution: "@vueuse/metadata@npm:9.7.0"
-  checksum: 01f3e312f6db18947fa51837949252f52e9040d33dbb5b3d3eaefa28b91c93cfacad65044731e7a559bd7d4177651b4ec997728778a42c0427dc55b0a369ed57
+"@vueuse/metadata@npm:9.8.2":
+  version: 9.8.2
+  resolution: "@vueuse/metadata@npm:9.8.2"
+  checksum: 5f1863033a77c0f201c48726460e88114e10af75d15dcb04110617d85022123a13d32f5083de696911f632dcee4cdd24816d9f4ef7d004fbc1d1ca2bac83d05b
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.7.0":
-  version: 9.7.0
-  resolution: "@vueuse/shared@npm:9.7.0"
+"@vueuse/shared@npm:9.8.2":
+  version: 9.8.2
+  resolution: "@vueuse/shared@npm:9.8.2"
   dependencies:
     vue-demi: "npm:*"
-  checksum: d5b7e3522713e5e97c907ec3c9c73ad3e6e9077704a5e6e2d80fcc80b01853535226a570d8516d32868a587a0800f28e3d44b9dfe729dc69c0be08f4e7d4cafa
+  checksum: 63f61c87eb998ecba768b789a6c957fd9032091fd08e8a261fb773e7c39c684d218395e7fa07ddc14769f15a85677295d904065e6dd8d99d22fbbc7560b7a0a6
   languageName: node
   linkType: hard
 
@@ -3378,7 +3378,7 @@ __metadata:
     "@vitejs/plugin-vue": "npm:^4.0.0"
     "@vue/eslint-config-prettier": "npm:^7.0.0"
     "@vue/eslint-config-typescript": "npm:^11.0.2"
-    "@vueuse/core": "npm:^9.7.0"
+    "@vueuse/core": "npm:^9.8.2"
     axios: "npm:^1.2.1"
     cac: "npm:^6.7.14"
     compression: "npm:^1.7.4"
@@ -3390,7 +3390,7 @@ __metadata:
     picocolors: "npm:^1.0.0"
     picomatch: "npm:^2.3.1"
     prettier: "npm:^2.8.1"
-    sass: "npm:^1.57.0"
+    sass: "npm:^1.57.1"
     serve-static: "npm:^1.15.0"
     swiper: "npm:^8.4.5"
     tsx: "npm:^3.12.1"
@@ -3433,16 +3433,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.57.0":
-  version: 1.57.0
-  resolution: "sass@npm:1.57.0"
+"sass@npm:^1.57.1":
+  version: 1.57.1
+  resolution: "sass@npm:1.57.1"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: b98428d48524969854e4a373579190f8a1b5b6e0f123456f76f15263c86ac2a1f4d507eadc12d0443d91bbabbf228dcde519a48f0cc94f5056bc05d67d8556e2
+  checksum: fb82efe47aca8682054f5ef0903b2b0f640ac09b52ac3781f6a5d45dea102969c34080229a243584d8d70f3f16f33b807b8e9d8d06a9af06939a644f7315c833
   languageName: node
   linkType: hard
 
