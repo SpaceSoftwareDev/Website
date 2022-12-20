@@ -5,7 +5,7 @@
         "stack_string": "Front-End Developer",
         "link": "",
         "avatar": {
-            "file": "storage/assets/ligmas.png"
+            "file": "storage/assets/ligmas.webp"
         },
         "sort_order": 1,
         "is_published": 1
@@ -16,7 +16,7 @@
         "stack_string": "Full Stack Developer",
         "link": "https://www.linkedin.com/in/martin-mojzis-550263223",
         "avatar": {
-            "file": "storage/assets/miki.png"
+            "file": "storage/assets/miki.webp"
         },
         "sort_order": 2,
         "is_published": 1
@@ -27,7 +27,7 @@
         "stack_string": "Full Stack Developer",
         "link": "",
         "avatar": {
-            "file": "storage/assets/malicky.png"
+            "file": "storage/assets/malicky.webp"
         },
         "sort_order": 3,
         "is_published": 1
@@ -38,7 +38,7 @@
         "stack_string": "Back-End Developer",
         "link": "https://www.linkedin.com/in/daniel-adam-czaja-2aab07257",
         "avatar": {
-            "file": "storage/assets/cajin.png"
+            "file": "storage/assets/cajin.webp"
         },
         "sort_order": 4,
         "is_published": 1
@@ -49,7 +49,7 @@
         "stack_string": "Back-End Developer",
         "link": "",
         "avatar": {
-            "file": "storage/assets/klinec.png"
+            "file": "storage/assets/klinec.webp"
         },
         "sort_order": 5,
         "is_published": 1
@@ -60,7 +60,7 @@
         "stack_string": "Designer",
         "link": "https://www.linkedin.com/in/sára-perdeková-2bb778240",
         "avatar": {
-            "file": "storage/assets/pelendrekova.png"
+            "file": "storage/assets/pelendrekova.webp"
         },
         "sort_order": 6,
         "is_published": 1
