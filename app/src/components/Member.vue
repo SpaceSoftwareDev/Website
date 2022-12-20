@@ -17,11 +17,12 @@
 							:src="member.avatar.path"
 							loading="lazy"
 							v-if="!isActive" />
-						<h2>{{ member.name }}</h2>
+						<h3>{{ member.name }}</h3>
 						<p>{{ member.stack.join(", ") }}</p>
 						<a
 							v-if="member.link"
 							:href="member.link"
+							aria-label="LinkedIn"
 							target="_blank">
 							<ion-icon :icon="linkedin" />
 						</a>
@@ -118,7 +119,8 @@ h2 {
 		transform: scale(0.9);
 	}
 
-	h2 {
+	h3 {
+		font-size: 1.5em;
 		font-weight: 500;
 		margin-top: 0.3rem;
 	}

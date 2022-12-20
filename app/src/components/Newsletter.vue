@@ -1,6 +1,6 @@
 <template>
 	<form @submit.prevent="newsletterSubmit">
-		<h3>Subscribe to our newsletter</h3>
+		<h1>Subscribe to our newsletter</h1>
 		<div class="input">
 			<input
 				type="email"
@@ -40,9 +40,10 @@ form {
 	margin: 1rem;
 }
 
-h3 {
+h1 {
 	color: rgba(0, 0, 0, 0.4);
 	text-align: center;
+	font-size: 1.17em;
 	font-weight: 600;
 	padding-bottom: 1rem;
 	margin: 0;

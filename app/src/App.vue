@@ -12,18 +12,26 @@
 			<section class="socials">
 				<a
 					href="https://facebook.com/profile/100076217131544"
+					aria-label="FaceBook"
 					target="_blank">
 					<ion-icon :icon="logos.facebook" id="ic1" />
 				</a>
 				<a
 					href="https://instagram.com/spacesoftwarestudio/"
+					aria-label="Instagram"
 					target="_blank">
 					<ion-icon :icon="logos.instagram" id="ic2" />
 				</a>
-				<a href="https://twitter.com/spacesoftstudio" target="_blank">
+				<a
+					href="https://twitter.com/spacesoftstudio"
+					aria-label="Twitter"
+					target="_blank">
 					<ion-icon :icon="logos.twitter" id="ic3" />
 				</a>
-				<a href="https://tiktok.com/@spacesoftware" target="_blank">
+				<a
+					href="https://tiktok.com/@spacesoftware"
+					aria-label="TikTok"
+					target="_blank">
 					<ion-icon :icon="logos.tiktok" id="ic4" />
 				</a>
 			</section>
@@ -165,6 +173,7 @@ aside {
 }
 
 .landingText {
+	color: black;
 	font-size: 3.7rem;
 	font-weight: 600;
 }
