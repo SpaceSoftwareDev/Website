@@ -12,19 +12,18 @@
 				v-slot="{ isActive }">
 				<div class="slide">
 					<div :class="{ card: true, hasLink: !!member.link }">
-						<div class="memberPic" v-if="!isActive">
-							<img
-								alt="avatar"
-								:src="member.avatar.path"
-								loading="lazy" />
-						</div>
-						<h1>{{ member.name }}</h1>
+						<img
+							alt="avatar"
+							:src="member.avatar.path"
+							loading="lazy"
+							v-if="!isActive" />
+						<h2>{{ member.name }}</h2>
 						<p>{{ member.stack.join(", ") }}</p>
 						<a
 							v-if="member.link"
 							:href="member.link"
 							target="_blank">
-							<ion-icon :icon="linkedin" class="icon" />
+							<ion-icon :icon="linkedin" />
 						</a>
 					</div>
 				</div>
@@ -68,6 +67,11 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 })
 </script>
 <style lang="scss" scoped>
+h2 {
+	text-align: center;
+	font-weight: 600;
+}
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -97,46 +101,6 @@ Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
 	}
 }
 
-img {
-	height: 180px;
-	width: 180px;
-	transform: scale(0.8);
-}
-
-h1 {
-	margin-top: 0;
-	margin-bottom: 0.5rem;
-	text-align: center;
-	color: #2f2f2f;
-	font-family: "Poppins", sans-serif;
-	width: 200%;
-	font-size: 1.5rem;
-	font-weight: 100;
-}
-
-p {
-	margin-top: 0;
-	color: #2f2f2f7a;
-	font-family: "Poppins", sans-serif;
-	font-size: 1rem;
-	font-weight: 100;
-	text-align: center;
-}
-
-ion-icon {
-	transform: scale(2);
-	margin-top: 0.25rem;
-}
-
-.icon {
-	transition: all 300ms ease-in-out;
-	color: black;
-
-	&:hover {
-		color: #00d1ff;
-	}
-}
-
 .swiper {
 	width: min(65vw, 850px);
 }
@@ -147,6 +111,34 @@ ion-icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	img {
+		height: 180px;
+		width: 180px;
+		transform: scale(0.9);
+	}
+
+	h2 {
+		font-weight: 500;
+		margin-top: 0.3rem;
+	}
+
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0.9rem;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	ion-icon {
+		transition: all 200ms ease-in-out;
+		transform: scale(2);
+		color: black;
+
+		&:hover {
+			color: #00d1ff;
+		}
+	}
 }
 
 .wrapper {
@@ -157,12 +149,6 @@ ion-icon {
 	align-items: center;
 	overflow: hidden;
 	margin-top: min(6vh, 2rem);
-
-	h2 {
-		color: #2f2f2f;
-		margin-bottom: 0;
-		font-weight: 600;
-	}
 }
 
 @media (max-width: 1024px) {

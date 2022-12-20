@@ -3,7 +3,10 @@
 		<img alt="footer" src="/assets/rights-footer.svg" class="rightsImg" />
 
 		<div class="contacts">
-			<a class="contact" href="https://goo.gl/maps/GtSMqiGos6WFJYZn6">
+			<a
+				class="contact"
+				href="https://goo.gl/maps/GtSMqiGos6WFJYZn6"
+				target="_blank">
 				<ion-icon :icon="home" />
 				<p>SPŠE Hálova 16, Bratislava</p>
 			</a>
@@ -32,16 +35,12 @@ const large = useBreakpoints(breakpointsTailwind).lg
 </script>
 <style lang="scss" scoped>
 footer {
-	height: 20vh;
 	background-color: rgba(255, 255, 255, 0.5);
 
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-
-	max-width: 100vw;
-	width: 100vw;
 }
 
 .rightsImg {
@@ -69,10 +68,7 @@ ion-icon {
 }
 
 p {
-	font-family: "Space Mono", monospace;
 	margin: 0.3rem 0;
-	color: rgba(0, 0, 0, 0.4);
-	line-height: 1.8;
 }
 
 .contact:hover {

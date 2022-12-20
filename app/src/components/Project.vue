@@ -59,10 +59,6 @@ h1 {
 	margin: 0.5rem 0;
 }
 
-p {
-	line-height: 1.8;
-}
-
 .project {
 	display: flex;
 	width: 90vw;
@@ -165,6 +161,11 @@ p {
 		justify-content: center;
 	}
 
+	h1 {
+		font-size: 3.5vh;
+		text-align: center;
+	}
+
 	p {
 		text-align: center;
 	}
@@ -177,10 +178,6 @@ p {
 		&:nth-child(odd) {
 			margin: 0 0 1rem;
 		}
-	}
-
-	h1 {
-		text-align: center;
 	}
 }
 </style>

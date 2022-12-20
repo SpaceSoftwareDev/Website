@@ -67,16 +67,12 @@ h3 {
 	button {
 		width: 20%;
 		height: 50px;
-		border: none;
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
-		background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-		color: #ffffff;
-		cursor: pointer;
 
 		ion-icon {
 			transform: scale(1.5);
-			margin-top: 0.2rem;
+			margin-top: 0.3rem;
 		}
 
 		&:hover {

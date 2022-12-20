@@ -6,7 +6,7 @@
 			<h1 class="landingText">
 				Software studio <br />
 				founded by <br />
-				<span class="highlightText"> high school students </span>
+				<strong class="highlightText"> high school students </strong>
 			</h1>
 
 			<section class="socials">
@@ -28,10 +28,9 @@
 				</a>
 			</section>
 
-			<button
-				class="getInTouchBtn"
-				data="Get In Touch"
-				@click="scrollTo('contact')"></button>
+			<button class="getInTouchBtn" @click="scrollTo('contact')">
+				Get In Touch
+			</button>
 		</article>
 
 		<aside>
@@ -50,12 +49,12 @@
 		<section>
 			<div class="scrollDivider">
 				<div class="textWrapper">
-					<span style="--i: 1" class="letter">S</span>
-					<span style="--i: 2" class="letter">C</span>
-					<span style="--i: 3" class="letter">R</span>
-					<span style="--i: 4" class="letter">O</span>
-					<span style="--i: 5" class="letter">L</span>
-					<span style="--i: 6" class="letter">L</span>
+					<p style="--i: 1" class="letter">S</p>
+					<p style="--i: 2" class="letter">C</p>
+					<p style="--i: 3" class="letter">R</p>
+					<p style="--i: 4" class="letter">O</p>
+					<p style="--i: 5" class="letter">L</p>
+					<p style="--i: 6" class="letter">L</p>
 				</div>
 				<div class="scrollLine"></div>
 			</div>
@@ -64,12 +63,14 @@
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
-				We are a software studio founded by high school students from
-				Slovakia.<br />
-				Currently we are studying on high school SPŠE Hálova 16,
+				<strong>space.</strong> is a software studio founded by high
+				school students from Slovakia.<br />
+				We are currently attending a high school SPŠE Hálova 16,
 				Bratislava,<br />
 				where we are also a part of a new study program called
-				<a href="https://openlab.sk" target="_blank"> OpenLab</a>.
+				<a href="https://openlab.sk" target="_blank">
+					<strong> OpenLab</strong></a
+				>.
 			</p>
 			<picture>
 				<source type="image/webp" srcset="/assets/logo.webp" />
@@ -164,27 +165,20 @@ aside {
 }
 
 .landingText {
-	margin: 0;
 	font-size: 3.7rem;
 	font-weight: 600;
 }
 
+a,
 .highlightText {
-	font-size: 3.7rem;
-	font-weight: 800;
 	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin: 0;
-}
 
-a {
-	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-	font-weight: 600;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	&.highlightText {
+		font-weight: 700;
+	}
 }
 
 .socials {
@@ -211,65 +205,31 @@ a {
 	}
 }
 
-.contact {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	margin-top: 2rem;
-	animation: pulse 3s infinite;
-}
-
-.newsletter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 2.5rem;
-	margin-bottom: 2.5rem;
-}
-
 #ic1,
 #ic2,
 #ic3,
 #ic4 {
-	transition: all 300ms ease-in-out;
+	transition: all 200ms ease-in-out;
 	color: black;
-}
 
-#ic1:hover,
-#ic2:hover,
-#ic3:hover,
-#ic4:hover {
-	color: #00d1ff;
+	&:hover {
+		color: #00d1ff;
+	}
 }
 
 .getInTouchBtn {
+	position: relative;
 	margin-top: 5vh;
 	padding: 20px 60px;
-	border: none;
-	outline: none;
-	position: relative;
-	z-index: 1;
 	border-radius: 5rem;
-	background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-	cursor: pointer;
 	font-weight: 600;
+	font-size: 1.7rem;
+	transition: all 200ms ease-in-out;
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 
 	&:hover {
-		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
-	}
-
-	&:active {
 		filter: none;
 	}
-}
-
-.getInTouchBtn::after {
-	content: attr(data);
-	font-size: 1.7rem;
-	color: white;
-	transition: all 300ms ease-in-out;
 }
 
 .scrollDivider {
@@ -278,23 +238,24 @@ a {
 
 .textWrapper {
 	margin-top: 8vh;
-	font-size: 1rem;
 }
 
 .letter {
 	position: relative;
 	display: inline-block;
-	color: rgba(0, 0, 0, 0.3);
+	color: #9cc6ff;
 	letter-spacing: 0.5vh;
+	font-size: 1.2rem;
+	font-weight: 500;
 	animation: waveAnim 3s infinite;
 	animation-delay: calc(0.1s * var(--i));
 }
 
 .scrollLine {
 	margin-top: 2vh;
-	width: 0.1vw;
+	width: 3px;
 	height: 40vh;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: #cce2ff;
 	margin-left: 2.5vw;
 }
 
@@ -329,11 +290,7 @@ a {
 }
 
 .aboutUsText {
-	margin: 0;
-	color: rgba(0, 0, 0, 0.4);
-	font-size: 1.1rem;
 	padding: 0 1rem;
-	line-height: 1.8;
 }
 
 .logo {
@@ -347,9 +304,27 @@ a {
 	justify-content: center;
 }
 
+.contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin-top: 2rem;
+	animation: pulse 3s infinite;
+}
+
+.newsletter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
 @media screen and (max-width: 1024px) {
 	.trashDiv {
-		margin-top: 0rem;
+		margin-top: 0;
 	}
 
 	article {
@@ -368,10 +343,6 @@ a {
 		margin-right: 0;
 		font-size: 3.5vh;
 		width: 85%;
-	}
-
-	.highlightText {
-		font-size: 3.5vh;
 	}
 
 	.socials {
@@ -395,25 +366,8 @@ a {
 		}
 	}
 
-	.contact {
-		img {
-			width: 12rem;
-			height: 12rem;
-		}
-	}
-
 	.getInTouchBtn {
 		padding: 2vh 6vw;
-	}
-
-	.getInTouchBtn::before {
-		left: 3px;
-		right: 3px;
-		top: 3px;
-		bottom: 3px;
-	}
-
-	.getInTouchBtn::after {
 		font-size: 1.3rem;
 	}
 
@@ -423,7 +377,6 @@ a {
 
 	.scrollLine {
 		margin-left: 2.4rem;
-		width: 1px;
 		height: 30vh;
 	}
 
@@ -445,6 +398,13 @@ a {
 
 	.illustration {
 		width: min(90vw, 400px);
+	}
+
+	.contact {
+		img {
+			width: 12rem;
+			height: 12rem;
+		}
 	}
 }
 @media screen and (max-width: 1375px) and (min-width: 1024px) {

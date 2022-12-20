@@ -63,7 +63,6 @@ const scrollTo = (id: string) => {
 </script>
 <style lang="scss" scoped>
 header {
-	min-height: 20vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -71,7 +70,6 @@ header {
 }
 
 .container {
-	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -129,7 +127,6 @@ nav {
 	a {
 		width: 200px;
 		transition: all 300ms;
-		font-family: "Space Mono", monospace;
 		text-decoration: none;
 		color: black;
 		&:hover {
@@ -143,7 +140,6 @@ nav {
 @media (max-width: 1024px) {
 	header {
 		min-height: 5vh;
-		width: 100%;
 	}
 
 	.logo {

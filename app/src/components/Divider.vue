@@ -1,8 +1,8 @@
 <template>
 	<div :class="{ dividerLineWrapper: true, right }">
-		<h2>
+		<h1>
 			<slot />
-		</h2>
+		</h1>
 		<div v-if="large" class="dividerLine" />
 	</div>
 </template>
@@ -15,16 +15,15 @@ defineProps<{
 }>()
 </script>
 <style lang="scss" scoped>
-h2 {
-	font-family: "Poppins", sans-serif;
-	color: #2f2f2f;
+h1 {
 	margin: 0 2rem 0 0;
 	min-width: 20vw;
 	text-align: right;
+	font-weight: 600;
 }
 
 .dividerLine {
-	background-color: #bbd8ff93;
+	background-color: #cce2ff;
 	width: 90vw;
 	margin-right: 8rem;
 	height: 3px;
@@ -43,7 +42,7 @@ h2 {
 	&.right {
 		flex-direction: row-reverse;
 
-		h2 {
+		h1 {
 			text-align: left;
 			margin-left: 2rem;
 			margin-right: 4rem;
@@ -57,10 +56,11 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-	h2 {
+	h1 {
 		text-align: center !important;
 		margin: 0;
 		width: 100%;
+		font-size: 3.5vh;
 	}
 
 	.dividerLineWrapper {
@@ -72,7 +72,7 @@ h2 {
 			margin-left: 0;
 			margin-right: 0;
 
-			h2 {
+			h1 {
 				margin: 0;
 				text-align: center !important;
 			}

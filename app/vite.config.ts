@@ -19,8 +19,8 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		ViteWebfontDownload([
-			"https://fonts.googleapis.com/css2?family=Space+Mono&display=swap", // Navigation Font
-			"https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" // Body Font
+			"https://fonts.googleapis.com/css2?family=Space+Mono&display=swap", // Mono Font
+			"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" // Body Font
 		])
 	],
 	resolve: {
