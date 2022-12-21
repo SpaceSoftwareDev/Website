@@ -1,6 +1,14 @@
 <template>
 	<footer>
-		<img alt="footer" src="/assets/rights-footer.svg" class="rightsImg" />
+		<div class="rightsFooter">
+			<a href="https://space-software.com/">
+				<img alt="logo" src="/assets/space-logo.svg" class="logo" />
+			</a>
+			<p>
+				<span class="copyright">️©</span>
+				2021 - {{ new Date().getFullYear() }} All rights reserved
+			</p>
+		</div>
 
 		<div class="contacts">
 			<a
@@ -42,9 +50,32 @@ footer {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
-.rightsImg {
+.copyright {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+}
+
+.logo {
 	max-width: 20rem;
-	height: 50px;
+	height: 25px;
+}
+
+.rightsFooter {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+
+	a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	p {
+		margin: 0.5rem 0 0 0;
+	}
 }
 
 .contacts {
@@ -96,6 +127,10 @@ footer {
 
 		justify-content: space-around;
 		flex-direction: column-reverse;
+	}
+
+	.rightsFooter {
+		align-items: center;
 	}
 }
 </style>

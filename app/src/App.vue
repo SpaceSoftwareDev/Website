@@ -277,6 +277,7 @@ a,
 
 .illustration {
 	width: 30vw;
+	height: 30vw;
 }
 
 @keyframes waveAnim {
@@ -407,6 +408,7 @@ a,
 
 	.illustration {
 		width: min(90vw, 400px);
+		height: min(90vw, 400px);
 	}
 
 	.contact {

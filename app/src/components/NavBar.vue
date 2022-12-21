@@ -4,7 +4,7 @@
 		<div class="container">
 			<!--Space Logo-->
 			<a href="https://space-software.com/" class="logoLink">
-				<img alt="logo" src="/assets/logo-nav-bar.svg" class="logo" />
+				<img alt="logo" src="/assets/space-logo.svg" class="logo" />
 			</a>
 			<!--Navigation links-->
 			<nav v-if="isLarge">
