@@ -24,7 +24,7 @@
 							:href="member.link"
 							aria-label="LinkedIn"
 							target="_blank">
-							<ion-icon :icon="linkedin" />
+							<icon icon="ion:logo-linkedin" class="icon" />
 						</a>
 					</div>
 				</div>
@@ -36,8 +36,7 @@
 import { ref, computed } from "vue"
 import { Get } from "@/types"
 
-import { IonIcon } from "@ionic/vue"
-import { logoLinkedin } from "ionicons/icons"
+import { Icon } from "@iconify/vue"
 
 import type { TeamMember } from "@/types"
 
@@ -54,7 +53,6 @@ const count = computed(() => {
 })
 
 const members = ref<TeamMember[]>([])
-const linkedin = logoLinkedin.replace("Logo Linkedin", "")
 
 const pagination = {
 	clickable: true,
@@ -131,7 +129,7 @@ h2 {
 		text-align: center;
 	}
 
-	ion-icon {
+	.icon {
 		transition: all 200ms ease-in-out;
 		transform: scale(2);
 		color: black;

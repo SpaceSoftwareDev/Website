@@ -39,24 +39,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@capacitor/core@npm:^4.6.1":
-  version: 4.6.1
-  resolution: "@capacitor/core@npm:4.6.1"
-  dependencies:
-    tslib: "npm:^2.1.0"
-  checksum: 86cc95248f919bc3a97bdfa5ae0112493bd557b02059555ed42f440a522b5749ae4e6884ef62ef5c33a9be2fe3724a9dc2cdc4d56701e2cb95953585da55dcfd
-  languageName: node
-  linkType: hard
-
-"@capacitor/preferences@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "@capacitor/preferences@npm:4.0.2"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-  checksum: 5edb2298bcde1031b13d50d2033c81508af9fc2b7b70595718d8b894e397a44ce7f1e3b08cacb88bc3d8a4ec82d0e89cc118e76fa3627908a959fcaeec13a2b3
-  languageName: node
-  linkType: hard
-
 "@esbuild-kit/cjs-loader@npm:^2.4.0":
   version: 2.4.1
   resolution: "@esbuild-kit/cjs-loader@npm:2.4.1"
@@ -304,24 +286,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ionic/core@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@ionic/core@npm:6.4.1"
+"@iconify-json/ion@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@iconify-json/ion@npm:1.1.4"
   dependencies:
-    "@stencil/core": "npm:^2.18.0"
-    ionicons: "npm:^6.0.4"
-    tslib: "npm:^2.1.0"
-  checksum: 82529bb30a3bd6360d021a0eb5d60d1ebae6ce2d2889992368e082d90ea16538f345e80c2f7d99fdac7d6ecc23b1a058fe9d19ea5735e838dcdaa9dcefd3e6db
+    "@iconify/types": "npm:*"
+  checksum: a5b8533093b395d78be927ad0a5ef8244c91a65a24ac96513c752000928b8459b51c98256541d6d1fdac59cda4fee2083f3dda434d122b6f3c13b0ebf3c8f533
   languageName: node
   linkType: hard
 
-"@ionic/vue@npm:^6.4.1":
-  version: 6.4.1
-  resolution: "@ionic/vue@npm:6.4.1"
+"@iconify/types@npm:*, @iconify/types@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@iconify/types@npm:2.0.0"
+  checksum: bf60cd0af0c37363500cc237cf215cf8c2f6608b5d7d1d4b8b7153084f68dc0ca0490b4471b4fc09119e433d6bea8986c3965fce5d54106388b475980ba1e257
+  languageName: node
+  linkType: hard
+
+"@iconify/vue@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "@iconify/vue@npm:4.0.2"
   dependencies:
-    "@ionic/core": "npm:6.4.1"
-    ionicons: "npm:^6.0.2"
-  checksum: b7b6b38122d40b39d9654a2afa5d6b5997a270e220b59acbd821b60ee536285657ab358d15bce48f53b18987a5ae4e23259914456a039c616dac30763cf36943
+    "@iconify/types": "npm:^2.0.0"
+  peerDependencies:
+    vue: ">=3"
+  checksum: d13cba908484166f55e316794a6cd4e9d31632687ae9e1cdb02e268273cf057c614768ae96350595e1f325f4e9f187eb7b5857b8a7c2b62abc3f9a96e6c8398c
   languageName: node
   linkType: hard
 
@@ -376,15 +364,6 @@ __metadata:
   version: 1.2.0
   resolution: "@rushstack/eslint-patch@npm:1.2.0"
   checksum: f91904a54e780bf2bb7644fb6d9bfcbf49ec92910c9aa3a3c7ba33f975e8c102a191d2bd18e49b41abdb13f5e5f6d54756299145e87ee073a93d111b9519ba1b
-  languageName: node
-  linkType: hard
-
-"@stencil/core@npm:^2.18.0":
-  version: 2.19.3
-  resolution: "@stencil/core@npm:2.19.3"
-  bin:
-    stencil: bin/stencil
-  checksum: 7d4314c3ad0bd7c563f23750d8c81448e115480d9b7eb5c33733de0a373abbb974d6059f17dbfa28379e30d844772c5343cd68b4cf45c1a0bf7f15f7b81f6e40
   languageName: node
   linkType: hard
 
@@ -483,13 +462,6 @@ __metadata:
   version: 18.11.17
   resolution: "@types/node@npm:18.11.17"
   checksum: c344af96ffdcc429d8d79576de72061553cd083d06cde8209a82b3d927c62ecf2211f24c3b970194636833f9dcfd94228f2b019f2d796f1f20dfc0d12e6dcc2b
-  languageName: node
-  linkType: hard
-
-"@types/picomatch@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "@types/picomatch@npm:2.3.0"
-  checksum: 643a57ab7c6a72859bbe9b1819f080564be8f7d3bfac1a4f060e4176ecfe25524490f4cfab5b98c3ba1b8543a8ad8ea6db24e32226a4eae60f862a90ba979a8f
   languageName: node
   linkType: hard
 
@@ -2480,15 +2452,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ionicons@npm:^6.0.2, ionicons@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "ionicons@npm:6.0.4"
-  dependencies:
-    "@stencil/core": "npm:^2.18.0"
-  checksum: e0411ef32534c90c4f8679a8151da7a9fc8872ed6b64e99ed813ab3b68601b267bee2d31b30059714ff3ec8a36e242036d01c74fff2495eae9a641825ae59337
-  languageName: node
-  linkType: hard
-
 "ip@npm:^2.0.0":
   version: 2.0.0
   resolution: "ip@npm:2.0.0"
@@ -3366,14 +3329,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@capacitor/core": "npm:^4.6.1"
-    "@capacitor/preferences": "npm:^4.0.2"
-    "@ionic/vue": "npm:^6.4.1"
+    "@iconify-json/ion": "npm:^1.1.4"
+    "@iconify/vue": "npm:^4.0.2"
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@types/compression": "npm:^1.7.2"
     "@types/express": "npm:^4.17.15"
     "@types/node": "npm:^18.11.17"
-    "@types/picomatch": "npm:^2.3.0"
     "@types/serve-static": "npm:^1.15.0"
     "@vitejs/plugin-vue": "npm:^4.0.0"
     "@vue/eslint-config-prettier": "npm:^7.0.0"
@@ -3385,10 +3346,8 @@ __metadata:
     eslint: "npm:^8.30.0"
     eslint-plugin-vue: "npm:^9.8.0"
     express: "npm:^4.18.2"
-    ionicons: "npm:^6.0.4"
     open: "npm:^8.4.0"
     picocolors: "npm:^1.0.0"
-    picomatch: "npm:^2.3.1"
     prettier: "npm:^2.8.1"
     sass: "npm:^1.57.1"
     serve-static: "npm:^1.15.0"
@@ -3399,7 +3358,6 @@ __metadata:
     vite-plugin-webfont-dl: "npm:^3.4.2"
     vue: "npm:^3.2.45"
     vue-router: "npm:^4.1.6"
-    vvic-utils: "npm:^1.0.12"
   languageName: unknown
   linkType: soft
 
@@ -3740,13 +3698,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: a739a21e3ff059e62c7c3c0845333fbc9c081bcc91e015f2d246a31eeaf1fb0e29b10c0913c7d22f692b3203bb469fd60ca5288aa4f27d351a969df2d0714899
-  languageName: node
-  linkType: hard
-
 "tsutils@npm:^3.21.0":
   version: 3.21.0
   resolution: "tsutils@npm:3.21.0"
@@ -3981,27 +3932,6 @@ __metadata:
     "@vue/server-renderer": "npm:3.2.45"
     "@vue/shared": "npm:3.2.45"
   checksum: 75309b6fae96dcbcbacd6f24577da109e2179d49c23206b656675a5599671b390e606282f82d424d1b2b7d752950f2196778d7e6177cfb4b352796a942cb3aed
-  languageName: node
-  linkType: hard
-
-"vvic-utils@npm:^1.0.12":
-  version: 1.0.12
-  resolution: "vvic-utils@npm:1.0.12"
-  peerDependencies:
-    "@capacitor/core": ^4.0.0
-    "@capacitor/preferences": ^4.0.0
-    vue: ^3.2.0
-    vue-i18n: ^9.2.0
-  peerDependenciesMeta:
-    "@capacitor/core":
-      optional: true
-    "@capacitor/preferences":
-      optional: true
-    vue:
-      optional: false
-    vue-i18n:
-      optional: true
-  checksum: 6067ffade17ef99bfc3955381b4f038462fec30141f2f8a4a74076986ebc371e981faf58124f9819c6f71cb7a5ccb608f6c43491e2780ed2081aa198f8783d60
   languageName: node
   linkType: hard
 

@@ -10,7 +10,7 @@
 				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
 			<button type="submit">
-				<ion-icon :icon="send" />
+				<icon icon="ion:send" class="icon" />
 			</button>
 		</div>
 	</form>
@@ -18,9 +18,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import axios from "axios"
-
-import { IonIcon } from "@ionic/vue"
-import { send } from "ionicons/icons"
+import { Icon } from "@iconify/vue"
 
 const email = ref<string>("")
 
@@ -71,7 +69,9 @@ h1 {
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
 
-		ion-icon {
+		.icon {
+			height: 25px;
+			transition: all 300ms ease-in-out;
 			transform: scale(1.5);
 			margin-top: 0.3rem;
 		}
@@ -80,7 +80,7 @@ h1 {
 			color: #00d1ff;
 			background: #ffffff;
 
-			ion-icon {
+			.icon {
 				filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 			}
 		}

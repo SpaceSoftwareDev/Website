@@ -14,25 +14,25 @@
 					href="https://facebook.com/profile/100076217131544"
 					aria-label="FaceBook"
 					target="_blank">
-					<ion-icon :icon="logos.facebook" id="ic1" />
+					<icon icon="ion:logo-facebook" id="ic1" />
 				</a>
 				<a
 					href="https://instagram.com/spacesoftwarestudio/"
 					aria-label="Instagram"
 					target="_blank">
-					<ion-icon :icon="logos.instagram" id="ic2" />
+					<icon icon="ion:logo-instagram" id="ic2" />
 				</a>
 				<a
 					href="https://twitter.com/spacesoftstudio"
 					aria-label="Twitter"
 					target="_blank">
-					<ion-icon :icon="logos.twitter" id="ic3" />
+					<icon icon="ion:logo-twitter" id="ic3" />
 				</a>
 				<a
 					href="https://tiktok.com/@spacesoftware"
 					aria-label="TikTok"
 					target="_blank">
-					<ion-icon :icon="logos.tiktok" id="ic4" />
+					<icon icon="ion:logo-tiktok" id="ic4" />
 				</a>
 			</section>
 
@@ -112,15 +112,9 @@
 </template>
 
 <script setup lang="ts">
-import { IonIcon } from "@ionic/vue"
+import { Icon } from "@iconify/vue"
 import Footer from "@/components/Footer.vue"
 import Newsletter from "@/components/Newsletter.vue"
-import {
-	logoFacebook,
-	logoTwitter,
-	logoInstagram,
-	logoTiktok
-} from "ionicons/icons"
 import NavBar from "@/components/NavBar.vue"
 import Member from "@/components/Member.vue"
 import Divider from "@/components/Divider.vue"
@@ -128,13 +122,6 @@ import Project from "@/components/Project.vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
-
-const logos = {
-	facebook: logoFacebook.replace("Logo Facebook", ""),
-	instagram: logoInstagram.replace("Logo Instagram", ""),
-	twitter: logoTwitter.replace("Logo Twitter", ""),
-	tiktok: logoTiktok.replace("Logo Tiktok", "")
-}
 
 const scrollTo = (id: string) => {
 	const element = document.getElementById(id)
@@ -218,6 +205,7 @@ a,
 #ic2,
 #ic3,
 #ic4 {
+	font-size: 2rem;
 	transition: all 200ms ease-in-out;
 	color: black;
 
@@ -230,14 +218,14 @@ a,
 	position: relative;
 	margin-top: 5vh;
 	padding: 20px 60px;
-	border-radius: 5rem;
+	border-radius: 360px;
 	font-weight: 600;
 	font-size: 1.7rem;
-	transition: all 200ms ease-in-out;
-	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+	filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
+	transition: all 200ms linear;
 
 	&:hover {
-		filter: none;
+		filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.4));
 	}
 }
 
@@ -254,7 +242,7 @@ a,
 	display: inline-block;
 	color: #9cc6ff;
 	letter-spacing: 0.5vh;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 500;
 	animation: waveAnim 3s infinite;
 	animation-delay: calc(0.1s * var(--i));

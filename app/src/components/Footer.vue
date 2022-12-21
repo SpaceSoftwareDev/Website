@@ -15,15 +15,15 @@
 				class="contact"
 				href="https://goo.gl/maps/GtSMqiGos6WFJYZn6"
 				target="_blank">
-				<ion-icon :icon="home" />
+				<icon icon="ion-home" class="icon" />
 				<p>SPŠE Hálova 16, Bratislava</p>
 			</a>
 			<a class="contact" href="mailto:info@space-software.com">
-				<ion-icon :icon="mail" />
+				<icon icon="ion:mail" class="icon" />
 				<p>info@space-software.com</p>
 			</a>
 			<a class="contact" href="tel:+421908072163">
-				<ion-icon :icon="call" />
+				<icon icon="ion:call" class="icon" />
 				<p>+421 908 072 163</p>
 			</a>
 		</div>
@@ -33,8 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonIcon } from "@ionic/vue"
-import { home, mail, call } from "ionicons/icons"
+import { Icon } from "@iconify/vue"
 
 import Newsletter from "./Newsletter.vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
@@ -90,7 +89,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 
-	ion-icon {
+	.icon {
 		color: #2f2f2f;
 		margin-right: 1rem;
 		transform: scale(1.3);
@@ -101,7 +100,7 @@ footer {
 	}
 
 	&:hover {
-		ion-icon {
+		.icon {
 			color: #00d1ff;
 		}
 

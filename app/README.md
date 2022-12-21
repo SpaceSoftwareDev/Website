@@ -33,4 +33,6 @@ yarn build
 yarn generate
 ```
 
+> SSR & SSG cli used in this project is **WIP** and may change frequently
+
 ----------------------------------------------------------
