@@ -9,7 +9,7 @@
 				placeholder="Your email..."
 				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
-			<button type="submit">
+			<button type="submit" aria-label="Submit">
 				<icon icon="ion:send" class="icon" />
 			</button>
 		</div>

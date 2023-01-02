@@ -36,7 +36,7 @@
 				</a>
 			</section>
 
-			<button class="getInTouchBtn" @click="scrollTo('contact')">
+			<button class="getInTouchBtn" aria-label="GetInTouch" @click="scrollTo('contact')">
 				Get In Touch
 			</button>
 		</article>
