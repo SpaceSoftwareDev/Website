@@ -776,31 +776,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:^9.9.0":
-  version: 9.9.0
-  resolution: "@vueuse/core@npm:9.9.0"
+"@vueuse/core@npm:^9.10.0":
+  version: 9.10.0
+  resolution: "@vueuse/core@npm:9.10.0"
   dependencies:
     "@types/web-bluetooth": "npm:^0.0.16"
-    "@vueuse/metadata": "npm:9.9.0"
-    "@vueuse/shared": "npm:9.9.0"
+    "@vueuse/metadata": "npm:9.10.0"
+    "@vueuse/shared": "npm:9.10.0"
     vue-demi: "npm:*"
-  checksum: ec05a0afe01ca133046fe7890dd4d0a9f35663340c1c00e2973e2e0cc5c4bc778a54c60fbb80aa7655e4c5d9290e0b9f49946da69fb96fbadfd52e63f913f891
+  checksum: 6679a394d91054765c97863835af2dfed9805d7461695f46eec4fb4ba014ca3dde713177f2716fffc0fb611f1bcd7da60910d8fa3d49dbae1dcf7123181944de
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:9.9.0":
-  version: 9.9.0
-  resolution: "@vueuse/metadata@npm:9.9.0"
-  checksum: 3891a61deb14a3282de80c45369582762043816ab0c577b542e28f76944248bd6af4cd4c695f7ce066ebc491c168c9e118a279c0aac6b97100f1e8b419dbdb25
+"@vueuse/metadata@npm:9.10.0":
+  version: 9.10.0
+  resolution: "@vueuse/metadata@npm:9.10.0"
+  checksum: 205e1bd58f80f135c05c3689d8425875b76a2f67b98eabc6dc07c75ef7f20306b302609dd6a7d576ef9c52b257a1468c7990b5cb373c4b853e2e2c8786939179
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.9.0":
-  version: 9.9.0
-  resolution: "@vueuse/shared@npm:9.9.0"
+"@vueuse/shared@npm:9.10.0":
+  version: 9.10.0
+  resolution: "@vueuse/shared@npm:9.10.0"
   dependencies:
     vue-demi: "npm:*"
-  checksum: 57f43296a91a5d555dea38521b49d3bcd15805144521937eb906183eb0c75f7629f3a65d0a44a482509d5ff7ad71a116e19bf5c79653e0b6f3743be2883f9435
+  checksum: 1e00aa6d4239fff31c19ec8d09e88125b2356cc8e5a1ea6092e2039d25d5d5951379cd9187c136d8b2129dd8a9c282fb39d11fd58227188c1ab1b13fa9faa273
   languageName: node
   linkType: hard
 
@@ -3331,7 +3331,7 @@ __metadata:
     "@vitejs/plugin-vue": "npm:^4.0.0"
     "@vue/eslint-config-prettier": "npm:^7.0.0"
     "@vue/eslint-config-typescript": "npm:^11.0.2"
-    "@vueuse/core": "npm:^9.9.0"
+    "@vueuse/core": "npm:^9.10.0"
     axios: "npm:^1.2.2"
     cac: "npm:^6.7.14"
     compression: "npm:^1.7.4"
@@ -3346,7 +3346,7 @@ __metadata:
     swiper: "npm:^8.4.5"
     tsx: "npm:^3.12.1"
     typescript: "npm:^4.9.4"
-    vite: "npm:^4.0.3"
+    vite: "npm:^4.0.4"
     vite-plugin-webfont-dl: "npm:^3.4.2"
     vue: "npm:^3.2.45"
     vue-router: "npm:^4.1.6"
@@ -3832,9 +3832,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "vite@npm:4.0.3"
+"vite@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "vite@npm:4.0.4"
   dependencies:
     esbuild: "npm:^0.16.3"
     fsevents: "npm:~2.3.2"
@@ -3866,7 +3866,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: b6a539ef6a7f826b7d53585284896f4f4f45089a52d151baa0d956eece63b3edab4b1e5b828df59e4374dc650719c4301cc3d00833ce618c14e2b95859fdbd18
+  checksum: f4f9d9d5b910b8cc8130ef235b3f0eaf1eb7ab690e744760de1326c5db1ca6a3def2c17b053dea3123a1dee991b782c0d2b5a5a8df3705c0d23db86e6039c552
   languageName: node
   linkType: hard
 

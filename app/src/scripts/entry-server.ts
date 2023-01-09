@@ -2,7 +2,12 @@ import { basename } from "node:path"
 import { renderToString } from "vue/server-renderer"
 import { createApp } from "@/main"
 
-export async function render(manifest) {
+interface BufferJSON {
+	type: "Buffer"
+	data: number[]
+}
+
+export async function render(manifest: BufferJSON) {
 	const { app } = createApp()
 
 	// passing SSR context object which will be available via useSSRContext()
