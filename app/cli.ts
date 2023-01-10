@@ -182,7 +182,7 @@ cli.command("build <mode>", "Build the project")
 	.action((mode: "ssr" | "ssg", options: { clean: boolean }) => {
 		title(mode.toUpperCase())
 		if (options.clean) clean()
-		buildCommand(mode)
+		buildCommand("ssg")
 	})
 
 cli.command("server", "Start the SSR server")
@@ -251,7 +251,6 @@ try {
 			cause: "User executed script in an invalid directory\n → Directory must contain a valid vite vue.js project"
 		})
 	cli.runMatchedCommand()
-	process.exit(0)
 } catch (error) {
 	console.log(pc.bold(pc.red(error.message)))
 	if (error.cause) console.log(pc.dim(error.cause))

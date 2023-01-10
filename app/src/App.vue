@@ -12,7 +12,7 @@
 			<section class="socials">
 				<a
 					href="https://facebook.com/profile/100076217131544"
-					aria-label="FaceBook"
+					aria-label="Facebook"
 					target="_blank">
 					<icon icon="ion:logo-facebook" id="ic1" />
 				</a>
@@ -36,7 +36,10 @@
 				</a>
 			</section>
 
-			<button class="getInTouchBtn" aria-label="GetInTouch" @click="scrollTo('contact')">
+			<button
+				class="getInTouchBtn"
+				aria-label="Get in touch"
+				@click="scrollTo('contact')">
 				Get In Touch
 			</button>
 		</article>
@@ -52,7 +55,7 @@
 			</picture>
 		</aside>
 
-		<div class="trashDiv"></div>
+		<div class="trashDiv" />
 
 		<section>
 			<div class="scrollDivider">
@@ -64,7 +67,7 @@
 					<p style="--i: 5" class="letter">L</p>
 					<p style="--i: 6" class="letter">L</p>
 				</div>
-				<div class="scrollLine"></div>
+				<div class="scrollLine" />
 			</div>
 		</section>
 

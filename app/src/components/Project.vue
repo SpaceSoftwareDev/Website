@@ -153,12 +153,20 @@ p {
 	}
 
 	.swiper {
-		width: 100%;
+		padding: 0;
+		margin: 0;
+		width: 100vw;
 		padding-bottom: 20px;
 	}
 
 	.title {
 		justify-content: center;
+		flex-direction: column;
+
+		.icon {
+			margin: 1rem 0;
+			margin-top: 0.25rem;
+		}
 	}
 
 	h1 {
@@ -168,16 +176,6 @@ p {
 
 	p {
 		text-align: center;
-	}
-
-	img {
-		margin: 0 0 1rem;
-		padding-left: 1rem;
-		padding-bottom: 0.5rem;
-
-		&:nth-child(odd) {
-			margin: 0 0 1rem;
-		}
 	}
 }
 </style>

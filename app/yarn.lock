@@ -39,7 +39,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild-kit/cjs-loader@npm:^2.4.0":
+"@esbuild-kit/cjs-loader@npm:^2.4.1":
   version: 2.4.1
   resolution: "@esbuild-kit/cjs-loader@npm:2.4.1"
   dependencies:
@@ -59,7 +59,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild-kit/esm-loader@npm:^2.5.0":
+"@esbuild-kit/esm-loader@npm:^2.5.4":
   version: 2.5.4
   resolution: "@esbuild-kit/esm-loader@npm:2.5.4"
   dependencies:
@@ -3134,12 +3134,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.1":
-  version: 2.8.1
-  resolution: "prettier@npm:2.8.1"
+"prettier@npm:^2.8.2":
+  version: 2.8.2
+  resolution: "prettier@npm:2.8.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 06a74a0f7aa5877a3912aeeeae3558014b10e438d945f88bd313222e75e7282eb7f41299d204353ec7d00b208377ddc36ffe4c7d2151f0502e783139b934d66d
+  checksum: a03ed99722f92e36e5c63b5dd5008d2b3d8d25d26c2894d3fd9a2bd887265af753af94c532990c3509711c74270df0b31f3c22110d5cc19ae3f0ee85079fb57b
   languageName: node
   linkType: hard
 
@@ -3340,14 +3340,14 @@ __metadata:
     express: "npm:^4.18.2"
     open: "npm:^8.4.0"
     picocolors: "npm:^1.0.0"
-    prettier: "npm:^2.8.1"
+    prettier: "npm:^2.8.2"
     sass: "npm:^1.57.1"
     serve-static: "npm:^1.15.0"
     swiper: "npm:^8.4.5"
-    tsx: "npm:^3.12.1"
+    tsx: "npm:^3.12.2"
     typescript: "npm:^4.9.4"
     vite: "npm:^4.0.4"
-    vite-plugin-webfont-dl: "npm:^3.4.2"
+    vite-plugin-webfont-dl: "npm:^3.4.3"
     vue: "npm:^3.2.45"
     vue-router: "npm:^4.1.6"
   languageName: unknown
@@ -3701,20 +3701,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^3.12.1":
-  version: 3.12.1
-  resolution: "tsx@npm:3.12.1"
+"tsx@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "tsx@npm:3.12.2"
   dependencies:
-    "@esbuild-kit/cjs-loader": "npm:^2.4.0"
+    "@esbuild-kit/cjs-loader": "npm:^2.4.1"
     "@esbuild-kit/core-utils": "npm:^3.0.0"
-    "@esbuild-kit/esm-loader": "npm:^2.5.0"
+    "@esbuild-kit/esm-loader": "npm:^2.5.4"
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     tsx: dist/cli.js
-  checksum: 41954a86cc5fc2002e140d5122d282060a20ad1a807ff1a2666c8d50e2dab3570614a43fe9f0844ef6232e22091e060234a3019a6d687c43d004bb8427473233
+  checksum: 749daa97650e8529c30bca3800deab0acbbbc90c4fce4305445743177c66bc4da9309db3ec6b8a1d2656c52c78315f00f61f046ae44b7f261e2f60ff7d1a3ca3
   languageName: node
   linkType: hard
 
@@ -3819,16 +3819,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-webfont-dl@npm:^3.4.2":
-  version: 3.4.2
-  resolution: "vite-plugin-webfont-dl@npm:3.4.2"
+"vite-plugin-webfont-dl@npm:^3.4.3":
+  version: 3.4.3
+  resolution: "vite-plugin-webfont-dl@npm:3.4.3"
   dependencies:
     axios: "npm:^0.25"
     clean-css: "npm:^5.3"
     picocolors: "npm:^1.0"
   peerDependencies:
     vite: ^2 || ^3 || ^4
-  checksum: b0956b6d4d9d6790d460d6d3f081bf7eb46e3c140240f30f10abcefe7b748e3c81ebe0b3434b24be864ca8bc96fd68a8971f90ad5dee1cbe3401584dba35a3f8
+  checksum: 4585545e909b2059e4e6e9dcc26990874ade5551e19035579d8db7d050c9df6552de3c4232477953fa0ac41c894b43ff58e0dbbbab8a540de4e44f30c2f8af87
   languageName: node
   linkType: hard
 

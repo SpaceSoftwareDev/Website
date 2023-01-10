@@ -1,5 +1,7 @@
 <template>
-	<form @submit.prevent="newsletterSubmit">
+	<form
+		@submit.prevent="newsletterSubmit"
+		aria-label="Newsletter Subscription">
 		<h1>Subscribe to our newsletter</h1>
 		<div class="input">
 			<input
@@ -9,7 +11,7 @@
 				placeholder="Your email..."
 				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
-			<button type="submit" aria-label="Submit">
+			<button type="submit" aria-label="Subscribe">
 				<icon icon="ion:send" class="icon" />
 			</button>
 		</div>
