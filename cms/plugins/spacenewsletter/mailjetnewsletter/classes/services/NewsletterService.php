@@ -1,4 +1,4 @@
-<?php namespace SpaceNotification\MailJetNewsletter\Classes\Services;
+<?php namespace SpaceNewsletter\MailJetNewsletter\Classes\Services;
 
 use Exception;
 use Mailjet\Client;
@@ -23,7 +23,7 @@ class NewsletterService
             throw new ValidationException($validation);
         }
 
-        Event::fire('spacenotification.mailjetnewsletter.beforeSubscribe', [$email]);
+        Event::fire('spacenewsletter.mailjetnewsletter.beforeSubscribe', [$email]);
 
         try {
             $mj = new Client(env('MJ_APIKEY_PUBLIC'), env('MJ_APIKEY_PRIVATE'),true, [
@@ -46,7 +46,7 @@ class NewsletterService
             $isSubscribed = false;
         }
 
-        Event::fire('spacenotification.mailjetnewsletter.afterSubscribe', [$email]);
+        Event::fire('spacenewsletter.mailjetnewsletter.afterSubscribe', [$email]);
 
         return $isSubscribed;
     }
@@ -65,7 +65,7 @@ class NewsletterService
             throw new ValidationException($validation);
         }
 
-        Event::fire('spacenotification.mailjetnewsletter.beforeUnsubscribe', [$email]);
+        Event::fire('spacenewsletter.mailjetnewsletter.beforeUnsubscribe', [$email]);
 
         try {
             $mj = new Client(env('MJ_APIKEY_PUBLIC'), env('MJ_APIKEY_PRIVATE'),true, [
@@ -88,7 +88,7 @@ class NewsletterService
             $isUnsubscribed = false;
         }
 
-        Event::fire('spacenotification.mailjetnewsletter.afterUnsubscribe', [$email]);
+        Event::fire('spacenewsletter.mailjetnewsletter.afterUnsubscribe', [$email]);
 
         return $isUnsubscribed;
     }

@@ -1,4 +1,4 @@
-<?php namespace SpaceNotification\MailJetNewsletter;
+<?php namespace SpaceNewsletter\MailJetNewsletter;
 
 use System\Classes\PluginBase;
 
@@ -17,7 +17,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'MailJetNewsletter',
             'description' => 'No description provided yet...',
-            'author'      => 'SpaceNotification',
+            'author'      => 'SpaceNewsletter',
             'icon'        => 'icon-leaf'
         ];
     }
