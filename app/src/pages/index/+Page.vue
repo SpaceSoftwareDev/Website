@@ -1,57 +1,37 @@
 <template>
 	<div class="container">
-		<NavBar />
+		<Navbar />
 
 		<article>
 			<h1 class="landingText">
 				Software studio <br />
 				founded by <br />
-				<strong class="highlightText"> high school students </strong>
+				<strong class="highlightText">high school students</strong>
 			</h1>
 
 			<section class="socials">
-				<a
-					href="https://facebook.com/profile/100076217131544"
-					aria-label="Facebook"
-					target="_blank">
+				<a href="https://facebook.com/profile/100076217131544" aria-label="Facebook" target="_blank">
 					<icon icon="ion:logo-facebook" id="ic1" />
 				</a>
-				<a
-					href="https://instagram.com/spacesoftwarestudio/"
-					aria-label="Instagram"
-					target="_blank">
+				<a href="https://instagram.com/spacesoftwarestudio/" aria-label="Instagram" target="_blank">
 					<icon icon="ion:logo-instagram" id="ic2" />
 				</a>
-				<a
-					href="https://twitter.com/spacesoftstudio"
-					aria-label="Twitter"
-					target="_blank">
+				<a href="https://twitter.com/spacesoftstudio" aria-label="Twitter" target="_blank">
 					<icon icon="ion:logo-twitter" id="ic3" />
 				</a>
-				<a
-					href="https://tiktok.com/@spacesoftware"
-					aria-label="TikTok"
-					target="_blank">
+				<a href="https://tiktok.com/@spacesoftware" aria-label="TikTok" target="_blank">
 					<icon icon="ion:logo-tiktok" id="ic4" />
 				</a>
 			</section>
 
-			<button
-				class="getInTouchBtn"
-				aria-label="Get in touch"
-				@click="scrollTo('contact')">
-				Get In Touch
-			</button>
+			<button class="getInTouchBtn" aria-label="Get in touch" @click="scrollTo('contact')">Get In Touch</button>
 		</article>
 
 		<aside>
 			<picture>
 				<source type="image/webp" srcset="/assets/tech-stack.webp" />
 				<source type="image/png" srcset="/assets/tech-stack.png" />
-				<img
-					class="illustration"
-					alt="Tech Stack Illustration"
-					src="/assets/tech-stack.png" />
+				<img class="illustration" alt="Tech Stack Illustration" src="/assets/tech-stack.png" />
 			</picture>
 		</aside>
 
@@ -74,13 +54,10 @@
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
 			<p class="aboutUsText">
-				<strong>space.</strong> is a software studio founded by high
-				school students from Slovakia.<br />
-				We are currently attending a high school SPŠE Hálova 16,
-				Bratislava,<br />
+				<strong>space.</strong> is a software studio founded by high school students from Slovakia.<br />
+				We are currently attending a high school SPŠE Hálova 16, Bratislava,<br />
 				where we are also a part of a new study program called
-				<a href="https://openlab.sk" target="_blank">
-					<strong> OpenLab</strong></a
+				<a href="https://openlab.sk" target="_blank"> <strong> OpenLab</strong></a
 				>.
 			</p>
 			<picture>
@@ -91,7 +68,7 @@
 		</section>
 
 		<section class="members">
-			<Member />
+			<Members />
 		</section>
 
 		<Divider id="projects" right>Projects</Divider>
@@ -116,12 +93,7 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue"
-import Footer from "@/components/Footer.vue"
-import Newsletter from "@/components/Newsletter.vue"
-import NavBar from "@/components/NavBar.vue"
-import Member from "@/components/Member.vue"
-import Divider from "@/components/Divider.vue"
-import Project from "@/components/Project.vue"
+import { Navbar, Members, Project, Divider, Newsletter, Footer } from "@/components"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg

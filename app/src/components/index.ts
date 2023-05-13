@@ -1,4 +1,8 @@
-import NavBar from "./NavBar.vue"
-import Footer from "./Footer.vue"
+export { default as Navbar } from "./NavBar.vue"
+export { default as Footer } from "./Footer.vue"
 
-export { NavBar, Footer }
+export { default as Members } from "./Member.vue"
+export { default as Project } from "./Project.vue"
+export { default as Newsletter } from "./Newsletter.vue"
+
+export { default as Divider } from "./Divider.vue"

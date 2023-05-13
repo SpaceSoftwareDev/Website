@@ -11,28 +11,29 @@
 	<img src="https://img.shields.io/badge/Status-WIP-yellow?style=for-the-badge&logo=github" alt="Version" />
 </p>
 
-----------------------------------------------------------
-
+---
 
 ## Technical Specs
 
-- Frontend Framework: [Vue.js 3](https://github.com/vuejs/core)
-- Frontend Tooling: [Vite 3.2](https://vitejs.dev/)
+-   Frontend Framework: [Vue.js 3](https://github.com/vuejs/core)
+-   Frontend Tooling: [Vite 3.2](https://vitejs.dev/)
 
-----------------------------------------------------------
+---
 
 ## Build
 
 ### Normal Build
+
 ```bash
 yarn build
 ```
 
 ### SSG Build
+
 ```bash
 yarn generate
 ```
 
 > SSR & SSG cli used in this project is **WIP** and may change frequently
 
-----------------------------------------------------------
+---

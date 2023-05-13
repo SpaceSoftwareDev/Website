@@ -1,45 +1,39 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "type": "npm",
-      "script": "dev",
-      "problemMatcher": [
-        "$vite"
-      ],
-      "label": "yarn: dev",
-      "detail": "Development Server",
-      "isBackground": true,
-      "icon": {
-        "id": "debug-start"
-      }
-    },
-    {
-      "type": "npm",
-      "script": "lint",
-      "problemMatcher": [
-        "$eslint-stylish"
-      ],
-      "label": "yarn: lint",
-      "detail": "Lint App Source",
-      "icon": {
-        "id": "eye-watch",
-        "color": "terminal.ansiCyan"
-      }
-    },
-    {
-      "type": "npm",
-      "script": "build",
-      "group": "build",
-      "problemMatcher": [
-        "$vite"
-      ],
-      "label": "yarn: build",
-      "detail": "Build App",
-      "icon": {
-        "id": "package",
-        "color": "terminal.ansiYellow"
-      }
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": ["$vite"],
+			"label": "yarn: dev",
+			"detail": "Development Server",
+			"isBackground": true,
+			"icon": {
+				"id": "debug-start"
+			}
+		},
+		{
+			"type": "npm",
+			"script": "lint",
+			"problemMatcher": ["$eslint-stylish"],
+			"label": "yarn: lint",
+			"detail": "Lint App Source",
+			"icon": {
+				"id": "eye-watch",
+				"color": "terminal.ansiCyan"
+			}
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": ["$vite"],
+			"label": "yarn: build",
+			"detail": "Build App",
+			"icon": {
+				"id": "package",
+				"color": "terminal.ansiYellow"
+			}
+		}
+	]
 }

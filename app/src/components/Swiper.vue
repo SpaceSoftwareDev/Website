@@ -1,8 +1,5 @@
 <template>
-	<swiper
-		:pagination="(pagination as any)"
-		:virtual="(virtual as any)"
-		:slides-per-view="(slidesPerView as any)">
+	<swiper :pagination="(pagination as any)" :virtual="(virtual as any)" :slides-per-view="(slidesPerView as any)">
 		<slot />
 	</swiper>
 </template>
@@ -36,10 +33,6 @@ SwiperCore.use(modules)
 }
 
 :global(.swiper-pagination-bullet-active) {
-	background: linear-gradient(
-		to bottom left,
-		#00d1ff 10%,
-		#007aff 80%
-	) !important;
+	background: linear-gradient(to bottom left, #00d1ff 10%, #007aff 80%) !important;
 }
 </style>

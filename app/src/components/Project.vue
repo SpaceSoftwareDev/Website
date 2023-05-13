@@ -5,10 +5,7 @@
 			<img alt="icon" class="icon" :src="data.icon.path" />
 		</div>
 		<swiper class="swipper" :pagination="pagination">
-			<swiper-slide
-				class="slide"
-				v-for="media in data.gallery"
-				:key="media.id">
+			<swiper-slide class="slide" v-for="media in data.gallery" :key="media.id">
 				<img alt="media" :src="media?.path" />
 			</swiper-slide>
 		</swiper>
@@ -31,11 +28,9 @@ import Swiper from "./Swiper.vue"
 import { SwiperSlide } from "swiper/vue"
 
 const projects = ref<project[]>([])
-Get<project[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/projects`).then(
-	(res) => {
-		projects.value = res.data.data
-	}
-)
+Get<project[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/projects`).then((res) => {
+	projects.value = res.data.data
+})
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 

@@ -2,8 +2,7 @@ import { defineConfig } from "vite"
 
 /** Vite Plugins */
 import vue from "@vitejs/plugin-vue"
-import { ViteWebfontDownload } from "vite-plugin-webfont-dl"
-
+import { ssr } from "vite-plugin-ssr/plugin"
 import { fileURLToPath, URL } from "url"
 
 /**
@@ -14,15 +13,10 @@ import { fileURLToPath, URL } from "url"
 export default defineConfig({
 	server: {
 		port: 80,
-		host: true
+		host: true,
+		strictPort: false
 	},
-	plugins: [
-		vue(),
-		ViteWebfontDownload([
-			"https://fonts.googleapis.com/css2?family=Space+Mono&display=swap", // Mono Font
-			"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" // Body Font
-		])
-	],
+	plugins: [vue(), ssr({ prerender: true })],
 	resolve: {
 		alias: {
 			"@": fileURLToPath(new URL("./src", import.meta.url))

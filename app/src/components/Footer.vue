@@ -11,10 +11,7 @@
 		</div>
 
 		<div class="contacts">
-			<a
-				class="contact"
-				href="https://goo.gl/maps/GtSMqiGos6WFJYZn6"
-				target="_blank">
+			<a class="contact" href="https://goo.gl/maps/GtSMqiGos6WFJYZn6" target="_blank">
 				<icon icon="ion-home" class="icon" />
 				<p>SPŠE Hálova 16, Bratislava</p>
 			</a>
@@ -105,11 +102,7 @@ footer {
 		}
 
 		p {
-			background: linear-gradient(
-				to bottom right,
-				#00d1ff 17%,
-				#0209b5 100%
-			);
+			background: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;

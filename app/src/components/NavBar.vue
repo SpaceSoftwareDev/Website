@@ -8,15 +8,9 @@
 			</a>
 			<!--Navigation links-->
 			<nav v-if="isLarge">
-				<a href="#about" @click.prevent="scrollTo('about')">
-					About us
-				</a>
-				<a href="#projects" @click.prevent="scrollTo('projects')">
-					Projects
-				</a>
-				<a href="#contact" @click.prevent="scrollTo('contact')">
-					Contact us
-				</a>
+				<a href="#about" @click.prevent="scrollTo('about')"> About us </a>
+				<a href="#projects" @click.prevent="scrollTo('projects')"> Projects </a>
+				<a href="#contact" @click.prevent="scrollTo('contact')"> Contact us </a>
 			</nav>
 			<!--More icon for mobile devices-->
 			<button class="moreButton" v-if="!isLarge" @click="open = !open">
@@ -27,15 +21,9 @@
 		</div>
 		<Transition name="scale">
 			<nav v-if="!isLarge && open" id="navLinks">
-				<a href="#about" @click.prevent="scrollTo('about')">
-					About us
-				</a>
-				<a href="#projects" @click.prevent="scrollTo('projects')">
-					Projects
-				</a>
-				<a href="#contact" @click.prevent="scrollTo('contact')">
-					Contact us
-				</a>
+				<a href="#about" @click.prevent="scrollTo('about')"> About us </a>
+				<a href="#projects" @click.prevent="scrollTo('projects')"> Projects </a>
+				<a href="#contact" @click.prevent="scrollTo('contact')"> Contact us </a>
 			</nav>
 		</Transition>
 	</header>

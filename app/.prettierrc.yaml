@@ -5,3 +5,4 @@ vueIndentScriptAndStyle: false
 bracketSameLine: true
 tabWidth: 4
 useTabs: true
+printWidth: 200

@@ -1,29 +1,14 @@
 <template>
 	<div class="wrapper">
 		<h2>Meet our team</h2>
-		<swiper
-			class="swipper"
-			:pagination="pagination"
-			:slides-per-view="count"
-			virtual>
-			<swiper-slide
-				v-for="member in members"
-				:key="member.name"
-				v-slot="{ isActive }">
+		<swiper class="swipper" :pagination="pagination" :slides-per-view="count" virtual>
+			<swiper-slide v-for="member in members" :key="member.name" v-slot="{ isActive }">
 				<div class="slide">
 					<div :class="{ card: true, hasLink: !!member.link }">
-						<img
-							alt="avatar"
-							:src="member.avatar.path"
-							loading="lazy"
-							v-if="!isActive" />
+						<img alt="avatar" :src="member.avatar.path" loading="lazy" v-if="!isActive" />
 						<h3>{{ member.name }}</h3>
 						<p>{{ member.stack.join(", ") }}</p>
-						<a
-							v-if="member.link"
-							:href="member.link"
-							aria-label="LinkedIn"
-							target="_blank">
+						<a v-if="member.link" :href="member.link" aria-label="LinkedIn" target="_blank">
 							<icon icon="ion:logo-linkedin" class="icon" />
 						</a>
 					</div>
