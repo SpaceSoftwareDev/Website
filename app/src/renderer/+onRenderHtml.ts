@@ -2,9 +2,11 @@
 export default onRenderHtml
 
 import { renderToNodeStream } from "@vue/server-renderer"
-import { escapeInject } from "vite-plugin-ssr/server"
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server"
 import { createApp } from "./app"
 import { getPageTitle } from "./getPageTitle"
+import { googletagmanager } from "./analytics"
+
 import type { PageContext } from "./types"
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types"
 
@@ -47,16 +49,7 @@ async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
 		<meta name="twitter:label1" content="Est. reading time" />
 		<meta name="twitter:data1" content="1 minute" />
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMDZ2B88L4"></script>
-		<script>
-			window.dataLayer = window.dataLayer || []
-			function gtag() {
-				dataLayer.push(arguments)
-			}
-			gtag("js", new Date())
-			gtag("config", "G-RMDZ2B88L4")
-		</script>
+		${dangerouslySkipEscape(googletagmanager)}
       </head>
       <body>
         <div id="app">${stream}</div>
