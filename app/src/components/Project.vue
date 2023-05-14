@@ -28,7 +28,7 @@ import Swiper from "./Swiper.vue"
 import { SwiperSlide } from "swiper/vue"
 
 const projects = ref<project[]>([])
-Get<project[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/projects`).then((res) => {
+Get<project[]>("projects").then((res) => {
 	projects.value = res.data.data
 })
 

@@ -2,6 +2,7 @@ import { createSSRApp, defineComponent, h, markRaw, reactive } from "vue"
 import PageShell from "./PageShell.vue"
 import type { Component, PageContext, PageProps } from "./types"
 import { setPageContext } from "./usePageContext"
+import axios from "axios"
 
 import "@/styles/index.scss"
 import "swiper/css"
@@ -46,6 +47,8 @@ export function createApp(pageContext: PageContext) {
 	const pageContextReactive = reactive(pageContext)
 
 	setPageContext(app, pageContextReactive)
+
+	axios.defaults.baseURL = `${import.meta.env.VITE_CMS_URL}/api/v1`
 
 	return app
 }

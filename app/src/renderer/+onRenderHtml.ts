@@ -17,7 +17,7 @@ async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
 	const title = getPageTitle(pageContext)
 
 	const documentHtml = escapeInject`<!DOCTYPE html>
-    <html>
+    <html lang="en">
       <head>
 		<meta charset="UTF-8" />
 

@@ -3,8 +3,8 @@
 	<header>
 		<div class="container">
 			<!--Space Logo-->
-			<a href="https://space-software.com/" class="logoLink">
-				<img alt="logo" src="/assets/space-logo.svg" class="logo" />
+			<a href="https://space-software.com/" class="logo">
+				<img alt="logo" src="/assets/space-logo.svg" />
 			</a>
 			<!--Navigation links-->
 			<nav v-if="isLarge">
@@ -14,9 +14,9 @@
 			</nav>
 			<!--More icon for mobile devices-->
 			<button class="moreButton" v-if="!isLarge" @click="open = !open">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
+				<span class="bar" />
+				<span class="bar" />
+				<span class="bar" />
 			</button>
 		</div>
 		<Transition name="scale">
@@ -65,16 +65,16 @@ header {
 	margin-top: 2.4rem;
 }
 
-.logoLink {
+.logo {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
 
-.logo {
-	width: 10rem;
-	height: auto;
-	margin-left: 5rem;
+	img {
+		width: 10rem;
+		height: auto;
+		margin-left: 5rem;
+	}
 }
 
 .moreButton {
@@ -131,8 +131,11 @@ nav {
 	}
 
 	.logo {
-		width: 8rem;
-		height: 2rem;
+		img {
+			width: 8rem;
+			height: 2rem;
+			margin-left: 2rem;
+		}
 	}
 
 	nav {
@@ -148,10 +151,6 @@ nav {
 			padding: 0.5rem 0;
 			border-top: 1px solid #7a7a7a43;
 		}
-	}
-
-	.logo {
-		margin-left: 2rem;
 	}
 
 	.moreButton {

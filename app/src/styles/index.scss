@@ -8,14 +8,14 @@
 
 body {
 	overflow-x: hidden;
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 header,
 footer {
 	min-width: 100vw;
 	min-height: 20vh;
-	font-family: "Space Mono", monospace;
+	font-family: "Space Mono", "Courier New", Courier, monospace;
 
 	p {
 		font-size: 1rem;
@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h5 {
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 	color: #2f2f2f;
 }
 

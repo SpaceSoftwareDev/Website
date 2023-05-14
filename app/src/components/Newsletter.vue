@@ -2,7 +2,15 @@
 	<form @submit.prevent="newsletterSubmit" aria-label="Newsletter Subscription">
 		<h1>Subscribe to our newsletter</h1>
 		<div class="input">
-			<input type="email" v-model="email" required placeholder="Your email..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+			<input
+				name="Newsletter"
+				autocomplete="email"
+				aria-autocomplete="inline"
+				type="email"
+				v-model="email"
+				required
+				placeholder="Your email..."
+				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
 			<button type="submit" aria-label="Subscribe">
 				<icon icon="ion:send" class="icon" />
@@ -18,7 +26,7 @@ import { Icon } from "@iconify/vue"
 const email = ref<string>("")
 
 const newsletterSubmit = async () => {
-	await axios.post(`${import.meta.env.VITE_CMS_URL}/api/v1/newsletter/subscribe`, {
+	await axios.post("newsletter/subscribe", {
 		email: email.value
 	})
 	email.value = ""
@@ -53,6 +61,12 @@ h1 {
 		border-bottom-left-radius: 20px;
 		border-top-left-radius: 20px;
 		padding: 0 1rem;
+
+		&:autofill,
+		&:-webkit-autofill {
+			-webkit-text-fill-color: black !important;
+			-webkit-box-shadow: 0 0 0 30px white inset !important;
+		}
 	}
 
 	button {

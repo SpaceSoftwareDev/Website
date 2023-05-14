@@ -240,7 +240,7 @@ a,
 
 .illustration {
 	width: 30vw;
-	height: 30vw;
+	aspect-ratio: 1;
 }
 
 @keyframes waveAnim {

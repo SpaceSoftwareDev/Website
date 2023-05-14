@@ -46,7 +46,7 @@ const pagination = {
 	}
 }
 
-Get<TeamMember[]>(`${import.meta.env.VITE_CMS_URL}/api/v1/team`).then((res) => {
+Get<TeamMember[]>("team").then((res) => {
 	members.value = res.data.data
 })
 </script>
