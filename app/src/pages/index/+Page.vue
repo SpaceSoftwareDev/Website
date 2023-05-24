@@ -3,35 +3,35 @@
 		<Navbar />
 
 		<div class="title">
-			<section class="article">
-				<h1 class="landingText">
-					Software studio <br />
-					founded by <br />
-					<strong class="highlightText">high school students</strong>
-				</h1>
-				<section class="socials">
-					<a href="https://facebook.com/profile/100076217131544" aria-label="Facebook" target="_blank">
-						<icon icon="ion:logo-facebook" id="ic1" />
-					</a>
-					<a href="https://instagram.com/spacesoftwarestudio/" aria-label="Instagram" target="_blank">
-						<icon icon="ion:logo-instagram" id="ic2" />
-					</a>
-					<a href="https://twitter.com/spacesoftstudio" aria-label="Twitter" target="_blank">
-						<icon icon="ion:logo-twitter" id="ic3" />
-					</a>
-					<a href="https://tiktok.com/@spacesoftware" aria-label="TikTok" target="_blank">
-						<icon icon="ion:logo-tiktok" id="ic4" />
-					</a>
-				</section>
-				<button class="getInTouchBtn" aria-label="Get in touch" @click="scrollTo('contact')">Get In Touch</button>
-			</section>
-			<aside>
+			<section>
+				<div class="article">
+					<h1 class="landingText">
+						Software studio <br />
+						founded by <br />
+						<strong class="highlightText">high school students</strong>
+					</h1>
+					<section class="socials">
+						<a href="https://facebook.com/profile/100076217131544" aria-label="Facebook" target="_blank">
+							<icon icon="ion:logo-facebook" id="ic1" />
+						</a>
+						<a href="https://instagram.com/spacesoftwarestudio/" aria-label="Instagram" target="_blank">
+							<icon icon="ion:logo-instagram" id="ic2" />
+						</a>
+						<a href="https://twitter.com/spacesoftstudio" aria-label="Twitter" target="_blank">
+							<icon icon="ion:logo-twitter" id="ic3" />
+						</a>
+						<a href="https://tiktok.com/@spacesoftware" aria-label="TikTok" target="_blank">
+							<icon icon="ion:logo-tiktok" id="ic4" />
+						</a>
+					</section>
+					<button class="getInTouchBtn" aria-label="Get in touch" @click="scrollTo('contact')">Get In Touch</button>
+				</div>
 				<picture>
 					<source type="image/webp" srcset="/assets/tech-stack.webp" />
 					<source type="image/png" srcset="/assets/tech-stack.png" />
 					<img class="illustration" alt="Tech Stack Illustration" src="/assets/tech-stack.png" />
 				</picture>
-			</aside>
+			</section>
 
 			<section class="scroll">
 				<div class="scrollDivider">
@@ -114,18 +114,24 @@ const scrollTo = (id: string) => {
 	overflow-x: hidden;
 }
 
-section.article {
-	margin-left: 10rem;
+.article {
 	float: left;
 }
 
 .title {
 	max-width: 1920px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+
+	section {
+		display: flex;
+		justify-content: space-evenly;
+	}
 }
 
 section.scroll {
-	width: fit-content;
+	width: min-content;
 	height: fit-content;
 	position: relative;
 }
@@ -158,7 +164,7 @@ a,
 
 .socials {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between !important;
 	width: 50%;
 	margin-top: 4vh;
 	padding-left: 0.4vw;
@@ -218,6 +224,8 @@ a,
 
 .textWrapper {
 	width: fit-content;
+	display: flex;
+	flex-direction: row;
 	margin-top: 8vh;
 }
 
@@ -250,6 +258,7 @@ a,
 .illustration {
 	width: min(30vw, 500px);
 	aspect-ratio: 1;
+	margin-left: 10rem;
 }
 
 @keyframes waveAnim {
@@ -306,18 +315,19 @@ a,
 }
 
 @media screen and (max-width: 1024px) {
-	.trashDiv {
-		margin-top: 0;
+	.title {
+		margin: 0;
 	}
 
-	article {
+	.article {
 		float: none;
-		margin: auto;
 		display: flex;
 		align-items: center;
 		text-align: center;
 		flex-direction: column;
 		justify-content: center;
+		margin-left: 0;
+		float: unset;
 	}
 
 	.landingText {

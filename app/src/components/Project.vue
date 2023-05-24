@@ -141,6 +141,7 @@ p {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin: 0;
 
 		&:nth-child(odd) {
 			flex-direction: column;

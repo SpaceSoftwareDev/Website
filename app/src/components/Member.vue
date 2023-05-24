@@ -5,7 +5,7 @@
 			<swiper-slide v-for="member in members" :key="member.name" v-slot="{ isActive }">
 				<div class="slide">
 					<div :class="{ card: true, hasLink: !!member.link }">
-						<img alt="avatar" :src="member.avatar.path" loading="lazy" v-if="!isActive" />
+						<img alt="avatar" :src="member.avatar.path" v-if="!isActive" />
 						<h3>{{ member.name }}</h3>
 						<p>{{ member.stack.join(", ") }}</p>
 						<a v-if="member.link" :href="member.link" aria-label="LinkedIn" target="_blank">
