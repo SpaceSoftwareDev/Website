@@ -1,6 +1,3 @@
-// https://vite-plugin-ssr.com/onRenderHtml
-export default onRenderHtml
-
 import { renderToNodeStream } from "@vue/server-renderer"
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server"
 import { createApp } from "./app"
@@ -10,7 +7,7 @@ import { googletagmanager } from "./analytics"
 import type { PageContext } from "./types"
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types"
 
-async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
+export default async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
 	const app = createApp(pageContext)
 	const stream = renderToNodeStream(app)
 

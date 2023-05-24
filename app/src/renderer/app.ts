@@ -18,7 +18,6 @@ export function createApp(pageContext: PageContext) {
 			pageProps: markRaw(pageContext.pageProps || {})
 		}),
 		created() {
-			// eslint-disable-next-line @typescript-eslint/no-this-alias
 			rootComponent = this
 		},
 		render() {

@@ -1,6 +1,3 @@
-// Hook `usePageContext()` to make `pageContext` available from any Vue component.
-// See https://vite-plugin-ssr.com/pageContext-anywhere
-
 import { inject } from "vue"
 import type { App } from "vue"
 import { PageContext } from "./types"
