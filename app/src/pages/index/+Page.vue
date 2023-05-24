@@ -3,7 +3,7 @@
 		<Navbar />
 
 		<div class="title">
-			<section>
+			<section class="welcome">
 				<div class="article">
 					<h1 class="landingText">
 						Software studio <br />
@@ -124,7 +124,8 @@ const scrollTo = (id: string) => {
 	display: flex;
 	flex-direction: column;
 
-	section {
+	.welcome {
+		padding: 0 3rem;
 		display: flex;
 		justify-content: space-evenly;
 	}
@@ -319,6 +320,12 @@ a,
 		margin: 0;
 	}
 
+	.welcome {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.article {
 		float: none;
 		display: flex;
@@ -392,6 +399,8 @@ a,
 	.illustration {
 		width: min(90vw, 400px);
 		height: min(90vw, 400px);
+		margin-left: 0;
+		margin-top: 2rem;
 	}
 
 	.contact {
