@@ -1,5 +1,7 @@
 <template>
-	<main class="content"><slot /></main>
+	<main class="content">
+		<Suspense>
+			<slot />
+		</Suspense>
+	</main>
 </template>
-
-<script lang="ts" setup></script>

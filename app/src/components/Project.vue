@@ -19,7 +19,7 @@
 	</div>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue"
+import { ref, onMounted } from "vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 import { Get } from "@/types"
@@ -28,8 +28,11 @@ import Swiper from "./Swiper.vue"
 import { SwiperSlide } from "swiper/vue"
 
 const projects = ref<project[]>([])
-Get<project[]>("projects").then((res) => {
-	projects.value = res.data.data
+
+onMounted(async () => {
+	await Get<project[]>("projects").then((res) => {
+		projects.value = res.data.data
+	})
 })
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
@@ -57,10 +60,11 @@ h1 {
 .project {
 	display: flex;
 	width: 90vw;
+	max-width: 1900px;
 	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: center;
-	margin: 0;
+	margin: 0 auto;
 	padding: 6vh 12vh;
 
 	&:nth-child(odd) {
@@ -70,6 +74,7 @@ h1 {
 
 .projectInfo {
 	width: 40vw;
+	max-width: 800px;
 	display: flex;
 	flex-direction: column;
 	margin-left: 1vw;

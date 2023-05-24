@@ -20,11 +20,11 @@ __metadata:
   linkType: hard
 
 "@babel/parser@npm:^7.20.15, @babel/parser@npm:^7.21.3":
-  version: 7.21.8
-  resolution: "@babel/parser@npm:7.21.8"
+  version: 7.21.9
+  resolution: "@babel/parser@npm:7.21.9"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: bd71a12bc76ff70317a20d10b9a9de9142b00608eeb45904e40a1337af82538aae8c18f30ee0ef16b384de28584197e39c960cdd10576a8e72f34f7ecdadff5e
+  checksum: 354941a5ec2819c4f0a15880f30fc73e2ab3c0ea3d0c33e9cfbeaaeeb7fc6c90fb0dbdfa3d71347726db39a5ea92575086a51a5182afbb104923fd401c6f3890
   languageName: node
   linkType: hard
 

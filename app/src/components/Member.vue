@@ -18,7 +18,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import { ref, computed, onMounted } from "vue"
 import { Get } from "@/types"
 
 import { Icon } from "@iconify/vue"
@@ -46,8 +46,10 @@ const pagination = {
 	}
 }
 
-Get<TeamMember[]>("team").then((res) => {
-	members.value = res.data.data
+onMounted(async () => {
+	await Get<TeamMember[]>("team").then((res) => {
+		members.value = res.data.data
+	})
 })
 </script>
 <style lang="scss" scoped>

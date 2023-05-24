@@ -1,9 +1,11 @@
 <template>
-	<div :class="{ dividerLineWrapper: true, right }">
-		<h1>
-			<slot />
-		</h1>
-		<div v-if="large" class="dividerLine" />
+	<div class="divider">
+		<div class="dividerLineWrapper" :class="{ right }">
+			<h1>
+				<slot />
+			</h1>
+			<div v-if="large" class="dividerLine" />
+		</div>
 	</div>
 </template>
 <script lang="ts" setup>
@@ -16,40 +18,42 @@ defineProps<{
 </script>
 <style lang="scss" scoped>
 h1 {
-	margin: 0 2rem 0 0;
-	min-width: 20vw;
-	text-align: right;
+	width: fit-content;
+	text-align: left;
 	font-weight: 600;
+}
+
+.divider {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .dividerLine {
 	background-color: #cce2ff;
-	width: 90vw;
-	margin-right: 8rem;
+	width: 80%;
 	height: 3px;
 }
 
 .dividerLineWrapper {
+	max-width: 1920px;
+	margin: 0 auto;
 	margin-top: 10vh;
-	width: 100%;
-	max-width: 100%;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	width: 80%;
+
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 
 	&.right {
 		flex-direction: row-reverse;
 
 		h1 {
-			text-align: left;
-			margin-left: 2rem;
-			margin-right: 4rem;
+			text-align: right;
 		}
 
 		.dividerLine {
-			margin-left: 8rem;
 			margin-right: 0;
 		}
 	}

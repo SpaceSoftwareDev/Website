@@ -2,54 +2,51 @@
 	<div class="container">
 		<Navbar />
 
-		<article>
-			<h1 class="landingText">
-				Software studio <br />
-				founded by <br />
-				<strong class="highlightText">high school students</strong>
-			</h1>
-
-			<section class="socials">
-				<a href="https://facebook.com/profile/100076217131544" aria-label="Facebook" target="_blank">
-					<icon icon="ion:logo-facebook" id="ic1" />
-				</a>
-				<a href="https://instagram.com/spacesoftwarestudio/" aria-label="Instagram" target="_blank">
-					<icon icon="ion:logo-instagram" id="ic2" />
-				</a>
-				<a href="https://twitter.com/spacesoftstudio" aria-label="Twitter" target="_blank">
-					<icon icon="ion:logo-twitter" id="ic3" />
-				</a>
-				<a href="https://tiktok.com/@spacesoftware" aria-label="TikTok" target="_blank">
-					<icon icon="ion:logo-tiktok" id="ic4" />
-				</a>
+		<div class="title">
+			<section class="article">
+				<h1 class="landingText">
+					Software studio <br />
+					founded by <br />
+					<strong class="highlightText">high school students</strong>
+				</h1>
+				<section class="socials">
+					<a href="https://facebook.com/profile/100076217131544" aria-label="Facebook" target="_blank">
+						<icon icon="ion:logo-facebook" id="ic1" />
+					</a>
+					<a href="https://instagram.com/spacesoftwarestudio/" aria-label="Instagram" target="_blank">
+						<icon icon="ion:logo-instagram" id="ic2" />
+					</a>
+					<a href="https://twitter.com/spacesoftstudio" aria-label="Twitter" target="_blank">
+						<icon icon="ion:logo-twitter" id="ic3" />
+					</a>
+					<a href="https://tiktok.com/@spacesoftware" aria-label="TikTok" target="_blank">
+						<icon icon="ion:logo-tiktok" id="ic4" />
+					</a>
+				</section>
+				<button class="getInTouchBtn" aria-label="Get in touch" @click="scrollTo('contact')">Get In Touch</button>
 			</section>
+			<aside>
+				<picture>
+					<source type="image/webp" srcset="/assets/tech-stack.webp" />
+					<source type="image/png" srcset="/assets/tech-stack.png" />
+					<img class="illustration" alt="Tech Stack Illustration" src="/assets/tech-stack.png" />
+				</picture>
+			</aside>
 
-			<button class="getInTouchBtn" aria-label="Get in touch" @click="scrollTo('contact')">Get In Touch</button>
-		</article>
-
-		<aside>
-			<picture>
-				<source type="image/webp" srcset="/assets/tech-stack.webp" />
-				<source type="image/png" srcset="/assets/tech-stack.png" />
-				<img class="illustration" alt="Tech Stack Illustration" src="/assets/tech-stack.png" />
-			</picture>
-		</aside>
-
-		<div class="trashDiv" />
-
-		<section>
-			<div class="scrollDivider">
-				<div class="textWrapper">
-					<p style="--i: 1" class="letter">S</p>
-					<p style="--i: 2" class="letter">C</p>
-					<p style="--i: 3" class="letter">R</p>
-					<p style="--i: 4" class="letter">O</p>
-					<p style="--i: 5" class="letter">L</p>
-					<p style="--i: 6" class="letter">L</p>
+			<section class="scroll">
+				<div class="scrollDivider">
+					<div class="textWrapper">
+						<p style="--i: 1" class="letter">S</p>
+						<p style="--i: 2" class="letter">C</p>
+						<p style="--i: 3" class="letter">R</p>
+						<p style="--i: 4" class="letter">O</p>
+						<p style="--i: 5" class="letter">L</p>
+						<p style="--i: 6" class="letter">L</p>
+					</div>
+					<div class="scrollLine" />
 				</div>
-				<div class="scrollLine" />
-			</div>
-		</section>
+			</section>
+		</div>
 
 		<Divider id="about">About us</Divider>
 		<section class="aboutUs">
@@ -114,21 +111,28 @@ const scrollTo = (id: string) => {
 	position: relative;
 	background: linear-gradient(180deg, #ffffff 0%, #cce2ff 100%);
 	height: auto;
-	max-width: 100%;
 	overflow-x: hidden;
 }
 
-.trashDiv {
-	margin-top: 30rem;
-}
-
-article {
+section.article {
 	margin-left: 10rem;
 	float: left;
 }
 
+.title {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+section.scroll {
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+}
+
 aside {
 	width: 30%;
+	max-width: fit-content;
 	height: auto;
 	float: right;
 	margin-right: 10rem;
@@ -206,9 +210,14 @@ a,
 
 .scrollDivider {
 	margin-left: 10rem;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .textWrapper {
+	width: fit-content;
 	margin-top: 8vh;
 }
 
@@ -227,8 +236,8 @@ a,
 	margin-top: 2vh;
 	width: 3px;
 	height: 40vh;
+	max-height: 400px;
 	background-color: #cce2ff;
-	margin-left: 2.5vw;
 }
 
 .projects {
@@ -239,7 +248,7 @@ a,
 }
 
 .illustration {
-	width: 30vw;
+	width: min(30vw, 500px);
 	aspect-ratio: 1;
 }
 
@@ -259,7 +268,8 @@ a,
 	justify-content: space-around;
 	align-items: center;
 	width: 60%;
-	margin: 0 20vw;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 .aboutUsText {

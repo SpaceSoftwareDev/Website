@@ -54,15 +54,20 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	transition: all 300ms;
-}
-
-.container {
-	display: flex;
-	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
-	margin-top: 2.4rem;
+	transition: all 300ms;
+	max-width: 1920px;
+	margin: 0 auto;
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 2.4rem;
+		width: 100%;
+		max-width: 1920px;
+	}
 }
 
 .logo {
