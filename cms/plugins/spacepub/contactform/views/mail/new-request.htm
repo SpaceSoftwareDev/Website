@@ -1,0 +1,27 @@
+subject = "Nová správa z kontaktného formulára"
+==
+
+Ahoj,
+
+obdržali sme novú správu z kontaktného formulára.
+
+Email: {{ email }}
+
+Meno: {{ name }}
+
+Správa: {{ request }}
+
+Pre zobrazenie detailu, navštív stánku {{ url }}
+==
+
+<p>Ahoj,</p>
+
+<p>obdržali sme novú správu z kontaktného formulára.</p>
+
+<p><b>Email</b>: {{ email }}</p>
+
+<p><b>Meno</b>: {{ name }}</p>
+
+<p><b>Správa</b>: {{ request | raw }}</p>
+
+<p>Pre zobrazenie detailu, navštív stánku <a href="{{ url }}">{{ url }}</a></p>

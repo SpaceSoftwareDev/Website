@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Contact Form
+
+# Model Form Field configuration
+form: $/spacepub/contactform/models/contactform/fields.yaml
+
+# Model Class name
+modelClass: SpacePub\ContactForm\Models\ContactForm
+
+# Default redirect location
+defaultRedirect: spacepub/contactform/contactforms
+
+# Create page
+create:
+    title: New Contact Form
+    redirect: spacepub/contactform/contactforms/update/:id
+    redirectClose: spacepub/contactform/contactforms
+
+# Update page
+update:
+    title: Update Contact Form
+    redirect: spacepub/contactform/contactforms
+    redirectClose: spacepub/contactform/contactforms
+
+# Preview page
+preview:
+    title: Preview Contact Form
