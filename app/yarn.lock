@@ -3061,7 +3061,7 @@ __metadata:
     tsx: "npm:^3.12.7"
     typescript: "npm:^5.0.4"
     vite: "npm:^4.3.8"
-    vite-plugin-ssr: "npm:^0.4.126"
+    vite-plugin-ssr: "npm:^0.4.128"
     vue: "npm:^3.3.4"
   languageName: unknown
   linkType: soft
@@ -3432,9 +3432,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-ssr@npm:^0.4.126":
-  version: 0.4.126
-  resolution: "vite-plugin-ssr@npm:0.4.126"
+"vite-plugin-ssr@npm:^0.4.128":
+  version: 0.4.128
+  resolution: "vite-plugin-ssr@npm:0.4.128"
   dependencies:
     "@brillout/import": "npm:0.2.3"
     "@brillout/json-serializer": "npm:^0.5.3"
@@ -3454,7 +3454,7 @@ __metadata:
       optional: true
   bin:
     vite-plugin-ssr: node/cli/bin-entry.js
-  checksum: 3e5fc85cd6af64a8f4f5997c60efb07850f104602e13443a10e2e7419851acad7f94480927f306d9a5d600e81ac6cb7372403dd21d672682d61c6d93e1a97fd0
+  checksum: c13ac419e6673f9ee65649bfcf3a1a9c51b073ae2194e52ba8b158a244d56b7f8f9b67aeb748bae600ff3b30083dcc97936f8f49a9a4a6921091e3f0b972790a
   languageName: node
   linkType: hard
 

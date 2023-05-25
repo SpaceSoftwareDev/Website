@@ -137,14 +137,6 @@ section.scroll {
 	position: relative;
 }
 
-aside {
-	width: 30%;
-	max-width: fit-content;
-	height: auto;
-	float: right;
-	margin-right: 10rem;
-}
-
 .landingText {
 	color: black;
 	font-size: 3.7rem;
@@ -350,22 +342,6 @@ a,
 		width: 78%;
 	}
 
-	aside {
-		float: none;
-		margin: auto;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		flex-direction: column;
-		justify-content: center;
-		width: 80vw;
-		height: auto;
-
-		img {
-			margin-top: 5vh;
-		}
-	}
-
 	.getInTouchBtn {
 		padding: 2vh 6vw;
 		font-size: 1.3rem;
@@ -376,7 +352,6 @@ a,
 	}
 
 	.scrollLine {
-		margin-left: 2.4rem;
 		height: 30vh;
 	}
 
@@ -411,14 +386,8 @@ a,
 	}
 }
 @media screen and (max-width: 1375px) and (min-width: 1024px) {
-	aside {
+	.illustration {
 		display: none;
-	}
-}
-
-@media screen and (min-width: 560px) and (max-width: 1375px) {
-	aside {
-		width: 400px;
 	}
 }
 </style>
