@@ -75,11 +75,10 @@
 
 		<Divider id="contact">Contact us</Divider>
 		<section class="contact">
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="First name" />
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="Last name" />
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="Name" />
 			<input type="text" autocomplete="off" name="text" class="input" placeholder="Email" />
-			<textarea class="input textArea" autocomplete="off" placeholder="Your message"></textarea>
-			<button class="button sent">Sent</button>
+			<textarea class="input textArea" autocomplete="off" placeholder="Your message" />
+			<button class="button send">Send</button>
 		</section>
 
 		<section class="newsletter">
@@ -159,7 +158,7 @@ const scrollTo = (id: string) => {
 		scale: 1;
 	}
 
-	&.sent {
+	&.send {
 		border-radius: 25px;
 		font-size: 1.5rem;
 	}
