@@ -50,9 +50,10 @@ p {
 	color: rgba(0, 0, 0, 0.4);
 }
 
-input {
+input, textarea {
 	border: none;
 	font-size: 0.85rem;
+	font-family: "Poppins", sans-serif;
 
 	&:focus {
 		outline: none;

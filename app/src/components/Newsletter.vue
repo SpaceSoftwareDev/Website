@@ -9,7 +9,7 @@
 				type="email"
 				v-model="email"
 				required
-				placeholder="Your email..."
+				placeholder="Your email"
 				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
 			<button type="submit" aria-label="Subscribe">

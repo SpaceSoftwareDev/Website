@@ -74,12 +74,13 @@
 		</section>
 
 		<Divider id="contact">Contact us</Divider>
-		<section class="contact">
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="Name" />
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="Email" />
-			<textarea class="input textArea" autocomplete="off" placeholder="Your message" />
-			<button class="button send">Send</button>
-		</section>
+		<h2 class="contact">Let's talk business</h2>
+		<form class="contact" @submit.prevent="contactFormSubmit">
+			<input type="text" v-model="name" autocomplete="off" name="text" class="input" placeholder="Your name" required />
+			<input type="email" v-model="email" autocomplete="off" name="text" class="input" placeholder="Your email" required />
+			<textarea v-model="message" class="input textArea" autocomplete="off" placeholder="Your message" required />
+			<button type="submit" class="button send">Send</button>
+		</form>
 
 		<section class="newsletter">
 			<Newsletter v-if="!large" />
@@ -90,11 +91,17 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue"
+import axios from "axios"
 import { Icon } from "@iconify/vue"
 import { Navbar, Members, Project, Divider, Newsletter, Footer } from "@/components"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
+
+const name = ref<string>("")
+const email = ref<string>("")
+const message = ref<string>("")
 
 const scrollTo = (id: string) => {
 	const element = document.getElementById(id)
@@ -105,6 +112,17 @@ const scrollTo = (id: string) => {
 		left: 0,
 		behavior: "smooth"
 	})
+}
+
+const contactFormSubmit = async () => {
+	await axios.post("contact", {
+		name: name.value,
+		email: email.value,
+		message: message.value
+	})
+	name.value = ""
+	email.value = ""
+	message.value = ""
 }
 </script>
 <style lang="scss" scoped>
@@ -159,8 +177,7 @@ const scrollTo = (id: string) => {
 	}
 
 	&.send {
-		border-radius: 25px;
-		font-size: 1.5rem;
+		width: max(30vw, 300px);
 	}
 }
 
@@ -349,7 +366,7 @@ a,
 	&:focus {
 		background-color: white;
 		transform: scale(1.05);
-		box-shadow: 13px 13px 100px #1b45605f, -13px -13px 100px #ffffff;
+		box-shadow: 13px 13px 100px #1b45605f;
 	}
 
 	&.textArea {
@@ -365,6 +382,7 @@ a,
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-weight: 600;
 }
 
 .newsletter {

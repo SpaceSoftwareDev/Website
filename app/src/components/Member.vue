@@ -1,8 +1,8 @@
 <template>
 	<div class="wrapper">
 		<h2>Meet our team</h2>
-		<img class="arrow" src="/assets/left.svg" @click="left()" :aria-disabled="first" />
-		<img class="arrow" src="/assets/right.svg" @click="right()" :aria-disabled="last" />
+		<img class="arrow" src="/assets/left.svg" @click="left()" :aria-disabled="first" alt="arrowLeft" />
+		<img class="arrow" src="/assets/right.svg" @click="right()" :aria-disabled="last" alt="arrowRight" />
 		<swiper class="swipper" :pagination="pagination" @onSwiper="inst = $event" @slide-change="console.log" :slides-per-view="count" virtual>
 			<swiper-slide v-for="member in members" :key="member.name" v-slot="{ isActive }">
 				<div class="slide">
@@ -74,7 +74,7 @@ h2 {
 }
 
 .arrow {
-	height: 75px;
+	height: 50px;
 	position: absolute;
 	z-index: 100;
 	right: 0;
