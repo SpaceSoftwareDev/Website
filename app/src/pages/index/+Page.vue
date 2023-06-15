@@ -12,16 +12,16 @@
 					</h1>
 					<section class="socials">
 						<a href="https://facebook.com/profile/100076217131544" aria-label="Facebook" target="_blank">
-							<icon icon="ion:logo-facebook" id="ic1" />
+							<icon icon="ion:logo-facebook" class="icon" />
 						</a>
 						<a href="https://instagram.com/spacesoftwarestudio/" aria-label="Instagram" target="_blank">
-							<icon icon="ion:logo-instagram" id="ic2" />
+							<icon icon="ion:logo-instagram" class="icon" />
 						</a>
 						<a href="https://twitter.com/spacesoftstudio" aria-label="Twitter" target="_blank">
-							<icon icon="ion:logo-twitter" id="ic3" />
+							<icon icon="ion:logo-twitter" class="icon" />
 						</a>
 						<a href="https://tiktok.com/@spacesoftware" aria-label="TikTok" target="_blank">
-							<icon icon="ion:logo-tiktok" id="ic4" />
+							<icon icon="ion:logo-tiktok" class="icon" />
 						</a>
 					</section>
 					<button @click="scrollTo('contact')" aria-label="Get in touch" class="button">Get In Touch</button>
@@ -75,9 +75,9 @@
 
 		<Divider id="contact">Contact us</Divider>
 		<section class="contact">
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="First name"/>
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="Last name"/>
-			<input type="text" autocomplete="off" name="text" class="input" placeholder="Email"/>
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="First name" />
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="Last name" />
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="Email" />
 			<textarea class="input textArea" autocomplete="off" placeholder="Your message"></textarea>
 			<button class="button sent">Sent</button>
 		</section>
@@ -128,49 +128,44 @@ const scrollTo = (id: string) => {
 	border-radius: 34px;
 	background-color: transparent;
 	font-weight: 600;
-	transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+	transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 	overflow: hidden;
 
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		width: 50px;
+		height: 50px;
+		border-radius: inherit;
+		scale: 0;
+		z-index: -1;
+		background-image: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+		transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
 
+	&:hover::before {
+		scale: 10;
+	}
+
+	&:hover {
+		color: #ffffff;
+		scale: 1.1;
+		border-width: 1px;
+	}
+
+	&:active {
+		scale: 1;
+	}
 }
 
-.button::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	margin: auto;
-	width: 50px;
-	height: 50px;
-	border-radius: inherit;
-	scale: 0;
-	z-index: -1;
-	background-image: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
-	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.button:hover::before {
-	scale: 10;
-}
-
-.button:hover {
-	color: #ffffff;
-	scale: 1.1;
-
-}
-.button:active {
-	scale: 1;
-}
-
-
-
-.sent{
+.sent {
 	width: 15vw;
 	height: 7vh;
 	border-radius: 1.25vw;
 	font-size: 1.5rem;
 }
-
-
 
 .article {
 	float: left;
@@ -237,10 +232,7 @@ a,
 	}
 }
 
-#ic1,
-#ic2,
-#ic3,
-#ic4 {
+.icon {
 	font-size: 2rem;
 	transition: all 200ms ease-in-out;
 	color: black;
@@ -364,12 +356,12 @@ a,
 	box-shadow: 13px 13px 100px #1b45605f, -13px -13px 100px #ffffff;
 }
 
-.textArea{
+.textArea {
 	height: 17vh;
 	resize: none;
 }
 
-.sentBtn{
+.sentBtn {
 	width: 10vw;
 	height: 5vh;
 	border-radius: 50vw;
@@ -378,13 +370,13 @@ a,
 }
 
 .contact {
-		padding-top: 20px;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
+	padding-top: 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 
 .newsletter {
 	display: flex;
@@ -464,8 +456,6 @@ a,
 		margin-left: 0;
 		margin-top: 2rem;
 	}
-
-
 }
 @media screen and (max-width: 1375px) and (min-width: 1024px) {
 	.illustration {

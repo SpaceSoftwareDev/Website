@@ -27,14 +27,14 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
+import { breakpointsTailwind, useBreakpoints, set } from "@vueuse/core"
 
 const isLarge = useBreakpoints(breakpointsTailwind).lg
 
 const open = ref(false)
 
 const scrollTo = (id: string) => {
-	open.value = false
+	set(open, false)
 	const element = document.getElementById(id)
 	if (!element) return
 	const rect = element.getBoundingClientRect()

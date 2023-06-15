@@ -1,12 +1,12 @@
 <template>
-	<swiper :pagination="pagination" :virtual="virtual" :slides-per-view="slidesPerView">
+	<swiper @swiper="emit('onSwiper', $event)" @slideChange="emit('onSwiper', $event)" :pagination="pagination" :virtual="virtual" :slides-per-view="slidesPerView">
 		<slot />
 	</swiper>
 </template>
 
 <script lang="ts" setup>
 import { Swiper } from "swiper/vue"
-import SwiperCore, { Pagination, Virtual } from "swiper"
+import SwiperCore, { Swiper as Instance, Pagination, Virtual } from "swiper"
 
 interface PaginationType {
 	clickable: boolean
@@ -17,6 +17,10 @@ const props = defineProps<{
 	pagination?: PaginationType
 	virtual?: boolean
 	slidesPerView?: number
+}>()
+
+const emit = defineEmits<{
+	(event: "onSwiper", data: Instance): void
 }>()
 
 const modules = []

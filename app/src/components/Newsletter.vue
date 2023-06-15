@@ -76,6 +76,8 @@ h1 {
 		height: 50px;
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
+		background-color: #00d1ff;
+		border: none;
 
 		.icon {
 			height: 25px;

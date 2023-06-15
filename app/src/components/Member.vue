@@ -1,7 +1,9 @@
 <template>
 	<div class="wrapper">
 		<h2>Meet our team</h2>
-		<swiper class="swipper" :pagination="pagination" :slides-per-view="count" virtual>
+		<img class="arrow" src="/assets/left.svg" @click="left()" :aria-disabled="first" />
+		<img class="arrow" src="/assets/right.svg" @click="right()" :aria-disabled="last" />
+		<swiper class="swipper" :pagination="pagination" @onSwiper="inst = $event" @slide-change="console.log" :slides-per-view="count" virtual>
 			<swiper-slide v-for="member in members" :key="member.name" v-slot="{ isActive }">
 				<div class="slide">
 					<div :class="{ card: true, hasLink: !!member.link }">
@@ -26,6 +28,7 @@ import type { TeamMember } from "@/types"
 
 import Swiper from "./Swiper.vue"
 import { SwiperSlide } from "swiper/vue"
+import { Swiper as Instance } from "swiper"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
@@ -35,6 +38,19 @@ const count = computed(() => {
 	if (breakpoints.md.value) return 2
 	return 1
 })
+
+const inst = ref<Instance>()
+const activeIndex = ref(0)
+const left = () => {
+	inst.value.slidePrev()
+	activeIndex.value--
+}
+const right = () => {
+	inst.value.slideNext()
+	activeIndex.value++
+}
+const first = computed(() => activeIndex.value === 0)
+const last = computed(() => activeIndex.value === inst.value?.snapGrid.length - 1)
 
 const members = ref<TeamMember[]>([])
 
@@ -55,6 +71,37 @@ onMounted(async () => {
 h2 {
 	text-align: center;
 	font-weight: 600;
+}
+
+.arrow {
+	height: 75px;
+	position: absolute;
+	z-index: 100;
+	right: 0;
+	opacity: 30%;
+	transition: all 500ms ease;
+	backdrop-filter: blur(10px);
+	margin: 0 12.5vw;
+	cursor: pointer;
+
+	&:first-of-type {
+		left: 0;
+	}
+
+	&:hover {
+		scale: 1.1;
+		opacity: 50%;
+	}
+
+	&[aria-disabled="true"] {
+		cursor: not-allowed;
+		opacity: 20%;
+
+		&:hover {
+			opacity: 20%;
+			scale: 1;
+		}
+	}
 }
 
 .card {
@@ -143,6 +190,10 @@ h2 {
 		&.hasLink {
 			height: 300px;
 		}
+	}
+
+	.arrow {
+		display: none;
 	}
 
 	.swiper {
