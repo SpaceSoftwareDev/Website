@@ -74,10 +74,12 @@
 		</section>
 
 		<Divider id="contact">Contact us</Divider>
-		<section>
-			<a class="contact" href="mailto:info@space-software.com" target="_blank">
-				<img src="/assets/email.svg" alt="email" />
-			</a>
+		<section class="contact">
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="First name"/>
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="Last name"/>
+			<input type="text" autocomplete="off" name="text" class="input" placeholder="Email"/>
+			<textarea class="input textArea" autocomplete="off" placeholder="Your message"></textarea>
+			<button class="sentBtn">Sent</button>
 		</section>
 
 		<section class="newsletter">
@@ -289,15 +291,44 @@ a,
 	justify-content: center;
 }
 
-.contact {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	margin-top: 2rem;
-	animation: pulse 3s infinite;
+.input {
+	margin-bottom: 20px;
+	border: none;
+	width: 30vw;
+	outline: none;
+	border-radius: 15px;
+	padding: 1em;
+	background-color: #ffffff;
+	transition: 300ms ease-in-out;
 }
+
+.input:focus {
+	background-color: white;
+	transform: scale(1.05);
+	box-shadow: 13px 13px 100px #1b45605f, -13px -13px 100px #ffffff;
+}
+
+.textArea{
+	height: 17vh;
+	resize: none;
+}
+
+.sentBtn{
+	width: 10vw;
+	height: 5vh;
+	border-radius: 50vw;
+	font-weight: bold;
+	font-family: "Poppins";
+}
+
+.contact {
+		padding-top: 20px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 
 .newsletter {
 	display: flex;
@@ -378,12 +409,7 @@ a,
 		margin-top: 2rem;
 	}
 
-	.contact {
-		img {
-			width: 12rem;
-			height: 12rem;
-		}
-	}
+
 }
 @media screen and (max-width: 1375px) and (min-width: 1024px) {
 	.illustration {
