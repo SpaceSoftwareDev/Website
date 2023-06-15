@@ -117,7 +117,7 @@ const scrollTo = (id: string) => {
 }
 .button {
 	margin-top: 5vh;
-	width: 15vw;
+	width: max(15vw, 300px);
 	height: 9vh;
 	font-size: 1.5rem;
 	font-family: "Poppins";
@@ -158,13 +158,11 @@ const scrollTo = (id: string) => {
 	&:active {
 		scale: 1;
 	}
-}
 
-.sent {
-	width: 15vw;
-	height: 7vh;
-	border-radius: 1.25vw;
-	font-size: 1.5rem;
+	&.sent {
+		border-radius: 25px;
+		font-size: 1.5rem;
+	}
 }
 
 .article {
@@ -342,31 +340,23 @@ a,
 .input {
 	margin-bottom: 20px;
 	border: none;
-	width: 30vw;
+	width: max(30vw, 300px);
 	outline: none;
 	border-radius: 15px;
 	padding: 1em;
 	background-color: #ffffff;
 	transition: 300ms ease-in-out;
-}
 
-.input:focus {
-	background-color: white;
-	transform: scale(1.05);
-	box-shadow: 13px 13px 100px #1b45605f, -13px -13px 100px #ffffff;
-}
+	&:focus {
+		background-color: white;
+		transform: scale(1.05);
+		box-shadow: 13px 13px 100px #1b45605f, -13px -13px 100px #ffffff;
+	}
 
-.textArea {
-	height: 17vh;
-	resize: none;
-}
-
-.sentBtn {
-	width: 10vw;
-	height: 5vh;
-	border-radius: 50vw;
-	font-weight: bold;
-	font-family: "Poppins";
+	&.textArea {
+		height: 17vh;
+		resize: none;
+	}
 }
 
 .contact {

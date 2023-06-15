@@ -87,13 +87,14 @@ footer {
 	align-items: center;
 
 	.icon {
-		color: #2f2f2f;
+		color: #555555;
 		margin-right: 1rem;
 		transform: scale(1.3);
 	}
 
 	p {
 		margin: 0.3rem 0;
+		transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	}
 
 	&:hover {
