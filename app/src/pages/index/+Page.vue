@@ -75,7 +75,7 @@
 
 		<Divider id="contact">Contact us</Divider>
 		<section>
-			<a class="contact" href="mailto:info@space-software.com">
+			<a class="contact" href="mailto:info@space-software.com" target="_blank">
 				<img src="/assets/email.svg" alt="email" />
 			</a>
 		</section>

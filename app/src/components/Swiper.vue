@@ -1,5 +1,5 @@
 <template>
-	<swiper :pagination="(pagination as any)" :virtual="(virtual as any)" :slides-per-view="(slidesPerView as any)">
+	<swiper :pagination="pagination" :virtual="virtual" :slides-per-view="slidesPerView">
 		<slot />
 	</swiper>
 </template>

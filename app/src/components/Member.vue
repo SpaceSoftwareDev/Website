@@ -22,7 +22,6 @@ import { ref, computed, onMounted } from "vue"
 import { Get } from "@/types"
 
 import { Icon } from "@iconify/vue"
-
 import type { TeamMember } from "@/types"
 
 import Swiper from "./Swiper.vue"

@@ -61,6 +61,8 @@ h1 {
 		border-bottom-left-radius: 20px;
 		border-top-left-radius: 20px;
 		padding: 0 1rem;
+		background-color: white;
+		color: black;
 
 		&:autofill,
 		&:-webkit-autofill {

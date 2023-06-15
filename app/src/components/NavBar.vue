@@ -1,18 +1,14 @@
 <template>
-	<!--Whole header-->
 	<header>
 		<div class="container">
-			<!--Space Logo-->
 			<a href="https://space-software.com/" class="logo">
 				<img alt="logo" src="/assets/space-logo.svg" />
 			</a>
-			<!--Navigation links-->
 			<nav v-if="isLarge">
 				<a href="#about" @click.prevent="scrollTo('about')"> About us </a>
 				<a href="#projects" @click.prevent="scrollTo('projects')"> Projects </a>
 				<a href="#contact" @click.prevent="scrollTo('contact')"> Contact us </a>
 			</nav>
-			<!--More icon for mobile devices-->
 			<button class="moreButton" v-if="!isLarge" @click="open = !open">
 				<span class="bar" />
 				<span class="bar" />
