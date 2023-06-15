@@ -2,15 +2,7 @@
 	<form @submit.prevent="newsletterSubmit" aria-label="Newsletter Subscription">
 		<h1>Subscribe to our newsletter</h1>
 		<div class="input">
-			<input
-				name="Newsletter"
-				autocomplete="email"
-				aria-autocomplete="inline"
-				type="email"
-				v-model="email"
-				required
-				placeholder="Your email"
-				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+			<input name="Newsletter" autocomplete="email" aria-autocomplete="inline" type="email" v-model="email" required placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
 			<button type="submit" aria-label="Subscribe">
 				<icon icon="ion:send" class="icon" />
@@ -22,14 +14,29 @@
 import { ref } from "vue"
 import axios from "axios"
 import { Icon } from "@iconify/vue"
+import { useEventBus } from "@vueuse/core"
 
+const bus = useEventBus("toasts")
 const email = ref<string>("")
 
 const newsletterSubmit = async () => {
-	await axios.post("newsletter/subscribe", {
-		email: email.value
-	})
-	email.value = ""
+	await axios
+		.post("newsletter/subscribe", {
+			email: email.value
+		})
+		.then((response) => {
+			bus.emit("show", {
+				message: "Successfully subscribed",
+				status: "success"
+			})
+			email.value = ""
+		})
+		.catch(() => {
+			bus.emit("show", {
+				message: "Something went wrong",
+				status: "error"
+			})
+		})
 }
 </script>
 

@@ -6,3 +6,5 @@ export { default as Project } from "./Project.vue"
 export { default as Newsletter } from "./Newsletter.vue"
 
 export { default as Divider } from "./Divider.vue"
+
+export { default as Toasts } from "./Toasts.vue"

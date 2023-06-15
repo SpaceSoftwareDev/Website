@@ -95,9 +95,10 @@ import { ref } from "vue"
 import axios from "axios"
 import { Icon } from "@iconify/vue"
 import { Navbar, Members, Project, Divider, Newsletter, Footer } from "@/components"
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
+import { breakpointsTailwind, useBreakpoints, useEventBus } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg
+const bus = useEventBus("toasts")
 
 const name = ref<string>("")
 const email = ref<string>("")
@@ -115,14 +116,27 @@ const scrollTo = (id: string) => {
 }
 
 const contactFormSubmit = async () => {
-	await axios.post("contact", {
-		name: name.value,
-		email: email.value,
-		message: message.value
-	})
-	name.value = ""
-	email.value = ""
-	message.value = ""
+	await axios
+		.post("contact", {
+			name: name.value,
+			email: email.value,
+			message: message.value
+		})
+		.then(() => {
+			bus.emit("show", {
+				message: `Message sent`,
+				status: "success"
+			})
+			name.value = ""
+			email.value = ""
+			message.value = ""
+		})
+		.catch(() => {
+			bus.emit("show", {
+				message: "Something went wrong",
+				status: "error"
+			})
+		})
 }
 </script>
 <style lang="scss" scoped>
@@ -359,6 +373,7 @@ a,
 	width: max(30vw, 300px);
 	outline: none;
 	border-radius: 15px;
+	color: black;
 	padding: 1em;
 	background-color: #ffffff;
 	transition: 300ms ease-in-out;

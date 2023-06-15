@@ -29,3 +29,8 @@ export interface TeamMember extends resource {
 export function Get<T>(url: string) {
 	return axios.get<CMSData<T>>(url)
 }
+
+export interface Toast {
+	status: "success" | "error" | "info"
+	message: string
+}
