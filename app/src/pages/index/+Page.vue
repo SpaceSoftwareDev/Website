@@ -24,7 +24,7 @@
 							<icon icon="ion:logo-tiktok" id="ic4" />
 						</a>
 					</section>
-					<button class="getInTouchBtn" aria-label="Get in touch" @click="scrollTo('contact')">Get In Touch</button>
+					<button @click="scrollTo('contact')" aria-label="Get in touch" class="button">Get In Touch</button>
 				</div>
 				<picture>
 					<source type="image/webp" srcset="/assets/tech-stack.webp" />
@@ -79,7 +79,7 @@
 			<input type="text" autocomplete="off" name="text" class="input" placeholder="Last name"/>
 			<input type="text" autocomplete="off" name="text" class="input" placeholder="Email"/>
 			<textarea class="input textArea" autocomplete="off" placeholder="Your message"></textarea>
-			<button class="sentBtn">Sent</button>
+			<button class="button sent">Sent</button>
 		</section>
 
 		<section class="newsletter">
@@ -115,6 +115,62 @@ const scrollTo = (id: string) => {
 	height: auto;
 	overflow-x: hidden;
 }
+.button {
+	margin-top: 5vh;
+	width: 15vw;
+	height: 9vh;
+	font-size: 1.5rem;
+	font-family: "Poppins";
+	cursor: pointer;
+	position: relative;
+	color: #2f81e1;
+	border: 2px solid #2f81e1;
+	border-radius: 34px;
+	background-color: transparent;
+	font-weight: 600;
+	transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+	overflow: hidden;
+
+
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border-radius: inherit;
+	scale: 0;
+	z-index: -1;
+	background-image: linear-gradient(to bottom right, #00d1ff 17%, #0209b5 100%);
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+	scale: 10;
+}
+
+.button:hover {
+	color: #ffffff;
+	scale: 1.1;
+
+}
+.button:active {
+	scale: 1;
+}
+
+
+
+.sent{
+	width: 15vw;
+	height: 7vh;
+	border-radius: 1.25vw;
+	font-size: 1.5rem;
+}
+
+
 
 .article {
 	float: left;
