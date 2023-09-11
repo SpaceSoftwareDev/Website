@@ -1,14 +1,12 @@
 {
-	"recommendations": [
-		"vue.volar",
-		"antfu.auto-npx",
-		"christian-kohler.path-intellisense",
-		"esbenp.prettier-vscode",
-		"syler.sass-indented",
-		"mrmlnc.vscode-scss",
-		"ms-vscode.vscode-typescript-next",
-		"dbaeumer.vscode-eslint",
-		"editorconfig.editorconfig",
-		"aaron-bond.better-comments"
-	]
+    "recommendations": [
+        "vue.volar",
+        "antfu.auto-npx",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "aaron-bond.better-comments"
+    ]
 }
