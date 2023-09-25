@@ -94,7 +94,7 @@
 import { ref } from "vue"
 import axios from "axios"
 import { Icon } from "@iconify/vue"
-import { Navbar, Members, Project, Divider, Newsletter, Footer } from "@/components"
+import { Navbar, Members, Project, Divider, Newsletter, Footer } from "#/components"
 import { breakpointsTailwind, useBreakpoints, useEventBus } from "@vueuse/core"
 
 const large = useBreakpoints(breakpointsTailwind).lg

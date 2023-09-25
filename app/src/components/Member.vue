@@ -21,10 +21,10 @@
 </template>
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
-import { Get } from "@/types"
+import { Get } from "#/types"
 
 import { Icon } from "@iconify/vue"
-import type { TeamMember } from "@/types"
+import type { TeamMember } from "#/types"
 
 import Swiper from "./Swiper.vue"
 import { SwiperSlide } from "swiper/vue"

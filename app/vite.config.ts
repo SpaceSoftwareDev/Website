@@ -2,7 +2,7 @@ import { defineConfig } from "vite"
 
 /** Vite Plugins */
 import vue from "@vitejs/plugin-vue"
-import { ssr } from "vite-plugin-ssr/plugin"
+import { ssr } from "vike/plugin"
 import { fileURLToPath, URL } from "url"
 
 /**
@@ -19,7 +19,7 @@ export default defineConfig({
 	plugins: [vue(), ssr({ prerender: true })],
 	resolve: {
 		alias: {
-			"@": fileURLToPath(new URL("./src", import.meta.url))
+			"#": fileURLToPath(new URL("./src", import.meta.url))
 		}
 	}
 })

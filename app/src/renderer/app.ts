@@ -4,7 +4,7 @@ import type { Component, PageContext, PageProps } from "./types"
 import { setPageContext } from "./usePageContext"
 import axios from "axios"
 
-import "@/styles/index.scss"
+import "#/styles/index.scss"
 import "swiper/css"
 import "swiper/css/bundle"
 
@@ -35,6 +35,7 @@ export function createApp(pageContext: PageContext) {
 
 	const app = createSSRApp(PageWithWrapper)
 
+	// We use `app.changePage()` to do Client Routing, see `_default.page.client.js`
 	objectAssign(app, {
 		changePage: (pageContext: PageContext) => {
 			Object.assign(pageContextReactive, pageContext)
@@ -43,15 +44,17 @@ export function createApp(pageContext: PageContext) {
 		}
 	})
 
+	// When doing Client Routing, we mutate pageContext (see usage of `app.changePage()` in `_default.page.client.js`).
+	// We therefore use a reactive pageContext.
 	const pageContextReactive = reactive(pageContext)
 
-	setPageContext(app, pageContextReactive)
-
-	axios.defaults.baseURL = `${import.meta.env.VITE_CMS_URL}/api/v1`
+	// Make `pageContext` accessible from any Vue component
+	setPageContext(app, pageContextReactive as PageContext)
 
 	return app
 }
 
+// Same as `Object.assign()` but with type inference
 function objectAssign<Obj extends object, ObjAddendum>(obj: Obj, objAddendum: ObjAddendum): asserts obj is Obj & ObjAddendum {
 	Object.assign(obj, objAddendum)
 }

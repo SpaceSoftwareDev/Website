@@ -1,11 +1,11 @@
 import { renderToNodeStream } from "@vue/server-renderer"
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr/server"
+import { escapeInject, dangerouslySkipEscape } from "vike/server"
 import { createApp } from "./app"
 import { getPageTitle } from "./getPageTitle"
 import { googletagmanager } from "./analytics"
 
 import type { PageContext } from "./types"
-import type { PageContextBuiltIn } from "vite-plugin-ssr/types"
+import type { PageContextBuiltIn } from "vike/types"
 
 export default async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
 	const app = createApp(pageContext)

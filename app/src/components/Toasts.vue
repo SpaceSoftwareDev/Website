@@ -16,7 +16,7 @@ import { ref } from "vue"
 import { useEventBus } from "@vueuse/core"
 import { Icon } from "@iconify/vue"
 
-import { Toast } from "@/types"
+import { Toast } from "#/types"
 
 const bus = useEventBus<"show", Toast>("toasts")
 const active = ref<Toast | undefined | null>()

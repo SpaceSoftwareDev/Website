@@ -53,14 +53,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brillout/json-serializer@npm:^0.5.4":
+"@brillout/json-serializer@npm:^0.5.6":
   version: 0.5.6
   resolution: "@brillout/json-serializer@npm:0.5.6"
   checksum: 871b48a0d8387b1d2d6f53e49de9e879639fc61f36bce021e05a940bb4d83ba42c0b25d9913cd559cb3dd972db08a56f252fdbc3d3847b8088e6ae5ccf3780a1
   languageName: node
   linkType: hard
 
-"@brillout/picocolors@npm:^1.0.7":
+"@brillout/picocolors@npm:^1.0.9":
   version: 1.0.9
   resolution: "@brillout/picocolors@npm:1.0.9"
   checksum: 37c0be0f384b43b75534c8569ac7f05f9dda3ef2969a0057457b1ae40ea1b33972568020ab5f7e246d06877e960392dd705037b23dabe13eb1e00654770ce9ae
@@ -3094,8 +3094,8 @@ __metadata:
     sass: "npm:^1.66.1"
     swiper: "npm:9.4.1"
     typescript: "npm:^5.2.2"
+    vike: "npm:^0.4.142"
     vite: "npm:^4.4.9"
-    vite-plugin-ssr: "npm:^0.4.140"
     vue: "npm:^3.3.4"
   languageName: unknown
   linkType: soft
@@ -3514,13 +3514,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-ssr@npm:^0.4.140":
-  version: 0.4.140
-  resolution: "vite-plugin-ssr@npm:0.4.140"
+"vike@npm:^0.4.142":
+  version: 0.4.142
+  resolution: "vike@npm:0.4.142"
   dependencies:
     "@brillout/import": "npm:0.2.3"
-    "@brillout/json-serializer": "npm:^0.5.4"
-    "@brillout/picocolors": "npm:^1.0.7"
+    "@brillout/json-serializer": "npm:^0.5.6"
+    "@brillout/picocolors": "npm:^1.0.9"
     "@brillout/require-shim": "npm:^0.1.2"
     "@brillout/vite-plugin-import-build": "npm:^0.2.18"
     acorn: "npm:^8.8.2"
@@ -3537,8 +3537,8 @@ __metadata:
     react-streaming:
       optional: true
   bin:
-    vite-plugin-ssr: node/cli/bin-entry.js
-  checksum: 017bdce0699f061b16ce6623fbacd1ab54e5c7c3d9aa12a3d661567dfd9c2cca5520f125670f11aa26bb89eccd7df23297f9f7a3c4a5ab78b89b2d9807908ec1
+    vike: node/cli/bin-entry.js
+  checksum: c77d98513b1413783a48219582b26899163dc20b09efa6e9080ea8bdc97ced0fe0edd77a5c2d043f7a7aae916bdb1b4afcf502857e72917b121f884c7d0380fe
   languageName: node
   linkType: hard
 

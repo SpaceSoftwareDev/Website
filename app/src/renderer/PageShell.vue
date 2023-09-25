@@ -8,5 +8,5 @@
 </template>
 
 <script lang="ts" setup>
-import { Toasts } from "@/components"
+import { Toasts } from "#/components"
 </script>

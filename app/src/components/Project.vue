@@ -22,8 +22,8 @@
 import { ref, onMounted } from "vue"
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 
-import { Get } from "@/types"
-import type { project } from "@/types"
+import { Get } from "#/types"
+import type { project } from "#/types"
 import Swiper from "./Swiper.vue"
 import { SwiperSlide } from "swiper/vue"
 

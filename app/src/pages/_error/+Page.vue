@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { navigate } from "vite-plugin-ssr/client/router"
+import { navigate } from "vike/client/router"
 
 function home() {
 	navigate("/")
